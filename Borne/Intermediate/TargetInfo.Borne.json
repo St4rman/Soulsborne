@@ -1,0 +1,39 @@
+{
+	"Targets": [
+		{
+			"Name": "LiveLinkHub",
+			"Path": "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Source\\Programs\\LiveLinkHub\\Source\\LiveLinkHub.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "DotNetPerforceLib",
+			"Path": "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Source\\Programs\\Shared\\EpicGames.Perforce.Native\\DotNetPerforceLib.Target.cs",
+			"Type": "Program"
+		},
+		{
+			"Name": "EventLoopUnitTests",
+			"Path": "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Source\\Runtime\\Online\\Experimental\\EventLoopTests\\EventLoopUnitTests.Target.cs",
+			"Type": "Program"
+		},
+		{
+			"Name": "UnrealEditor",
+			"Path": "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Source\\UnrealEditor.Target.cs",
+			"Type": "Editor"
+		},
+		{
+			"Name": "UnrealGame",
+			"Path": "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Source\\UnrealGame.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Borne",
+			"Path": "..\\Source\\Borne.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BorneEditor",
+			"Path": "..\\Source\\BorneEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

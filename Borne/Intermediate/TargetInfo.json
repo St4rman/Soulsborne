@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Borne",
+			"Path": "..\\Source\\Borne.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BorneEditor",
+			"Path": "..\\Source\\BorneEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

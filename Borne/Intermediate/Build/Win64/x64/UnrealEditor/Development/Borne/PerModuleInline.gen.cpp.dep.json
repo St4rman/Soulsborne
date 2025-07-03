@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

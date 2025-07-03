@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Projects\\UNREAL\\Souls\\Borne\\Source\\Borne\\Borne.Build.cs",
+		"E:\\Projects\\UNREAL\\Souls\\Borne\\Source\\Borne.Target.cs",
+		"E:\\Projects\\UNREAL\\Souls\\Borne\\Source\\BorneEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

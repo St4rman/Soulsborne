@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\projects\\unreal\\souls\\borne\\source\\borne\\borne.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
+            "e:\\projects\\unreal\\souls\\borne\\source\\borne\\borne.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
