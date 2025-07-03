@@ -10,6 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Interfaces/TargetableInterface.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -142,13 +143,31 @@ void ABorneCharacter::Look(const FInputActionValue& Value)
 
 void ABorneCharacter::FireDetection()
 {
-	if (EnemyDetector)
+	if (EnemyDetector && MainLocomotionMode == ELocomotionMode::L_Free)
 	{
 		EnemyDetector->FireDetection();
-		if (EnemyDetector->GetMainTarget() != nullptr)
+		AActor* LocalTarget = EnemyDetector->GetMainTarget();
+		
+		if (LocalTarget != nullptr)
 		{
-			MainLocomotionMode = L_InCombat;
-			CameraHandlerComponent->ToggleLockedOn(EnemyDetector->GetMainTarget());
+			if (LocalTarget->Implements<UTargetableInterface>())
+			{
+				CurrentMainTarget = LocalTarget;
+				ITargetableInterface::Execute_SetSelfAsTarget(LocalTarget);
+				MainLocomotionMode = L_InCombat;
+				CameraHandlerComponent->SetLockedOn(CurrentMainTarget);
+				
+			}
+		}
+	}
+	else
+	{
+		if (CurrentMainTarget != nullptr && CurrentMainTarget->Implements<UTargetableInterface>())
+		{
+			ITargetableInterface::Execute_RemoveSelfAsTarget(CurrentMainTarget);
+			MainLocomotionMode= L_Free;
+			CameraHandlerComponent->SetCamFree();
+			CurrentMainTarget = nullptr;
 		}
 	}
 }

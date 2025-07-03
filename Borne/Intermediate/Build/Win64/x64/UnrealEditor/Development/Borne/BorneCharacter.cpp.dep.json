@@ -76,7 +76,9 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\playermappablekeyslot.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\playermappablekeyslot.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsysteminterface.generated.h",
-            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h"
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\interfaces\\targetableinterface.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableinterface.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

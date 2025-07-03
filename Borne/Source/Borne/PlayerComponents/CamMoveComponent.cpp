@@ -39,34 +39,24 @@ void UCamMoveComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
  * Toggles locked on state for cameMovecomponent. Sets MainTarget as the target, or nullptr depends on not locking in
  * @param target Target To Lock onto
  */
-void UCamMoveComponent::ToggleLockedOn(AActor* Target)
+void UCamMoveComponent::SetLockedOn(AActor* Target)
 {
 	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
-
-	//this toggles the states so put the settings in reverse order
-	switch (CurrentCameraState)
-	{
-		case Free:
-			CurrentCameraState = Locked;
-			Player->SetCurrentLocomotionMode(ELocomotionMode::L_InCombat);
-			LockOnTarget = Target;
-			MoveComp->bUseControllerDesiredRotation = true;
-			MoveComp->bOrientRotationToMovement = false;
-			SpringArm->bEnableCameraRotationLag = true;
-			break;
-		
-		case Locked:
-			CurrentCameraState = Free;
-			Player->SetCurrentLocomotionMode(ELocomotionMode::L_Free);
-			MoveComp->bUseControllerDesiredRotation = false;
-			MoveComp->bOrientRotationToMovement = true;
-			SpringArm->bEnableCameraRotationLag = false;
-			break;
-	}
-		
+	CurrentCameraState = Locked;
+	LockOnTarget = Target;
+	MoveComp->bUseControllerDesiredRotation = true;
+	MoveComp->bOrientRotationToMovement = false;
+	SpringArm->bEnableCameraRotationLag = true;
 	
 }
-
+void UCamMoveComponent::SetCamFree()
+{
+	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
+	CurrentCameraState = Free;
+	MoveComp->bUseControllerDesiredRotation = false;
+	MoveComp->bOrientRotationToMovement = true;
+	SpringArm->bEnableCameraRotationLag = false;
+}
 /**
  * Updates camera rotation to look at the main target
  * @param dt Delta time
@@ -75,7 +65,7 @@ void UCamMoveComponent::UpdateCamLocation(float dt)
 {
 	const FVector CurrentLocation = PlayerCameraComp->GetComponentLocation();
 	const FVector TargetLocation = LockOnTarget->GetActorLocation();
-	DrawDebugLine(GetWorld(), GetOwner()->GetActorLocation() , TargetLocation, FColor::Purple, false, 0.1f);
+	// DrawDebugLine(GetWorld(), GetOwner()->GetActorLocation() , TargetLocation, FColor::Purple, false, 0.1f);
 	
 	const FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(CurrentLocation, TargetLocation);
 	
@@ -87,7 +77,7 @@ void UCamMoveComponent::UpdateCamLocation(float dt)
 	//TODO:: MOVE THIS TO PLAYER LOCOMOTION
 	const FRotator NewPlayerRot = FRotator(LookAt.Pitch, LookAt.Yaw, GetOwner()->GetActorRotation().Roll);
 	GetOwner()->SetActorRotation(FMath::Lerp(GetOwner()->GetActorRotation(), NewPlayerRot, dt * 0.5f));
-	//hehe
+	
 }
 
 

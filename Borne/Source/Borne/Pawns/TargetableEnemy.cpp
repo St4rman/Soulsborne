@@ -11,6 +11,19 @@ ATargetableEnemy::ATargetableEnemy()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+void ATargetableEnemy::SetSelfAsTarget_Implementation()
+{
+	ITargetableInterface::SetSelfAsTarget_Implementation();
+	IsTargeted = true;
+	// GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, "Target is self");
+}
+
+void ATargetableEnemy::RemoveSelfAsTarget_Implementation()
+{
+	IsTargeted = false;
+	ITargetableInterface::RemoveSelfAsTarget_Implementation();
+}
+
 // Called when the game starts or when spawned
 void ATargetableEnemy::BeginPlay()
 {

@@ -71,6 +71,8 @@ class ABorneCharacter : public ACharacter
 	UCamMoveComponent* CameraHandlerComponent;
 
 	ELocomotionMode MainLocomotionMode;
+
+	AActor* CurrentMainTarget;
 	
 public:
 	ABorneCharacter();

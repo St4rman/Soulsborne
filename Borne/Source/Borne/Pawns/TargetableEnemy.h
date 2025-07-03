@@ -3,26 +3,36 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Borne/Interfaces/TargetableInterface.h"
+
 #include "GameFramework/Character.h"
 #include "TargetableEnemy.generated.h"
 
+class UUserWidget;
+
 UCLASS()
-class BORNE_API ATargetableEnemy : public ACharacter
+class BORNE_API ATargetableEnemy : public ACharacter, public ITargetableInterface
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
+	
 	ATargetableEnemy();
-
+	
+	virtual void SetSelfAsTarget_Implementation() override;
+	virtual void RemoveSelfAsTarget_Implementation() override;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	
 public:
-	// Called every frame
+	
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(BlueprintReadOnly)
+	bool IsTargeted;
+	
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 };

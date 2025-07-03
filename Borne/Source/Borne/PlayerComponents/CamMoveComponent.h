@@ -55,6 +55,7 @@ public:
 	void UpdateCamLocation(float dt);
 	void UpdateSpringArm(float dt);
 	
-	FORCEINLINE void ToggleLockedOn(AActor* Target);
+	FORCEINLINE void SetLockedOn(AActor* Target);
+	void SetCamFree();
 	FORCEINLINE CameraState GetCamState() const {return CurrentCameraState; }
 };
