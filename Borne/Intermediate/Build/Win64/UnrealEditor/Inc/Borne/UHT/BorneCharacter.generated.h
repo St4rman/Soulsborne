@@ -14,6 +14,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_BorneCharacter_generated_h
 
+#define FID_Borne_Source_Borne_BorneCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetCurrentLocomotionMode);
+
+
 #define FID_Borne_Source_Borne_BorneCharacter_h_36_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABorneCharacter(); \
@@ -39,6 +43,7 @@ public: \
 #define FID_Borne_Source_Borne_BorneCharacter_h_36_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Borne_Source_Borne_BorneCharacter_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_BorneCharacter_h_36_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_BorneCharacter_h_36_ENHANCED_CONSTRUCTORS \
 private: \
@@ -55,4 +60,8 @@ template<> BORNE_API UClass* StaticClass<class ABorneCharacter>();
 	op(L_Free) \
 	op(L_Locked) \
 	op(L_InCombat) 
+
+enum ELocomotionMode : uint8;
+template<> BORNE_API UEnum* StaticEnum<ELocomotionMode>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

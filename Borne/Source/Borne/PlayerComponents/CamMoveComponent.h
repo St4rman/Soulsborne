@@ -40,6 +40,8 @@ protected:
 
 	UPROPERTY()
 	USpringArmComponent* SpringArm;
+
+	ABorneCharacter* Player;
 	
 	UPROPERTY( EditAnywhere, Category = "Combat Cameras" )
 	float CombatPitch = -20.0f;

@@ -1,17 +1,17 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\projects\\unreal\\souls\\borne\\source\\borne\\playercomponents\\detectorcomponent.cpp",
+        "Source": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\detectorcomponent.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
-            "e:\\projects\\unreal\\souls\\borne\\source\\borne\\playercomponents\\detectorcomponent.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\detectorcomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\detectorcomponent.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\source\\borne\\bornecharacter.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\detectorcomponent.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\bornecharacter.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
@@ -23,7 +23,7 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\source\\borne\\playercomponents\\cammovecomponent.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\cammovecomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
@@ -49,8 +49,8 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponentasync.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\cammovecomponent.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h"
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\cammovecomponent.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

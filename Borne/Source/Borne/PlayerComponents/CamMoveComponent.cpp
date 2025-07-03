@@ -8,6 +8,7 @@ UCamMoveComponent::UCamMoveComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 	if (GetOwner())
 	{
+		Player = Cast<ABorneCharacter>(GetOwner());
 		PlayerCameraComp = Cast<ABorneCharacter>(GetOwner())->GetFollowCamera();
 		SpringArm = Cast<ABorneCharacter>(GetOwner())->GetCameraBoom();
 	}
@@ -47,6 +48,7 @@ void UCamMoveComponent::ToggleLockedOn(AActor* Target)
 	{
 		case Free:
 			CurrentCameraState = Locked;
+			Player->SetCurrentLocomotionMode(ELocomotionMode::L_InCombat);
 			LockOnTarget = Target;
 			MoveComp->bUseControllerDesiredRotation = true;
 			MoveComp->bOrientRotationToMovement = false;
@@ -55,6 +57,7 @@ void UCamMoveComponent::ToggleLockedOn(AActor* Target)
 		
 		case Locked:
 			CurrentCameraState = Free;
+			Player->SetCurrentLocomotionMode(ELocomotionMode::L_Free);
 			MoveComp->bUseControllerDesiredRotation = false;
 			MoveComp->bOrientRotationToMovement = true;
 			SpringArm->bEnableCameraRotationLag = false;

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\UNREAL\\Souls\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj": {}
+    "E:\\Projects\\UNREAL\\Souls\\Soulsborne\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj": {}
   },
   "projects": {
     "D:\\Games\\EpicGames\\UE_5.5\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj": {
@@ -1178,14 +1178,14 @@
         }
       }
     },
-    "E:\\Projects\\UNREAL\\Souls\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj": {
+    "E:\\Projects\\UNREAL\\Souls\\Soulsborne\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\UNREAL\\Souls\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj",
+        "projectUniqueName": "E:\\Projects\\UNREAL\\Souls\\Soulsborne\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj",
         "projectName": "BorneModuleRules",
-        "projectPath": "E:\\Projects\\UNREAL\\Souls\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj",
+        "projectPath": "E:\\Projects\\UNREAL\\Souls\\Soulsborne\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\BorneModuleRules.csproj",
         "packagesPath": "C:\\Users\\idhant\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\UNREAL\\Souls\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\obj\\",
+        "outputPath": "E:\\Projects\\UNREAL\\Souls\\Soulsborne\\Borne\\Intermediate\\Build\\BuildRulesProjects\\BorneModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\idhant\\AppData\\Roaming\\NuGet\\NuGet.Config",

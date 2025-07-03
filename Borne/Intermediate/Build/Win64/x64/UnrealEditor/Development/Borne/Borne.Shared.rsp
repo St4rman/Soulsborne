@@ -1,6 +1,6 @@
 /I "."
-/I "E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\UnrealEditor\Inc\Borne\UHT"
-/I "E:\Projects\UNREAL\Souls\Borne\Source"
+/I "E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\UnrealEditor\Inc\Borne\UHT"
+/I "E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source"
 /I "Runtime\Core\Public"
 /I "Runtime\Core\Internal"
 /I "Runtime\TraceLog\Public"

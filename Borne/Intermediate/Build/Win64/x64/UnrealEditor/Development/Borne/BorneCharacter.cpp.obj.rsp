@@ -1,12 +1,12 @@
-"E:\Projects\UNREAL\Souls\Borne\Source\Borne\BorneCharacter.cpp"
-/FI"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\Definitions.Borne.h"
-/Yu"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.obj"
-/experimental:log "E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.sarif"
-/sourceDependencies "E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.dep.json"
-@"E:\Projects\UNREAL\Souls\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\Borne.Shared.rsp"
+"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp"
+/FI"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\Definitions.Borne.h"
+/Yu"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\BorneEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.obj"
+/experimental:log "E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.sarif"
+/sourceDependencies "E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\BorneCharacter.cpp.dep.json"
+@"E:\Projects\UNREAL\Souls\Soulsborne\Borne\Intermediate\Build\Win64\x64\UnrealEditor\Development\Borne\Borne.Shared.rsp"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

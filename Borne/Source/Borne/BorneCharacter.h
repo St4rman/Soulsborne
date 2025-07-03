@@ -22,8 +22,8 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UENUM()
-enum ELocomotionMode
+UENUM(BlueprintType)
+enum ELocomotionMode : uint8
 {
 	L_Free = 0   UMETA(DisplayName = "Free", ToolTip = "Free, normal locomotion"),
 	L_Locked = 1 UMETA(DisplayName = "Locked - normal", Tooltip = "Locked, to targets when not in combat"),
@@ -98,6 +98,11 @@ public:
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
+	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
+
+	UFUNCTION(BlueprintCallable)
+	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;};
+
 	
 };
 

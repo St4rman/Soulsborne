@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableenemy.gen.cpp",
+        "Source": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableenemy.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
-            "e:\\projects\\unreal\\souls\\borne\\source\\borne\\pawns\\targetableenemy.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\pawns\\targetableenemy.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
@@ -16,7 +16,7 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "e:\\projects\\unreal\\souls\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableenemy.generated.h"
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableenemy.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

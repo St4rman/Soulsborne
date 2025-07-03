@@ -41,6 +41,7 @@ struct Z_Construct_UEnum_Borne_ELocomotionMode_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "L_Free.DisplayName", "Free" },
 		{ "L_Free.Name", "L_Free" },
 		{ "L_Free.ToolTip", "Free, normal locomotion" },
@@ -82,9 +83,55 @@ UEnum* Z_Construct_UEnum_Borne_ELocomotionMode()
 }
 // End Enum ELocomotionMode
 
+// Begin Class ABorneCharacter Function GetCurrentLocomotionMode
+struct Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics
+{
+	struct BorneCharacter_eventGetCurrentLocomotionMode_Parms
+	{
+		TEnumAsByte<ELocomotionMode> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BorneCharacter_eventGetCurrentLocomotionMode_Parms, ReturnValue), Z_Construct_UEnum_Borne_ELocomotionMode, METADATA_PARAMS(0, nullptr) }; // 2669941529
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABorneCharacter, nullptr, "GetCurrentLocomotionMode", nullptr, nullptr, Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::BorneCharacter_eventGetCurrentLocomotionMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::BorneCharacter_eventGetCurrentLocomotionMode_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABorneCharacter::execGetCurrentLocomotionMode)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<ELocomotionMode>*)Z_Param__Result=P_THIS->GetCurrentLocomotionMode();
+	P_NATIVE_END;
+}
+// End Class ABorneCharacter Function GetCurrentLocomotionMode
+
 // Begin Class ABorneCharacter
 void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 {
+	UClass* Class = ABorneCharacter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentLocomotionMode", &ABorneCharacter::execGetCurrentLocomotionMode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABorneCharacter);
 UClass* Z_Construct_UClass_ABorneCharacter_NoRegister()
@@ -208,6 +255,10 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraHandlerComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode, "GetCurrentLocomotionMode" }, // 254126133
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABorneCharacter>::IsAbstract,
 	};
@@ -244,11 +295,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABorneCharacter_Statics
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ABorneCharacter_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ABorneCharacter_Statics::PropPointers),
 	0,
 	0x008000A4u,
@@ -274,13 +325,13 @@ ABorneCharacter::~ABorneCharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2138301502U) },
+		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2669941529U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 2677024133U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 3497490076U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_470876121(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1225119901(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::EnumInfo));
