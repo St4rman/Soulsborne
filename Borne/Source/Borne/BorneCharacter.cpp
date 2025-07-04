@@ -94,6 +94,8 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
+		EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
+
 	}
 	else
 	{
@@ -170,4 +172,14 @@ void ABorneCharacter::FireDetection()
 			CurrentMainTarget = nullptr;
 		}
 	}
+}
+
+/**
+ * Method to fire roll. Manually does this right now, make it use GAS afterwards
+ */
+void ABorneCharacter::DoRoll()
+{
+	FVector Movement = GetLastMovementInputVector();
+	
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
 }

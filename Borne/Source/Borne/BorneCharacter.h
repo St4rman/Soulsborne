@@ -59,10 +59,14 @@ class ABorneCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
-	/** Look Input Action */
+	/** Detect Enemy Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* DetectAction;
 
+	/** Roll action for dodging*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* RollAction;
+	
 	/** Detection */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UDetectorComponent* EnemyDetector;
@@ -86,6 +90,7 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 	void FireDetection();
+	void DoRoll();
 	void SetPlayerRotation(float dt);
 
 protected:
