@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "PlayerComponents/DetectorComponent.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
 #include "GAS/SoulsASComponent.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
@@ -32,10 +33,14 @@ enum ELocomotionMode : uint8
 };
 
 UCLASS(config=Game)
-class ABorneCharacter : public ACharacter
+class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
+	
+	ELocomotionMode MainLocomotionMode;
+	AActor* CurrentMainTarget;
 
+	
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* CameraBoom;
@@ -76,17 +81,13 @@ class ABorneCharacter : public ACharacter
 	UCamMoveComponent* CameraHandlerComponent;
 
 	/** Ability Systsem Component*/
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
-	USoulsASComponent* SoulsAbilitySystemComponent;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ability System", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<USoulsASComponent> SoulsAbilitySystemComponent;
 	
-	ELocomotionMode MainLocomotionMode;
-	
-
-	AActor* CurrentMainTarget;
 	
 public:
 	ABorneCharacter();
-	
+	virtual void BeginPlay() override;
 
 protected:
 
@@ -102,7 +103,6 @@ protected:
 protected:
 
 	virtual void NotifyControllerChanged() override;
-
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
@@ -116,6 +116,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;};
 
-	
+	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
 };
 

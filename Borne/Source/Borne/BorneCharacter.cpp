@@ -63,6 +63,14 @@ ABorneCharacter::ABorneCharacter()
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
 }
 
+void ABorneCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Holy cow"));
+
+	SoulsAbilitySystemComponent->InitAbilityActorInfo(this, this);
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 
