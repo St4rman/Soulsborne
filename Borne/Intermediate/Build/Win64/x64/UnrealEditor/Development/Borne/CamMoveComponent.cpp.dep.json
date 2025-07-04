@@ -106,6 +106,8 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\soulsascomponent.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\attributesets\\baseattributesset.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\baseattributesset.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h"
         ],
         "ImportedModules": [],

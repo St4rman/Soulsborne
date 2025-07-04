@@ -8,13 +8,14 @@
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include "GAS/SoulsASComponent.h"
+#include "GAS/AttributeSets/BaseAttributesSet.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
 #include "BorneCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
-
+class UBaseAttributesSet;
 class UDetectorComponent;
 class UCamMoveComponent;
 
@@ -84,6 +85,8 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ability System", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USoulsASComponent> SoulsAbilitySystemComponent;
 	
+	UPROPERTY(VisibleAnywhere)
+	const class UBaseAttributesSet* BaseSet;
 	
 public:
 	ABorneCharacter();

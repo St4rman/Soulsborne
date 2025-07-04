@@ -61,6 +61,7 @@ ABorneCharacter::ABorneCharacter()
 	MainLocomotionMode = L_Free;
 
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
+	
 }
 
 void ABorneCharacter::BeginPlay()
@@ -69,6 +70,10 @@ void ABorneCharacter::BeginPlay()
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT("Holy cow"));
 
 	SoulsAbilitySystemComponent->InitAbilityActorInfo(this, this);
+	if (IsValid(SoulsAbilitySystemComponent))
+	{
+		BaseSet = SoulsAbilitySystemComponent->GetSet<UBaseAttributesSet>();  
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -190,6 +195,7 @@ void ABorneCharacter::FireDetection()
 void ABorneCharacter::DoRoll()
 {
 	FVector Movement = GetLastMovementInputVector();
-	
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
+	
+
 }
