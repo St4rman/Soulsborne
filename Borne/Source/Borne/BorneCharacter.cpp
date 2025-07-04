@@ -59,6 +59,8 @@ ABorneCharacter::ABorneCharacter()
 
 	CameraHandlerComponent = CreateDefaultSubobject<UCamMoveComponent>(TEXT("CameraHandler"));
 	MainLocomotionMode = L_Free;
+
+	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
 }
 
 //////////////////////////////////////////////////////////////////////////

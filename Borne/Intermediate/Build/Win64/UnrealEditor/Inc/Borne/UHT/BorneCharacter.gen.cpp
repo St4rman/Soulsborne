@@ -14,6 +14,7 @@ BORNE_API UClass* Z_Construct_UClass_ABorneCharacter();
 BORNE_API UClass* Z_Construct_UClass_ABorneCharacter_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UCamMoveComponent_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UDetectorComponent_NoRegister();
+BORNE_API UClass* Z_Construct_UClass_USoulsASComponent_NoRegister();
 BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -254,6 +255,18 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "BorneCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SoulsAbilitySystemComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Detector" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Ability Systsem Component*/" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Ability Systsem Component" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
@@ -265,6 +278,7 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RollAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyDetector;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraHandlerComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SoulsAbilitySystemComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -286,6 +300,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacte
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_RollAction = { "RollAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, RollAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RollAction_MetaData), NewProp_RollAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_EnemyDetector = { "EnemyDetector", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, EnemyDetector), Z_Construct_UClass_UDetectorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemyDetector_MetaData), NewProp_EnemyDetector_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_CameraHandlerComponent = { "CameraHandlerComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, CameraHandlerComponent), Z_Construct_UClass_UCamMoveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraHandlerComponent_MetaData), NewProp_CameraHandlerComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent = { "SoulsAbilitySystemComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, SoulsAbilitySystemComponent), Z_Construct_UClass_USoulsASComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SoulsAbilitySystemComponent_MetaData), NewProp_SoulsAbilitySystemComponent_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_FollowCamera,
@@ -297,6 +312,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCha
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_RollAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_EnemyDetector,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_CameraHandlerComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABorneCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABorneCharacter_Statics::DependentSingletons[])() = {
@@ -342,10 +358,10 @@ struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2669941529U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 682351792U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 4265086474U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_2223738005(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_383768757(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::EnumInfo));

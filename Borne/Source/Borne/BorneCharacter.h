@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "PlayerComponents/DetectorComponent.h"
 #include "GameFramework/Character.h"
+#include "GAS/SoulsASComponent.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
 #include "BorneCharacter.generated.h"
@@ -74,7 +75,12 @@ class ABorneCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UCamMoveComponent* CameraHandlerComponent;
 
+	/** Ability Systsem Component*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
+	USoulsASComponent* SoulsAbilitySystemComponent;
+	
 	ELocomotionMode MainLocomotionMode;
+	
 
 	AActor* CurrentMainTarget;
 	
