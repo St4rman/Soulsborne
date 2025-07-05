@@ -1,8 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "HelperBPLib.h"
-
+﻿#include "HelperBPLib.h"
 
 void UHelperBPLib::PlayImportantAnimMontage(ACharacter* SourceChar, UAnimMontage* MontageToPlay, float const InPlayRate)
 {
@@ -11,4 +7,19 @@ void UHelperBPLib::PlayImportantAnimMontage(ACharacter* SourceChar, UAnimMontage
 	{
 		SourceChar->PlayAnimMontage(MontageToPlay, InPlayRate);
 	}
+}
+
+bool UHelperBPLib::HasLastMovementInput(ACharacter* SourceChar)
+{
+	const FVector LastInput = SourceChar->GetCharacterMovement()->GetLastInputVector();
+
+	return !LastInput.IsNearlyZero(0.001);
+	
+}
+
+void UHelperBPLib::AddRotationPreDodge(ACharacter* SourceChar)
+{
+	const FVector LastInput = SourceChar->GetCharacterMovement()->GetLastInputVector();
+	const FRotator DodgeRotation = FRotationMatrix::MakeFromX(LastInput).Rotator();
+	SourceChar->SetActorRotation(DodgeRotation);
 }
