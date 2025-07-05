@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "Core/HelperData.h"
-#include "Core/HelperBPFunctions.h"
+#include "Core/HelperBPLib.h"
 
 #include "Camera/CameraComponent.h"
 #include "PlayerComponents/DetectorComponent.h"
