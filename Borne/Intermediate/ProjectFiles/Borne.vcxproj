@@ -278,7 +278,6 @@
     <ClCompile Include="..\..\Source\Borne\BorneGameMode.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Borne\Core\HelperBPFunctions.cpp" />
     <ClCompile Include="..\..\Source\Borne\Core\HelperData.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -321,7 +320,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\Borne\Core\HelperBPFunctions.h" />
     <ClInclude Include="..\..\Source\Borne\GAS\Abilities\SoulGameplayAbility.h" />
   </ItemGroup>
   <PropertyGroup>

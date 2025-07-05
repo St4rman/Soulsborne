@@ -1381,3 +1381,16 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.07.05-16.06.01:286][ 84]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1366.225708
 [2025.07.05-16.06.02:286][ 87]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2025.07.05-16.06.02:286][ 87]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1366.892456, Update Interval: 349.864807
+[2025.07.05-16.12.23:816][233]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1748.755127
+[2025.07.05-16.12.24:815][235]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.05-16.12.24:815][236]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1749.421997, Update Interval: 352.598663
+[2025.07.05-16.15.58:244][907]LogSlate: Took 0.011322 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.07.05-16.16.14:506][860]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_0
+[2025.07.05-16.16.14:705][860]LogStats: UGameplayCueManager::InitializeEditorObjectLibrary -  0.027 s
+[2025.07.05-16.16.14:705][860]LogAbilitySystem: Warning: No GameplayCueNotifyPaths were specified in DefaultGame.ini under [/Script/GameplayAbilities.AbilitySystemGlobals]. Falling back to using all of /Game/. This may be slow on large projects. Consider specifying which paths are to be searched.
+[2025.07.05-16.16.15:076][870]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2025.07.05-16.16.15:084][870]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_1
+[2025.07.05-16.16.15:355][870]LogStreaming: Display: FlushAsyncLoading(346): 1 QueuedPackages, 0 AsyncPackages
+[2025.07.05-16.16.18:756][870]LogSlate: Took 0.007933 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2025.07.05-16.16.18:964][870]LogStreaming: Display: FlushAsyncLoading(537): 1 QueuedPackages, 0 AsyncPackages
+[2025.07.05-16.16.19:239][871]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_2
