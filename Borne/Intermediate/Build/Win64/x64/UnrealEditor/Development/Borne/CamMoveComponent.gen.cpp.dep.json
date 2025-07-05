@@ -7,6 +7,7 @@
         "Includes": [
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\cammovecomponent.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\core\\helperdata.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",

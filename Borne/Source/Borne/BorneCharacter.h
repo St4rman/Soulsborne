@@ -3,11 +3,16 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "Core/HelperData.h"
+#include "Core/HelperBPFunctions.h"
+
 #include "Camera/CameraComponent.h"
 #include "PlayerComponents/DetectorComponent.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include "GAS/SoulsASComponent.h"
+#include "GAS/Abilities/SoulGameplayAbility.h"
 #include "GAS/AttributeSets/BaseAttributesSet.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
@@ -18,6 +23,7 @@ class UCameraComponent;
 class UBaseAttributesSet;
 class UDetectorComponent;
 class UCamMoveComponent;
+class USoulGameplayAbility;
 
 class UInputMappingContext;
 class UInputAction;
@@ -25,13 +31,6 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UENUM(BlueprintType)
-enum ELocomotionMode : uint8
-{
-	L_Free = 0   UMETA(DisplayName = "Free", ToolTip = "Free, normal locomotion"),
-	L_Locked = 1 UMETA(DisplayName = "Locked - normal", Tooltip = "Locked, to targets when not in combat"),
-	L_InCombat = 2 UMETA(DisplayName = "Locked - In Combat", Tooltip = "Locked to target, IN COMBAT. Changes movement"),
-};
 
 UCLASS(config=Game)
 class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
@@ -81,12 +80,17 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UCamMoveComponent* CameraHandlerComponent;
 
+	/**ABILTIES ////////////////////////////////////////////
+	 */
+
 	/** Ability Systsem Component*/
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ability System", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USoulsASComponent> SoulsAbilitySystemComponent;
 	
 	UPROPERTY(VisibleAnywhere)
 	const class UBaseAttributesSet* BaseSet;
+
+	
 	
 public:
 	ABorneCharacter();
@@ -102,7 +106,21 @@ protected:
 	void FireDetection();
 	void DoRoll();
 	void SetPlayerRotation(float dt);
+	void AddStartUpGameplayAbilities();
 
+	/**
+	 * ABILITIES ///////////////////////////////////////////////////////
+	 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Abilities")
+	TArray<TSubclassOf<UGameplayEffect>> PassiveGameplayEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities")
+	TArray<TSubclassOf<USoulGameplayAbility>> GameplayAbilities;
+
+	UPROPERTY()
+	uint8 bAbilitiesInitialized:1;
+
+	
 protected:
 
 	virtual void NotifyControllerChanged() override;
@@ -113,12 +131,16 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
-	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
+	/** returns ability system suboject **/
+	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
 
+	
+	/** Returns camera forward vector **/
+	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
+	/** Sets current Locomotion mode **/
+	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
+	/** Returns current Locomotion mode **/
 	UFUNCTION(BlueprintCallable)
 	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;};
-
-	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
 };
 

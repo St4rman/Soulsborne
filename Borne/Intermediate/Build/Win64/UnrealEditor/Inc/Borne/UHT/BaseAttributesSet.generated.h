@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_BaseAttributesSet_generated_h
 
-#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBaseAttributesSet(); \
 	friend struct Z_Construct_UClass_UBaseAttributesSet_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UBaseAttributesSet)
 
 
-#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UBaseAttributesSet(UBaseAttributesSet&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UBaseAttributesSet();
 
 
-#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_19_PROLOG
-#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_22_GENERATED_BODY \
+#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_20_PROLOG
+#define FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_23_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_GAS_AttributeSets_BaseAttributesSet_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

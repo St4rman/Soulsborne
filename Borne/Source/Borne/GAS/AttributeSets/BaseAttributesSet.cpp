@@ -5,8 +5,28 @@
 
 UBaseAttributesSet::UBaseAttributesSet()
 {
-	// InitHealth(100.0f);
-	// InitMaxHealth(100.0f);
-	// InitStamina(100.f);
-	// InitMaxStamina(100.f);
+	
 }
+
+void UBaseAttributesSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
+{
+	// Super::PostGameplayEffectExecute(Data);
+
+	FGameplayEffectContextHandle Ctx = Data.EffectSpec.GetContext();
+	UAbilitySystemComponent* OwningASC = Ctx.GetInstigatorAbilitySystemComponent();
+	const FGameplayTagContainer OwnedTags = *Data.EffectSpec.CapturedSourceTags.GetAggregatedTags();
+
+	float Delta = 0.f;
+
+	//CHANGE STUFF
+	if (Data.EvaluatedData.ModifierOp == EGameplayModOp::Type::Additive)
+	{
+		Delta = Data.EvaluatedData.Magnitude;
+	}
+
+	if (Data.EvaluatedData.Attribute == GetStaminaAttribute())
+	{
+		// SetStamina(FMath::Clamp(GetStamina(), 0.F, GetMaxStamina()));
+	}
+}
+ 

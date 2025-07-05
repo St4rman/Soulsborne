@@ -7,6 +7,7 @@
         "Includes": [
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\cammovecomponent.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\core\\helperdata.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
@@ -41,6 +42,7 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementcomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\cammovecomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\bornecharacter.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\core\\helperbpfunctions.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\detectorcomponent.h",
@@ -106,7 +108,10 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\soulsascomponent.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\abilities\\soulgameplayability.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\soulgameplayability.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\attributesets\\baseattributesset.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffectextension.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\baseattributesset.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h"
         ],

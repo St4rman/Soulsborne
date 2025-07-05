@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AbilitySystemComponent.h"
+#include "GameplayEffectExtension.h"
 #include "AttributeSet.h"
 #include "BaseAttributesSet.generated.h"
 
@@ -23,6 +24,9 @@ class BORNE_API UBaseAttributesSet : public UAttributeSet
 	UBaseAttributesSet();
 
 public:
+
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UBaseAttributesSet, Health)
