@@ -17,6 +17,7 @@ class UAnimMontage;
 #define BORNE_HelperBPLib_generated_h
 
 #define FID_Borne_Source_Borne_Core_HelperBPLib_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execResetMeshToCharacter); \
 	DECLARE_FUNCTION(execAddRotationPreDodge); \
 	DECLARE_FUNCTION(execHasLastMovementInput); \
 	DECLARE_FUNCTION(execPlayImportantAnimMontage);

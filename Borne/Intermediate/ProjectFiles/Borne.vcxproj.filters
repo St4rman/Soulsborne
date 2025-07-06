@@ -58,7 +58,10 @@
     <Filter Include="Source\Borne\Core">
       <UniqueIdentifier>{BD8DF353-D3A7-3ACF-B26F-A1D558E08DF9}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Borne\Core\HelperData.cpp">
+    <ClCompile Include="..\..\Source\Borne\Core\HelperBPLib.cpp">
+      <Filter>Source\Borne\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Core\HelperBPLib.h">
       <Filter>Source\Borne\Core</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Borne\Core\HelperData.h">
@@ -72,6 +75,24 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Borne\GAS\SoulsASComponent.h">
       <Filter>Source\Borne\GAS</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\GAS\Abilities">
+      <UniqueIdentifier>{AA226EFB-F068-36CD-AB18-A74D6FF5EC37}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\SoulGameplayAbility.cpp">
+      <Filter>Source\Borne\GAS\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\SoulGameplayAbility.h">
+      <Filter>Source\Borne\GAS\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\GAS\AbilityTasks">
+      <UniqueIdentifier>{6499EFAD-041D-3CF2-A9EA-31E12C3A42D0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\AbilityTasks\PreDodgeTask.cpp">
+      <Filter>Source\Borne\GAS\AbilityTasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\GAS\AbilityTasks\PreDodgeTask.h">
+      <Filter>Source\Borne\GAS\AbilityTasks</Filter>
     </ClCompile>
     <Filter Include="Source\Borne\GAS\AttributeSets">
       <UniqueIdentifier>{06FA8BD0-2011-3B36-92DC-84D3967529D1}</UniqueIdentifier>

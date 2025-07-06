@@ -179,6 +179,49 @@ DEFINE_FUNCTION(UHelperBPLib::execPlayImportantAnimMontage)
 }
 // End Class UHelperBPLib Function PlayImportantAnimMontage
 
+// Begin Class UHelperBPLib Function ResetMeshToCharacter
+struct Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics
+{
+	struct HelperBPLib_eventResetMeshToCharacter_Parms
+	{
+		ACharacter* SourceChar;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Dodge rotation" },
+		{ "ModuleRelativePath", "Core/HelperBPLib.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SourceChar;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::NewProp_SourceChar = { "SourceChar", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HelperBPLib_eventResetMeshToCharacter_Parms, SourceChar), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::NewProp_SourceChar,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHelperBPLib, nullptr, "ResetMeshToCharacter", nullptr, nullptr, Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::HelperBPLib_eventResetMeshToCharacter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04042401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::HelperBPLib_eventResetMeshToCharacter_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UHelperBPLib::execResetMeshToCharacter)
+{
+	P_GET_OBJECT(ACharacter,Z_Param_SourceChar);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	UHelperBPLib::ResetMeshToCharacter(Z_Param_SourceChar);
+	P_NATIVE_END;
+}
+// End Class UHelperBPLib Function ResetMeshToCharacter
+
 // Begin Class UHelperBPLib
 void UHelperBPLib::StaticRegisterNativesUHelperBPLib()
 {
@@ -187,6 +230,7 @@ void UHelperBPLib::StaticRegisterNativesUHelperBPLib()
 		{ "AddRotationPreDodge", &UHelperBPLib::execAddRotationPreDodge },
 		{ "HasLastMovementInput", &UHelperBPLib::execHasLastMovementInput },
 		{ "PlayImportantAnimMontage", &UHelperBPLib::execPlayImportantAnimMontage },
+		{ "ResetMeshToCharacter", &UHelperBPLib::execResetMeshToCharacter },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -211,6 +255,7 @@ struct Z_Construct_UClass_UHelperBPLib_Statics
 		{ &Z_Construct_UFunction_UHelperBPLib_AddRotationPreDodge, "AddRotationPreDodge" }, // 3402058327
 		{ &Z_Construct_UFunction_UHelperBPLib_HasLastMovementInput, "HasLastMovementInput" }, // 3382886107
 		{ &Z_Construct_UFunction_UHelperBPLib_PlayImportantAnimMontage, "PlayImportantAnimMontage" }, // 1660020917
+		{ &Z_Construct_UFunction_UHelperBPLib_ResetMeshToCharacter, "ResetMeshToCharacter" }, // 4210360858
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -259,10 +304,10 @@ UHelperBPLib::~UHelperBPLib() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperBPLib_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHelperBPLib, UHelperBPLib::StaticClass, TEXT("UHelperBPLib"), &Z_Registration_Info_UClass_UHelperBPLib, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHelperBPLib), 4103896205U) },
+		{ Z_Construct_UClass_UHelperBPLib, UHelperBPLib::StaticClass, TEXT("UHelperBPLib"), &Z_Registration_Info_UClass_UHelperBPLib, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHelperBPLib), 1525922391U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperBPLib_h_1910245492(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperBPLib_h_273650803(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperBPLib_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperBPLib_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
