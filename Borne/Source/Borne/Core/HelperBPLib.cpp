@@ -22,4 +22,5 @@ void UHelperBPLib::AddRotationPreDodge(ACharacter* SourceChar)
 	const FVector LastInput = SourceChar->GetCharacterMovement()->GetLastInputVector();
 	const FRotator DodgeRotation = FRotationMatrix::MakeFromX(LastInput).Rotator();
 	SourceChar->SetActorRotation(DodgeRotation);
+	
 }

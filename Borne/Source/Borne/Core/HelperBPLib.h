@@ -34,5 +34,7 @@ class BORNE_API UHelperBPLib : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, Category = "Dodge rotation")
 	static void AddRotationPreDodge(ACharacter* SourceChar);
+
+	
 };
 	
