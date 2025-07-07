@@ -1,6 +1,11 @@
 E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneGameMode.h
-E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\PlayerComponents\CamMoveComponent.h
 E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\Core\HelperBPLib.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\Core\HelperData.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\PlayerComponents\CamMoveComponent.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\GAS\SoulsASComponent.h
 E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\Interfaces\TargetableInterface.h
-E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\Pawns\TargetableEnemy.h
 E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\PlayerComponents\DetectorComponent.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\GAS\Abilities\SoulGameplayAbility.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\Pawns\TargetableEnemy.h
+E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\GAS\AttributeSets\BaseAttributesSet.h

@@ -12,67 +12,12 @@ void EmptyLinkFunctionForGeneratedCodeCamMoveComponent() {}
 // Begin Cross Module References
 BORNE_API UClass* Z_Construct_UClass_UCamMoveComponent();
 BORNE_API UClass* Z_Construct_UClass_UCamMoveComponent_NoRegister();
-BORNE_API UEnum* Z_Construct_UEnum_Borne_CameraState();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
-
-// Begin Enum CameraState
-static FEnumRegistrationInfo Z_Registration_Info_UEnum_CameraState;
-static UEnum* CameraState_StaticEnum()
-{
-	if (!Z_Registration_Info_UEnum_CameraState.OuterSingleton)
-	{
-		Z_Registration_Info_UEnum_CameraState.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Borne_CameraState, (UObject*)Z_Construct_UPackage__Script_Borne(), TEXT("CameraState"));
-	}
-	return Z_Registration_Info_UEnum_CameraState.OuterSingleton;
-}
-template<> BORNE_API UEnum* StaticEnum<CameraState>()
-{
-	return CameraState_StaticEnum();
-}
-struct Z_Construct_UEnum_Borne_CameraState_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-		{ "Free.DisplayName", "Free" },
-		{ "Free.Name", "Free" },
-		{ "Locked.DisplayName", "Locked" },
-		{ "Locked.Name", "Locked" },
-		{ "ModuleRelativePath", "PlayerComponents/CamMoveComponent.h" },
-	};
-#endif // WITH_METADATA
-	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
-		{ "Free", (int64)Free },
-		{ "Locked", (int64)Locked },
-	};
-	static const UECodeGen_Private::FEnumParams EnumParams;
-};
-const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Borne_CameraState_Statics::EnumParams = {
-	(UObject*(*)())Z_Construct_UPackage__Script_Borne,
-	nullptr,
-	"CameraState",
-	"CameraState",
-	Z_Construct_UEnum_Borne_CameraState_Statics::Enumerators,
-	RF_Public|RF_Transient|RF_MarkAsNative,
-	UE_ARRAY_COUNT(Z_Construct_UEnum_Borne_CameraState_Statics::Enumerators),
-	EEnumFlags::None,
-	(uint8)UEnum::ECppForm::Regular,
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Borne_CameraState_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Borne_CameraState_Statics::Enum_MetaDataParams)
-};
-UEnum* Z_Construct_UEnum_Borne_CameraState()
-{
-	if (!Z_Registration_Info_UEnum_CameraState.InnerSingleton)
-	{
-		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_CameraState.InnerSingleton, Z_Construct_UEnum_Borne_CameraState_Statics::EnumParams);
-	}
-	return Z_Registration_Info_UEnum_CameraState.InnerSingleton;
-}
-// End Enum CameraState
 
 // Begin Class UCamMoveComponent
 void UCamMoveComponent::StaticRegisterNativesUCamMoveComponent()
@@ -176,16 +121,13 @@ UCamMoveComponent::~UCamMoveComponent() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics
 {
-	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ CameraState_StaticEnum, TEXT("CameraState"), &Z_Registration_Info_UEnum_CameraState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3399523276U) },
-	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UCamMoveComponent, UCamMoveComponent::StaticClass, TEXT("UCamMoveComponent"), &Z_Registration_Info_UClass_UCamMoveComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCamMoveComponent), 2194207667U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_1092457931(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_2523518238(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::EnumInfo));
+	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

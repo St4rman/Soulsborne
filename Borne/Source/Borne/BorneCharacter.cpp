@@ -27,6 +27,8 @@ ABorneCharacter::ABorneCharacter()
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
+	bAbilitiesInitialized = false;
+
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 500.0f, 0.0f); // ...at this rotation rate
@@ -59,6 +61,35 @@ ABorneCharacter::ABorneCharacter()
 
 	CameraHandlerComponent = CreateDefaultSubobject<UCamMoveComponent>(TEXT("CameraHandler"));
 	MainLocomotionMode = L_Free;
+
+	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
+	
+}
+
+void ABorneCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	//all of this would happen in rep if this was multiplayered
+	SoulsAbilitySystemComponent->InitAbilityActorInfo(this, this);
+	AddStartUpGameplayAbilities();
+	if (IsValid(SoulsAbilitySystemComponent))
+	{
+		BaseSet = SoulsAbilitySystemComponent->GetSet<UBaseAttributesSet>();
+		if (InputComponent)
+		{
+			 const FGameplayAbilityInputBinds Binds(
+				"Confirm",
+				"Cancel",
+				"ESoulsAbilityInputID",
+				static_cast<int32>(ESoulsAbilityInputID::Confirm),
+				static_cast<int32>(ESoulsAbilityInputID::Cancel)
+			 );
+
+			SoulsAbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, Binds);
+			
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -94,16 +125,28 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
-		EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
+		// EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
 
 	}
 	else
 	{
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+	
 }
 
-void ABorneCharacter::Move(const FInputActionValue& Value)
+FVector2D ABorneCharacter::GetInputCache()
+{
+	FVector2D NormalInput = InputCache;
+	if (InputCache.X > 1 || InputCache.X  -1 )
+	{
+		NormalInput.X = FMath::Sign(InputCache.X);
+		NormalInput.Y = FMath::Sign(InputCache.Y);
+	}
+	return NormalInput;
+}
+
+void ABorneCharacter::Move(const FInputActionValue	& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -123,6 +166,8 @@ void ABorneCharacter::Move(const FInputActionValue& Value)
 		// add movement 
 		AddMovementInput(ForwardDirection, MovementVector.Y);
 		AddMovementInput(RightDirection, MovementVector.X);
+
+		InputCache = MovementVector;
 	}
 }
 
@@ -180,6 +225,46 @@ void ABorneCharacter::FireDetection()
 void ABorneCharacter::DoRoll()
 {
 	FVector Movement = GetLastMovementInputVector();
-	
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
+	
+
 }
+
+//this is all from the action rpg example project on epic + a few tutorials
+void ABorneCharacter::AddStartUpGameplayAbilities()
+{
+	check(SoulsAbilitySystemComponent);
+
+	if (GetLocalRole() == ROLE_Authority && !bAbilitiesInitialized)
+	{
+		//grant abilities, this should only be done on the server for multiplayer games
+		for (TSubclassOf<USoulGameplayAbility>& DefaultAbility : GameplayAbilities)
+		{
+			
+			SoulsAbilitySystemComponent->GiveAbility(
+				FGameplayAbilitySpec(DefaultAbility,
+					1,
+					static_cast<int32>(DefaultAbility.GetDefaultObject()->AbilityInputID),
+					this));
+		}
+
+		for (const TSubclassOf<UGameplayEffect>& DefaultEffect : PassiveGameplayEffects)
+		{
+			FGameplayEffectContextHandle EffectContext = SoulsAbilitySystemComponent->MakeEffectContext();
+			EffectContext.AddSourceObject(this);
+
+			FGameplayEffectSpecHandle Handle = SoulsAbilitySystemComponent->MakeOutgoingSpec(
+				DefaultEffect, 1, EffectContext);
+
+			//apply our default startup abilities if the handle is valid 
+			if (Handle.IsValid())
+			{
+				FActiveGameplayEffectHandle ActiveGEHandle = SoulsAbilitySystemComponent->ApplyGameplayEffectSpecToTarget(
+					*Handle.Data.Get(), SoulsAbilitySystemComponent);
+			}
+		}
+		
+		bAbilitiesInitialized = true;
+	}
+}
+

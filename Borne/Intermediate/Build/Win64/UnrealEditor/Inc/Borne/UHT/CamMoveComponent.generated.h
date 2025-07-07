@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_CamMoveComponent_generated_h
 
-#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCamMoveComponent(); \
 	friend struct Z_Construct_UClass_UCamMoveComponent_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UCamMoveComponent)
 
 
-#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UCamMoveComponent(UCamMoveComponent&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UCamMoveComponent();
 
 
-#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_22_PROLOG
-#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_25_GENERATED_BODY \
+#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_18_PROLOG
+#define FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_25_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_25_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -51,7 +51,4 @@ template<> BORNE_API UClass* StaticClass<class UCamMoveComponent>();
 #define CURRENT_FILE_ID FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h
 
 
-#define FOREACH_ENUM_CAMERASTATE(op) \
-	op(Free) \
-	op(Locked) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

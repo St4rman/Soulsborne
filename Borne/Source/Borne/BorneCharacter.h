@@ -3,18 +3,27 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "Core/HelperData.h"
+#include "Core/HelperBPLib.h"
+
 #include "Camera/CameraComponent.h"
 #include "PlayerComponents/DetectorComponent.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
+#include "GAS/SoulsASComponent.h"
+#include "GAS/Abilities/SoulGameplayAbility.h"
+#include "GAS/AttributeSets/BaseAttributesSet.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
 #include "BorneCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
-
+class UBaseAttributesSet;
 class UDetectorComponent;
 class UCamMoveComponent;
+class USoulGameplayAbility;
 
 class UInputMappingContext;
 class UInputAction;
@@ -22,19 +31,16 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UENUM(BlueprintType)
-enum ELocomotionMode : uint8
-{
-	L_Free = 0   UMETA(DisplayName = "Free", ToolTip = "Free, normal locomotion"),
-	L_Locked = 1 UMETA(DisplayName = "Locked - normal", Tooltip = "Locked, to targets when not in combat"),
-	L_InCombat = 2 UMETA(DisplayName = "Locked - In Combat", Tooltip = "Locked to target, IN COMBAT. Changes movement"),
-};
 
 UCLASS(config=Game)
-class ABorneCharacter : public ACharacter
+class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
+	
+	ELocomotionMode MainLocomotionMode;
+	AActor* CurrentMainTarget;
 
+	
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* CameraBoom;
@@ -74,13 +80,21 @@ class ABorneCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UCamMoveComponent* CameraHandlerComponent;
 
-	ELocomotionMode MainLocomotionMode;
+	/**ABILTIES ////////////////////////////////////////////
+	 */
 
-	AActor* CurrentMainTarget;
+	/** Ability Systsem Component*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ability System", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<USoulsASComponent> SoulsAbilitySystemComponent;
+	
+	UPROPERTY(VisibleAnywhere)
+	const class UBaseAttributesSet* BaseSet;
+
+	
 	
 public:
 	ABorneCharacter();
-	
+	virtual void BeginPlay() override;
 
 protected:
 
@@ -92,11 +106,26 @@ protected:
 	void FireDetection();
 	void DoRoll();
 	void SetPlayerRotation(float dt);
+	void AddStartUpGameplayAbilities();
+	
+	FVector2D InputCache;
 
+	/**
+	 * ABILITIES ///////////////////////////////////////////////////////
+	 */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Abilities")
+	TArray<TSubclassOf<UGameplayEffect>> PassiveGameplayEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities")
+	TArray<TSubclassOf<USoulGameplayAbility>> GameplayAbilities;
+
+	UPROPERTY()
+	uint8 bAbilitiesInitialized:1;
+
+	
 protected:
 
 	virtual void NotifyControllerChanged() override;
-
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
@@ -104,12 +133,19 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
-	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
-
-	UFUNCTION(BlueprintCallable)
-	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;};
+	/** returns ability system suboject **/
+	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
 
 	
+	/** Returns camera forward vector **/
+	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
+	/** Sets current Locomotion mode **/
+	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
+	/** Returns current Locomotion mode **/
+	UFUNCTION(BlueprintCallable)
+	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;}
+
+	UFUNCTION(BlueprintCallable)
+	FVector2D GetInputCache();
 };
 

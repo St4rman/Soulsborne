@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
+#include "../Core/HelperData.h"
 #include "Components/ActorComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetMathLibrary.h"
@@ -12,12 +13,7 @@ class UCharacterMovementComponent;
 class UCameraComponent;
 class USpringArmComponent;
 
-UENUM(BlueprintType)
-enum CameraState
-{
-	Free = 0   UMETA(DisplayName = "Free"),
-	Locked = 1 UMETA(DisplayName = "Locked"),
-};
+
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class BORNE_API UCamMoveComponent : public UActorComponent
@@ -33,7 +29,7 @@ protected:
 	UPROPERTY()
 	AActor* LockOnTarget;
 	
-	CameraState CurrentCameraState;
+	ECameraState CurrentCameraState;
 
 	UPROPERTY()
 	UCameraComponent* PlayerCameraComp;
@@ -57,5 +53,5 @@ public:
 	
 	FORCEINLINE void SetLockedOn(AActor* Target);
 	void SetCamFree();
-	FORCEINLINE CameraState GetCamState() const {return CurrentCameraState; }
+	FORCEINLINE ECameraState GetCamState() const {return CurrentCameraState; }
 };
