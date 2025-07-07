@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BORNE_BorneCharacter_generated_h
 
 #define FID_Borne_Source_Borne_BorneCharacter_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetInputCache); \
 	DECLARE_FUNCTION(execGetCurrentLocomotionMode);
 
 

@@ -107,6 +107,8 @@ protected:
 	void DoRoll();
 	void SetPlayerRotation(float dt);
 	void AddStartUpGameplayAbilities();
+	
+	FVector2D InputCache;
 
 	/**
 	 * ABILITIES ///////////////////////////////////////////////////////
@@ -141,6 +143,9 @@ public:
 	FORCEINLINE void SetCurrentLocomotionMode(ELocomotionMode dest) {MainLocomotionMode = dest;}
 	/** Returns current Locomotion mode **/
 	UFUNCTION(BlueprintCallable)
-	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;};
+	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;}
+
+	UFUNCTION(BlueprintCallable)
+	FVector2D GetInputCache() {return InputCache;}
 };
 
