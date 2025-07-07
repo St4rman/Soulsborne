@@ -146,6 +146,6 @@ public:
 	ELocomotionMode GetCurrentLocomotionMode() const {return MainLocomotionMode;}
 
 	UFUNCTION(BlueprintCallable)
-	FVector2D GetInputCache() {return InputCache;}
+	FVector2D GetInputCache();
 };
 

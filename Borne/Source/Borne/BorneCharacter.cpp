@@ -125,7 +125,7 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
-		EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
+		// EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
 
 	}
 	else
@@ -133,6 +133,17 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
 	
+}
+
+FVector2D ABorneCharacter::GetInputCache()
+{
+	FVector2D NormalInput = InputCache;
+	if (InputCache.X > 1 || InputCache.X  -1 )
+	{
+		NormalInput.X = FMath::Sign(InputCache.X);
+		NormalInput.Y = FMath::Sign(InputCache.Y);
+	}
+	return NormalInput;
 }
 
 void ABorneCharacter::Move(const FInputActionValue	& Value)
