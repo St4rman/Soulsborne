@@ -287,6 +287,7 @@
     <ClCompile Include="..\..\Source\Borne\Core\HelperData.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Active\BDodgeRollAbility.cpp" />
     <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Passive\PGA_StaminaRegen.cpp">
       <AssemblerOutput>NoListing</AssemblerOutput>
       <AssemblerListingLocation>D:\Games\EpicGames\UE_5.5\Engine\Intermediate\Build\Unused\</AssemblerListingLocation>
@@ -543,10 +544,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="..\..\Source\Borne\GAS\Abilities\Active\" />
     <Folder Include="..\..\Source\Borne\GAS\AbilityTasks\" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Borne\GAS\Abilities\Active\BDodgeRollAbility.h" />
     <ClInclude Include="..\..\Source\Borne\GAS\Abilities\Passive\PGA_StaminaRegen.h" />
   </ItemGroup>
   <PropertyGroup>

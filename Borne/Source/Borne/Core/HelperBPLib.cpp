@@ -12,7 +12,6 @@ void UHelperBPLib::PlayImportantAnimMontage(ACharacter* SourceChar, UAnimMontage
 bool UHelperBPLib::HasLastMovementInput(ACharacter* SourceChar)
 {
 	const FVector LastInput = SourceChar->GetCharacterMovement()->GetLastInputVector();
-
 	return !LastInput.IsNearlyZero(0.001);
 	
 }
