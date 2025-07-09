@@ -31,29 +31,27 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	
 	ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(TagsToGive);
 	
-	if (UHelperBPLib::HasLastMovementInput(PlayerChar))
+	if (UHelperBPLib::HasLastMovementInput(PlayerChar) && PlayerChar->GetCurrentLocomotionMode() == ELocomotionMode::L_InCombat)
 	{
 		const FVector2D InputCache = PlayerChar->GetInputCache();
 		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
 		float const Duration = AnimInstance->Montage_Play(AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true);
-
-		FOnMontageEnded EndDelegate;
-		EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
-		AnimInstance->Montage_SetEndDelegate(EndDelegate);
 	}
 	else
 	{
-		float const Duration = AnimInstance->Montage_Play(AnimMontages[0], 2.0f, EMontagePlayReturnType::Duration, 0.f, true);
+		float const Duration = AnimInstance->Montage_Play(ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true);
 	}
+
+	FOnMontageEnded EndDelegate;
+	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
+	AnimInstance->Montage_SetEndDelegate(EndDelegate);
 }
 
 bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilityActorInfo* ActorInfo )
 {
 	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
 	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
-
 	const bool IsFalling =  Char->GetMovementComponent()->IsFalling();
-	
 	return !IsFalling;
 }
 

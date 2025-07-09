@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Borne/Core/HelperData.h"
 #include "Borne/BorneCharacter.h"
 #include "Borne/GAS/Abilities/SoulGameplayAbility.h"
 #include "BDodgeRollAbility.generated.h"
@@ -28,6 +29,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="DodgeAbility")
 	FGameplayTagContainer TagsToGive;
+
+	UPROPERTY(EditAnywhere, Category="DodgeAbility")
+	UAnimMontage* ForwardDashMontage;
 
 	
 protected:
