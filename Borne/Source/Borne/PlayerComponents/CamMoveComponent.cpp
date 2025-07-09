@@ -41,7 +41,6 @@ void UCamMoveComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
  */
 void UCamMoveComponent::SetLockedOn(AActor* Target)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "Cam lock");
 	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
 	MoveComp->bUseControllerDesiredRotation = true;
 	MoveComp->bOrientRotationToMovement = false;
@@ -53,7 +52,6 @@ void UCamMoveComponent::SetLockedOn(AActor* Target)
 }
 void UCamMoveComponent::SetCamFree()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "Cam free");
 	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
 	MoveComp->bUseControllerDesiredRotation = false;
 	MoveComp->bOrientRotationToMovement = true;

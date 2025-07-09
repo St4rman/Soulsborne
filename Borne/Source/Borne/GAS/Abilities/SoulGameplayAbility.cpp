@@ -3,6 +3,19 @@
 
 #include "SoulGameplayAbility.h"
 
+
+
 USoulGameplayAbility::USoulGameplayAbility()
 {
+	
+}
+
+void USoulGameplayAbility::OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
+{
+	Super::OnAvatarSet(ActorInfo, Spec);
+
+	if (bActivateAbilityOnGrant)
+	{
+		ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle, false);
+	}
 }
