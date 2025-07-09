@@ -35,11 +35,11 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	{
 		const FVector2D InputCache = PlayerChar->GetInputCache();
 		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
-		float const Duration = AnimInstance->Montage_Play(AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true);
+		float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	else
 	{
-		float const Duration = AnimInstance->Montage_Play(ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true);
+		float const Duration = AnimInstance->Montage_Play( ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 
 	FOnMontageEnded EndDelegate;
