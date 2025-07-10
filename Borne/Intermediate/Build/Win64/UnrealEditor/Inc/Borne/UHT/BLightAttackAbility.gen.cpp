@@ -74,7 +74,6 @@ template<> BORNE_API UClass* StaticClass<UBLightAttackAbility>()
 {
 	return UBLightAttackAbility::StaticClass();
 }
-UBLightAttackAbility::UBLightAttackAbility() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBLightAttackAbility);
 UBLightAttackAbility::~UBLightAttackAbility() {}
 // End Class UBLightAttackAbility

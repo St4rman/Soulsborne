@@ -15,11 +15,18 @@ bool UBDodgeRollAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Han
 
 void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-	if (! CheckCost(Handle, ActorInfo) && ! CheckCanDodgeConditions(ActorInfo))
+	if (! CheckCanDodgeConditions(ActorInfo))
 	{
-		Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
-		return;
+		if (!CheckCost(Handle, ActorInfo))
+		{
+			Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
+			return;
+		}
 	}
+	// if (! CheckCost(Handle, ActorInfo) && ! CheckCanDodgeConditions(ActorInfo))
+	// {
+	// 	
+	// }
 	
 	ApplyCost(Handle, ActorInfo, ActivationInfo);
 	

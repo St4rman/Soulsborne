@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef BORNE_SBWeaponBase_generated_h
 #error "SBWeaponBase.generated.h already included, missing '#pragma once' in SBWeaponBase.h"
 #endif
 #define BORNE_SBWeaponBase_generated_h
+
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetLightAnim);
+
 
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +44,7 @@ public: \
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \

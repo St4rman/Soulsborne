@@ -7,10 +7,6 @@
         "Includes": [
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\weapons\\sbweaponbase.h",
-            "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
-            "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
-            "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
-            "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\sbweaponbase.generated.h"
         ],
         "ImportedModules": [],

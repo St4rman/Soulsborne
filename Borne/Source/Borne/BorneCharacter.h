@@ -140,8 +140,8 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	/** returns ability system suboject **/
 	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
-
-	
+	/** returns inventory subobject **/
+	FORCEINLINE class USInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
 	/** Returns camera forward vector **/
 	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
 	/** Sets current Locomotion mode **/

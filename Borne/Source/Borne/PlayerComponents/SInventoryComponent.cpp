@@ -1,4 +1,6 @@
 ﻿#include "SInventoryComponent.h"
+
+#include "MovieSceneTracksComponentTypes.h"
 #include "Borne/BorneCharacter.h"
 
 
@@ -31,6 +33,7 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
 	ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
 	NewWeapon->SetOwner(Player);
+	NewWeapon->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");
 	EquippedWeapon = NewWeapon;
 }
 
