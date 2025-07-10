@@ -68,7 +68,7 @@ void Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_bActivateAbilityOn
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_bActivateAbilityOnGrant = { "bActivateAbilityOnGrant", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(uint8), sizeof(USoulGameplayAbility), &Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_bActivateAbilityOnGrant_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bActivateAbilityOnGrant_MetaData), NewProp_bActivateAbilityOnGrant_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_AbilityInputID_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_AbilityInputID = { "AbilityInputID", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USoulGameplayAbility, AbilityInputID), Z_Construct_UEnum_Borne_ESoulsAbilityInputID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AbilityInputID_MetaData), NewProp_AbilityInputID_MetaData) }; // 2515057219
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_AbilityInputID = { "AbilityInputID", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USoulGameplayAbility, AbilityInputID), Z_Construct_UEnum_Borne_ESoulsAbilityInputID, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AbilityInputID_MetaData), NewProp_AbilityInputID_MetaData) }; // 2896397640
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USoulGameplayAbility_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_bActivateAbilityOnGrant,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USoulGameplayAbility_Statics::NewProp_AbilityInputID_Underlying,
@@ -115,10 +115,10 @@ USoulGameplayAbility::~USoulGameplayAbility() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_SoulGameplayAbility_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USoulGameplayAbility, USoulGameplayAbility::StaticClass, TEXT("USoulGameplayAbility"), &Z_Registration_Info_UClass_USoulGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USoulGameplayAbility), 515537836U) },
+		{ Z_Construct_UClass_USoulGameplayAbility, USoulGameplayAbility::StaticClass, TEXT("USoulGameplayAbility"), &Z_Registration_Info_UClass_USoulGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USoulGameplayAbility), 1758982490U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_SoulGameplayAbility_h_1437616457(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_SoulGameplayAbility_h_847031607(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_SoulGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_SoulGameplayAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -9,7 +9,8 @@ enum class ESoulsAbilityInputID: uint8
 	None,
 	Confirm,
 	Cancel,
-	Roll
+	Roll,
+	Attack
 };
 
 /**

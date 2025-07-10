@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_SBWeaponBase_generated_h
 
-#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_11_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASBWeaponBase(); \
 	friend struct Z_Construct_UClass_ASBWeaponBase_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ASBWeaponBase)
 
 
-#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_11_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASBWeaponBase(ASBWeaponBase&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ASBWeaponBase();
 
 
-#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_8_PROLOG
-#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_11_GENERATED_BODY \
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_10_PROLOG
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_11_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_11_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

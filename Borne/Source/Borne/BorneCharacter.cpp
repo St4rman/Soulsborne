@@ -63,6 +63,7 @@ ABorneCharacter::ABorneCharacter()
 	MainLocomotionMode = L_Free;
 
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
+	InventoryComponent = CreateDefaultSubobject<USInventoryComponent>(TEXT("InventoryComponent"));
 	
 }
 
@@ -87,9 +88,10 @@ void ABorneCharacter::BeginPlay()
 			 );
 
 			SoulsAbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, Binds);
-			
 		}
 	}
+
+	
 }
 
 //////////////////////////////////////////////////////////////////////////
