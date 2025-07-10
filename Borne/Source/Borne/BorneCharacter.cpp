@@ -125,8 +125,6 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
-		// EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
-
 	}
 	else
 	{
