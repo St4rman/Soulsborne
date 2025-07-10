@@ -39,3 +39,4 @@ enum ECameraState : uint8
 class BORNE_API HelperData
 {
 };
+

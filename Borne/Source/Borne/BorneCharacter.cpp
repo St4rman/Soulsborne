@@ -143,6 +143,7 @@ FVector2D ABorneCharacter::GetInputCache()
 		NormalInput.X = FMath::Sign(InputCache.X);
 		NormalInput.Y = FMath::Sign(InputCache.Y);
 	}
+	
 	return NormalInput;
 }
 

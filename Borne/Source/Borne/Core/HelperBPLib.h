@@ -13,7 +13,7 @@ UCLASS()
 class BORNE_API UHelperBPLib : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-
+public:
 	/**
 	 * Function to play a high priority animation that checks if it's already playing.
 	 * @param SourceChar Source Character to play the animation on 

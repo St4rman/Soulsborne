@@ -26,7 +26,14 @@ void UBaseAttributesSet::PostGameplayEffectExecute(const FGameplayEffectModCallb
 
 	if (Data.EvaluatedData.Attribute == GetStaminaAttribute())
 	{
-		// SetStamina(FMath::Clamp(GetStamina(), 0.F, GetMaxStamina()));
+		const float OldStaminaValue = GetStamina();
+		const float MaxStaminaValue = GetMaxStamina();
+		const float NewStaminaValue = FMath::Clamp(OldStaminaValue, 0.0f, MaxStaminaValue);
+		
+		if (OldStaminaValue != NewStaminaValue)
+		{
+			SetStamina(NewStaminaValue);
+		}
 	}
 }
  
