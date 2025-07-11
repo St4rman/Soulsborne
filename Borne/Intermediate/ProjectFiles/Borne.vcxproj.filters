@@ -28,6 +28,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -85,14 +88,32 @@
     <ClCompile Include="..\..\Source\Borne\GAS\Abilities\SoulGameplayAbility.h">
       <Filter>Source\Borne\GAS\Abilities</Filter>
     </ClCompile>
-    <Filter Include="Source\Borne\GAS\AbilityTasks">
-      <UniqueIdentifier>{6499EFAD-041D-3CF2-A9EA-31E12C3A42D0}</UniqueIdentifier>
+    <Filter Include="Source\Borne\GAS\Abilities\Active">
+      <UniqueIdentifier>{819C8594-8F93-36E4-9A5A-F653F4279789}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Borne\GAS\AbilityTasks\PreDodgeTask.cpp">
-      <Filter>Source\Borne\GAS\AbilityTasks</Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Active\BDodgeRollAbility.cpp">
+      <Filter>Source\Borne\GAS\Abilities\Active</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Borne\GAS\AbilityTasks\PreDodgeTask.h">
-      <Filter>Source\Borne\GAS\AbilityTasks</Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Active\BDodgeRollAbility.h">
+      <Filter>Source\Borne\GAS\Abilities\Active</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\GAS\Abilities\Active\Attack">
+      <UniqueIdentifier>{7891D201-57DF-3F56-8AF3-C7493F28708B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Active\Attack\BLightAttackAbility.cpp">
+      <Filter>Source\Borne\GAS\Abilities\Active\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Active\Attack\BLightAttackAbility.h">
+      <Filter>Source\Borne\GAS\Abilities\Active\Attack</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\GAS\Abilities\Passive">
+      <UniqueIdentifier>{0251F8E5-8CC1-3E67-942A-C0063BFEAE94}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Passive\PGA_StaminaRegen.cpp">
+      <Filter>Source\Borne\GAS\Abilities\Passive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\GAS\Abilities\Passive\PGA_StaminaRegen.h">
+      <Filter>Source\Borne\GAS\Abilities\Passive</Filter>
     </ClCompile>
     <Filter Include="Source\Borne\GAS\AttributeSets">
       <UniqueIdentifier>{06FA8BD0-2011-3B36-92DC-84D3967529D1}</UniqueIdentifier>
@@ -135,6 +156,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Borne\PlayerComponents\DetectorComponent.h">
       <Filter>Source\Borne\PlayerComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\PlayerComponents\SInventoryComponent.cpp">
+      <Filter>Source\Borne\PlayerComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\PlayerComponents\SInventoryComponent.h">
+      <Filter>Source\Borne\PlayerComponents</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\Weapons">
+      <UniqueIdentifier>{004E73F2-1180-368B-982A-C87E7C588EA5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\Weapons\SBWeaponBase.cpp">
+      <Filter>Source\Borne\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Weapons\SBWeaponBase.h">
+      <Filter>Source\Borne\Weapons</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

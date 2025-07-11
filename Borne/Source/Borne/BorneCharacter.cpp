@@ -64,6 +64,10 @@ ABorneCharacter::ABorneCharacter()
 
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
 	InventoryComponent = CreateDefaultSubobject<USInventoryComponent>(TEXT("InventoryComponent"));
+
+	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+	NiagaraComponent->SetupAttachment(GetMesh());
+	NiagaraComponent->SetAutoActivate(false);
 	
 }
 

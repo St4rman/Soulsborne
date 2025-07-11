@@ -41,7 +41,8 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	{
 		float const Duration = AnimInstance->Montage_Play( ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
-
+	
+	PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
@@ -60,6 +61,11 @@ bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHand
 
 void UBDodgeRollAbility::OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
 {
+	
+	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
+	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
+	PlayerChar->GetNiagaraEffectComponent()->SetActive(false);
+	
 	ActorInfo->AbilitySystemComponent->RemoveLooseGameplayTags(TagsToGive);
 	Super::EndAbility(SpecHandle, ActorInfo, ActivationInfo, false, false);
 }
