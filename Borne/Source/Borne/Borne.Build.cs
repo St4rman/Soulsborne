@@ -16,7 +16,8 @@ public class Borne : ModuleRules
 			"EnhancedInput",
 			"GameplayAbilities", 
 			"GameplayTags", 
-			"GameplayTasks"
+			"GameplayTasks",
+			"Niagara"
 		});
 	}
 }

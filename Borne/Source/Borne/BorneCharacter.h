@@ -11,13 +11,18 @@
 #include "PlayerComponents/DetectorComponent.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
+
 #include "GAS/SoulsASComponent.h"
 #include "GAS/Abilities/SoulGameplayAbility.h"
 #include "GAS/AttributeSets/BaseAttributesSet.h"
+
 #include "Logging/LogMacros.h"
+
 #include "PlayerComponents/CamMoveComponent.h"
 #include "PlayerComponents/SInventoryComponent.h"
+#include "NiagaraComponent.h"
 #include "BorneCharacter.generated.h"
+
 
 class USpringArmComponent;
 class UCameraComponent;
@@ -85,6 +90,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	USInventoryComponent* InventoryComponent;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	UNiagaraComponent* NiagaraComponent;
+
 	/**ABILTIES ////////////////////////////////////////////
 	 */
 
@@ -142,6 +150,9 @@ public:
 	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
 	/** returns inventory subobject **/
 	FORCEINLINE class USInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
+
+	FORCEINLINE class UNiagaraComponent* GetNiagaraEffectComponent() const {return NiagaraComponent; }
+	
 	/** Returns camera forward vector **/
 	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
 	/** Sets current Locomotion mode **/

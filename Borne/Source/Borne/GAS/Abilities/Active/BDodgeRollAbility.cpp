@@ -35,6 +35,7 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	{
 		const FVector2D InputCache = PlayerChar->GetInputCache();
 		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
+		PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 		float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	else
@@ -60,6 +61,11 @@ bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHand
 
 void UBDodgeRollAbility::OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
 {
+	
+	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
+	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
+	PlayerChar->GetNiagaraEffectComponent()->SetActive(false);
+	
 	ActorInfo->AbilitySystemComponent->RemoveLooseGameplayTags(TagsToGive);
 	Super::EndAbility(SpecHandle, ActorInfo, ActivationInfo, false, false);
 }
