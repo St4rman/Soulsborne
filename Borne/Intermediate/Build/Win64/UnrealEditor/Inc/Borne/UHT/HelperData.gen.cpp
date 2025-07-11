@@ -34,6 +34,7 @@ struct Z_Construct_UEnum_Borne_ESoulsAbilityInputID_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Attack.Name", "ESoulsAbilityInputID::Attack" },
 		{ "BlueprintType", "true" },
 		{ "Cancel.Name", "ESoulsAbilityInputID::Cancel" },
 		{ "Confirm.Name", "ESoulsAbilityInputID::Confirm" },
@@ -47,6 +48,7 @@ struct Z_Construct_UEnum_Borne_ESoulsAbilityInputID_Statics
 		{ "ESoulsAbilityInputID::Confirm", (int64)ESoulsAbilityInputID::Confirm },
 		{ "ESoulsAbilityInputID::Cancel", (int64)ESoulsAbilityInputID::Cancel },
 		{ "ESoulsAbilityInputID::Roll", (int64)ESoulsAbilityInputID::Roll },
+		{ "ESoulsAbilityInputID::Attack", (int64)ESoulsAbilityInputID::Attack },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -202,12 +204,12 @@ UEnum* Z_Construct_UEnum_Borne_ECameraState()
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2515057219U) },
+		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2896397640U) },
 		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2571520345U) },
 		{ ECameraState_StaticEnum, TEXT("ECameraState"), &Z_Registration_Info_UEnum_ECameraState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4218898129U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_2766195394(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_3967080373(TEXT("/Script/Borne"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo));

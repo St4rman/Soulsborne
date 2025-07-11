@@ -1,5 +1,4 @@
 ﻿#include "DetectorComponent.h"
-
 #include "Borne/BorneCharacter.h"
 
 UDetectorComponent::UDetectorComponent()

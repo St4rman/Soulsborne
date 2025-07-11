@@ -63,6 +63,7 @@ ABorneCharacter::ABorneCharacter()
 	MainLocomotionMode = L_Free;
 
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
+	InventoryComponent = CreateDefaultSubobject<USInventoryComponent>(TEXT("InventoryComponent"));
 	
 }
 
@@ -87,9 +88,10 @@ void ABorneCharacter::BeginPlay()
 			 );
 
 			SoulsAbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, Binds);
-			
 		}
 	}
+
+	
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -123,10 +125,7 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
-
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
-		// EnhancedInputComponent->BindAction(RollAction, ETriggerEvent::Completed, this, &ABorneCharacter::DoRoll);
-
 	}
 	else
 	{

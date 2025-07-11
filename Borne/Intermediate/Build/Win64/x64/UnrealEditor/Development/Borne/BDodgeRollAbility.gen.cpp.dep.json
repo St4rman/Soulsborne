@@ -115,6 +115,10 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\cammovecomponent.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\sinventorycomponent.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\weapons\\sbweaponbase.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\sbweaponbase.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\sinventorycomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bdodgerollability.generated.h"
         ],

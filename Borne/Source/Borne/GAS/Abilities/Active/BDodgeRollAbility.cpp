@@ -15,7 +15,7 @@ bool UBDodgeRollAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Han
 
 void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-	if (! CheckCost(Handle, ActorInfo) && ! CheckCanDodgeConditions(ActorInfo))
+	if (! CheckCanDodgeConditions(Handle, ActorInfo) )
 	{
 		Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
 		return;
@@ -47,12 +47,14 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
 }
 
-bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilityActorInfo* ActorInfo )
+bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo )
 {
 	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
 	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
 	const bool IsFalling =  Char->GetMovementComponent()->IsFalling();
-	return !IsFalling;
+	const bool CanPayCost = CheckCost(Handle, ActorInfo);
+
+	return !IsFalling && CanPayCost;
 }
 
 

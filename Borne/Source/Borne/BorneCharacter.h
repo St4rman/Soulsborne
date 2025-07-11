@@ -16,6 +16,7 @@
 #include "GAS/AttributeSets/BaseAttributesSet.h"
 #include "Logging/LogMacros.h"
 #include "PlayerComponents/CamMoveComponent.h"
+#include "PlayerComponents/SInventoryComponent.h"
 #include "BorneCharacter.generated.h"
 
 class USpringArmComponent;
@@ -24,9 +25,10 @@ class UBaseAttributesSet;
 class UDetectorComponent;
 class UCamMoveComponent;
 class USoulGameplayAbility;
-
+class USInventoryComponent;
 class UInputMappingContext;
 class UInputAction;
+
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -79,6 +81,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UCamMoveComponent* CameraHandlerComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
+	USInventoryComponent* InventoryComponent;
 
 	/**ABILTIES ////////////////////////////////////////////
 	 */
@@ -135,8 +140,8 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 	/** returns ability system suboject **/
 	FORCEINLINE virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return SoulsAbilitySystemComponent;}
-
-	
+	/** returns inventory subobject **/
+	FORCEINLINE class USInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
 	/** Returns camera forward vector **/
 	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}
 	/** Sets current Locomotion mode **/
