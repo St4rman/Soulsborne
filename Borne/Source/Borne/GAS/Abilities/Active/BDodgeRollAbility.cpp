@@ -35,14 +35,14 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	{
 		const FVector2D InputCache = PlayerChar->GetInputCache();
 		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
-		PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 		float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	else
 	{
 		float const Duration = AnimInstance->Montage_Play( ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
-
+	
+	PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
