@@ -21,6 +21,7 @@
 			"TargetableInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"Borne.cpp.obj",
+			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
@@ -34,8 +35,7 @@
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BorneCharacter.cpp.obj"
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }
