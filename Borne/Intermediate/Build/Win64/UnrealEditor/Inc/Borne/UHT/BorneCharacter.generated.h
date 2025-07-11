@@ -14,12 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_BorneCharacter_generated_h
 
-#define FID_Borne_Source_Borne_BorneCharacter_h_45_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_BorneCharacter_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetInputCache); \
 	DECLARE_FUNCTION(execGetCurrentLocomotionMode);
 
 
-#define FID_Borne_Source_Borne_BorneCharacter_h_45_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_BorneCharacter_h_47_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABorneCharacter(); \
 	friend struct Z_Construct_UClass_ABorneCharacter_Statics; \
@@ -29,7 +29,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ABorneCharacter*>(this); }
 
 
-#define FID_Borne_Source_Borne_BorneCharacter_h_45_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_BorneCharacter_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABorneCharacter(ABorneCharacter&&); \
@@ -41,13 +41,13 @@ public: \
 	NO_API virtual ~ABorneCharacter();
 
 
-#define FID_Borne_Source_Borne_BorneCharacter_h_42_PROLOG
-#define FID_Borne_Source_Borne_BorneCharacter_h_45_GENERATED_BODY \
+#define FID_Borne_Source_Borne_BorneCharacter_h_44_PROLOG
+#define FID_Borne_Source_Borne_BorneCharacter_h_47_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_BorneCharacter_h_45_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_BorneCharacter_h_45_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_BorneCharacter_h_45_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_BorneCharacter_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_BorneCharacter_h_47_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_BorneCharacter_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
