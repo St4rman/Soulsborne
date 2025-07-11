@@ -20,7 +20,6 @@
 			"Borne.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
-			"BDodgeRollAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
 			"BaseAttributesSet.cpp.obj",
@@ -34,6 +33,7 @@
 			"SBWeaponBase.gen.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
+			"BDodgeRollAbility.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"SBWeaponBase.cpp.obj"
 		]

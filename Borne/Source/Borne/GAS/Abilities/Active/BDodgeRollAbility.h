@@ -35,6 +35,6 @@ public:
 
 	
 protected:
-	static bool CheckCanDodgeConditions( const FGameplayAbilityActorInfo* ActorInfo);
+	bool CheckCanDodgeConditions( const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo);
 	void OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle , const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo);
 };
