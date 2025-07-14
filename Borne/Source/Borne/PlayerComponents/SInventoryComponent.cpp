@@ -24,7 +24,10 @@ void USInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
-	EquippedWeapon = nullptr;
+	if (EquippedWeapon)
+	{
+		return;
+	}
 	ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
 	NewWeapon->SetOwner(Player);
 	NewWeapon->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");
