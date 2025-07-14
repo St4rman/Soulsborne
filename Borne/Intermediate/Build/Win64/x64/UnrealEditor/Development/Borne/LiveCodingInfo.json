@@ -13,7 +13,9 @@
 			"HelperBPLib.gen.cpp.obj",
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
+			"PlayerHUD.gen.cpp.obj",
 			"SBWeaponBase.gen.cpp.obj",
+			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
@@ -28,14 +30,16 @@
 			"BDodgeRollAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
+			"BaseAttributesSet.cpp.obj",
 			"SoulsASComponent.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
+			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BaseAttributesSet.cpp.obj"
+			"PlayerHUD.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }

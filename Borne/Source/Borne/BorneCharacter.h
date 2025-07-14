@@ -20,6 +20,7 @@
 
 #include "PlayerComponents/CamMoveComponent.h"
 #include "PlayerComponents/SInventoryComponent.h"
+#include "PlayerComponents/SHUDComponent.h"
 #include "NiagaraComponent.h"
 #include "BorneCharacter.generated.h"
 
@@ -31,6 +32,7 @@ class UDetectorComponent;
 class UCamMoveComponent;
 class USoulGameplayAbility;
 class USInventoryComponent;
+class USHUDComponent;
 class UInputMappingContext;
 class UInputAction;
 
@@ -87,8 +89,11 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
 	UCamMoveComponent* CameraHandlerComponent;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapons", meta = (AllowPrivateAccess = "true"))
 	USInventoryComponent* InventoryComponent;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "HUD", meta = (AllowPrivateAccess = "true"))
+	USHUDComponent* PlayerHUD;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraComponent;

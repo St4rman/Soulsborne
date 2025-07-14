@@ -163,6 +163,15 @@
     <ClCompile Include="..\..\Source\Borne\PlayerComponents\SInventoryComponent.h">
       <Filter>Source\Borne\PlayerComponents</Filter>
     </ClCompile>
+    <Filter Include="Source\Borne\UI">
+      <UniqueIdentifier>{72A6105D-5E68-3A0F-BE7E-C99207A55ED9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\UI\SBBaseWidget.cpp">
+      <Filter>Source\Borne\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\UI\SBBaseWidget.h">
+      <Filter>Source\Borne\UI</Filter>
+    </ClCompile>
     <Filter Include="Source\Borne\Weapons">
       <UniqueIdentifier>{004E73F2-1180-368B-982A-C87E7C588EA5}</UniqueIdentifier>
     </Filter>

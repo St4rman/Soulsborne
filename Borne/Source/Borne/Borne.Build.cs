@@ -17,6 +17,7 @@ public class Borne : ModuleRules
 			"GameplayAbilities", 
 			"GameplayTags", 
 			"GameplayTasks",
+			"UMG",
 			"Niagara"
 		});
 	}
