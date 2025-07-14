@@ -37,9 +37,9 @@
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
 			"SHUDComponent.cpp.obj",
+			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"SInventoryComponent.cpp.obj"
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }
