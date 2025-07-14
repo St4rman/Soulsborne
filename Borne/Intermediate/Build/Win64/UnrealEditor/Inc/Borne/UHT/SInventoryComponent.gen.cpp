@@ -17,6 +17,36 @@ ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class USInventoryComponent Function DropCurrentWeapon
+struct Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Inventory" },
+		{ "ModuleRelativePath", "PlayerComponents/SInventoryComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USInventoryComponent, nullptr, "DropCurrentWeapon", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon_Statics::Function_MetaDataParams), Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USInventoryComponent::execDropCurrentWeapon)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DropCurrentWeapon();
+	P_NATIVE_END;
+}
+// End Class USInventoryComponent Function DropCurrentWeapon
+
 // Begin Class USInventoryComponent Function SetCurrentEquippedWeapon
 struct Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics
 {
@@ -65,6 +95,7 @@ void USInventoryComponent::StaticRegisterNativesUSInventoryComponent()
 {
 	UClass* Class = USInventoryComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DropCurrentWeapon", &USInventoryComponent::execDropCurrentWeapon },
 		{ "SetCurrentEquippedWeapon", &USInventoryComponent::execSetCurrentEquippedWeapon },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -92,6 +123,7 @@ struct Z_Construct_UClass_USInventoryComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon, "DropCurrentWeapon" }, // 1503011976
 		{ &Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon, "SetCurrentEquippedWeapon" }, // 3674489307
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -145,10 +177,10 @@ USInventoryComponent::~USInventoryComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USInventoryComponent, USInventoryComponent::StaticClass, TEXT("USInventoryComponent"), &Z_Registration_Info_UClass_USInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USInventoryComponent), 3492408897U) },
+		{ Z_Construct_UClass_USInventoryComponent, USInventoryComponent::StaticClass, TEXT("USInventoryComponent"), &Z_Registration_Info_UClass_USInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USInventoryComponent), 2924313882U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_2244836044(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_1981973206(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

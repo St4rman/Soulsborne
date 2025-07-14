@@ -7,6 +7,7 @@
 #include "Components/ActorComponent.h"
 #include "SInventoryComponent.generated.h"
 
+class ABUarmedWeapon;
 class ABorneCharacter;
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
@@ -16,7 +17,7 @@ class BORNE_API USInventoryComponent : public UActorComponent
 
 public:
 	USInventoryComponent();
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inventory")
 	ASBWeaponBase* EquippedWeapon;
 
@@ -31,4 +32,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	void SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	void DropCurrentWeapon();
 };

@@ -15,11 +15,12 @@ class ASBWeaponBase;
 #endif
 #define BORNE_SInventoryComponent_generated_h
 
-#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDropCurrentWeapon); \
 	DECLARE_FUNCTION(execSetCurrentEquippedWeapon);
 
 
-#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSInventoryComponent(); \
 	friend struct Z_Construct_UClass_USInventoryComponent_Statics; \
@@ -28,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(USInventoryComponent)
 
 
-#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	USInventoryComponent(USInventoryComponent&&); \
@@ -40,13 +41,13 @@ public: \
 	NO_API virtual ~USInventoryComponent();
 
 
-#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_12_PROLOG
-#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_GENERATED_BODY \
+#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_13_PROLOG
+#define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

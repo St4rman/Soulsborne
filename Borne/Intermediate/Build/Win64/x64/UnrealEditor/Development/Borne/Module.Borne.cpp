@@ -34,6 +34,5 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/CamMoveComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/DetectorComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/SHUDComponent.cpp"
-#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/SInventoryComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/SUI/PlayerHUD.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Weapons/SBWeaponBase.cpp"
