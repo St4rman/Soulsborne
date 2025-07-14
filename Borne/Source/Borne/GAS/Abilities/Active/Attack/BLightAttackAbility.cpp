@@ -22,7 +22,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		if (!CheckAbilityConditions( ActorInfo ))
 		{
 			check(NoWeaponAnimMontage);
-			float const Dur = AnimInstance->Montage_Play(NoWeaponAnimMontage);
+			float const Dur = AnimInstance->Montage_Play(NoWeaponAnimMontage, 3.0f);
 			Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
 			return;
 		}

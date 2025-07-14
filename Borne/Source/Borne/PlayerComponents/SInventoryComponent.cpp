@@ -31,3 +31,11 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 	EquippedWeapon = NewWeapon;
 }
 
+void USInventoryComponent::DropCurrentWeapon()
+{
+	if (EquippedWeapon)
+	{
+		EquippedWeapon->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		EquippedWeapon = nullptr;
+	}
+}

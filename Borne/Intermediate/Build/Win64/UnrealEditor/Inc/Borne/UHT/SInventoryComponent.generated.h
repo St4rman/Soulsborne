@@ -16,6 +16,7 @@ class ASBWeaponBase;
 #define BORNE_SInventoryComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDropCurrentWeapon); \
 	DECLARE_FUNCTION(execSetCurrentEquippedWeapon);
 
 

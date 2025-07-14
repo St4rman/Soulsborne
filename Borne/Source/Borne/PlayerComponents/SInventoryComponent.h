@@ -32,4 +32,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	void SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	void DropCurrentWeapon();
 };
