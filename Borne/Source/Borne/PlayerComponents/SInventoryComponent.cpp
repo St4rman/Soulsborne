@@ -1,16 +1,11 @@
 ﻿#include "SInventoryComponent.h"
-
-#include "MovieSceneTracksComponentTypes.h"
 #include "Borne/BorneCharacter.h"
-
-
 
 USInventoryComponent::USInventoryComponent()
 {
 	
 	PrimaryComponentTick.bCanEverTick = true;
-
-	
+	EquippedWeapon = nullptr;
 }
 
 
@@ -18,8 +13,6 @@ USInventoryComponent::USInventoryComponent()
 void USInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-
 	
 }
 
@@ -31,6 +24,7 @@ void USInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
+	EquippedWeapon = nullptr;
 	ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
 	NewWeapon->SetOwner(Player);
 	NewWeapon->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");

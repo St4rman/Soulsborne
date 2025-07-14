@@ -1,7 +1,5 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+﻿#include "BLightAttackAbility.h"
 
-
-#include "BLightAttackAbility.h"
 
 UBLightAttackAbility::UBLightAttackAbility()
 {
@@ -17,30 +15,51 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 {
 	if (CheckCost(Handle, ActorInfo))
 	{
+		ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
+		ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
+		UAnimInstance* AnimInstance = ActorInfo->GetAnimInstance();
+		
 		if (!CheckAbilityConditions( ActorInfo ))
 		{
+			check(NoWeaponAnimMontage);
+			float const Dur = AnimInstance->Montage_Play(NoWeaponAnimMontage);
 			Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
 			return;
 		}
 		
-		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "uwe uwe uwe");
-		Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
-	}
+		ApplyCost(Handle, ActorInfo, ActivationInfo);
+		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(AttackingTags);
 	
-	Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
+		//if you have currently equipped thing play its light attack
+		const ASBWeaponBase* CurrentWeapon = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
+		if (CurrentWeapon)
+		{
+			UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
+			float const Duration = AnimInstance->Montage_Play(LightAttack);
+		}
+		
+		FOnMontageEnded EndDelegate;
+		EndDelegate.BindUObject(this, &UBLightAttackAbility::OnAttackAnimFinished, Handle, ActorInfo, ActivationInfo);
+		AnimInstance->Montage_SetEndDelegate(EndDelegate);
+	}
 }
 
 //returns true if we CAN attack
 bool UBLightAttackAbility::CheckAbilityConditions(const FGameplayAbilityActorInfo* ActorInfo )
 {
-	
 	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
 	ABorneCharacter* Player = CastChecked<ABorneCharacter>(ActorInfo->AvatarActor.Get());
-
+	
 	if (Player->GetInventoryComponent()->GetCurrentEquippedWeapon() == nullptr)
 	{
 		return false;
 	}
 	return true;
 	
+}
+
+void UBLightAttackAbility::OnAttackAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
+{
+	ActorInfo->AbilitySystemComponent->RemoveLooseGameplayTags(AttackingTags);
+	Super::EndAbility(SpecHandle, ActorInfo, ActivationInfo, false, false);
 }
