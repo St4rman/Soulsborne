@@ -38,8 +38,8 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BLightAttackAbility.cpp.obj"
+			"BLightAttackAbility.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }

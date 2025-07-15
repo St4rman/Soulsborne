@@ -27,7 +27,8 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 	}
 
 	const ASBWeaponBase* CurrentWeapon = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
-	const float CurrentCost =CurrentWeapon->LightStaminaCost;
+	const float CurrentCost = CurrentWeapon->LightStaminaCost;
+	const float AttackSpeed = CurrentWeapon->LightAttackSpeed > 1.0f ? CurrentWeapon->LightAttackSpeed : 1.0f;
 
 	if (CustomCheckCost(CurrentCost, ActorInfo) && ensure(CurrentWeapon))
 	{
@@ -39,7 +40,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*NewSpecHandle.Data.Get());
 
 		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
-		float const Duration = AnimInstance->Montage_Play(LightAttack);
+		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed);
 		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(AttackingTags);
 	}
 
@@ -56,6 +57,7 @@ bool UBLightAttackAbility::CheckAbilityConditions(const FGameplayAbilityActorInf
 	
 	if (Player->GetInventoryComponent()->GetCurrentEquippedWeapon() == nullptr)
 	{
+		UE_LOG(LogTemp, Error, TEXT("No Equipped weapon"));
 		return false;
 	}
 	return true;

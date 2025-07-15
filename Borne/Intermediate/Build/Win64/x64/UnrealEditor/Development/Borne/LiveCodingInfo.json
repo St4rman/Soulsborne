@@ -4,6 +4,7 @@
 		"Module.Borne.cpp.obj": [
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
+			"BLightAttackAbility.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"CamMoveComponent.gen.cpp.obj",
@@ -12,7 +13,6 @@
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
-			"SBWeaponBase.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
@@ -36,10 +36,10 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BLightAttackAbility.gen.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"BLightAttackAbility.cpp.obj"
+			"SBWeaponBase.gen.cpp.obj",
+			"BLightAttackAbility.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }

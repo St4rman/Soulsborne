@@ -37,6 +37,8 @@ public:
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
 	float HeavyStaminaCost;
 
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
+	float LightAttackSpeed;
 	
 protected:
 	
