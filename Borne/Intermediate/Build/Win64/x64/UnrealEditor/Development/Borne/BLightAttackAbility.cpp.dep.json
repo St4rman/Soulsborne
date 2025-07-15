@@ -184,6 +184,13 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\particlesystemcomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\fx\\niagara\\intermediate\\build\\win64\\unrealeditor\\inc\\niagara\\uht\\niagaracomponent.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.generated.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemglobals.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayabilitiesmodule.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemglobals.generated.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemblueprintlibrary.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\gameplayabilitytargetdatafilter.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilitytargetdatafilter.generated.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemblueprintlibrary.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\blightattackability.generated.h"
         ],
         "ImportedModules": [],
