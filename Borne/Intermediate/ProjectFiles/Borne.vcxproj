@@ -331,6 +331,7 @@
     <ClCompile Include="..\..\Source\Borne\Interfaces\TargetableInterface.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\WeaponInterface.cpp" />
     <ClCompile Include="..\..\Source\Borne\Pawns\TargetableEnemy.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -366,6 +367,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.h" />
+    <ClInclude Include="..\..\Source\Borne\Interfaces\WeaponInterface.h" />
     <ClInclude Include="..\..\Source\Borne\PlayerComponents\SHUDComponent.h" />
     <ClInclude Include="..\..\Source\Borne\SUI\PlayerHUD.h" />
   </ItemGroup>

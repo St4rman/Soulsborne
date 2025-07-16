@@ -22,16 +22,23 @@ void USInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 }
 
+
 void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
-	if (EquippedWeapon)
+	if (ensure(NewWeapon->GetClass()))
 	{
-		return;
+		ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
+		const FVector HandLoc = Player->GetMesh()->GetSocketLocation("MeleeArmament-right");
+		const FTransform SpawnTM = FTransform(FRotator(0, 0, 0), HandLoc);
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnParams.Instigator = Cast<APawn>(GetOwner());
+		
+		auto CurrentWep = GetWorld()->SpawnActor<ASBWeaponBase>(NewWeapon->GetClass(), SpawnTM, SpawnParams);
+		CurrentWep->SetOwner(Player);
+		CurrentWep->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");
+		EquippedWeapon = CurrentWep;
 	}
-	ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
-	NewWeapon->SetOwner(Player);
-	NewWeapon->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");
-	EquippedWeapon = NewWeapon;
 }
 
 void USInventoryComponent::DropCurrentWeapon()

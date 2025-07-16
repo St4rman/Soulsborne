@@ -9,15 +9,13 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class ASBWeaponBase;
 #ifdef BORNE_SInventoryComponent_generated_h
 #error "SInventoryComponent.generated.h already included, missing '#pragma once' in SInventoryComponent.h"
 #endif
 #define BORNE_SInventoryComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execDropCurrentWeapon); \
-	DECLARE_FUNCTION(execSetCurrentEquippedWeapon);
+	DECLARE_FUNCTION(execDropCurrentWeapon);
 
 
 #define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_INCLASS_NO_PURE_DECLS \

@@ -2,15 +2,18 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimMontage.h"
+#include "Borne/Interfaces/WeaponInterface.h"
 #include "GameFramework/Actor.h"
 #include "SBWeaponBase.generated.h"
 
 class UAnimMontage;
 
 UCLASS()
-class BORNE_API ASBWeaponBase : public AActor
+class BORNE_API ASBWeaponBase : public AActor, public IWeaponInterface
 {
 	GENERATED_BODY()
+
+
 
 public:
 	
@@ -52,4 +55,7 @@ public:
 	UAnimMontage* GetLightAnim() const { return LightAttackAnim; }
 
 	UStaticMeshComponent* GetMesh() const { return MeshComp; }
+
+	UFUNCTION(BlueprintCallable)
+	virtual void OnWeaponPickup_Implementation(AActor* ReferenceActor) override;
 };

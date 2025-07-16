@@ -29,8 +29,7 @@ public:
 	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,FActorComponentTickFunction* ThisTickFunction) override;
 	ASBWeaponBase* GetCurrentEquippedWeapon() const {return EquippedWeapon;}
-
-	UFUNCTION(BlueprintCallable, Category = "Inventory")
+	
 	void SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon);
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory")

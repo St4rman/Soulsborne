@@ -12,7 +12,9 @@ void EmptyLinkFunctionForGeneratedCodeSBWeaponBase() {}
 // Begin Cross Module References
 BORNE_API UClass* Z_Construct_UClass_ASBWeaponBase();
 BORNE_API UClass* Z_Construct_UClass_ASBWeaponBase_NoRegister();
+BORNE_API UClass* Z_Construct_UClass_UWeaponInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
@@ -59,12 +61,55 @@ DEFINE_FUNCTION(ASBWeaponBase::execGetLightAnim)
 }
 // End Class ASBWeaponBase Function GetLightAnim
 
+// Begin Class ASBWeaponBase Function OnWeaponPickup_Implementation
+struct Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics
+{
+	struct SBWeaponBase_eventOnWeaponPickup_Implementation_Parms
+	{
+		AActor* ReferenceActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReferenceActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::NewProp_ReferenceActor = { "ReferenceActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SBWeaponBase_eventOnWeaponPickup_Implementation_Parms, ReferenceActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::NewProp_ReferenceActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBWeaponBase, nullptr, "OnWeaponPickup_Implementation", nullptr, nullptr, Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::SBWeaponBase_eventOnWeaponPickup_Implementation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::SBWeaponBase_eventOnWeaponPickup_Implementation_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASBWeaponBase::execOnWeaponPickup_Implementation)
+{
+	P_GET_OBJECT(AActor,Z_Param_ReferenceActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnWeaponPickup_Implementation(Z_Param_ReferenceActor);
+	P_NATIVE_END;
+}
+// End Class ASBWeaponBase Function OnWeaponPickup_Implementation
+
 // Begin Class ASBWeaponBase
 void ASBWeaponBase::StaticRegisterNativesASBWeaponBase()
 {
 	UClass* Class = ASBWeaponBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetLightAnim", &ASBWeaponBase::execGetLightAnim },
+		{ "OnWeaponPickup_Implementation", &ASBWeaponBase::execOnWeaponPickup_Implementation },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -134,8 +179,10 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetLightAnim, "GetLightAnim" }, // 1980117797
+		{ &Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation, "OnWeaponPickup_Implementation" }, // 515731518
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASBWeaponBase>::IsAbstract,
 	};
@@ -165,6 +212,9 @@ UObject* (*const Z_Construct_UClass_ASBWeaponBase_Statics::DependentSingletons[]
 	(UObject* (*)())Z_Construct_UPackage__Script_Borne,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASBWeaponBase_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ASBWeaponBase_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UWeaponInterface_NoRegister, (int32)VTABLE_OFFSET(ASBWeaponBase, IWeaponInterface), false },  // 2474437687
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ASBWeaponBase_Statics::ClassParams = {
 	&ASBWeaponBase::StaticClass,
 	"Engine",
@@ -172,11 +222,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ASBWeaponBase_Statics::
 	DependentSingletons,
 	FuncInfo,
 	Z_Construct_UClass_ASBWeaponBase_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ASBWeaponBase_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASBWeaponBase_Statics::Class_MetaDataParams), Z_Construct_UClass_ASBWeaponBase_Statics::Class_MetaDataParams)
 };
@@ -200,10 +250,10 @@ ASBWeaponBase::~ASBWeaponBase() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 529185158U) },
+		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 1006871755U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_2498583766(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_1168907409(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
