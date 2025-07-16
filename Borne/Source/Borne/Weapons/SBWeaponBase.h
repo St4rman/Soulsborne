@@ -50,4 +50,6 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	UAnimMontage* GetLightAnim() const { return LightAttackAnim; }
+
+	UStaticMeshComponent* GetMesh() const { return MeshComp; }
 };

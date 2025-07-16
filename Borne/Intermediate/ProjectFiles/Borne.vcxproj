@@ -261,6 +261,7 @@
     <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\Borne\Borne.Build.cs"/>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.cpp" />
     <ClCompile Include="..\..\Source\Borne\Borne.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -364,6 +365,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.h" />
     <ClInclude Include="..\..\Source\Borne\PlayerComponents\SHUDComponent.h" />
     <ClInclude Include="..\..\Source\Borne\SUI\PlayerHUD.h" />
   </ItemGroup>

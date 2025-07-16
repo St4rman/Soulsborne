@@ -197,7 +197,6 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilitytargetdatafilter.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemblueprintlibrary.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\blightattackability.generated.h",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\borne.init.gen.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornecharacter.gen.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\bornegamemode.gen.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\bornegamemode.h",
@@ -257,8 +256,6 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsysteminterface.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\bornegamemode.cpp",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\core\\helperbplib.cpp",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\abilities\\active\\attack\\blightattackability.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\abilities\\active\\bdodgerollability.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\abilities\\passive\\pga_staminaregen.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\gas\\abilities\\soulgameplayability.cpp",
@@ -270,8 +267,7 @@
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\detectorcomponent.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\shudcomponent.cpp",
             "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\playercomponents\\sinventorycomponent.cpp",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\sui\\playerhud.cpp",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\weapons\\sbweaponbase.cpp"
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\sui\\playerhud.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
