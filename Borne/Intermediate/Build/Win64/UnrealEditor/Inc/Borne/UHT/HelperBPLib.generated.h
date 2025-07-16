@@ -16,14 +16,14 @@ class UAnimMontage;
 #endif
 #define BORNE_HelperBPLib_generated_h
 
-#define FID_Borne_Source_Borne_Core_HelperBPLib_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_Core_HelperBPLib_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execResetMeshToCharacter); \
 	DECLARE_FUNCTION(execAddRotationPreDodge); \
 	DECLARE_FUNCTION(execHasLastMovementInput); \
 	DECLARE_FUNCTION(execPlayImportantAnimMontage);
 
 
-#define FID_Borne_Source_Borne_Core_HelperBPLib_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_Core_HelperBPLib_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUHelperBPLib(); \
 	friend struct Z_Construct_UClass_UHelperBPLib_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(UHelperBPLib)
 
 
-#define FID_Borne_Source_Borne_Core_HelperBPLib_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_Core_HelperBPLib_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UHelperBPLib(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -46,13 +46,13 @@ public: \
 	NO_API virtual ~UHelperBPLib();
 
 
-#define FID_Borne_Source_Borne_Core_HelperBPLib_h_12_PROLOG
-#define FID_Borne_Source_Borne_Core_HelperBPLib_h_15_GENERATED_BODY \
+#define FID_Borne_Source_Borne_Core_HelperBPLib_h_13_PROLOG
+#define FID_Borne_Source_Borne_Core_HelperBPLib_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_Core_HelperBPLib_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_Core_HelperBPLib_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_Core_HelperBPLib_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_Core_HelperBPLib_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_Core_HelperBPLib_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_Core_HelperBPLib_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

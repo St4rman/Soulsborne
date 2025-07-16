@@ -13,6 +13,7 @@
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
+			"SBWeaponBase.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
@@ -23,7 +24,7 @@
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
-			"HelperBPLib.cpp.obj",
+			"BLightAttackAbility.cpp.obj",
 			"BDodgeRollAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
@@ -36,9 +37,10 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
+			"ANS_MeleeAttackNotify.gen.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"SBWeaponBase.gen.cpp.obj",
-			"BLightAttackAbility.cpp.obj",
+			"ANS_MeleeAttackNotify.cpp.obj",
+			"HelperBPLib.cpp.obj",
 			"SBWeaponBase.cpp.obj"
 		]
 	}

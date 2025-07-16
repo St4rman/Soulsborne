@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "HelperBPLib.generated.h"
 
+class ABorneCharacter;
 /**
  * 
  */
@@ -33,8 +34,14 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Dodge rotation")
-	static void AddRotationPreDodge(ACharacter* SourceChar);
+	static void AddRotationPreDodge(ACharacter* SourceChar); 
 	UFUNCTION(BlueprintCallable, Category = "Dodge rotation")
 	static void ResetMeshToCharacter(ACharacter* SourceChar);
+
+	/**
+	 * Run a trace for enemies. Synced to anim notify - 
+	 * 
+	 */
+	static void RunAttackTrace(AActor* Self);
 };
 	

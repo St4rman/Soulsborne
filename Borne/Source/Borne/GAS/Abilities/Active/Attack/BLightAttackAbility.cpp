@@ -3,7 +3,7 @@
 
 UBLightAttackAbility::UBLightAttackAbility()
 {
-	AbilityInputID = ESoulsAbilityInputID::Attack;
+	// AbilityInputID = ESoulsAbilityInputID::Attack;
 }
 
 bool UBLightAttackAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
@@ -30,7 +30,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 	const float CurrentCost = CurrentWeapon->LightStaminaCost;
 	const float AttackSpeed = CurrentWeapon->LightAttackSpeed > 1.0f ? CurrentWeapon->LightAttackSpeed : 1.0f;
 
-	if (CustomCheckCost(CurrentCost, ActorInfo) && ensure(CurrentWeapon))
+	if (CustomCheckCost(CurrentCost, ActorInfo) && CurrentWeapon != nullptr)
 	{
 		FGameplayEffectContextHandle ContextHandle =  PlayerChar->GetAbilitySystemComponent()->MakeEffectContext();
 		ContextHandle.AddSourceObject(ActorInfo->AvatarActor.Get());
