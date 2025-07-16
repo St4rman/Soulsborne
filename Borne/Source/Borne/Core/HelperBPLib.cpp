@@ -33,7 +33,7 @@ void UHelperBPLib::ResetMeshToCharacter(ACharacter* SourceChar)
 	SourceChar->GetMesh()->SetRelativeRotation(SourceChar->GetActorRotation());
 }
 
-void UHelperBPLib::RunAttackTrace( AActor* Self)
+void UHelperBPLib::RunAttackTrace( AActor* Self )
 {
 	
 	FHitResult Target;
@@ -43,10 +43,9 @@ void UHelperBPLib::RunAttackTrace( AActor* Self)
 	TArray<AActor*> IgnoreActors;
 	IgnoreActors.Init(Self, 1);
 	
-
 	ACharacter* Char = Cast<ACharacter>(Self);
 	ABorneCharacter* PlayerChar = Cast<ABorneCharacter>(Char);
-	// check(PlayerChar);
+	check(PlayerChar);
 	ASBWeaponBase* CurWep = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
 
 	if (CurWep == nullptr)
@@ -72,6 +71,7 @@ void UHelperBPLib::RunAttackTrace( AActor* Self)
 	{
 		FString name = TargetActor->GetName();
 		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
+		
 	}
 }
 

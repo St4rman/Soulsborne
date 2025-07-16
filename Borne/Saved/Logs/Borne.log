@@ -1600,3 +1600,18 @@ ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\B
 [2025.07.16-13.09.14:171][ 77]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 311.731415
 [2025.07.16-13.09.15:171][ 80]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2025.07.16-13.09.15:171][ 80]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 312.399048, Update Interval: 318.983124
+[2025.07.16-13.14.36:220][ 43]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 633.781250
+[2025.07.16-13.14.37:220][ 46]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.16-13.14.37:220][ 46]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 634.451477, Update Interval: 326.653656
+[2025.07.16-13.20.10:933][ 47]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 968.495850
+[2025.07.16-13.20.11:934][ 50]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.16-13.20.11:934][ 50]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 969.162476, Update Interval: 347.257294
+[2025.07.16-13.26.13:328][134]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1330.891113
+[2025.07.16-13.26.14:329][137]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.16-13.26.14:329][138]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1331.557739, Update Interval: 334.269226
+[2025.07.16-13.32.14:055][216]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1691.619019
+[2025.07.16-13.32.15:055][219]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.16-13.32.15:055][219]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1692.285767, Update Interval: 328.406006
+[2025.07.16-13.38.24:779][328]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2062.342285
+[2025.07.16-13.38.25:777][331]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.07.16-13.38.25:778][331]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2063.008057, Update Interval: 346.090881
