@@ -47,56 +47,12 @@ DEFINE_FUNCTION(USInventoryComponent::execDropCurrentWeapon)
 }
 // End Class USInventoryComponent Function DropCurrentWeapon
 
-// Begin Class USInventoryComponent Function SetCurrentEquippedWeapon
-struct Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics
-{
-	struct SInventoryComponent_eventSetCurrentEquippedWeapon_Parms
-	{
-		ASBWeaponBase* NewWeapon;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Inventory" },
-		{ "ModuleRelativePath", "PlayerComponents/SInventoryComponent.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_NewWeapon;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::NewProp_NewWeapon = { "NewWeapon", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SInventoryComponent_eventSetCurrentEquippedWeapon_Parms, NewWeapon), Z_Construct_UClass_ASBWeaponBase_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::NewProp_NewWeapon,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USInventoryComponent, nullptr, "SetCurrentEquippedWeapon", nullptr, nullptr, Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::PropPointers), sizeof(Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::SInventoryComponent_eventSetCurrentEquippedWeapon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::Function_MetaDataParams), Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::SInventoryComponent_eventSetCurrentEquippedWeapon_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(USInventoryComponent::execSetCurrentEquippedWeapon)
-{
-	P_GET_OBJECT(ASBWeaponBase,Z_Param_NewWeapon);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->SetCurrentEquippedWeapon(Z_Param_NewWeapon);
-	P_NATIVE_END;
-}
-// End Class USInventoryComponent Function SetCurrentEquippedWeapon
-
 // Begin Class USInventoryComponent
 void USInventoryComponent::StaticRegisterNativesUSInventoryComponent()
 {
 	UClass* Class = USInventoryComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "DropCurrentWeapon", &USInventoryComponent::execDropCurrentWeapon },
-		{ "SetCurrentEquippedWeapon", &USInventoryComponent::execSetCurrentEquippedWeapon },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -124,7 +80,6 @@ struct Z_Construct_UClass_USInventoryComponent_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_USInventoryComponent_DropCurrentWeapon, "DropCurrentWeapon" }, // 1503011976
-		{ &Z_Construct_UFunction_USInventoryComponent_SetCurrentEquippedWeapon, "SetCurrentEquippedWeapon" }, // 3674489307
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -177,10 +132,10 @@ USInventoryComponent::~USInventoryComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USInventoryComponent, USInventoryComponent::StaticClass, TEXT("USInventoryComponent"), &Z_Registration_Info_UClass_USInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USInventoryComponent), 2924313882U) },
+		{ Z_Construct_UClass_USInventoryComponent, USInventoryComponent::StaticClass, TEXT("USInventoryComponent"), &Z_Registration_Info_UClass_USInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USInventoryComponent), 1270807517U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_1981973206(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_2241755091(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

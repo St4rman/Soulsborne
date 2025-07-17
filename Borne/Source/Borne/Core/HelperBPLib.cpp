@@ -24,8 +24,8 @@ bool UHelperBPLib::HasLastMovementInput(ACharacter* SourceChar)
 void UHelperBPLib::AddRotationPreDodge(ACharacter* SourceChar)
 {
 	const FVector LastInput = SourceChar->GetCharacterMovement()->GetLastInputVector();
-	const FRotator DodgeRotation = FRotationMatrix::MakeFromX(LastInput).Rotator();
-	SourceChar->GetMesh()->SetRelativeRotation(DodgeRotation);
+	// const FRotator DodgeRotation = FRotationMatrix::MakeFromXZ(LastInput).Rotator();
+	// SourceChar->GetMesh()->SetRelativeRotation(DodgeRotation);
 }
 
 void UHelperBPLib::ResetMeshToCharacter(ACharacter* SourceChar)

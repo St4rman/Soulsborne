@@ -33,6 +33,49 @@ NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class ABorneCharacter Function ExecuteDodge
+static const FName NAME_ABorneCharacter_ExecuteDodge = FName(TEXT("ExecuteDodge"));
+void ABorneCharacter::ExecuteDodge()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ABorneCharacter_ExecuteDodge);
+	if (!Func->GetOwnerClass()->HasAnyClassFlags(CLASS_Native))
+	{
+	ProcessEvent(Func,NULL);
+	}
+	else
+	{
+		ExecuteDodge_Implementation();
+	}
+}
+struct Z_Construct_UFunction_ABorneCharacter_ExecuteDodge_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Ddoging" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABorneCharacter_ExecuteDodge_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABorneCharacter, nullptr, "ExecuteDodge", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_ExecuteDodge_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABorneCharacter_ExecuteDodge_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABorneCharacter_ExecuteDodge()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABorneCharacter_ExecuteDodge_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABorneCharacter::execExecuteDodge)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ExecuteDodge_Implementation();
+	P_NATIVE_END;
+}
+// End Class ABorneCharacter Function ExecuteDodge
+
 // Begin Class ABorneCharacter Function GetCurrentLocomotionMode
 struct Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode_Statics
 {
@@ -126,6 +169,7 @@ void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 {
 	UClass* Class = ABorneCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ExecuteDodge", &ABorneCharacter::execExecuteDodge },
 		{ "GetCurrentLocomotionMode", &ABorneCharacter::execGetCurrentLocomotionMode },
 		{ "GetInputCache", &ABorneCharacter::execGetInputCache },
 	};
@@ -330,6 +374,7 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABorneCharacter_ExecuteDodge, "ExecuteDodge" }, // 3943078948
 		{ &Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode, "GetCurrentLocomotionMode" }, // 2769954917
 		{ &Z_Construct_UFunction_ABorneCharacter_GetInputCache, "GetInputCache" }, // 2083511342
 	};
@@ -430,10 +475,10 @@ ABorneCharacter::~ABorneCharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 2445324601U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 291202785U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_3810347403(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1423965351(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

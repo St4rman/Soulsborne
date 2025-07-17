@@ -54,4 +54,7 @@ public:
 	FORCEINLINE void SetLockedOn(AActor* Target);
 	void SetCamFree();
 	FORCEINLINE ECameraState GetCamState() const {return CurrentCameraState; }
+
+	UFUNCTION(BlueprintCallable)
+	AActor* GetLockedOn(){if (LockOnTarget) return LockOnTarget; else return NULL; };
 };

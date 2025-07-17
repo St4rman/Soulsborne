@@ -151,6 +151,12 @@ FVector2D ABorneCharacter::GetInputCache()
 	return NormalInput;
 }
 
+void ABorneCharacter::ExecuteDodge_Implementation()
+{
+	UE_LOG(LogTemp, Error, TEXT("No implementation of execute dodge found, check player blueprint"));
+	return;
+}
+
 void ABorneCharacter::Move(const FInputActionValue	& Value)
 {
 	// input is a Vector2D

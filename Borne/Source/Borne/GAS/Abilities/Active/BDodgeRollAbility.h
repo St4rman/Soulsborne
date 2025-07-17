@@ -31,7 +31,7 @@ public:
 	FGameplayTagContainer TagsToGive;
 
 	UPROPERTY(EditAnywhere, Category="DodgeAbility")
-	UAnimMontage* ForwardDashMontage;
+	UAnimMontage* BackwardsDash;
 
 	
 protected:

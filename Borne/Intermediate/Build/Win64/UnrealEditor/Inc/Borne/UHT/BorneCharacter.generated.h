@@ -15,10 +15,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BORNE_BorneCharacter_generated_h
 
 #define FID_Borne_Source_Borne_BorneCharacter_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ExecuteDodge_Implementation(); \
+	DECLARE_FUNCTION(execExecuteDodge); \
 	DECLARE_FUNCTION(execGetInputCache); \
 	DECLARE_FUNCTION(execGetCurrentLocomotionMode);
 
 
+#define FID_Borne_Source_Borne_BorneCharacter_h_47_CALLBACK_WRAPPERS
 #define FID_Borne_Source_Borne_BorneCharacter_h_47_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABorneCharacter(); \
@@ -46,6 +49,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Borne_Source_Borne_BorneCharacter_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_BorneCharacter_h_47_CALLBACK_WRAPPERS \
 	FID_Borne_Source_Borne_BorneCharacter_h_47_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_BorneCharacter_h_47_ENHANCED_CONSTRUCTORS \
 private: \

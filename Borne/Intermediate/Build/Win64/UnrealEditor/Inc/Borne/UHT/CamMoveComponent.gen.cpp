@@ -19,9 +19,55 @@ ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class UCamMoveComponent Function GetLockedOn
+struct Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics
+{
+	struct CamMoveComponent_eventGetLockedOn_Parms
+	{
+		AActor* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/CamMoveComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CamMoveComponent_eventGetLockedOn_Parms, ReturnValue), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCamMoveComponent, nullptr, "GetLockedOn", nullptr, nullptr, Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::CamMoveComponent_eventGetLockedOn_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::CamMoveComponent_eventGetLockedOn_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UCamMoveComponent_GetLockedOn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCamMoveComponent_GetLockedOn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCamMoveComponent::execGetLockedOn)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->GetLockedOn();
+	P_NATIVE_END;
+}
+// End Class UCamMoveComponent Function GetLockedOn
+
 // Begin Class UCamMoveComponent
 void UCamMoveComponent::StaticRegisterNativesUCamMoveComponent()
 {
+	UClass* Class = UCamMoveComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLockedOn", &UCamMoveComponent::execGetLockedOn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCamMoveComponent);
 UClass* Z_Construct_UClass_UCamMoveComponent_NoRegister()
@@ -64,6 +110,10 @@ struct Z_Construct_UClass_UCamMoveComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CombatLength;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UCamMoveComponent_GetLockedOn, "GetLockedOn" }, // 2589479833
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCamMoveComponent>::IsAbstract,
 	};
@@ -92,11 +142,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCamMoveComponent_Stati
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UCamMoveComponent_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UCamMoveComponent_Statics::PropPointers),
 	0,
 	0x00B000A4u,
@@ -122,10 +172,10 @@ UCamMoveComponent::~UCamMoveComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCamMoveComponent, UCamMoveComponent::StaticClass, TEXT("UCamMoveComponent"), &Z_Registration_Info_UClass_UCamMoveComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCamMoveComponent), 2194207667U) },
+		{ Z_Construct_UClass_UCamMoveComponent, UCamMoveComponent::StaticClass, TEXT("UCamMoveComponent"), &Z_Registration_Info_UClass_UCamMoveComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCamMoveComponent), 1965653506U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_2523518238(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_3848071756(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_CamMoveComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

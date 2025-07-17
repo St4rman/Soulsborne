@@ -31,15 +31,19 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	
 	ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(TagsToGive);
 	
-	if (UHelperBPLib::HasLastMovementInput(PlayerChar) && PlayerChar->GetCurrentLocomotionMode() == ELocomotionMode::L_InCombat)
+	if (UHelperBPLib::HasLastMovementInput(PlayerChar))
 	{
 		const FVector2D InputCache = PlayerChar->GetInputCache();
 		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
-		float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
+
+		//set up in player blueprint bcz no easy delta time
+		PlayerChar->ExecuteDodge();
+
+		// float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	else
 	{
-		float const Duration = AnimInstance->Montage_Play( ForwardDashMontage, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
+		float const Duration = AnimInstance->Montage_Play( BackwardsDash, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	
 	PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
