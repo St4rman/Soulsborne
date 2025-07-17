@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class UAnimMontage;
+class UTexture2D;
 #ifdef BORNE_SBWeaponBase_generated_h
 #error "SBWeaponBase.generated.h already included, missing '#pragma once' in SBWeaponBase.h"
 #endif
@@ -18,6 +19,7 @@ class UAnimMontage;
 
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnWeaponPickup_Implementation); \
+	DECLARE_FUNCTION(execGetIcon); \
 	DECLARE_FUNCTION(execGetLightAnim);
 
 

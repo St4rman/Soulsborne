@@ -9,12 +9,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UTexture2D;
 #ifdef BORNE_SHUDComponent_generated_h
 #error "SHUDComponent.generated.h already included, missing '#pragma once' in SHUDComponent.h"
 #endif
 #define BORNE_SHUDComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetMeleeIcon); \
 	DECLARE_FUNCTION(execSetHealth); \
 	DECLARE_FUNCTION(execSetStamina);
 

@@ -58,6 +58,10 @@ void USHUDComponent::SetHealth(const float Health, const float MaxHealth)
 	PlayerHUD->SetHealth(Health, MaxHealth);
 }
 
+void USHUDComponent::SetMeleeIcon(UTexture2D* Texture)
+{
+	PlayerHUD->SetMeleeIcon(Texture, true);
+}
 
 void USHUDComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
