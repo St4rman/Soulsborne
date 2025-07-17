@@ -56,22 +56,20 @@ void UHelperBPLib::RunAttackTrace( AActor* Self )
 	const UStaticMeshComponent* WepMesh = CurWep->GetMesh();
 	const FVector StartLoc	= WepMesh->GetSocketLocation("Weapon_Hilt");
 	const FVector EndLoc	= WepMesh->GetSocketLocation("Weapon_Tip");
-	const float Radius		= 50.0f;
+	constexpr float Radius		= 50.0f;
 
 	UKismetSystemLibrary::SphereTraceSingleForObjects(
 		Self->GetWorld(),
 		StartLoc, EndLoc, Radius, TraceObjects,
 		true, IgnoreActors,
-		EDrawDebugTrace::ForOneFrame,
+		EDrawDebugTrace::None,
 		Target, true);
 
 	AActor* TargetActor = Target.GetActor();
 
 	if (TargetActor != nullptr)
 	{
-		FString name = TargetActor->GetName();
 		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
-		
 	}
 }
 

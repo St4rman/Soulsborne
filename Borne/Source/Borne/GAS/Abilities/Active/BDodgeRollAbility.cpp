@@ -46,7 +46,7 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 		float const Duration = AnimInstance->Montage_Play( BackwardsDash, 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	
-	PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
+	// PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);

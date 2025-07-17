@@ -40,8 +40,10 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*NewSpecHandle.Data.Get());
 
 		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
-		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed);
-		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(AttackingTags);
+		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed );
+		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags( AttackingTags );
+
+		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, FString::Printf(TEXT("Current stamina Cost per weapon: %i"), (int)CurrentCost));
 	}
 
 	FOnMontageEnded EndDelegate;

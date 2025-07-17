@@ -34,7 +34,7 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		SpawnParams.Instigator = Cast<APawn>(GetOwner());
 		
-		auto CurrentWep = GetWorld()->SpawnActor<ASBWeaponBase>(NewWeapon->GetClass(), SpawnTM, SpawnParams);
+		ASBWeaponBase* CurrentWep = GetWorld()->SpawnActor<ASBWeaponBase>(NewWeapon->GetClass(), SpawnTM, SpawnParams);
 		CurrentWep->SetOwner(Player);
 		CurrentWep->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale, "MeleeArmament-right");
 		EquippedWeapon = CurrentWep;
