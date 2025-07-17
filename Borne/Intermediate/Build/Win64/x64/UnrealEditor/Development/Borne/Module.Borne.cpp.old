@@ -10,7 +10,6 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/HelperBPLib.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/HelperData.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/PGA_StaminaRegen.gen.cpp"
-#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SBWeaponBase.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SInventoryComponent.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SoulGameplayAbility.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SoulsASComponent.gen.cpp"

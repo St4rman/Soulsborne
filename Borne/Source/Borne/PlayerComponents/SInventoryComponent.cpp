@@ -45,6 +45,7 @@ void USInventoryComponent::DropCurrentWeapon()
 {
 	if (EquippedWeapon)
 	{
+		EquippedWeapon->GetMesh()->SetSimulatePhysics(true);
 		EquippedWeapon->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 		EquippedWeapon = nullptr;
 	}
