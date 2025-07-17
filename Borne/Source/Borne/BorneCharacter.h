@@ -168,5 +168,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	FVector2D GetInputCache();
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Ddoging")
+	void ExecuteDodge();
 };
 
