@@ -8,5 +8,5 @@ Featurelist completed:
 * Stamina based on attribute
 * Ability system (GAS) for attacking
 * Weapons class
-* Inventory (rudamentary)
+* Inventory 
 
