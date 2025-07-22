@@ -15,6 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BORNE_SInventoryComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SInventoryComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execPickUpWeapon); \
+	DECLARE_FUNCTION(execWeaponInPickUpRange); \
 	DECLARE_FUNCTION(execDropCurrentWeapon);
 
 

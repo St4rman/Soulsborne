@@ -21,8 +21,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Inventory")
 	ASBWeaponBase* EquippedWeapon;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Detector")
+	float DetectorRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Detector")
+	TArray<TEnumAsByte<EObjectTypeQuery>> WeaponObjectType;
+
+	TArray<AActor*> ActorsToIgnore;
+
 protected:
-	
+
+	ASBWeaponBase* CurrentTargetWeapon;
 	virtual void BeginPlay() override;
 
 public:
@@ -34,4 +43,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory")
 	void DropCurrentWeapon();
+	
+	UFUNCTION(BlueprintCallable, Category = "Detector")
+	bool WeaponInPickUpRange();
+
+	UFUNCTION(BlueprintCallable, Category = "Pickup")
+	void PickUpWeapon();
 };
