@@ -29,6 +29,8 @@ public:
 
 	TArray<AActor*> ActorsToIgnore;
 
+	ABorneCharacter* Player;
+
 protected:
 
 	ASBWeaponBase* CurrentTargetWeapon;

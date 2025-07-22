@@ -38,6 +38,7 @@ protected:
 	USpringArmComponent* SpringArm;
 
 	ABorneCharacter* Player;
+	UCharacterMovementComponent* MoveComp;
 	
 	UPROPERTY( EditAnywhere, Category = "Combat Cameras" )
 	float CombatPitch = -20.0f;
@@ -48,8 +49,8 @@ protected:
 public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	void UpdateCamLocation(float dt);
-	void UpdateSpringArm(float dt);
+	void UpdateCamLocation(float dt) const;
+	void UpdateSpringArm(float dt) const;
 	
 	FORCEINLINE void SetLockedOn(AActor* Target);
 	void SetCamFree();

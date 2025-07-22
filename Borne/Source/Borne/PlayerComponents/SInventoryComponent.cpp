@@ -7,6 +7,11 @@ USInventoryComponent::USInventoryComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 	EquippedWeapon = nullptr;
 	CurrentTargetWeapon = nullptr;
+
+	if (GetOwner())
+	{
+		Player = CastChecked<ABorneCharacter>(GetOwner());
+	}
 }
 
 
@@ -33,7 +38,6 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
 	if (ensure(NewWeapon->GetClass()))
 	{
-		ABorneCharacter* Player = CastChecked<ABorneCharacter>(GetOwner());
 		const FVector HandLoc = Player->GetMesh()->GetSocketLocation("MeleeArmament-right");
 		const FTransform SpawnTM = FTransform(FRotator(0, 0, 0), HandLoc);
 		FActorSpawnParameters SpawnParams;

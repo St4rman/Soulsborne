@@ -9,8 +9,9 @@ UCamMoveComponent::UCamMoveComponent()
 	if (GetOwner())
 	{
 		Player = Cast<ABorneCharacter>(GetOwner());
-		PlayerCameraComp = Cast<ABorneCharacter>(GetOwner())->GetFollowCamera();
-		SpringArm = Cast<ABorneCharacter>(GetOwner())->GetCameraBoom();
+		PlayerCameraComp = Player->GetFollowCamera();
+		SpringArm = Player->GetCameraBoom();
+		MoveComp =  Player->GetCharacterMovement();
 	}
 	
 	CurrentCameraState = Free;
@@ -37,11 +38,10 @@ void UCamMoveComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 
 /**
  * Toggles locked on state for cameMovecomponent. Sets MainTarget as the target, or nullptr depends on not locking in
- * @param target Target To Lock onto
+ * @param Target Target To Lock onto
  */
 void UCamMoveComponent::SetLockedOn(AActor* Target)
 {
-	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
 	MoveComp->bUseControllerDesiredRotation = true;
 	MoveComp->bOrientRotationToMovement = false;
 	SpringArm->bEnableCameraRotationLag = true;
@@ -52,7 +52,6 @@ void UCamMoveComponent::SetLockedOn(AActor* Target)
 }
 void UCamMoveComponent::SetCamFree()
 {
-	UCharacterMovementComponent* MoveComp = Cast<ABorneCharacter>(GetOwner())->GetCharacterMovement();
 	MoveComp->bUseControllerDesiredRotation = false;
 	MoveComp->bOrientRotationToMovement = true;
 	SpringArm->bEnableCameraRotationLag = false;
@@ -63,11 +62,10 @@ void UCamMoveComponent::SetCamFree()
  * Updates camera rotation to look at the main target
  * @param dt Delta time
  */
-void UCamMoveComponent::UpdateCamLocation(float dt)
+void UCamMoveComponent::UpdateCamLocation(float dt) const
 {
 	const FVector CurrentLocation = PlayerCameraComp->GetComponentLocation();
 	const FVector TargetLocation = LockOnTarget->GetActorLocation();
-	// DrawDebugLine(GetWorld(), GetOwner()->GetActorLocation() , TargetLocation, FColor::Purple, false, 0.1f);
 	
 	const FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(CurrentLocation, TargetLocation);
 	
@@ -88,7 +86,7 @@ void UCamMoveComponent::UpdateCamLocation(float dt)
  * Updates spring Arm to longer/zoomed out 
  * @param dt Delta time
  */
-void UCamMoveComponent::UpdateSpringArm(float dt)
+void UCamMoveComponent::UpdateSpringArm(float dt) const
 {
 	if (CurrentCameraState == Free)
 	{

@@ -10,6 +10,7 @@
 #include "BLightAttackAbility.generated.h"
 
 class ACharacter;
+
 /**
  * 
  */
@@ -18,7 +19,7 @@ class BORNE_API UBLightAttackAbility : public USoulGameplayAbility
 {
 	GENERATED_BODY()
 
-	
+	ABorneCharacter* PlayerCharacter;
 
 public:
 	UBLightAttackAbility();
@@ -37,9 +38,9 @@ public:
 
 	virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags = nullptr, const FGameplayTagContainer* TargetTags = nullptr, FGameplayTagContainer* OptionalRelevantTags = nullptr) const override;
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
-	bool CheckAbilityConditions(const FGameplayAbilityActorInfo* ActorInfo);
-	void OnAttackAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle,
-	                          const FGameplayAbilityActorInfo* ActorInfo,
-	                          FGameplayAbilityActivationInfo ActivationInfo);
+
+	bool CheckAbilityConditions(const FGameplayAbilityActorInfo* ActorInfo , const ABorneCharacter* Player);
 	bool CustomCheckCost(float Cost, const FGameplayAbilityActorInfo* ActorInfo);
+
+	void OnAttackAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle,const FGameplayAbilityActorInfo* ActorInfo, FGameplayAbilityActivationInfo ActivationInfo);
 };

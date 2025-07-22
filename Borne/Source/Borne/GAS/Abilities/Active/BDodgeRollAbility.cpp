@@ -15,31 +15,30 @@ bool UBDodgeRollAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Han
 
 void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-	if (! CheckCanDodgeConditions(Handle, ActorInfo) )
+	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(ActorInfo->AvatarActor.Get());
+ 	UAnimInstance* AnimInstance = ActorInfo->GetAnimInstance();
+	
+	if (! CheckCanDodgeConditions(Handle, ActorInfo , PlayerChar ) )
 	{
 		Super::EndAbility(Handle, ActorInfo, ActivationInfo, false, false);
 		return;
 	}
 	
 	ApplyCost(Handle, ActorInfo, ActivationInfo);
-	
-	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
-	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
-	UAnimInstance* AnimInstance = ActorInfo->GetAnimInstance();
-
+	// ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
 	TArray<FActiveGameplayEffectHandle> AppliedEffects;
 	
 	ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(TagsToGive);
 	
 	if (UHelperBPLib::HasLastMovementInput(PlayerChar))
 	{
-		const FVector2D InputCache = PlayerChar->GetInputCache();
-		const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
+		// const FVector2D InputCache = PlayerChar->GetInputCache();
+		// const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
+		// float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 
+		
 		//set up in player blueprint bcz no easy delta time
 		PlayerChar->ExecuteDodge();
-
-		// float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
 	}
 	else
 	{
@@ -48,28 +47,23 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	
 	// PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
 	FOnMontageEnded EndDelegate;
-	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo);
+	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo, PlayerChar);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
 }
 
-bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo )
+bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const ABorneCharacter* Player )
 {
-	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
-	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
-	const bool IsFalling =  Char->GetMovementComponent()->IsFalling();
+	const bool IsFalling =  Player->GetMovementComponent()->IsFalling();
 	const bool CanPayCost = CheckCost(Handle, ActorInfo);
 
 	return !IsFalling && CanPayCost;
 }
 
 
-void UBDodgeRollAbility::OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo)
+void UBDodgeRollAbility::OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,  ABorneCharacter* Player)
 {
 	
-	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
-	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
-	PlayerChar->GetNiagaraEffectComponent()->SetActive(false);
-	
+	// Player->GetNiagaraEffectComponent()->SetActive(false);
 	ActorInfo->AbilitySystemComponent->RemoveLooseGameplayTags(TagsToGive);
 	Super::EndAbility(SpecHandle, ActorInfo, ActivationInfo, false, false);
 }
