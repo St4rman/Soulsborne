@@ -6,6 +6,7 @@ void ASBWeaponBase::OnWeaponPickup_Implementation(AActor* ReferenceActor)
 {
 	const ABorneCharacter* Player = Cast<ABorneCharacter>(ReferenceActor);
 	Player->GetInventoryComponent()->SetCurrentEquippedWeapon(this);
+	Player->GetPlayerHUD()->SetMeleeIcon(Icon);
 	IWeaponInterface::OnWeaponPickup_Implementation(ReferenceActor);
 	Destroy();
 }

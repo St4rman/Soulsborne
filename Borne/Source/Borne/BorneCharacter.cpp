@@ -64,7 +64,7 @@ ABorneCharacter::ABorneCharacter()
 
 	SoulsAbilitySystemComponent = CreateDefaultSubobject<USoulsASComponent>(TEXT("AbilitySystemComponent"));
 	InventoryComponent = CreateDefaultSubobject<USInventoryComponent>(TEXT("InventoryComponent"));
-	PlayerHUD = CreateDefaultSubobject<USHUDComponent>(TEXT("PlayerHUD"));
+	PlayerHUD = CreateDefaultSubobject<USHUDComponent>(TEXT("PlayerHUDComponent"));
 	
 	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
 	NiagaraComponent->SetupAttachment(GetMesh());
@@ -96,6 +96,8 @@ void ABorneCharacter::BeginPlay()
 		}
 	}
 
+	MainLocomotionMode= L_Free;
+	CameraHandlerComponent->SetCamFree();
 	
 }
 

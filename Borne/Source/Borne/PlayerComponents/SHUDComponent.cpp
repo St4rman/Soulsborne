@@ -1,12 +1,7 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "SHUDComponent.h"
-
+﻿#include "SHUDComponent.h"
 #include "Borne/BorneCharacter.h"
 
 
-// Sets default values for this component's properties
 USHUDComponent::USHUDComponent()
 {
 
@@ -23,7 +18,6 @@ USHUDComponent::USHUDComponent()
 }
 
 
-// Called when the game starts
 void USHUDComponent::BeginPlay()
 {
 	Super::BeginPlay();
@@ -48,16 +42,20 @@ void USHUDComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	
 }
 
-void  USHUDComponent::SetStamina(const float Stamina, const float MaxStamina)
+void  USHUDComponent::SetStamina(const float Stamina, const float MaxStamina) const
 {
 	PlayerHUD->SetStamina(Stamina, MaxStamina);
 }
 
-void USHUDComponent::SetHealth(const float Health, const float MaxHealth)
+void USHUDComponent::SetHealth(const float Health, const float MaxHealth) const
 {
 	PlayerHUD->SetHealth(Health, MaxHealth);
 }
 
+void USHUDComponent::SetMeleeIcon(UTexture2D* Texture) const
+{
+	PlayerHUD->SetMeleeIcon(Texture, true);
+}
 
 void USHUDComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {

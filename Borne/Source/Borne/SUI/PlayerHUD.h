@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/Image.h"
 #include "Components/ProgressBar.h"
 #include "PlayerHUD.generated.h"
 
@@ -17,15 +18,20 @@ class BORNE_API UPlayerHUD : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable)
+	
 	void SetHealth(const float Health, const float MaxHealth);
-
-	UFUNCTION(BlueprintCallable)
 	void SetStamina(const float Stamina, const float MaxStamina);
-
+	void SetMeleeIcon(UTexture2D* WeaponTexture, bool bMatchSize);
+	
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* HealthBar;
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* StaminaBar;
+
+	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	class UImage* ShieldIcon;
+	
+	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	class UImage* MeleeIcon;
 };

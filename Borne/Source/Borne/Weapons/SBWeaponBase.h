@@ -42,6 +42,9 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
 	float LightAttackSpeed;
+
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Icon")
+	UTexture2D* Icon;
 	
 protected:
 	
@@ -55,6 +58,9 @@ public:
 	UAnimMontage* GetLightAnim() const { return LightAttackAnim; }
 
 	UStaticMeshComponent* GetMesh() const { return MeshComp; }
+
+	UFUNCTION(BlueprintCallable)
+	UTexture2D* GetIcon() const { return Icon; }
 
 	UFUNCTION(BlueprintCallable)
 	virtual void OnWeaponPickup_Implementation(AActor* ReferenceActor) override;

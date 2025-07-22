@@ -4,21 +4,21 @@
 UBLightAttackAbility::UBLightAttackAbility()
 {
 	AbilityInputID = ESoulsAbilityInputID::Attack;
+	// PlayerCharacter = CastChecked<>()
 }
 
 bool UBLightAttackAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
 {
+
 	return Super::CanActivateAbility(Handle, ActorInfo, SourceTags, TargetTags, OptionalRelevantTags);
 }
 
 void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
-
-	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
-	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(Char);
+	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(ActorInfo->AvatarActor.Get());
 	UAnimInstance* AnimInstance = ActorInfo->GetAnimInstance();
 	
-	if (!CheckAbilityConditions(ActorInfo))
+	if (!CheckAbilityConditions(ActorInfo , PlayerChar))
 	{
 		check(NoWeaponAnimMontage);
 		float const Dur = AnimInstance->Montage_Play(NoWeaponAnimMontage, 3.0f);
@@ -40,9 +40,15 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*NewSpecHandle.Data.Get());
 
 		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
-		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed);
-		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(AttackingTags);
+		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed );
+		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags( AttackingTags );
+		
+		CommitAbility(Handle, ActorInfo, ActivationInfo);
+
+		//GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, TEXT(" Firing animations "));
 	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT(" Activating Ablitity poggers "));
 
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBLightAttackAbility::OnAttackAnimFinished, Handle, ActorInfo, ActivationInfo);
@@ -50,11 +56,8 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 }
 
 //returns true if we CAN attack
-bool UBLightAttackAbility::CheckAbilityConditions(const FGameplayAbilityActorInfo* ActorInfo )
+bool UBLightAttackAbility::CheckAbilityConditions(const FGameplayAbilityActorInfo* ActorInfo, const ABorneCharacter* Player )
 {
-	ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
-	ABorneCharacter* Player = CastChecked<ABorneCharacter>(ActorInfo->AvatarActor.Get());
-	
 	if (Player->GetInventoryComponent()->GetCurrentEquippedWeapon() == nullptr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("No Equipped weapon"));

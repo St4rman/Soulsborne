@@ -59,9 +59,9 @@ void UDetectorComponent::PickMainTarget()
 	if (Targets.Num() > 0)
 	{
 		AActor* FirstTarget = Targets[0];
-		float firstAngle = ComputeTargetCompareData(FirstTarget);
+		float FirstAngle = ComputeTargetCompareData(FirstTarget);
 		
-		for (auto Element : Targets)
+		for (AActor* Element : Targets)
 		{
 			if (Element == FirstTarget)
 			{
@@ -69,7 +69,7 @@ void UDetectorComponent::PickMainTarget()
 			}
 			float NewAngle = ComputeTargetCompareData(Element);
 			
-			if (NewAngle < firstAngle)
+			if (NewAngle < FirstAngle)
 			{
 				FirstTarget = Element;
 			}
@@ -84,13 +84,12 @@ void UDetectorComponent::PickMainTarget()
  * @param NewTarget Target whose comparison data we need
  * @return Comparison data to tell if one target is more likely to be a main target or not
  */
-float UDetectorComponent::ComputeTargetCompareData(AActor*  NewTarget)
+float UDetectorComponent::ComputeTargetCompareData(const AActor*  NewTarget) const
 {
 	FVector ToNew = NewTarget->GetActorLocation() - GetOwner()->GetActorLocation();
 	ToNew.Normalize();
 
-	FVector Fwd = PlayerCharacter->GetCamFwd();
+	const FVector Fwd = PlayerCharacter->GetCamFwd();
 
-	float CurAngle = FMath::Acos(FVector::DotProduct(ToNew, Fwd));
-	return CurAngle;
+	return FMath::Acos(FVector::DotProduct(ToNew, Fwd));
 }

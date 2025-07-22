@@ -38,8 +38,10 @@ public:
 	class UPlayerHUD* PlayerHUD;
 
 	UFUNCTION(BlueprintCallable)
-	void SetStamina(const float Stamina, const float MaxStamina);
+	void SetStamina(const float Stamina, const float MaxStamina) const ;
 
 	UFUNCTION(BlueprintCallable)
-	void SetHealth(const float Health, const float MaxHealth);
+	void SetHealth(const float Health, const float MaxHealth) const ;
+	UFUNCTION(BlueprintCallable)
+	void SetMeleeIcon(UTexture2D* Texture) const;
 };

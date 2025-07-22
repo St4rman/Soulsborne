@@ -157,6 +157,8 @@ public:
 	FORCEINLINE class USInventoryComponent* GetInventoryComponent() const { return InventoryComponent; }
 
 	FORCEINLINE class UNiagaraComponent* GetNiagaraEffectComponent() const {return NiagaraComponent; }
+
+	FORCEINLINE class USHUDComponent* GetPlayerHUD() const { return PlayerHUD; }
 	
 	/** Returns camera forward vector **/
 	FORCEINLINE FVector GetCamFwd() const {return GetFollowCamera()->GetForwardVector();}

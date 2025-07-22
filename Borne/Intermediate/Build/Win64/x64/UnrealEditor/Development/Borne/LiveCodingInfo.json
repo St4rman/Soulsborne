@@ -26,7 +26,6 @@
 			"PerModuleInline.gen.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
-			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
@@ -40,9 +39,10 @@
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
-			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
+			"BorneCharacter.cpp.obj",
+			"SHUDComponent.cpp.obj",
 			"SBWeaponBase.cpp.obj"
 		]
 	}

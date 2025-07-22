@@ -42,7 +42,7 @@ protected:
 	TObjectPtr<ABorneCharacter> PlayerCharacter;
 
 	void PickMainTarget();
-	float ComputeTargetCompareData(AActor* NewTar);
+	float ComputeTargetCompareData(const AActor* NewTarget ) const;
 
 public:
 	

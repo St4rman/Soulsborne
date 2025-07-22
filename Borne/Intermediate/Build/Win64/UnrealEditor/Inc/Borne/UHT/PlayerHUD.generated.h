@@ -14,12 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_PlayerHUD_generated_h
 
-#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSetStamina); \
-	DECLARE_FUNCTION(execSetHealth);
-
-
-#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerHUD(); \
 	friend struct Z_Construct_UClass_UPlayerHUD_Statics; \
@@ -28,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerHUD)
 
 
-#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerHUD(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -42,13 +37,12 @@ public: \
 	NO_API virtual ~UPlayerHUD();
 
 
-#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_14_PROLOG
-#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_GENERATED_BODY \
+#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_15_PROLOG
+#define FID_Borne_Source_Borne_SUI_PlayerHUD_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_SUI_PlayerHUD_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_SUI_PlayerHUD_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_SUI_PlayerHUD_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

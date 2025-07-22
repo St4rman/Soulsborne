@@ -15,6 +15,7 @@ BORNE_API UClass* Z_Construct_UClass_USHUDComponent();
 BORNE_API UClass* Z_Construct_UClass_USHUDComponent_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
@@ -49,7 +50,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::NewProp_MaxHealth,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetHealth", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::SHUDComponent_eventSetHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetHealth", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::SHUDComponent_eventSetHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::Function_MetaDataParams) };
 static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_SetHealth_Statics::SHUDComponent_eventSetHealth_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_USHUDComponent_SetHealth()
 {
@@ -70,6 +71,48 @@ DEFINE_FUNCTION(USHUDComponent::execSetHealth)
 	P_NATIVE_END;
 }
 // End Class USHUDComponent Function SetHealth
+
+// Begin Class USHUDComponent Function SetMeleeIcon
+struct Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics
+{
+	struct SHUDComponent_eventSetMeleeIcon_Parms
+	{
+		UTexture2D* Texture;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Texture;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::NewProp_Texture = { "Texture", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SHUDComponent_eventSetMeleeIcon_Parms, Texture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::NewProp_Texture,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetMeleeIcon", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::SHUDComponent_eventSetMeleeIcon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::SHUDComponent_eventSetMeleeIcon_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USHUDComponent_SetMeleeIcon()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USHUDComponent_SetMeleeIcon_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USHUDComponent::execSetMeleeIcon)
+{
+	P_GET_OBJECT(UTexture2D,Z_Param_Texture);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMeleeIcon(Z_Param_Texture);
+	P_NATIVE_END;
+}
+// End Class USHUDComponent Function SetMeleeIcon
 
 // Begin Class USHUDComponent Function SetStamina
 struct Z_Construct_UFunction_USHUDComponent_SetStamina_Statics
@@ -102,7 +145,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::NewProp_MaxStamina,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetStamina", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::SHUDComponent_eventSetStamina_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetStamina", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::SHUDComponent_eventSetStamina_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::Function_MetaDataParams) };
 static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_SetStamina_Statics::SHUDComponent_eventSetStamina_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_USHUDComponent_SetStamina()
 {
@@ -130,6 +173,7 @@ void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 	UClass* Class = USHUDComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "SetHealth", &USHUDComponent::execSetHealth },
+		{ "SetMeleeIcon", &USHUDComponent::execSetMeleeIcon },
 		{ "SetStamina", &USHUDComponent::execSetStamina },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -163,8 +207,9 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_USHUDComponent_SetHealth, "SetHealth" }, // 1102703286
-		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 2452963471
+		{ &Z_Construct_UFunction_USHUDComponent_SetHealth, "SetHealth" }, // 1039324302
+		{ &Z_Construct_UFunction_USHUDComponent_SetMeleeIcon, "SetMeleeIcon" }, // 1892680031
+		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 576948195
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -219,10 +264,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 1041711736U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 1766106097U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_522119885(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2432409852(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
