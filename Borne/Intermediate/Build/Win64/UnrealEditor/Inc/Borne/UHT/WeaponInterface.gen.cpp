@@ -17,6 +17,54 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Interface UWeaponInterface Function OnWeaponDrop
+void IWeaponInterface::OnWeaponDrop()
+{
+	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_OnWeaponDrop instead.");
+}
+static FName NAME_UWeaponInterface_OnWeaponDrop = FName(TEXT("OnWeaponDrop"));
+void IWeaponInterface::Execute_OnWeaponDrop(UObject* O)
+{
+	check(O != NULL);
+	check(O->GetClass()->ImplementsInterface(UWeaponInterface::StaticClass()));
+	UFunction* const Func = O->FindFunction(NAME_UWeaponInterface_OnWeaponDrop);
+	if (Func)
+	{
+		O->ProcessEvent(Func, NULL);
+	}
+	else if (auto I = (IWeaponInterface*)(O->GetNativeInterfaceAddress(UWeaponInterface::StaticClass())))
+	{
+		I->OnWeaponDrop_Implementation();
+	}
+}
+struct Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Interfaces/WeaponInterface.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWeaponInterface, nullptr, "OnWeaponDrop", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(IWeaponInterface::execOnWeaponDrop)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnWeaponDrop_Implementation();
+	P_NATIVE_END;
+}
+// End Interface UWeaponInterface Function OnWeaponDrop
+
 // Begin Interface UWeaponInterface Function OnWeaponPickup
 struct WeaponInterface_eventOnWeaponPickup_Parms
 {
@@ -85,6 +133,7 @@ void UWeaponInterface::StaticRegisterNativesUWeaponInterface()
 {
 	UClass* Class = UWeaponInterface::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "OnWeaponDrop", &IWeaponInterface::execOnWeaponDrop },
 		{ "OnWeaponPickup", &IWeaponInterface::execOnWeaponPickup },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -103,6 +152,7 @@ struct Z_Construct_UClass_UWeaponInterface_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWeaponInterface_OnWeaponDrop, "OnWeaponDrop" }, // 4149173292
 		{ &Z_Construct_UFunction_UWeaponInterface_OnWeaponPickup, "OnWeaponPickup" }, // 1398360018
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -152,10 +202,10 @@ UWeaponInterface::~UWeaponInterface() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWeaponInterface, UWeaponInterface::StaticClass, TEXT("UWeaponInterface"), &Z_Registration_Info_UClass_UWeaponInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponInterface), 2474437687U) },
+		{ Z_Construct_UClass_UWeaponInterface, UWeaponInterface::StaticClass, TEXT("UWeaponInterface"), &Z_Registration_Info_UClass_UWeaponInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWeaponInterface), 2173716592U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_4090347088(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_1974699939(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

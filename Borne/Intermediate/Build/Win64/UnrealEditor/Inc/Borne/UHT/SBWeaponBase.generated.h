@@ -18,11 +18,16 @@ class UTexture2D;
 #define BORNE_SBWeaponBase_generated_h
 
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void StopFloating_Implementation(); \
+	DECLARE_FUNCTION(execStopFloating); \
+	DECLARE_FUNCTION(execIsWeaponEquipped); \
+	DECLARE_FUNCTION(execOnWeaponDrop_Implementation); \
 	DECLARE_FUNCTION(execOnWeaponPickup_Implementation); \
 	DECLARE_FUNCTION(execGetIcon); \
 	DECLARE_FUNCTION(execGetLightAnim);
 
 
+#define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_CALLBACK_WRAPPERS
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASBWeaponBase(); \
@@ -50,6 +55,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_CALLBACK_WRAPPERS \
 	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \
