@@ -6,6 +6,7 @@
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
+			"Borne.init.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"CamMoveComponent.gen.cpp.obj",
@@ -18,11 +19,14 @@
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
+			"SoulsAICharacter.gen.cpp.obj",
+			"SoulsAIController.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
 			"TargetableEnemy.gen.cpp.obj",
 			"TargetableInterface.gen.cpp.obj",
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"SoulsAICharacter.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
@@ -43,10 +47,6 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"Borne.init.gen.cpp.obj",
-			"SoulsAICharacter.gen.cpp.obj",
-			"SoulsAIController.gen.cpp.obj",
-			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj"
 		]
 	}

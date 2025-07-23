@@ -16,7 +16,7 @@ void ASoulsAIController::BeginPlay()
 	APawn* player = UGameplayStatics::GetPlayerPawn(this, 0);
 	if (player)
 	{
-		GetBlackboardComponent()->SetValueAsVector("MoveToLocation", player->GetActorLocation());
+		GetBlackboardComponent()->SetValueAsObject("TargetActor", player);
 		
 	}
 }
