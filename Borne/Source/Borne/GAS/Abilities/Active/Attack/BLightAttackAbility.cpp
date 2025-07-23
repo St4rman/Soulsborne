@@ -27,7 +27,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 	}
 
 	const ASBWeaponBase* CurrentWeapon = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
-	const float CurrentCost = CurrentWeapon->LightStaminaCost;
+	float CurrentCost = CurrentWeapon->LightStaminaCost;
 	const float AttackSpeed = CurrentWeapon->LightAttackSpeed > 1.0f ? CurrentWeapon->LightAttackSpeed : 1.0f;
 
 	if (CustomCheckCost(CurrentCost, ActorInfo) && CurrentWeapon != nullptr)
@@ -37,19 +37,18 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		
 		const FGameplayEffectSpecHandle SpecHandle =  PlayerChar->GetAbilitySystemComponent()->MakeOutgoingSpec(EffectClass, 1.0f, ContextHandle);
 		const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, Dynamic, CurrentCost * -1.0f);
-		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf(*NewSpecHandle.Data.Get());
+		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
 
 		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
 		float const Duration = AnimInstance->Montage_Play( LightAttack, AttackSpeed );
 		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags( AttackingTags );
-		
-		CommitAbility(Handle, ActorInfo, ActivationInfo);
 
-		//GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, TEXT(" Firing animations "));
+		// since we manually do it, dont call this
+		// CommitAbility(Handle, ActorInfo, ActivationInfo);
+
+		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Green, FString::Printf(TEXT(" Firing animations %f"), CurrentCost));
 	}
-
-	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TEXT(" Activating Ablitity poggers "));
-
+	
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBLightAttackAbility::OnAttackAnimFinished, Handle, ActorInfo, ActivationInfo);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);

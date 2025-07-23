@@ -24,4 +24,7 @@ class BORNE_API IWeaponInterface
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void OnWeaponPickup(AActor* ReferenceActor);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void OnWeaponDrop();
 };

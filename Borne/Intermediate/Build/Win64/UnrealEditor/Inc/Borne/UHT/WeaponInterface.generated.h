@@ -16,7 +16,9 @@ class AActor;
 #define BORNE_WeaponInterface_generated_h
 
 #define FID_Borne_Source_Borne_Interfaces_WeaponInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void OnWeaponDrop_Implementation() {}; \
 	virtual void OnWeaponPickup_Implementation(AActor* ReferenceActor) {}; \
+	DECLARE_FUNCTION(execOnWeaponDrop); \
 	DECLARE_FUNCTION(execOnWeaponPickup);
 
 
@@ -58,6 +60,7 @@ protected: \
 public: \
 	typedef UWeaponInterface UClassType; \
 	typedef IWeaponInterface ThisClass; \
+	static void Execute_OnWeaponDrop(UObject* O); \
 	static void Execute_OnWeaponPickup(UObject* O, AActor* ReferenceActor); \
 	virtual UObject* _getUObject() const { return nullptr; }
 

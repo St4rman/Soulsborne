@@ -54,10 +54,11 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 
 void USInventoryComponent::DropCurrentWeapon()
 {
-	if (EquippedWeapon)
+	if (EquippedWeapon
+		&& EquippedWeapon->Implements<UWeaponInterface>())
 	{
-		EquippedWeapon->GetMesh()->SetSimulatePhysics(true);
-		EquippedWeapon->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		
+		EquippedWeapon->OnWeaponDrop_Implementation();
 		EquippedWeapon = nullptr;
 		ActorsToIgnore.Empty(0);
 	}
