@@ -58,6 +58,30 @@
     <ClCompile Include="..\..\Source\Borne\BorneGameMode.h">
       <Filter>Source\Borne</Filter>
     </ClCompile>
+    <Filter Include="Source\Borne\AI">
+      <UniqueIdentifier>{41077716-6DDD-3026-A9FA-E33FE3D278F7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\AI\SoulsAICharacter.cpp">
+      <Filter>Source\Borne\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\SoulsAICharacter.h">
+      <Filter>Source\Borne\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\SoulsAIController.cpp">
+      <Filter>Source\Borne\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\SoulsAIController.h">
+      <Filter>Source\Borne\AI</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\Anims">
+      <UniqueIdentifier>{03BB59C3-CABB-314A-A173-839DE1C98DED}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.cpp">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.h">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
     <Filter Include="Source\Borne\Core">
       <UniqueIdentifier>{BD8DF353-D3A7-3ACF-B26F-A1D558E08DF9}</UniqueIdentifier>
     </Filter>
@@ -133,6 +157,12 @@
     <ClCompile Include="..\..\Source\Borne\Interfaces\TargetableInterface.h">
       <Filter>Source\Borne\Interfaces</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\WeaponInterface.cpp">
+      <Filter>Source\Borne\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\WeaponInterface.h">
+      <Filter>Source\Borne\Interfaces</Filter>
+    </ClCompile>
     <Filter Include="Source\Borne\Pawns">
       <UniqueIdentifier>{40203D7F-0D64-37BE-B64D-8677F8C89D87}</UniqueIdentifier>
     </Filter>
@@ -157,20 +187,26 @@
     <ClCompile Include="..\..\Source\Borne\PlayerComponents\DetectorComponent.h">
       <Filter>Source\Borne\PlayerComponents</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\PlayerComponents\SHUDComponent.cpp">
+      <Filter>Source\Borne\PlayerComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\PlayerComponents\SHUDComponent.h">
+      <Filter>Source\Borne\PlayerComponents</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Borne\PlayerComponents\SInventoryComponent.cpp">
       <Filter>Source\Borne\PlayerComponents</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Borne\PlayerComponents\SInventoryComponent.h">
       <Filter>Source\Borne\PlayerComponents</Filter>
     </ClCompile>
-    <Filter Include="Source\Borne\UI">
-      <UniqueIdentifier>{72A6105D-5E68-3A0F-BE7E-C99207A55ED9}</UniqueIdentifier>
+    <Filter Include="Source\Borne\SUI">
+      <UniqueIdentifier>{7AB71EC7-5678-34FA-91F3-74B68644E817}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Borne\UI\SBBaseWidget.cpp">
-      <Filter>Source\Borne\UI</Filter>
+    <ClCompile Include="..\..\Source\Borne\SUI\PlayerHUD.cpp">
+      <Filter>Source\Borne\SUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Borne\UI\SBBaseWidget.h">
-      <Filter>Source\Borne\UI</Filter>
+    <ClCompile Include="..\..\Source\Borne\SUI\PlayerHUD.h">
+      <Filter>Source\Borne\SUI</Filter>
     </ClCompile>
     <Filter Include="Source\Borne\Weapons">
       <UniqueIdentifier>{004E73F2-1180-368B-982A-C87E7C588EA5}</UniqueIdentifier>
