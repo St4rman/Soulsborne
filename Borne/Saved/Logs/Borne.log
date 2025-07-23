@@ -1492,3 +1492,108 @@ ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\B
 [2025.07.23-17.20.52:462][637]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
 [2025.07.23-17.20.52:482][637]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
 [2025.07.23-17.20.52:579][638]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2025.07.23-17.21.23:328][815]LogDerivedDataCache: C:/Users/idhant/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.07.23-17.21.48:526][352]LogSlate: Took 0.000664 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.07.23-17.21.49:638][406]LogAssetEditorSubsystem: Opening Asset editor for BehaviorTree /Game/MyContent/AIContent/Data/BT_SoulsAI.BT_SoulsAI
+[2025.07.23-17.21.50:102][406]LogSlate: Took 0.000770 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2025.07.23-17.22.02:739][145]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.07.23-17.22.02:840][145]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/AIContent/Data/BT_SoulsAI] ([1] browsable assets)...
+[2025.07.23-17.22.02:841][145]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/AIContent/Data/BT_SoulsAI]
+[2025.07.23-17.22.02:841][145]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/AIContent/Data/BT_SoulsAI" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Data/BT_SoulsAI.uasset" SILENT=true
+[2025.07.23-17.22.02:851][145]LogSavePackage: Moving output files for package: /Game/MyContent/AIContent/Data/BT_SoulsAI
+[2025.07.23-17.22.02:852][145]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BT_SoulsAIB3E829F24254FCC7D9FDAB9969A35684.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Data/BT_SoulsAI.uasset'
+[2025.07.23-17.22.02:874][145]LogFileHelpers: InternalPromptForCheckoutAndSave took 135.010 ms
+[2025.07.23-17.22.02:976][145]LogContentValidation: Display: Starting to validate 1 assets
+[2025.07.23-17.22.02:977][145]LogContentValidation: Enabled validators:
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.07.23-17.22.02:977][145]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.07.23-17.22.02:977][145]AssetCheck: /Game/MyContent/AIContent/Data/BT_SoulsAI Validating asset
+[2025.07.23-17.22.04:429][216]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.07.23-17.22.04:449][216]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.07.23-17.22.04:450][216]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.07.23-17.22.04:454][216]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004205s)
+[2025.07.23-17.22.04:454][216]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.004270s)
+[2025.07.23-17.22.04:488][216]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2025.07.23-17.22.04:490][216]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.07.23-17.22.04:492][216]LogPlayLevel: PIE: World Init took: (0.002644s)
+[2025.07.23-17.22.04:494][216]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.07.23-17.22.04:494][216]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.07.23-17.22.04:494][216]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.07.23-17.22.04:494][216]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.07.23-17.22.04:494][216]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.07.23-17.22.04:494][216]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.07.23-17.22.04:497][216]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.07.23-17.22.04:815][216]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.07.23-17.22.04:815][216]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.07.23-17.22.04:815][216]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.07.23-17.22.04:815][216]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.07.23-17.22.04:816][216]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.07.23-17.22.04:816][216]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.07.23-17.22.04:819][216]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.07.23-17.22.04:820][216]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.07.23-17.22.04:820][216]LogInit: FAudioDevice initialized with ID 3.
+[2025.07.23-17.22.04:820][216]LogAudio: Display: Audio Device (ID: 3) registered with world 'PrototypeMap'.
+[2025.07.23-17.22.04:820][216]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.07.23-17.22.04:823][216]LogLoad: Game class is 'BorneGameMode'
+[2025.07.23-17.22.04:829][216]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.07.23-18.22.04
+[2025.07.23-17.22.04:831][216]LogWorld: Bringing up level for play took: 0.006820
+[2025.07.23-17.22.04:834][216]LogOnline: OSS: Created online subsystem instance for: :Context_2
+[2025.07.23-17.22.04:850][216]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007ffba28f085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:87]
+0x00007ffb98643664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ffb9ab51936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ffb993d5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ffb9a8d53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ffb99323648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ffb96cf3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.07.23-17.22.04:851][216]PIE: Server logged in
+[2025.07.23-17.22.04:852][216]PIE: Play in editor total start time 0.41 seconds.
+[2025.07.23-17.22.04:873][217]LogTemp: Error: No Equipped weapon
+[2025.07.23-17.22.07:074][332]LogAbilitySystem: Warning: AbilityLocalInputReleased: Default__BGA_Dodge_C is InstancedPerExecution. This is unreliable for Input as you may only interact with the latest spawned Instance
+[2025.07.23-17.22.25:231][197]LogAbilitySystem: Warning: AbilityLocalInputReleased: Default__BGA_Dodge_C is InstancedPerExecution. This is unreliable for Input as you may only interact with the latest spawned Instance
+[2025.07.23-17.22.25:895][230]LogAbilitySystem: Warning: AbilityLocalInputPressed: Default__BGA_Dodge_C is InstancedPerExecution. This is unreliable for Input as you may only interact with the latest spawned Instance
+[2025.07.23-17.22.26:056][238]LogAbilitySystem: Warning: AbilityLocalInputReleased: Default__BGA_Dodge_C is InstancedPerExecution. This is unreliable for Input as you may only interact with the latest spawned Instance
+[2025.07.23-17.22.26:406][249]LogAbilitySystem: Warning: AbilityLocalInputReleased: Default__BGA_Dodge_C is InstancedPerExecution. This is unreliable for Input as you may only interact with the latest spawned Instance
+[2025.07.23-17.22.27:419][273]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.07.23-17.22.27:419][273]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.07.23-17.22.27:420][273]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.07.23-17.22.27:420][273]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.07.23-17.22.27:448][273]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.07.23-17.22.27:454][273]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.07.23-17.22.27:466][273]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.07.23-17.22.27:467][273]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.07.23-17.22.27:468][273]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.07.23-17.22.27:471][273]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.07.23-17.22.27:481][273]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.07.23-17.22.27:484][273]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.07.23-17.22.27:600][274]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2025.07.23-17.22.28:497][296]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.07.23-17.22.28:656][296]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.07.23-17.22.28:723][296]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2025.07.23-17.22.28:745][296]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.07.23-17.22.28:745][296]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMapABF105074FD3DFBE7FAB7DBAFA19934F.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.07.23-17.22.28:768][296]LogFileHelpers: Saving map 'PrototypeMap' took 0.112
+[2025.07.23-17.22.28:785][296]LogFileHelpers: InternalPromptForCheckoutAndSave took 288.939 ms (total: 423.950 ms)
+[2025.07.23-17.22.28:870][296]LogContentValidation: Display: Starting to validate 1 assets
+[2025.07.23-17.22.28:870][296]LogContentValidation: Enabled validators:
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.07.23-17.22.28:870][296]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.07.23-17.22.28:870][296]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
