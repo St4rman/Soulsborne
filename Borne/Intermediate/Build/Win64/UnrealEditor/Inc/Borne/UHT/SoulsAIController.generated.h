@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_SoulsAIController_generated_h
 
-#define FID_Borne_Source_Borne_AI_SoulsAIController_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_AI_SoulsAIController_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASoulsAIController(); \
 	friend struct Z_Construct_UClass_ASoulsAIController_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ASoulsAIController)
 
 
-#define FID_Borne_Source_Borne_AI_SoulsAIController_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_AI_SoulsAIController_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASoulsAIController(ASoulsAIController&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ASoulsAIController();
 
 
-#define FID_Borne_Source_Borne_AI_SoulsAIController_h_7_PROLOG
-#define FID_Borne_Source_Borne_AI_SoulsAIController_h_10_GENERATED_BODY \
+#define FID_Borne_Source_Borne_AI_SoulsAIController_h_12_PROLOG
+#define FID_Borne_Source_Borne_AI_SoulsAIController_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_AI_SoulsAIController_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_AI_SoulsAIController_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_AI_SoulsAIController_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_AI_SoulsAIController_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
