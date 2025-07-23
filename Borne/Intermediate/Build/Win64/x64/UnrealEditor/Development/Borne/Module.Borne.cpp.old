@@ -23,7 +23,6 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/BorneCharacter.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/BorneGameMode.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Core/HelperBPLib.cpp"
-#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/Active/Attack/BLightAttackAbility.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/Active/BDodgeRollAbility.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/Passive/PGA_StaminaRegen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/SoulGameplayAbility.cpp"
