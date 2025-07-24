@@ -26,6 +26,7 @@ ASDmgProjectile::ASDmgProjectile()
 void ASDmgProjectile::BeginPlay()
 {
 	Super::BeginPlay();
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "ASDmgProjectile::BeginPlay");
 	GetWorld()->GetTimerManager().SetTimer(LIfeCycleTimer, this, &ASDmgProjectile::OnLifeExpired,LifeTime);
 }
 
@@ -48,8 +49,9 @@ void ASDmgProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, A
 			const FGameplayEffectSpecHandle SpecHandle =  Player->GetAbilitySystemComponent()->MakeOutgoingSpec(DamageGameplayEffect, 1.0f, ContextHandle);
 			const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, DamageTag, ProjectileDamage * -1.0f );
 			Player->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
+			Destroy();
 		}
-		Destroy();
+		
 	}
 }
 
