@@ -6,8 +6,6 @@
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
-			"Borne.init.gen.cpp.obj",
-			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"CamMoveComponent.gen.cpp.obj",
 			"DetectorComponent.gen.cpp.obj",
@@ -32,9 +30,9 @@
 			"SoulBTSCheckAttackRange.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
+			"SoulsBTTaskRangedAttack.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
-			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
@@ -45,6 +43,7 @@
 			"SoulsASComponent.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
+			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
@@ -52,8 +51,11 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"SoulsBTTaskRangedAttack.cpp.obj",
-			"SDmgProjectile.cpp.obj"
+			"Borne.init.gen.cpp.obj",
+			"BorneCharacter.gen.cpp.obj",
+			"DamageableInterface.gen.cpp.obj",
+			"BorneCharacter.cpp.obj",
+			"DamageableInterface.cpp.obj"
 		]
 	}
 }

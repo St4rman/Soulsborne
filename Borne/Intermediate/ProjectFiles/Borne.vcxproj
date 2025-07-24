@@ -344,6 +344,7 @@
     <ClCompile Include="..\..\Source\Borne\GAS\AttributeSets\BaseAttributesSet.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\DamageableInterface.cpp" />
     <ClCompile Include="..\..\Source\Borne\Interfaces\TargetableInterface.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -403,6 +404,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.h" />
+    <ClInclude Include="..\..\Source\Borne\Interfaces\DamageableInterface.h" />
     <ClInclude Include="..\..\Source\Borne\Pawns\SDmgProjectile.h" />
   </ItemGroup>
   <PropertyGroup>

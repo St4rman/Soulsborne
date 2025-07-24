@@ -101,6 +101,7 @@ void ABorneCharacter::BeginPlay()
 	
 }
 
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 
@@ -279,5 +280,12 @@ void ABorneCharacter::AddStartUpGameplayAbilities()
 		
 		bAbilitiesInitialized = true;
 	}
+}
+
+
+void ABorneCharacter::DoDamageFeedback_Implementation()
+{
+	IDamageableInterface::DoDamageFeedback_Implementation();
+	PlayAnimMontage(TakingDamageAnim);
 }
 

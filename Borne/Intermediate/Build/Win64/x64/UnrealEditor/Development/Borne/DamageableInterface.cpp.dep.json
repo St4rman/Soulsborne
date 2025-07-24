@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\interfaces\\damageableinterface.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\borneeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\borne\\definitions.borne.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\interfaces\\damageableinterface.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\damageableinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -14,6 +14,7 @@ BORNE_API UClass* Z_Construct_UClass_ABorneCharacter();
 BORNE_API UClass* Z_Construct_UClass_ABorneCharacter_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UBaseAttributesSet_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UCamMoveComponent_NoRegister();
+BORNE_API UClass* Z_Construct_UClass_UDamageableInterface_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UDetectorComponent_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_USHUDComponent_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_USInventoryComponent_NoRegister();
@@ -23,6 +24,7 @@ BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
@@ -314,6 +316,11 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "BorneCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TakingDamageAnim_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SoulsAbilitySystemComponent_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Ability System" },
@@ -363,6 +370,7 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InventoryComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerHUD;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TakingDamageAnim;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SoulsAbilitySystemComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BaseSet;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_PassiveGameplayEffects_Inner;
@@ -398,6 +406,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacte
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_InventoryComponent = { "InventoryComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, InventoryComponent), Z_Construct_UClass_USInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InventoryComponent_MetaData), NewProp_InventoryComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PlayerHUD = { "PlayerHUD", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, PlayerHUD), Z_Construct_UClass_USHUDComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerHUD_MetaData), NewProp_PlayerHUD_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_NiagaraComponent = { "NiagaraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, NiagaraComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NiagaraComponent_MetaData), NewProp_NiagaraComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_TakingDamageAnim = { "TakingDamageAnim", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, TakingDamageAnim), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TakingDamageAnim_MetaData), NewProp_TakingDamageAnim_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent = { "SoulsAbilitySystemComponent", nullptr, (EPropertyFlags)0x01440000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, SoulsAbilitySystemComponent), Z_Construct_UClass_USoulsASComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SoulsAbilitySystemComponent_MetaData), NewProp_SoulsAbilitySystemComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_BaseSet = { "BaseSet", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, BaseSet), Z_Construct_UClass_UBaseAttributesSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BaseSet_MetaData), NewProp_BaseSet_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PassiveGameplayEffects_Inner = { "PassiveGameplayEffects", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -423,6 +432,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCha
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_InventoryComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PlayerHUD,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_NiagaraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_TakingDamageAnim,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_BaseSet,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PassiveGameplayEffects_Inner,
@@ -439,6 +449,7 @@ UObject* (*const Z_Construct_UClass_ABorneCharacter_Statics::DependentSingletons
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABorneCharacter_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABorneCharacter_Statics::InterfaceParams[] = {
 	{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(ABorneCharacter, IAbilitySystemInterface), false },  // 2272790346
+	{ Z_Construct_UClass_UDamageableInterface_NoRegister, (int32)VTABLE_OFFSET(ABorneCharacter, IDamageableInterface), false },  // 961404820
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ABorneCharacter_Statics::ClassParams = {
 	&ABorneCharacter::StaticClass,
@@ -475,10 +486,10 @@ ABorneCharacter::~ABorneCharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 291202785U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 3048952569U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1423965351(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_2951127845(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -22,6 +22,7 @@
 #include "PlayerComponents/SInventoryComponent.h"
 #include "PlayerComponents/SHUDComponent.h"
 #include "NiagaraComponent.h"
+#include "Interfaces/DamageableInterface.h"
 #include "BorneCharacter.generated.h"
 
 
@@ -42,7 +43,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 
 UCLASS(config=Game)
-class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
+class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, public IDamageableInterface
 {
 	GENERATED_BODY()
 	
@@ -98,6 +99,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	UAnimMontage* TakingDamageAnim;
+	
 	/**ABILTIES ////////////////////////////////////////////
 	 */
 
@@ -113,6 +117,8 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 public:
 	ABorneCharacter();
 	virtual void BeginPlay() override;
+	virtual void DoDamageFeedback_Implementation() override;
+
 
 protected:
 
