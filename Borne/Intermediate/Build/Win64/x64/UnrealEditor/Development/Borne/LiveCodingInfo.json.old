@@ -45,7 +45,6 @@
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
-			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
@@ -55,7 +54,8 @@
 			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
 			"SoulsBTTaskRangedAttack.gen.cpp.obj",
-			"SoulsBTTaskRangedAttack.cpp.obj"
+			"SoulsBTTaskRangedAttack.cpp.obj",
+			"SDmgProjectile.cpp.obj"
 		]
 	}
 }

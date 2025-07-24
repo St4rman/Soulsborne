@@ -42,7 +42,6 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Interfaces/DamageableInterface.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Interfaces/TargetableInterface.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Interfaces/WeaponInterface.cpp"
-#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Pawns/SDmgProjectile.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Pawns/TargetableEnemy.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/CamMoveComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/DetectorComponent.cpp"
