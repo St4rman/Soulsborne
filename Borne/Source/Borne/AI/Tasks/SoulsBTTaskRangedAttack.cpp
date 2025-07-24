@@ -3,7 +3,6 @@
 
 EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-	//spawn projectile towards
 	AAIController* MyController = OwnerComp.GetAIOwner();
 
 	if (ensure(MyController))
@@ -24,6 +23,13 @@ EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent
 		const FVector Direction = TargetActor->GetActorLocation() - MuzzleLocation;
 		FRotator Rotation = Direction.Rotation();
 
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		//Spawn Projecile 
+		// AActor* NewProjectile; //GetWorld()->SpawnActor<AActor>(Class, MuzzleLocation, MuzzleRotation, Parameters);
 		
+		// return NewProjectile ? EBTNodeResult::Succeeded : EBTNodeResult::Failed;
+		return EBTNodeResult::Failed;
 	}
+	return EBTNodeResult::Failed;
 }

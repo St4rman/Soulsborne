@@ -16,6 +16,7 @@
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
 			"SBWeaponBase.gen.cpp.obj",
+			"SDmgProjectile.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.gen.cpp.obj",
@@ -23,10 +24,12 @@
 			"SoulsAICharacter.gen.cpp.obj",
 			"SoulsAIController.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
+			"SoulsBTTaskRangedAttack.gen.cpp.obj",
 			"TargetableEnemy.gen.cpp.obj",
 			"TargetableInterface.gen.cpp.obj",
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"SoulBTSCheckAttackRange.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
@@ -49,7 +52,8 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"SoulBTSCheckAttackRange.cpp.obj"
+			"SoulsBTTaskRangedAttack.cpp.obj",
+			"SDmgProjectile.cpp.obj"
 		]
 	}
 }

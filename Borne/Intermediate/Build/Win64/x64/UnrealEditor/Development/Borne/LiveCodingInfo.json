@@ -17,6 +17,7 @@
 			"SBWeaponBase.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
+			"SoulBTSCheckAttackRange.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
 			"SoulsAICharacter.gen.cpp.obj",
 			"SoulsAIController.gen.cpp.obj",
@@ -25,6 +26,7 @@
 			"TargetableInterface.gen.cpp.obj",
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"SoulBTSCheckAttackRange.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
@@ -48,8 +50,10 @@
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"SoulBTSCheckAttackRange.gen.cpp.obj",
-			"SoulBTSCheckAttackRange.cpp.obj"
+			"SDmgProjectile.gen.cpp.obj",
+			"SoulsBTTaskRangedAttack.gen.cpp.obj",
+			"SoulsBTTaskRangedAttack.cpp.obj",
+			"SDmgProjectile.cpp.obj"
 		]
 	}
 }
