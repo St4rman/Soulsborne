@@ -33,6 +33,5 @@ void USoulBTSCheckAttackRange::TickNode(UBehaviorTreeComponent& OwnerComp, uint8
 			}
 		}
 	}
-	// line of sight maybe
 }
  
