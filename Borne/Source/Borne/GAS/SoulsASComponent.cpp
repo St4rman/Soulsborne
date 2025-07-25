@@ -3,3 +3,7 @@
 
 #include "SoulsASComponent.h"
 
+USoulsASComponent::USoulsASComponent()
+{
+	ReplicationMode = EGameplayEffectReplicationMode::Mixed;	
+}

@@ -6,6 +6,7 @@
 UBDodgeRollAbility::UBDodgeRollAbility()
 {
 	AbilityInputID = ESoulsAbilityInputID::Roll;
+	
 }
 
 bool UBDodgeRollAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const

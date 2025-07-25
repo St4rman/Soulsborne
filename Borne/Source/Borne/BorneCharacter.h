@@ -82,6 +82,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, publi
 	/** Roll action for dodging*/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* RollAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* AttackAction;
 	
 	/** Detection */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
@@ -118,7 +121,7 @@ public:
 	ABorneCharacter();
 	virtual void BeginPlay() override;
 	virtual void DoDamageFeedback_Implementation() override;
-
+	void SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID);
 
 protected:
 
@@ -133,6 +136,10 @@ protected:
 	void AddStartUpGameplayAbilities();
 	
 	FVector2D InputCache;
+	void HandleAttackActionPressed();
+	void HandleRollActionPressed();
+	void HandleRollActionReleased();
+	void HandleAttackActionReleased();
 
 	/**
 	 * ABILITIES ///////////////////////////////////////////////////////

@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Borne_Source_Borne_GAS_SoulsASComponent_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USoulsASComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	USoulsASComponent(USoulsASComponent&&); \
@@ -33,7 +31,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USoulsASComponent); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USoulsASComponent); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USoulsASComponent) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USoulsASComponent) \
 	NO_API virtual ~USoulsASComponent();
 
 

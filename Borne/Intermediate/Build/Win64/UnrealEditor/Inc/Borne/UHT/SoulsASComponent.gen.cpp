@@ -75,7 +75,6 @@ template<> BORNE_API UClass* StaticClass<USoulsASComponent>()
 {
 	return USoulsASComponent::StaticClass();
 }
-USoulsASComponent::USoulsASComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(USoulsASComponent);
 USoulsASComponent::~USoulsASComponent() {}
 // End Class USoulsASComponent

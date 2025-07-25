@@ -93,6 +93,7 @@ void ABorneCharacter::BeginPlay()
 			 );
 
 			SoulsAbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, Binds);
+			
 		}
 	}
 
@@ -134,6 +135,14 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
+
+		EnhancedInputComponent->BindAction(AttackAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleAttackActionPressed);
+		EnhancedInputComponent->BindAction(AttackAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleAttackActionReleased);
+
+		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleRollActionPressed);
+		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleRollActionReleased);
+
+
 	}
 	else
 	{
@@ -289,3 +298,40 @@ void ABorneCharacter::DoDamageFeedback_Implementation()
 	PlayAnimMontage(TakingDamageAnim);
 }
 
+void ABorneCharacter::HandleAttackActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::Attack);
+}
+
+void ABorneCharacter::HandleAttackActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Attack);
+}
+
+void ABorneCharacter::HandleRollActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::Roll);
+}
+
+void ABorneCharacter::HandleRollActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Roll);
+}
+
+
+void ABorneCharacter::SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID)
+{
+	if (! SoulsAbilitySystemComponent)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No valid ASC found - char.cpp"));
+	}
+
+	if (bIsPressed)
+	{
+		SoulsAbilitySystemComponent->AbilityLocalInputPressed(static_cast<int32>(InputID));
+	}
+	else
+	{
+		SoulsAbilitySystemComponent->AbilityLocalInputReleased(static_cast<int32>(InputID));
+	}
+}
