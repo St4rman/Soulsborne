@@ -4,6 +4,22 @@
 ASoulsAICharacter::ASoulsAICharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	LockOnWidget = CreateDefaultSubobject<UWidgetComponent>("LockOnWidget");
+	LockOnWidget->SetupAttachment(RootComponent);
+	LockOnWidget->SetVisibility(false);
+}
+
+void ASoulsAICharacter::SetSelfAsTarget_Implementation()
+{
+	ITargetableInterface::SetSelfAsTarget_Implementation();
+	LockOnWidget->SetVisibility(true);
+}
+
+void ASoulsAICharacter::RemoveSelfAsTarget_Implementation()
+{
+	LockOnWidget->SetVisibility(false);
+	ITargetableInterface::RemoveSelfAsTarget_Implementation();
 }
 
 void ASoulsAICharacter::BeginPlay()

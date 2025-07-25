@@ -39,9 +39,12 @@ public:
 	static void ResetMeshToCharacter(ACharacter* SourceChar);
 
 	/**
-	 * Run a trace for enemies. Synced to anim notify - 
-	 * 
+	 * Run a trace for enemies.
 	 */
 	static void RunAttackTrace(AActor* Self);
+	TArray<AActor*> TraceIgnoreActors;
+
+	static void ClearIgnoredActors();
+		
 };
 	

@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_SoulsAICharacter_generated_h
 
-#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASoulsAICharacter(); \
 	friend struct Z_Construct_UClass_ASoulsAICharacter_Statics; \
 public: \
 	DECLARE_CLASS(ASoulsAICharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Borne"), NO_API) \
-	DECLARE_SERIALIZER(ASoulsAICharacter)
+	DECLARE_SERIALIZER(ASoulsAICharacter) \
+	virtual UObject* _getUObject() const override { return const_cast<ASoulsAICharacter*>(this); }
 
 
-#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASoulsAICharacter(ASoulsAICharacter&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~ASoulsAICharacter();
 
 
-#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_7_PROLOG
-#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_10_GENERATED_BODY \
+#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_12_PROLOG
+#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

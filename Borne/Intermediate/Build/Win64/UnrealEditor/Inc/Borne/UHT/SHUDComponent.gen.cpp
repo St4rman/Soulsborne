@@ -201,9 +201,14 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EmptyTexture_MetaData[] = {
+		{ "Category", "SHUDComponent" },
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_PlayerHUDClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerHUD;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EmptyTexture;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -219,9 +224,11 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_USHUDComponent_Statics::NewProp_PlayerHUDClass = { "PlayerHUDClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USHUDComponent, PlayerHUDClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UPlayerHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerHUDClass_MetaData), NewProp_PlayerHUDClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHUDComponent_Statics::NewProp_PlayerHUD = { "PlayerHUD", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USHUDComponent, PlayerHUD), Z_Construct_UClass_UPlayerHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerHUD_MetaData), NewProp_PlayerHUD_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHUDComponent_Statics::NewProp_EmptyTexture = { "EmptyTexture", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USHUDComponent, EmptyTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EmptyTexture_MetaData), NewProp_EmptyTexture_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USHUDComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHUDComponent_Statics::NewProp_PlayerHUDClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHUDComponent_Statics::NewProp_PlayerHUD,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHUDComponent_Statics::NewProp_EmptyTexture,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USHUDComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_USHUDComponent_Statics::DependentSingletons[])() = {
@@ -264,10 +271,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 1766106097U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 3290179807U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2432409852(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_4078256807(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

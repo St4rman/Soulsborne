@@ -28,6 +28,7 @@ void USHUDComponent::BeginPlay()
 		PlayerHUD = CreateWidget<UPlayerHUD>(GetWorld(), PlayerHUDClass);
 		check(PlayerController);
 		PlayerHUD->AddToPlayerScreen();
+		SetMeleeIcon(EmptyTexture);
 	}
 }
 

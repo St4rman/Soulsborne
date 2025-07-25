@@ -37,6 +37,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	class UPlayerHUD* PlayerHUD;
 
+	UPROPERTY(EditAnywhere)
+	UTexture2D* EmptyTexture;
+
 	UFUNCTION(BlueprintCallable)
 	void SetStamina(const float Stamina, const float MaxStamina) const ;
 

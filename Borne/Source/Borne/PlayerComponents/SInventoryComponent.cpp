@@ -72,7 +72,7 @@ bool USInventoryComponent::WeaponInPickUpRange()
 		GetWorld(),
 		BoxPos, FVector(DetectorRadius, DetectorRadius, DetectorRadius), WeaponObjectType, nullptr, ActorsToIgnore,  OutActor );
 
-	// UKismetSystemLibrary::DrawDebugBox(GetWorld(), BoxPos,FVector(DetectorRadius, DetectorRadius, DetectorRadius), FColor::Red, FRotator::ZeroRotator, 3.0f, 1.0f );
+	UKismetSystemLibrary::DrawDebugBox(GetWorld(), BoxPos,FVector(DetectorRadius, DetectorRadius, DetectorRadius), FColor::Red, FRotator::ZeroRotator, 3.0f, 1.0f );
 
 	if (OutActor.Num() > 0)
 	{
@@ -87,12 +87,16 @@ bool USInventoryComponent::WeaponInPickUpRange()
 
 void USInventoryComponent::PickUpWeapon()
 {
-	if (EquippedWeapon)
+	if (WeaponInPickUpRange())
 	{
-		DropCurrentWeapon();
+		if (EquippedWeapon)
+		{
+			DropCurrentWeapon();
+		}
+		if (CurrentTargetWeapon->Implements<UWeaponInterface>())
+		{
+			CurrentTargetWeapon->OnWeaponPickup_Implementation(GetOwner());
+		}
 	}
-	if (CurrentTargetWeapon->Implements<UWeaponInterface>())
-	{
-		CurrentTargetWeapon->OnWeaponPickup_Implementation(GetOwner());
-	}
+	
 }
