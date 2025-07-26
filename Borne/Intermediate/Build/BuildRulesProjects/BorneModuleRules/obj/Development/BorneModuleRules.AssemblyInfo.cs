@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BorneModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2edf24efba454bcd178f72426e4f1ba09cb625f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+310b2876a8cf9f9e4574a7450f9dfdbc564effeb")]
 [assembly: System.Reflection.AssemblyProductAttribute("BorneModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BorneModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
