@@ -3,11 +3,15 @@
 #include "CoreMinimal.h"
 #include "Borne/Interfaces/TargetableInterface.h"
 #include "Components/WidgetComponent.h"
+#include "AIController.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "Perception/PawnSensingComponent.h"
 #include "GameFramework/Character.h"
 #include "SoulsAICharacter.generated.h"
 
 
 class UUserWidget;
+class UPawnSensingComponent;
 
 UCLASS()
 class BORNE_API ASoulsAICharacter : public ACharacter, public ITargetableInterface
@@ -22,16 +26,18 @@ public:
 	virtual void RemoveSelfAsTarget_Implementation() override;
 
 protected:
-	
-	virtual void BeginPlay() override;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UPawnSensingComponent* PawnSensingComponent;
+	
 	UPROPERTY(EditAnywhere)
 	UWidgetComponent* LockOnWidget;
-	
+
+	UFUNCTION()
+	void OnPawnSeen(APawn* Pawn);
+
+	void PostInitializeComponents() override;
 public:
-	
-	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool IsTargeted;

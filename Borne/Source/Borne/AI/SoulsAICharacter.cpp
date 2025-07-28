@@ -1,5 +1,7 @@
 ﻿#include "SoulsAICharacter.h"
 
+#include "Borne/Core/HelperData.h"
+
 
 ASoulsAICharacter::ASoulsAICharacter()
 {
@@ -8,6 +10,14 @@ ASoulsAICharacter::ASoulsAICharacter()
 	LockOnWidget = CreateDefaultSubobject<UWidgetComponent>("LockOnWidget");
 	LockOnWidget->SetupAttachment(RootComponent);
 	LockOnWidget->SetVisibility(false);
+
+	PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComponent");
+}
+
+void ASoulsAICharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	PawnSensingComponent->OnSeePawn.AddDynamic(this, &ASoulsAICharacter::OnPawnSeen);
 }
 
 void ASoulsAICharacter::SetSelfAsTarget_Implementation()
@@ -22,19 +32,17 @@ void ASoulsAICharacter::RemoveSelfAsTarget_Implementation()
 	ITargetableInterface::RemoveSelfAsTarget_Implementation();
 }
 
-void ASoulsAICharacter::BeginPlay()
+void ASoulsAICharacter::OnPawnSeen(APawn* Pawn)
 {
-	Super::BeginPlay();
-	
+	AAIController* AIC = Cast<AAIController>(GetController());
+	if (AIC)
+	{
+		UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
+		BBComp->SetValueAsObject("TargetActor", Pawn);
+
+		DrawDebugString(GetWorld(), Pawn->GetActorLocation(), "SPOTTED", nullptr, FColor::Purple, 4.0f, true);
+	}
 }
 
-void ASoulsAICharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-}
 
-void ASoulsAICharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
 

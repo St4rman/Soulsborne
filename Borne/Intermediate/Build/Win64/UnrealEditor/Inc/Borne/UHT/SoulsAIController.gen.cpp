@@ -14,6 +14,7 @@ AIMODULE_API UClass* Z_Construct_UClass_AAIController();
 AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAIController();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAIController_NoRegister();
+BORNE_API UEnum* Z_Construct_UEnum_Borne_EAIState();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
@@ -38,8 +39,18 @@ struct Z_Construct_UClass_ASoulsAIController_Statics
 		{ "Category", "AI" },
 		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentState_MetaData[] = {
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlackBoardStateKeyValue_MetaData[] = {
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainBehaviorTree;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentState;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_BlackBoardStateKeyValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -48,8 +59,12 @@ struct Z_Construct_UClass_ASoulsAIController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_MainBehaviorTree = { "MainBehaviorTree", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, MainBehaviorTree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainBehaviorTree_MetaData), NewProp_MainBehaviorTree_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, CurrentState), Z_Construct_UEnum_Borne_EAIState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 403279179
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BlackBoardStateKeyValue = { "BlackBoardStateKeyValue", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, BlackBoardStateKeyValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlackBoardStateKeyValue_MetaData), NewProp_BlackBoardStateKeyValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASoulsAIController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_MainBehaviorTree,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_CurrentState,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BlackBoardStateKeyValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASoulsAIController_Statics::DependentSingletons[])() = {
@@ -92,10 +107,10 @@ ASoulsAIController::~ASoulsAIController() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 1743490415U) },
+		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 2067129130U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_3648284025(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_379371152(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

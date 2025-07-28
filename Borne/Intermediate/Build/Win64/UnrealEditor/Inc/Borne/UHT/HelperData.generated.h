@@ -45,4 +45,12 @@ template<> BORNE_API UEnum* StaticEnum<ELocomotionMode>();
 enum ECameraState : uint8;
 template<> BORNE_API UEnum* StaticEnum<ECameraState>();
 
+#define FOREACH_ENUM_EAISTATE(op) \
+	op(Idle) \
+	op(Strafing) \
+	op(Attacking) 
+
+enum EAIState : uint8;
+template<> BORNE_API UEnum* StaticEnum<EAIState>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
