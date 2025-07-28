@@ -21,7 +21,7 @@ protected:
 	FBlackboardKeySelector AttackRangeKey;
 
 	UPROPERTY(EditAnywhere, Category = "AI")
-	float MeleeRange;
+	float RangeToCheck;
 	
 	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 

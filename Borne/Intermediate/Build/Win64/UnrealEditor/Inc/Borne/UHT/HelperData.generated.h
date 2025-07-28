@@ -48,7 +48,8 @@ template<> BORNE_API UEnum* StaticEnum<ECameraState>();
 #define FOREACH_ENUM_EAISTATE(op) \
 	op(Idle) \
 	op(Strafing) \
-	op(Attacking) 
+	op(Attacking) \
+	op(Ranged) 
 
 enum EAIState : uint8;
 template<> BORNE_API UEnum* StaticEnum<EAIState>();

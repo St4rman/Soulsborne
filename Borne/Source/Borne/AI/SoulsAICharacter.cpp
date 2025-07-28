@@ -39,7 +39,6 @@ void ASoulsAICharacter::OnPawnSeen(APawn* Pawn)
 	{
 		UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
 		BBComp->SetValueAsObject("TargetActor", Pawn);
-
 		DrawDebugString(GetWorld(), Pawn->GetActorLocation(), "SPOTTED", nullptr, FColor::Purple, 4.0f, true);
 	}
 }

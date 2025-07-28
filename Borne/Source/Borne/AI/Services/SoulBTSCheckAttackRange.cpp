@@ -21,7 +21,7 @@ void USoulBTSCheckAttackRange::TickNode(UBehaviorTreeComponent& OwnerComp, uint8
 				{
 					const float Distance = FVector::Distance(TargetActor->GetActorLocation(), AIPawn->GetActorLocation());
 					
-					bool bIsWithinRange = Distance < 500;
+					bool bIsWithinRange = Distance < RangeToCheck;
 					bool bHasLOS = false;
 					if (bIsWithinRange)
 					{

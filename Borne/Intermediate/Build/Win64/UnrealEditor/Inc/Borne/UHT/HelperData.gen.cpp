@@ -225,6 +225,8 @@ struct Z_Construct_UEnum_Borne_EAIState_Statics
 		{ "Idle.DisplayName", "Idle" },
 		{ "Idle.Name", "Idle" },
 		{ "ModuleRelativePath", "Core/HelperData.h" },
+		{ "Ranged.DisplayName", "Ranged" },
+		{ "Ranged.Name", "Ranged" },
 		{ "Strafing.DisplayName", "Strafing" },
 		{ "Strafing.Name", "Strafing" },
 	};
@@ -233,6 +235,7 @@ struct Z_Construct_UEnum_Borne_EAIState_Statics
 		{ "Idle", (int64)Idle },
 		{ "Strafing", (int64)Strafing },
 		{ "Attacking", (int64)Attacking },
+		{ "Ranged", (int64)Ranged },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -265,10 +268,10 @@ struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics
 		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2896397640U) },
 		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2571520345U) },
 		{ ECameraState_StaticEnum, TEXT("ECameraState"), &Z_Registration_Info_UEnum_ECameraState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4218898129U) },
-		{ EAIState_StaticEnum, TEXT("EAIState"), &Z_Registration_Info_UEnum_EAIState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 403279179U) },
+		{ EAIState_StaticEnum, TEXT("EAIState"), &Z_Registration_Info_UEnum_EAIState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3248951569U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_2740869117(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_2635180638(TEXT("/Script/Borne"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo));
