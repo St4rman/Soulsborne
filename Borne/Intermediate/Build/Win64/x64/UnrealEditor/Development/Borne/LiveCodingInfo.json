@@ -6,7 +6,6 @@
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
-			"Borne.init.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"CamMoveComponent.gen.cpp.obj",
@@ -45,7 +44,6 @@
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
-			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
@@ -53,9 +51,13 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
+			"Borne.init.gen.cpp.obj",
+			"SStateCheckService.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.cpp.obj",
+			"SStateCheckService.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
-			"SoulsAIController.cpp.obj"
+			"SoulsAIController.cpp.obj",
+			"SDmgProjectile.cpp.obj"
 		]
 	}
 }

@@ -26,7 +26,7 @@ ASDmgProjectile::ASDmgProjectile()
 void ASDmgProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "ASDmgProjectile::BeginPlay");
+	// GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "ASDmgProjectile::BeginPlay");
 	GetWorld()->GetTimerManager().SetTimer(LIfeCycleTimer, this, &ASDmgProjectile::OnLifeExpired,LifeTime);
 }
 

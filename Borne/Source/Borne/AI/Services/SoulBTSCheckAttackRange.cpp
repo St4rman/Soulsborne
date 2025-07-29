@@ -5,7 +5,10 @@
 void USoulBTSCheckAttackRange::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
 	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
-	// find distance from ourselves and our target actor
+	
+	// distance less than range to check and it has
+	// LOS
+	
 	UBlackboardComponent*  BlackboardComponent = OwnerComp.GetBlackboardComponent();
 
 	if (ensure(BlackboardComponent))
