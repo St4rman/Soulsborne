@@ -35,7 +35,22 @@ void ASoulsAICharacter::BeginPlay()
 	CurrentWep->SetOwner(this);
 	CurrentWep->GetMesh()->SetWorldScale3D(FVector(2, 2, 2));
 	CurrentWep->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepWorldTransform, "MeleeArmament-boss-r");
-	MainWeapon = CurrentWep; 
+	MainWeapon = CurrentWep;
+	
+	if (MaxHealth < 0)
+	{
+		UE_LOG(LogTemp, Error, TEXT("MaxHealth is 0"));
+	}
+	Health = MaxHealth;
+}
+
+void ASoulsAICharacter::TakeDamage(float DamageAmount)
+{
+	const float HealthDelta = Health - DamageAmount;
+	if (HealthDelta > 0)
+	{
+		Health = HealthDelta;
+	}
 }
 
 void ASoulsAICharacter::SetSelfAsTarget_Implementation()

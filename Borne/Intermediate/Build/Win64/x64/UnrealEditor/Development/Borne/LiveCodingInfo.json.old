@@ -2,10 +2,13 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Borne.cpp.obj": [
+			"ANS_EnemyAttackNotify.gen.cpp.obj",
 			"ANS_MeleeAttackNotify.gen.cpp.obj",
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
+			"Borne.init.gen.cpp.obj",
+			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"CamMoveComponent.gen.cpp.obj",
 			"DamageableInterface.gen.cpp.obj",
@@ -14,12 +17,14 @@
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
+			"SBTTaskMeleeAttack.gen.cpp.obj",
 			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
+			"SoulsAICharacter.gen.cpp.obj",
 			"SoulsAIController.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
 			"SoulsBTTaskRangedAttack.gen.cpp.obj",
@@ -32,8 +37,9 @@
 			"SStateCheckService.cpp.obj",
 			"SoulsAIController.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
-			"ANS_MeleeAttackNotify.cpp.obj",
+			"ANS_EnemyAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
+			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
@@ -42,8 +48,10 @@
 			"SoulGameplayAbility.cpp.obj",
 			"BaseAttributesSet.cpp.obj",
 			"SoulsASComponent.cpp.obj",
+			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
+			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
@@ -51,15 +59,9 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"ANS_EnemyAttackNotify.gen.cpp.obj",
-			"Borne.init.gen.cpp.obj",
-			"BorneCharacter.gen.cpp.obj",
-			"SoulsAICharacter.gen.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
-			"ANS_EnemyAttackNotify.cpp.obj",
-			"BorneCharacter.cpp.obj",
-			"DamageableInterface.cpp.obj",
-			"SDmgProjectile.cpp.obj"
+			"SBTTaskMeleeAttack.cpp.obj",
+			"ANS_MeleeAttackNotify.cpp.obj"
 		]
 	}
 }

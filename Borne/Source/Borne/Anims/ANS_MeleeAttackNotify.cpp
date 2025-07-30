@@ -3,8 +3,10 @@
 
 #include "ANS_MeleeAttackNotify.h"
 
+#include "Borne/AI/SoulsAICharacter.h"
+
 void UANS_MeleeAttackNotify::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation,
-	const FAnimNotifyEventReference& EventReference){
+                                       const FAnimNotifyEventReference& EventReference){
 	Super::NotifyEnd(MeshComp, Animation, EventReference);
 	if (MeshComp !=nullptr && MeshComp->GetOwner() != nullptr)
 	{
@@ -62,7 +64,13 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 
 		if (TargetActor !=  nullptr && DidHit == true)
 		{
-			TraceIgnoreActors.Add(TargetActor);
+			
+			ASoulsAICharacter* Enemy = Cast<ASoulsAICharacter>(TargetActor);
+			if (Enemy != nullptr)
+			{
+				TraceIgnoreActors.Add(TargetActor);
+				Enemy->TakeDamage(CurWep->LightDamage);
+			}
 			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
 		}
 	}

@@ -43,6 +43,12 @@ protected:
 	TSubclassOf<ASBWeaponBase> WeaponBase;
 
 	virtual void PostInitializeComponents() override;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Health")
+	float Health;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxHealth;
 	
 public:
 
@@ -52,5 +58,6 @@ public:
 	virtual void BeginPlay() override;
 
 	 ASBWeaponBase* GetWeapon() const {return MainWeapon; }
-	
+
+	void TakeDamage(float DamageAmount);
 };
