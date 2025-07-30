@@ -21,6 +21,7 @@ class BORNE_API IDamageableInterface
 	GENERATED_BODY()
 
 public:
+
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void DoDamageFeedback();
+	void DoPlayerDamage(const float IncomingDamage , UObject* Source);
 };

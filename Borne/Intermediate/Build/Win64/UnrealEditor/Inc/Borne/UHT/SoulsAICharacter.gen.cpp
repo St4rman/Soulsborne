@@ -11,9 +11,11 @@ void EmptyLinkFunctionForGeneratedCodeSoulsAICharacter() {}
 
 // Begin Cross Module References
 AIMODULE_API UClass* Z_Construct_UClass_UPawnSensingComponent_NoRegister();
+BORNE_API UClass* Z_Construct_UClass_ASBWeaponBase_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAICharacter();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAICharacter_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UTargetableInterface_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
@@ -94,6 +96,10 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WeaponBase_MetaData[] = {
+		{ "Category", "WeaponBase Class" },
+		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsTargeted_MetaData[] = {
 		{ "Category", "SoulsAICharacter" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
@@ -101,6 +107,7 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnSensingComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LockOnWidget;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WeaponBase;
 	static void NewProp_IsTargeted_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsTargeted;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -117,6 +124,7 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_PawnSensingComponent = { "PawnSensingComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, PawnSensingComponent), Z_Construct_UClass_UPawnSensingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PawnSensingComponent_MetaData), NewProp_PawnSensingComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_LockOnWidget = { "LockOnWidget", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, LockOnWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LockOnWidget_MetaData), NewProp_LockOnWidget_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_WeaponBase = { "WeaponBase", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, WeaponBase), Z_Construct_UClass_UClass, Z_Construct_UClass_ASBWeaponBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponBase_MetaData), NewProp_WeaponBase_MetaData) };
 void Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted_SetBit(void* Obj)
 {
 	((ASoulsAICharacter*)Obj)->IsTargeted = 1;
@@ -125,6 +133,7 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ASoulsAICharacte
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASoulsAICharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_PawnSensingComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_LockOnWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_WeaponBase,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAICharacter_Statics::PropPointers) < 2048);
@@ -171,10 +180,10 @@ ASoulsAICharacter::~ASoulsAICharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 1079079851U) },
+		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 1669493616U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_3663689964(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_4277873257(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

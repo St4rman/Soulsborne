@@ -1,8 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "BorneCharacter.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
+#include "GameplayEffect.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -13,6 +16,8 @@
 #include "Interfaces/TargetableInterface.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
+
+class UGameplayEffect;
 
 //////////////////////////////////////////////////////////////////////////
 // ABorneCharacter
@@ -292,11 +297,18 @@ void ABorneCharacter::AddStartUpGameplayAbilities()
 }
 
 
-void ABorneCharacter::DoDamageFeedback_Implementation()
+
+void ABorneCharacter::DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source)
 {
-	IDamageableInterface::DoDamageFeedback_Implementation();
-	PlayAnimMontage(TakingDamageAnim);
+	IDamageableInterface::DoPlayerDamage_Implementation(IncomingDamage, Source);
+	FGameplayEffectContextHandle ContextHandle = GetAbilitySystemComponent()->MakeEffectContext();
+	ContextHandle.AddSourceObject(Source);
+		
+	const FGameplayEffectSpecHandle SpecHandle =  GetAbilitySystemComponent()->MakeOutgoingSpec(DamageGameplayEffect, 1.0f, ContextHandle);
+	const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, DamageTag, 10.0 * -1.0f );
+	GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
 }
+
 
 void ABorneCharacter::HandleAttackActionPressed()
 {

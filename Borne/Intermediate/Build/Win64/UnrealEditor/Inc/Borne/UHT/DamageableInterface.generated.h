@@ -9,14 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
 #ifdef BORNE_DamageableInterface_generated_h
 #error "DamageableInterface.generated.h already included, missing '#pragma once' in DamageableInterface.h"
 #endif
 #define BORNE_DamageableInterface_generated_h
 
 #define FID_Borne_Source_Borne_Interfaces_DamageableInterface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void DoDamageFeedback_Implementation() {}; \
-	DECLARE_FUNCTION(execDoDamageFeedback);
+	virtual void DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source) {}; \
+	DECLARE_FUNCTION(execDoPlayerDamage);
 
 
 #define FID_Borne_Source_Borne_Interfaces_DamageableInterface_h_13_CALLBACK_WRAPPERS
@@ -57,7 +58,7 @@ protected: \
 public: \
 	typedef UDamageableInterface UClassType; \
 	typedef IDamageableInterface ThisClass; \
-	static void Execute_DoDamageFeedback(UObject* O); \
+	static void Execute_DoPlayerDamage(UObject* O, const float IncomingDamage, UObject* Source); \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 

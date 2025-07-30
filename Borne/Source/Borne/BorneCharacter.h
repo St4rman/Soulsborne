@@ -120,8 +120,11 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, publi
 public:
 	ABorneCharacter();
 	virtual void BeginPlay() override;
-	virtual void DoDamageFeedback_Implementation() override;
+	
+	virtual void DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source) override;
+	
 	void SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID);
+
 
 protected:
 
@@ -153,6 +156,11 @@ protected:
 	UPROPERTY()
 	uint8 bAbilitiesInitialized:1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Abilities")
+	TSubclassOf<UGameplayEffect> DamageGameplayEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Abilities")
+	FGameplayTag DamageTag;
 	
 protected:
 

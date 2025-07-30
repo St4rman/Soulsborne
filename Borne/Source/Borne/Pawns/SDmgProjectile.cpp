@@ -43,12 +43,7 @@ void ASDmgProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, A
 	{
 		if (ABorneCharacter* Player =  Cast<ABorneCharacter>(OtherActor))
 		{
-			FGameplayEffectContextHandle ContextHandle =  Player->GetAbilitySystemComponent()->MakeEffectContext();
-			ContextHandle.AddSourceObject(GetOwner());
-		
-			const FGameplayEffectSpecHandle SpecHandle =  Player->GetAbilitySystemComponent()->MakeOutgoingSpec(DamageGameplayEffect, 1.0f, ContextHandle);
-			const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, DamageTag, ProjectileDamage * -1.0f );
-			Player->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
+			Player->DoPlayerDamage_Implementation(ProjectileDamage, GetOwner());
 			Destroy();
 		}
 		

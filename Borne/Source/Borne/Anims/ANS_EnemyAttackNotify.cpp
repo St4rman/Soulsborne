@@ -1,4 +1,7 @@
 ﻿#include "ANS_EnemyAttackNotify.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
+#include "Borne/BorneCharacter.h"
 #include "Borne/AI/SoulsAICharacter.h"
 #include "Kismet/KismetSystemLibrary.h"
 
@@ -23,8 +26,7 @@ void UANS_EnemyAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 	}
 }
 
-void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation,
-	float FrameDeltaTime, const FAnimNotifyEventReference& EventReference)
+void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, const FAnimNotifyEventReference& EventReference)
 {
 	Super::NotifyTick(MeshComp, Animation, FrameDeltaTime, EventReference);
 
@@ -35,21 +37,22 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 		TArray<TEnumAsByte<EObjectTypeQuery>> TraceObjects;
 		TraceObjects.Add(UEngineTypes::ConvertToObjectType(ECC_Pawn));
 	
-		const ASoulsAICharacter* PlayerChar = Cast<ASoulsAICharacter>(Self);
-		if (PlayerChar == nullptr)
+		const ASoulsAICharacter* Character = Cast<ASoulsAICharacter>(Self);
+		if (Character == nullptr)
 		{
 			return;
 		}
 	
 		
-		// const UStaticMeshComponent* WepMesh = PlayerChar->GetMesh();
-		// const FVector StartLoc	= WepMesh->GetSocketLocation("MeleeArmament-right");
-		// const FVector EndLoc	= WepMesh->GetSocketLocation("Weapon_Tip");
-		constexpr float Radius		= 50.0f;
+		const ASBWeaponBase* Weapon = Character->GetWeapon();
+		if (Weapon == nullptr){ return;}
+		const FVector StartLoc	= Weapon->GetMesh()->GetSocketLocation("Hilt");
+		const FVector EndLoc	= Weapon->GetMesh()->GetSocketLocation("Tip");
+		constexpr float Radius	= 50.0f;
 
 		bool DidHit = UKismetSystemLibrary::SphereTraceSingleForObjects(
 			Self->GetWorld(),
-			PlayerChar->GetActorLocation(), PlayerChar->GetActorLocation()* 1000.0f, Radius, TraceObjects,
+			StartLoc, EndLoc, Radius, TraceObjects,
 			true, TraceIgnoreActors,
 			EDrawDebugTrace::ForOneFrame,
 			Target, true);
@@ -59,7 +62,14 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 		if (TargetActor !=  nullptr && DidHit == true)
 		{
 			TraceIgnoreActors.Add(TargetActor);
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
+			ABorneCharacter* Player = Cast<ABorneCharacter>(TargetActor);
+			
+			if (Player)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
+				Player->DoPlayerDamage_Implementation(50.0f, MeshComp->GetOwner());
+			}
+			
 		}
 	}
 }

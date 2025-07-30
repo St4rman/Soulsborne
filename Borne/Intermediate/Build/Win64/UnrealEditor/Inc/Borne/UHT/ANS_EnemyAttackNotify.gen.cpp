@@ -6,14 +6,18 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Borne/Anims/ANS_EnemyAttackNotify.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeANS_EnemyAttackNotify() {}
 
 // Begin Cross Module References
 BORNE_API UClass* Z_Construct_UClass_UANS_EnemyAttackNotify();
 BORNE_API UClass* Z_Construct_UClass_UANS_EnemyAttackNotify_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimNotifyState();
+GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
@@ -37,10 +41,22 @@ struct Z_Construct_UClass_UANS_EnemyAttackNotify_Statics
 		{ "IncludePath", "Anims/ANS_EnemyAttackNotify.h" },
 		{ "ModuleRelativePath", "Anims/ANS_EnemyAttackNotify.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageGameplayEffect_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "ANS_EnemyAttackNotify" },
+		{ "ModuleRelativePath", "Anims/ANS_EnemyAttackNotify.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageTag_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "ANS_EnemyAttackNotify" },
+		{ "ModuleRelativePath", "Anims/ANS_EnemyAttackNotify.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TraceIgnoreActors_MetaData[] = {
 		{ "ModuleRelativePath", "Anims/ANS_EnemyAttackNotify.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_DamageGameplayEffect;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DamageTag;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TraceIgnoreActors_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_TraceIgnoreActors;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -50,9 +66,13 @@ struct Z_Construct_UClass_UANS_EnemyAttackNotify_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_DamageGameplayEffect = { "DamageGameplayEffect", nullptr, (EPropertyFlags)0x0044000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UANS_EnemyAttackNotify, DamageGameplayEffect), Z_Construct_UClass_UClass, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageGameplayEffect_MetaData), NewProp_DamageGameplayEffect_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_DamageTag = { "DamageTag", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UANS_EnemyAttackNotify, DamageTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageTag_MetaData), NewProp_DamageTag_MetaData) }; // 1298103297
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_TraceIgnoreActors_Inner = { "TraceIgnoreActors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_TraceIgnoreActors = { "TraceIgnoreActors", nullptr, (EPropertyFlags)0x0010000000000010, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UANS_EnemyAttackNotify, TraceIgnoreActors), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TraceIgnoreActors_MetaData), NewProp_TraceIgnoreActors_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_DamageGameplayEffect,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_DamageTag,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_TraceIgnoreActors_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_EnemyAttackNotify_Statics::NewProp_TraceIgnoreActors,
 };
@@ -98,10 +118,10 @@ UANS_EnemyAttackNotify::~UANS_EnemyAttackNotify() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_EnemyAttackNotify_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UANS_EnemyAttackNotify, UANS_EnemyAttackNotify::StaticClass, TEXT("UANS_EnemyAttackNotify"), &Z_Registration_Info_UClass_UANS_EnemyAttackNotify, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UANS_EnemyAttackNotify), 2477134886U) },
+		{ Z_Construct_UClass_UANS_EnemyAttackNotify, UANS_EnemyAttackNotify::StaticClass, TEXT("UANS_EnemyAttackNotify"), &Z_Registration_Info_UClass_UANS_EnemyAttackNotify, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UANS_EnemyAttackNotify), 3033236570U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_EnemyAttackNotify_h_1845477388(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_EnemyAttackNotify_h_902653991(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_EnemyAttackNotify_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_EnemyAttackNotify_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

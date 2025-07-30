@@ -10,10 +10,7 @@ ASoulsAICharacter::ASoulsAICharacter()
 	LockOnWidget = CreateDefaultSubobject<UWidgetComponent>("LockOnWidget");
 	LockOnWidget->SetupAttachment(RootComponent);
 	LockOnWidget->SetVisibility(false);
-
-	MainWeapon = CreateDefaultSubobject<ASBWeaponBase>("Main Axe");
 	
-
 	PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComponent");
 }
 
@@ -21,6 +18,24 @@ void ASoulsAICharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	PawnSensingComponent->OnSeePawn.AddDynamic(this, &ASoulsAICharacter::OnPawnSeen);
+	
+}
+
+void ASoulsAICharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	const FVector HandLoc =  GetMesh()->GetSocketLocation("MeleeArmament-boss-r");
+	const FTransform SpawnTM = FTransform(GetMesh()->GetSocketRotation("MeleeArmament-boss-r"), HandLoc);
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParams.Instigator = Cast<APawn>(GetOwner());
+
+	ASBWeaponBase* CurrentWep  =  GetWorld()->SpawnActor<ASBWeaponBase>(WeaponBase, SpawnTM, SpawnParams);
+	CurrentWep->SetOwner(this);
+	CurrentWep->GetMesh()->SetWorldScale3D(FVector(2, 2, 2));
+	CurrentWep->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepWorldTransform, "MeleeArmament-boss-r");
+	MainWeapon = CurrentWep; 
 }
 
 void ASoulsAICharacter::SetSelfAsTarget_Implementation()

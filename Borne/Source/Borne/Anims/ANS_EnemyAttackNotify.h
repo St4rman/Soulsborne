@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayEffect.h"
+#include "GameplayTagContainer.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "ANS_EnemyAttackNotify.generated.h"
 
@@ -13,6 +15,12 @@ UCLASS()
 class BORNE_API UANS_EnemyAttackNotify : public UAnimNotifyState
 {
 	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<UGameplayEffect> DamageGameplayEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	FGameplayTag DamageTag;
 	
 public:
 	UPROPERTY()

@@ -36,14 +36,21 @@ protected:
 
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
-
-	UPROPERTY(EditAnywhere, Category = "Weapon")
+	
 	ASBWeaponBase* MainWeapon;
 
-	void PostInitializeComponents() override;
+	UPROPERTY(EditAnywhere, Category = "WeaponBase Class")
+	TSubclassOf<ASBWeaponBase> WeaponBase;
+
+	virtual void PostInitializeComponents() override;
+	
 public:
 
 	UPROPERTY(BlueprintReadOnly)
 	bool IsTargeted;
+
+	virtual void BeginPlay() override;
+
+	 ASBWeaponBase* GetWeapon() const {return MainWeapon; }
 	
 };
