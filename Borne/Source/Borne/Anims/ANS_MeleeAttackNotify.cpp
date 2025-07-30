@@ -55,7 +55,7 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			Self->GetWorld(),
 			StartLoc, EndLoc, Radius, TraceObjects,
 			true, TraceIgnoreActors,
-			EDrawDebugTrace::None,
+			EDrawDebugTrace::ForOneFrame,
 			Target, true);
 
 		AActor* TargetActor = Target.GetActor();
@@ -63,7 +63,7 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 		if (TargetActor !=  nullptr && DidHit == true)
 		{
 			TraceIgnoreActors.Add(TargetActor);
-			// GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
+			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
 		}
 	}
 	

@@ -5,6 +5,7 @@
 #include "Components/WidgetComponent.h"
 #include "AIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Borne/Weapons/SBWeaponBase.h"
 #include "Perception/PawnSensingComponent.h"
 #include "GameFramework/Character.h"
 #include "SoulsAICharacter.generated.h"
@@ -35,6 +36,9 @@ protected:
 
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+	ASBWeaponBase* MainWeapon;
 
 	void PostInitializeComponents() override;
 public:

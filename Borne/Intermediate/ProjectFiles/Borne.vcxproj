@@ -264,6 +264,7 @@
     <ClCompile Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Services\SStateCheckService.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.cpp" />
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.cpp" />
     <ClCompile Include="..\..\Source\Borne\Borne.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -406,6 +407,7 @@
     <ClInclude Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Services\SStateCheckService.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.h" />
+    <ClInclude Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.h" />
     <ClInclude Include="..\..\Source\Borne\Interfaces\DamageableInterface.h" />
     <ClInclude Include="..\..\Source\Borne\Pawns\SDmgProjectile.h" />
   </ItemGroup>

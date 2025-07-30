@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Borne.cpp.obj": [
+			"ANS_EnemyAttackNotify.gen.cpp.obj",
 			"ANS_MeleeAttackNotify.gen.cpp.obj",
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
@@ -15,7 +16,6 @@
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
-			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
@@ -25,12 +25,16 @@
 			"SoulsAIController.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
 			"SoulsBTTaskRangedAttack.gen.cpp.obj",
+			"SStateCheckService.gen.cpp.obj",
 			"TargetableEnemy.gen.cpp.obj",
 			"TargetableInterface.gen.cpp.obj",
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"SoulBTSCheckAttackRange.cpp.obj",
+			"SStateCheckService.cpp.obj",
+			"SoulsAICharacter.cpp.obj",
+			"SoulsAIController.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
-			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
@@ -44,20 +48,18 @@
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
+			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"SStateCheckService.gen.cpp.obj",
-			"SoulBTSCheckAttackRange.cpp.obj",
-			"SStateCheckService.cpp.obj",
-			"SoulsAICharacter.cpp.obj",
-			"SoulsAIController.cpp.obj",
-			"SDmgProjectile.cpp.obj"
+			"SBWeaponBase.gen.cpp.obj",
+			"ANS_EnemyAttackNotify.cpp.obj",
+			"ANS_MeleeAttackNotify.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }

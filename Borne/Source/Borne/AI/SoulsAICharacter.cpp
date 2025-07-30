@@ -11,6 +11,9 @@ ASoulsAICharacter::ASoulsAICharacter()
 	LockOnWidget->SetupAttachment(RootComponent);
 	LockOnWidget->SetVisibility(false);
 
+	MainWeapon = CreateDefaultSubobject<ASBWeaponBase>("Main Axe");
+	
+
 	PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComponent");
 }
 
