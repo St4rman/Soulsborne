@@ -35,7 +35,6 @@
 			"PerModuleInline.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.cpp.obj",
 			"SStateCheckService.cpp.obj",
-			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
 			"SBTTaskMeleeAttack.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
@@ -60,8 +59,9 @@
 			"DetectorComponent.cpp.obj",
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
+			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"PlayerHUD.cpp.obj"
+			"SoulsAICharacter.cpp.obj"
 		]
 	}
 }

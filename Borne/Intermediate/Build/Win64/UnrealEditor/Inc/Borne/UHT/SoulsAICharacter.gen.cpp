@@ -64,6 +64,34 @@ DEFINE_FUNCTION(ASoulsAICharacter::execOnPawnSeen)
 }
 // End Class ASoulsAICharacter Function OnPawnSeen
 
+// Begin Class ASoulsAICharacter Function UpdateHealth
+static const FName NAME_ASoulsAICharacter_UpdateHealth = FName(TEXT("UpdateHealth"));
+void ASoulsAICharacter::UpdateHealth()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ASoulsAICharacter_UpdateHealth);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASoulsAICharacter, nullptr, "UpdateHealth", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class ASoulsAICharacter Function UpdateHealth
+
 // Begin Class ASoulsAICharacter
 void ASoulsAICharacter::StaticRegisterNativesASoulsAICharacter()
 {
@@ -124,6 +152,7 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASoulsAICharacter_OnPawnSeen, "OnPawnSeen" }, // 3017015962
+		{ &Z_Construct_UFunction_ASoulsAICharacter_UpdateHealth, "UpdateHealth" }, // 21523966
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -194,10 +223,10 @@ ASoulsAICharacter::~ASoulsAICharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 935857675U) },
+		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 3808404725U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_1891462409(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_965462917(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

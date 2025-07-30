@@ -32,7 +32,6 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/PerModuleInline.gen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Services/SoulBTSCheckAttackRange.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Services/SStateCheckService.cpp"
-#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAIController.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SBTTaskMeleeAttack.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
@@ -57,4 +56,5 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/DetectorComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/SHUDComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/PlayerComponents/SInventoryComponent.cpp"
+#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/SUI/PlayerHUD.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Weapons/SBWeaponBase.cpp"

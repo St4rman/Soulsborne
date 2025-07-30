@@ -44,12 +44,13 @@ void ASoulsAICharacter::BeginPlay()
 	Health = MaxHealth;
 }
 
-void ASoulsAICharacter::TakeDamage(float DamageAmount)
+void ASoulsAICharacter::TakeDamage( const float DamageAmount )
 {
 	const float HealthDelta = Health - DamageAmount;
 	if (HealthDelta > 0)
 	{
 		Health = HealthDelta;
+		UpdateHealth();
 	}
 }
 

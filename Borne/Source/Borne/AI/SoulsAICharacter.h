@@ -59,5 +59,8 @@ public:
 
 	 ASBWeaponBase* GetWeapon() const {return MainWeapon; }
 
-	void TakeDamage(float DamageAmount);
+	void TakeDamage( const float DamageAmount );
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateHealth();
 };

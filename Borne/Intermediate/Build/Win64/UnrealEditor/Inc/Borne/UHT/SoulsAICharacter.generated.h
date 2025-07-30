@@ -19,6 +19,7 @@ class APawn;
 	DECLARE_FUNCTION(execOnPawnSeen);
 
 
+#define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_CALLBACK_WRAPPERS
 #define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASoulsAICharacter(); \
@@ -46,6 +47,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_CALLBACK_WRAPPERS \
 	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_AI_SoulsAICharacter_h_20_ENHANCED_CONSTRUCTORS \
 private: \

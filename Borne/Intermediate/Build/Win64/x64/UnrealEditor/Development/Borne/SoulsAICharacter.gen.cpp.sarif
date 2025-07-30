@@ -29,7 +29,7 @@
                 {
                     "ruleId": "C4263",
                     "message": {
-                        "text": "'void ASoulsAICharacter::TakeDamage(float)': member function does not override any base class virtual member function"
+                        "text": "'void ASoulsAICharacter::TakeDamage(const float)': member function does not override any base class virtual member function"
                     },
                     "analysisTarget": {
                         "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SoulsAICharacter.gen.cpp"
