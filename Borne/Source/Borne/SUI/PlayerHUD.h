@@ -22,6 +22,7 @@ public:
 	void SetHealth(const float Health, const float MaxHealth);
 	void SetStamina(const float Stamina, const float MaxStamina);
 	void SetMeleeIcon(UTexture2D* WeaponTexture, bool bMatchSize);
+	void SetBossHealth(const float Health, const float MaxHealth);
 	
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* HealthBar;
@@ -34,4 +35,7 @@ public:
 	
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UImage* MeleeIcon;
+
+	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	class UProgressBar* BossHealthBar;
 };

@@ -58,6 +58,11 @@ void USHUDComponent::SetMeleeIcon(UTexture2D* Texture) const
 	PlayerHUD->SetMeleeIcon(Texture, true);
 }
 
+void USHUDComponent::SetBossHealth(const float Health, const float MaxHealth)
+{
+	PlayerHUD->SetBossHealth(Health, MaxHealth);
+}
+
 void USHUDComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);

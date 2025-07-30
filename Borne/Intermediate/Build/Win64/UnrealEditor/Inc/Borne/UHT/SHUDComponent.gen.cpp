@@ -19,6 +19,53 @@ ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class USHUDComponent Function SetBossHealth
+struct Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics
+{
+	struct SHUDComponent_eventSetBossHealth_Parms
+	{
+		float Health;
+		float MaxHealth;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SHUDComponent_eventSetBossHealth_Parms, Health), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SHUDComponent_eventSetBossHealth_Parms, MaxHealth), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::NewProp_Health,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::NewProp_MaxHealth,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "SetBossHealth", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::SHUDComponent_eventSetBossHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::SHUDComponent_eventSetBossHealth_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USHUDComponent_SetBossHealth()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USHUDComponent_SetBossHealth_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USHUDComponent::execSetBossHealth)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_Health);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_MaxHealth);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBossHealth(Z_Param_Health,Z_Param_MaxHealth);
+	P_NATIVE_END;
+}
+// End Class USHUDComponent Function SetBossHealth
+
 // Begin Class USHUDComponent Function SetHealth
 struct Z_Construct_UFunction_USHUDComponent_SetHealth_Statics
 {
@@ -172,6 +219,7 @@ void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 {
 	UClass* Class = USHUDComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBossHealth", &USHUDComponent::execSetBossHealth },
 		{ "SetHealth", &USHUDComponent::execSetHealth },
 		{ "SetMeleeIcon", &USHUDComponent::execSetMeleeIcon },
 		{ "SetStamina", &USHUDComponent::execSetStamina },
@@ -212,6 +260,7 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_USHUDComponent_SetBossHealth, "SetBossHealth" }, // 2245802297
 		{ &Z_Construct_UFunction_USHUDComponent_SetHealth, "SetHealth" }, // 1039324302
 		{ &Z_Construct_UFunction_USHUDComponent_SetMeleeIcon, "SetMeleeIcon" }, // 1892680031
 		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 576948195
@@ -271,10 +320,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 3290179807U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 1315616732U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_4078256807(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2210821417(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

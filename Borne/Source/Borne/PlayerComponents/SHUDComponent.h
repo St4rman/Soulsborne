@@ -47,4 +47,7 @@ public:
 	void SetHealth(const float Health, const float MaxHealth) const ;
 	UFUNCTION(BlueprintCallable)
 	void SetMeleeIcon(UTexture2D* Texture) const;
+
+	UFUNCTION(BlueprintCallable)
+	void SetBossHealth(float Health, float MaxHealth);
 };

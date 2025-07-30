@@ -16,6 +16,7 @@ class UTexture2D;
 #define BORNE_SHUDComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetBossHealth); \
 	DECLARE_FUNCTION(execSetMeleeIcon); \
 	DECLARE_FUNCTION(execSetHealth); \
 	DECLARE_FUNCTION(execSetStamina);

@@ -25,3 +25,11 @@ void UPlayerHUD::SetMeleeIcon(UTexture2D* WeaponTexture, bool bMatchSize)
 		MeleeIcon->SetBrushFromTexture(WeaponTexture, bMatchSize);
 	}
 }
+
+void UPlayerHUD::SetBossHealth(const float Health, const float MaxHealth)
+{
+	if (BossHealthBar != nullptr)
+	{
+		BossHealthBar->SetPercent(Health / MaxHealth);
+	}
+}
