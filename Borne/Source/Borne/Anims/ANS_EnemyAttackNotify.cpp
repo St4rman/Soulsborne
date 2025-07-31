@@ -66,7 +66,6 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			
 			if (Player)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
 				Player->DoPlayerDamage_Implementation(50.0f, MeshComp->GetOwner());
 			}
 			

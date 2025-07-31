@@ -12,7 +12,7 @@ EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent
 		ACharacter* MyCharacter = Cast<ACharacter>(MyController->GetPawn());
 		if (MyCharacter == nullptr)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Emerald, "OFF TASK");
+			UE_LOG(LogTemp, Error, TEXT("Cant cast AI controller to pawn @ SBTTRangedAttack"));
 			return EBTNodeResult::Failed;
 		}
 		FVector MuzzleLocation = MyCharacter->GetMesh()->GetSocketLocation("WeaponSocket_r");
@@ -20,7 +20,7 @@ EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent
 		AActor* TargetActor = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject("TargetActor"));
 		if (TargetActor == nullptr)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Emerald, "OFF TASK");
+			UE_LOG(LogTemp, Error, TEXT("Cant cast Actor to pawn @ SBTTRangedAttack"));
 			return EBTNodeResult::Failed;
 		}
 
@@ -31,9 +31,7 @@ EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent
 		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		
 		AActor* NewProjectile = GetWorld()->SpawnActor<AActor>(ProjectileClass, MyCharacter->GetActorLocation(), Rotation, SpawnParameters);
-		GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Emerald, "Firing task");
 		return NewProjectile ? EBTNodeResult::Succeeded : EBTNodeResult::Failed;
-
 	}
 	return EBTNodeResult::Failed;
 }

@@ -61,7 +61,7 @@ void ASoulsAICharacter::SetSelfAsTarget_Implementation()
 }
 
 void ASoulsAICharacter::RemoveSelfAsTarget_Implementation()
-{
+{ 
 	LockOnWidget->SetVisibility(false);
 	ITargetableInterface::RemoveSelfAsTarget_Implementation();
 }

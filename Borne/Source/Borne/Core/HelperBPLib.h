@@ -45,6 +45,7 @@ public:
 	TArray<AActor*> TraceIgnoreActors;
 
 	static void ClearIgnoredActors();
-		
+
+	
 };
 	

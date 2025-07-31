@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_SBTTaskMeleeAttack_generated_h
 
-#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSBTTaskMeleeAttack(); \
 	friend struct Z_Construct_UClass_USBTTaskMeleeAttack_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(USBTTaskMeleeAttack)
 
 
-#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USBTTaskMeleeAttack(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~USBTTaskMeleeAttack();
 
 
-#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_12_PROLOG
-#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_GENERATED_BODY \
+#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_PROLOG
+#define FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_AI_Tasks_SBTTaskMeleeAttack_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

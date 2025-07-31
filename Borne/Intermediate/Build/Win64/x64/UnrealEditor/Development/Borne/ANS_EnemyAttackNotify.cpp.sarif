@@ -25,6 +25,82 @@
                             }
                         }
                     ]
+                },
+                {
+                    "ruleId": "C4263",
+                    "message": {
+                        "text": "'void ASoulsAICharacter::TakeDamage(const float)': member function does not override any base class virtual member function"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Anims/ANS_EnemyAttackNotify.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 62,
+                                    "startColumn": 7
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4264",
+                    "message": {
+                        "text": "'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Anims/ANS_EnemyAttackNotify.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 18,
+                                    "startColumn": 17
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
+                                },
+                                "region": {
+                                    "startLine": 285,
+                                    "startColumn": 27
+                                }
+                            },
+                            "message": {
+                                "text": "see declaration of 'APawn::TakeDamage'"
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 7
+                                }
+                            },
+                            "message": {
+                                "text": "see declaration of 'APawn'"
+                            }
+                        }
+                    ]
                 }
             ],
             "tool": {
