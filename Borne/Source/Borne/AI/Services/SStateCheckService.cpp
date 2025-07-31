@@ -14,7 +14,9 @@ void USStateCheckService::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Nod
 			AAIController* MyController = OwnerComp.GetAIOwner();
 			if (ensure(MyController))
 			{
+				// BlackboardComponent->SetValueAsFloat("Stamina", BlackboardComponent->GetValueAsFloat("Stamina") +10.0f);
 				APawn* AIPawn = MyController->GetPawn();
+
 				if (ensure(AIPawn))
 				{
 					const float Distance = FVector::Distance(TargetActor->GetActorLocation(), AIPawn->GetActorLocation());
@@ -26,14 +28,30 @@ void USStateCheckService::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Nod
 					else if (Distance < MediumRange && Distance > MeleeRange)
 					{
 						BlackboardComponent->SetValueAsEnum(ReferencesKey, EAIState::Strafing);
+						RegenStamina(BlackboardComponent);
 					}
-
 					else
 					{
 						BlackboardComponent->SetValueAsEnum(ReferencesKey, EAIState::Ranged);
+						RegenStamina(BlackboardComponent);
 					}
 				}
 			}
 		}
 	}
+}
+
+void USStateCheckService::RegenStamina(UBlackboardComponent* BlackboardComponent)
+{
+	float CurStam = BlackboardComponent->GetValueAsFloat("Stamina");
+	if(CurStam < 100)
+	{
+		CurStam += 10.0f;
+		if (CurStam > 100)
+		{
+			CurStam = 100;
+		}
+		BlackboardComponent->SetValueAsFloat("Stamina", CurStam);
+	}
+	
 }

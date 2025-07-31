@@ -32,13 +32,14 @@
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.cpp.obj",
-			"SStateCheckService.cpp.obj",
-			"SoulsAIController.cpp.obj",
+			"SoulsAICharacter.cpp.obj",
+			"SoulsBTTaskRangedAttack.cpp.obj",
+			"ANS_EnemyAttackNotify.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
-			"BLightAttackAbility.cpp.obj",
+			"HelperBPLib.cpp.obj",
 			"BDodgeRollAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
@@ -57,11 +58,10 @@
 			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
 			"SBTTaskMeleeAttack.gen.cpp.obj",
-			"SoulsAICharacter.cpp.obj",
+			"SStateCheckService.cpp.obj",
+			"SoulsAIController.cpp.obj",
 			"SBTTaskMeleeAttack.cpp.obj",
-			"SoulsBTTaskRangedAttack.cpp.obj",
-			"ANS_EnemyAttackNotify.cpp.obj",
-			"HelperBPLib.cpp.obj"
+			"BLightAttackAbility.cpp.obj"
 		]
 	}
 }

@@ -20,11 +20,11 @@ class BORNE_API USBTTaskMeleeAttack : public UBTTaskNode
 	UPROPERTY(Category = Node, EditAnywhere)
 	FValueOrBBKey_Object AnimationToPlay = TObjectPtr<UAnimMontage>();
 
-	UPROPERTY(Category = Node, EditAnywhere, DisplayName = Looping)
-	FValueOrBBKey_Bool bLooping = false;
+	UPROPERTY(Category = Node, EditAnywhere)
+	FValueOrBBKey_Float fCost = 10;
 
-	UPROPERTY(Category = Node, EditAnywhere, DisplayName = NonBlocking)
-	FValueOrBBKey_Bool bNonBlocking = false;
+	UPROPERTY(Category = Node, EditAnywhere)
+	FName BlackBoardStaminaValueName = "Stamina";
 	
 	UPROPERTY()
 	TObjectPtr<UBehaviorTreeComponent> MyOwnerComp;
@@ -34,11 +34,9 @@ class BORNE_API USBTTaskMeleeAttack : public UBTTaskNode
 
 	USkeletalMeshComponent* MeshCache;
 
-	
 protected:
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 	void OnAnimFinished();
-
-	UPROPERTY(EditAnywhere)
-	UAnimMontage* AttackAnimMontage ;
+	bool CalculateCost(UBehaviorTreeComponent& OwnerComp,  const float Cost);
+	
 };

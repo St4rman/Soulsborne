@@ -1,18 +1,11 @@
 ﻿#include "SBTTaskMeleeAttack.h"
 
-// USBTTaskMeleeAttack::USBTTaskMeleeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
-// {
-// 	bLooping = false;
-// 	TimerDelegate = FTimerDelegate::CreateUObject(this, &USBTTaskMeleeAttack::OnAnimFinished);
-// }
-
-
-
 EBTNodeResult::Type USBTTaskMeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AAIController* BossController = OwnerComp.GetAIOwner();
 	EBTNodeResult::Type Result = EBTNodeResult::Failed;
 	MyOwnerComp = &OwnerComp;
+	
 	TimerDelegate = FTimerDelegate::CreateUObject(this, &USBTTaskMeleeAttack::OnAnimFinished);
 	TimerHandle.Invalidate();
 
@@ -24,10 +17,14 @@ EBTNodeResult::Type USBTTaskMeleeAttack::ExecuteTask(UBehaviorTreeComponent& Own
 		MeshCache = Character->GetMesh();
 		if (Character)
 		{
-			const float FinishDelay = Character->PlayAnimMontage(AnimToPlay);
-			// float FinishDelay = AnimIns->Montage_Play(AnimToPlay, 1.0f);
-			BossController->GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDelegate, FinishDelay, /*bLoop=*/false);
-			Result = EBTNodeResult::InProgress;
+			const float curCost = fCost.GetValue(OwnerComp);
+			
+			if (CalculateCost(OwnerComp, curCost))
+			{
+				const float FinishDelay = Character->PlayAnimMontage(AnimToPlay);
+				BossController->GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDelegate, FinishDelay, /*bLoop=*/false);
+				Result = EBTNodeResult::InProgress;
+			}
 		}
 	}
 	return Result;
@@ -37,8 +34,23 @@ void USBTTaskMeleeAttack::OnAnimFinished()
 {
 	if (MyOwnerComp)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("OnAnimFinished"));
-		MeshCache->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 		FinishLatentTask(*MyOwnerComp, EBTNodeResult::Succeeded);
+		if(MeshCache != nullptr)
+		{
+			MeshCache->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+		}
 	}
+}
+
+bool USBTTaskMeleeAttack::CalculateCost(UBehaviorTreeComponent& OwnerComp , const float Cost)
+{
+	UBlackboardComponent* BBComp = OwnerComp.GetBlackboardComponent();
+	const float CurrentStamina = BBComp->GetValueAsFloat( BlackBoardStaminaValueName );
+
+	if ( CurrentStamina - Cost >= 0.0f )
+	{
+		BBComp->SetValueAsFloat( BlackBoardStaminaValueName , CurrentStamina - Cost );
+		return true;
+	}
+	return false;
 }

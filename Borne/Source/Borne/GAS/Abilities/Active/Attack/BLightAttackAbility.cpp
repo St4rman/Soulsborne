@@ -67,7 +67,7 @@ bool UBLightAttackAbility::CheckAbilityConditions(const FGameplayAbilityActorInf
 {
 	if (Player->GetInventoryComponent()->GetCurrentEquippedWeapon() == nullptr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("No Equipped weapon -BLightAttackAbility.cpp"));
+		UE_LOG(LogTemp, Error, TEXT("No Equipped weapon - BLightAttackAbility.cpp"));
 		return false;
 	}
 	return true;
