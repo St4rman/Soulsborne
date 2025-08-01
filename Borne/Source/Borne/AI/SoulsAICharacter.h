@@ -5,6 +5,7 @@
 #include "Components/WidgetComponent.h"
 #include "AIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Borne/Core/HelperData.h"
 #include "Borne/Weapons/SBWeaponBase.h"
 #include "Perception/PawnSensingComponent.h"
 #include "GameFramework/Character.h"
@@ -49,6 +50,9 @@ protected:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MaxHealth;
+
+	UPROPERTY(VisibleAnywhere)
+	TEnumAsByte<ELocomotionMode> CurrentLocomotionMode;
 	
 public:
 
@@ -63,4 +67,7 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void UpdateHealth();
+
+	void SetLocomotionMode(ELocomotionMode ToMode ) { CurrentLocomotionMode = ToMode;}
+	ELocomotionMode GetCurrentLocomotionMode() { return CurrentLocomotionMode; }
 };

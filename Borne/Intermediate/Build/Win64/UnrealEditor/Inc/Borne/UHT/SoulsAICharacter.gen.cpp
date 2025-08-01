@@ -15,6 +15,7 @@ BORNE_API UClass* Z_Construct_UClass_ASBWeaponBase_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAICharacter();
 BORNE_API UClass* Z_Construct_UClass_ASoulsAICharacter_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_UTargetableInterface_NoRegister();
+BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
@@ -136,6 +137,10 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 		{ "Category", "SoulsAICharacter" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentLocomotionMode_MetaData[] = {
+		{ "Category", "SoulsAICharacter" },
+		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsTargeted_MetaData[] = {
 		{ "Category", "SoulsAICharacter" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
@@ -146,6 +151,7 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WeaponBase;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentLocomotionMode;
 	static void NewProp_IsTargeted_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsTargeted;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -166,6 +172,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAICharac
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_WeaponBase = { "WeaponBase", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, WeaponBase), Z_Construct_UClass_UClass, Z_Construct_UClass_ASBWeaponBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WeaponBase_MetaData), NewProp_WeaponBase_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, Health), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, MaxHealth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHealth_MetaData), NewProp_MaxHealth_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_CurrentLocomotionMode = { "CurrentLocomotionMode", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, CurrentLocomotionMode), Z_Construct_UEnum_Borne_ELocomotionMode, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLocomotionMode_MetaData), NewProp_CurrentLocomotionMode_MetaData) }; // 2571520345
 void Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted_SetBit(void* Obj)
 {
 	((ASoulsAICharacter*)Obj)->IsTargeted = 1;
@@ -177,6 +184,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASoulsAIC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_WeaponBase,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MaxHealth,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_CurrentLocomotionMode,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAICharacter_Statics::PropPointers) < 2048);
@@ -223,10 +231,10 @@ ASoulsAICharacter::~ASoulsAICharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 3808404725U) },
+		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 3397869581U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_965462917(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_4084508199(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -261,9 +261,11 @@
     <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\Borne\Borne.Build.cs"/>
+    <ClCompile Include="..\..\Source\Borne\AI\Decorators\BTD_CheckPlayerInRange.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Services\SStateCheckService.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTaskMeleeAttack.cpp" />
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTTurnToFacePlayer.cpp" />
     <ClCompile Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.cpp" />
     <ClCompile Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.cpp" />
     <ClCompile Include="..\..\Source\Borne\Borne.cpp">
@@ -405,9 +407,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Borne\AI\Decorators\BTD_CheckPlayerInRange.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Services\SStateCheckService.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Tasks\SBTTaskMeleeAttack.h" />
+    <ClInclude Include="..\..\Source\Borne\AI\Tasks\SBTTTurnToFacePlayer.h" />
     <ClInclude Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.h" />
     <ClInclude Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.h" />
     <ClInclude Include="..\..\Source\Borne\Interfaces\DamageableInterface.h" />

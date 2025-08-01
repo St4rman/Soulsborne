@@ -1,5 +1,4 @@
 ﻿#include "SoulsAICharacter.h"
-
 #include "Borne/Core/HelperData.h"
 
 
@@ -36,7 +35,7 @@ void ASoulsAICharacter::BeginPlay()
 	CurrentWep->GetMesh()->SetWorldScale3D(FVector(2, 2, 2));
 	CurrentWep->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepWorldTransform, "MeleeArmament-boss-r");
 	MainWeapon = CurrentWep;
-	
+
 	if (MaxHealth < 0)
 	{
 		UE_LOG(LogTemp, Error, TEXT("MaxHealth is 0"));
@@ -73,9 +72,10 @@ void ASoulsAICharacter::OnPawnSeen(APawn* Pawn)
 	{
 		UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
 		BBComp->SetValueAsObject("TargetActor", Pawn);
-		// DrawDebugString(GetWorld(), Pawn->GetActorLocation(), "SPOTTED", nullptr, FColor::Purple, 4.0f, true);
 	}
 }
+
+
 
 
 
