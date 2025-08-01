@@ -19,7 +19,7 @@
                                     "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
                                 },
                                 "region": {
-                                    "startLine": 32,
+                                    "startLine": 33,
                                     "startColumn": 2
                                 }
                             }
@@ -29,7 +29,7 @@
                 {
                     "ruleId": "C4263",
                     "message": {
-                        "text": "'void ASoulsAICharacter::TakeDamage(float)': member function does not override any base class virtual member function"
+                        "text": "'void ASoulsAICharacter::TakeDamage(const float)': member function does not override any base class virtual member function"
                     },
                     "analysisTarget": {
                         "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Anims/ANS_MeleeAttackNotify.cpp"
@@ -41,7 +41,7 @@
                                     "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
                                 },
                                 "region": {
-                                    "startLine": 62,
+                                    "startLine": 66,
                                     "startColumn": 7
                                 }
                             }
@@ -63,7 +63,7 @@
                                     "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
                                 },
                                 "region": {
-                                    "startLine": 18,
+                                    "startLine": 19,
                                     "startColumn": 17
                                 }
                             }

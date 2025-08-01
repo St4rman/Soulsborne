@@ -54,7 +54,7 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			Self->GetWorld(),
 			StartLoc, EndLoc, Radius, TraceObjects,
 			true, TraceIgnoreActors,
-			EDrawDebugTrace::ForOneFrame,
+			EDrawDebugTrace::None,
 			Target, true);
 
 		AActor* TargetActor = Target.GetActor();

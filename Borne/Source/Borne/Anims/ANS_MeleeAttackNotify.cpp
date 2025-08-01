@@ -71,7 +71,6 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 				TraceIgnoreActors.Add(TargetActor);
 				Enemy->TakeDamage(CurWep->LightDamage);
 			}
-			GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, TargetActor->GetName());
 		}
 	}
 	

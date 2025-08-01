@@ -18,6 +18,7 @@
 			"PGA_StaminaRegen.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
 			"SBTTaskMeleeAttack.gen.cpp.obj",
+			"SBTTTurnToFacePlayer.gen.cpp.obj",
 			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
@@ -34,13 +35,13 @@
 			"WeaponInterface.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"BTD_CheckPlayerInRange.cpp.obj",
+			"SoulBTSCheckAttackRange.cpp.obj",
 			"SStateCheckService.cpp.obj",
 			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
 			"SBTTaskMeleeAttack.cpp.obj",
+			"SBTTTurnToFacePlayer.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
-			"ANS_EnemyAttackNotify.cpp.obj",
-			"ANS_MeleeAttackNotify.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
@@ -62,10 +63,11 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
+			"ANS_SpawnAOE.gen.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"SBTTTurnToFacePlayer.gen.cpp.obj",
-			"SoulBTSCheckAttackRange.cpp.obj",
-			"SBTTTurnToFacePlayer.cpp.obj"
+			"ANS_EnemyAttackNotify.cpp.obj",
+			"ANS_MeleeAttackNotify.cpp.obj",
+			"ANS_SpawnAOE.cpp.obj"
 		]
 	}
 }
