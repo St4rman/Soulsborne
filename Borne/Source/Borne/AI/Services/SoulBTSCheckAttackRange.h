@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AIController.h"
 #include "BehaviorTree/BTService.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "SoulBTSCheckAttackRange.generated.h"

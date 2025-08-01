@@ -1,5 +1,4 @@
 ﻿#include "SoulBTSCheckAttackRange.h"
-#include "AIController.h"
 
 
 void USoulBTSCheckAttackRange::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
