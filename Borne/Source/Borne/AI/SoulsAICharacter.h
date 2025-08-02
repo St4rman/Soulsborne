@@ -5,6 +5,7 @@
 #include "Components/WidgetComponent.h"
 #include "MotionWarpingComponent.h"
 #include "AIController.h"
+#include "NiagaraComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Borne/Core/HelperData.h"
 #include "Borne/Weapons/SBWeaponBase.h"
@@ -63,6 +64,9 @@ protected:
 
 	AActor* Target;
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	UNiagaraComponent* NiagaraRoarComponent;
+	
 public:
 
 	UPROPERTY(BlueprintReadOnly)
@@ -81,4 +85,6 @@ public:
 	void SetLocomotionMode(ELocomotionMode ToMode ) { CurrentLocomotionMode = ToMode;}
 	ELocomotionMode GetCurrentLocomotionMode() { return CurrentLocomotionMode; }
 	void UpdateMotionWarpingTarget();
+
+	FORCEINLINE UNiagaraComponent* GetNiagaraComponent() const { return NiagaraRoarComponent; }
 };

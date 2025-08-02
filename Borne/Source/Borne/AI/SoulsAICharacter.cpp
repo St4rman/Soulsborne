@@ -15,6 +15,10 @@ ASoulsAICharacter::ASoulsAICharacter()
 
 	MotionWarp = CreateDefaultSubobject<UMotionWarpingComponent>("MotionWarp");
 
+	NiagaraRoarComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+	NiagaraRoarComponent->SetupAttachment(GetMesh());
+	NiagaraRoarComponent->SetAutoActivate(false);
+
 	PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComponent");
 }
 

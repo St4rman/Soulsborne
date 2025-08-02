@@ -12,6 +12,7 @@ void UANS_EnemyAttackNotify::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSe
 	if (MeshComp !=nullptr && MeshComp->GetOwner() != nullptr)
 	{
 		TraceIgnoreActors.Empty();
+		
 	}
 }
 
@@ -23,6 +24,7 @@ void UANS_EnemyAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 	if (MeshComp !=nullptr && MeshComp->GetOwner() != nullptr)
 	{
 		TraceIgnoreActors.Empty();
+		
 	}
 }
 
