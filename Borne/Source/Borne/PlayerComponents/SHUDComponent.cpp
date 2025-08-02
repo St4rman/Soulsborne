@@ -28,6 +28,7 @@ void USHUDComponent::BeginPlay()
 		PlayerHUD = CreateWidget<UPlayerHUD>(GetWorld(), PlayerHUDClass);
 		check(PlayerController);
 		PlayerHUD->AddToPlayerScreen();
+		SetMeleeIcon(EmptyTexture);
 	}
 }
 
@@ -55,6 +56,11 @@ void USHUDComponent::SetHealth(const float Health, const float MaxHealth) const
 void USHUDComponent::SetMeleeIcon(UTexture2D* Texture) const
 {
 	PlayerHUD->SetMeleeIcon(Texture, true);
+}
+
+void USHUDComponent::SetBossHealth(const float Health, const float MaxHealth)
+{
+	PlayerHUD->SetBossHealth(Health, MaxHealth);
 }
 
 void USHUDComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)

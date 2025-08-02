@@ -22,6 +22,7 @@
 #include "PlayerComponents/SInventoryComponent.h"
 #include "PlayerComponents/SHUDComponent.h"
 #include "NiagaraComponent.h"
+#include "Interfaces/DamageableInterface.h"
 #include "BorneCharacter.generated.h"
 
 
@@ -42,7 +43,7 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 
 UCLASS(config=Game)
-class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
+class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, public IDamageableInterface
 {
 	GENERATED_BODY()
 	
@@ -81,6 +82,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	/** Roll action for dodging*/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* RollAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* AttackAction;
 	
 	/** Detection */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
@@ -92,12 +96,15 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Weapons", meta = (AllowPrivateAccess = "true"))
 	USInventoryComponent* InventoryComponent;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "HUD", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HUD", meta = (AllowPrivateAccess = "true"))
 	USHUDComponent* PlayerHUD;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	UAnimMontage* TakingDamageAnim;
+	
 	/**ABILTIES ////////////////////////////////////////////
 	 */
 
@@ -113,6 +120,11 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface
 public:
 	ABorneCharacter();
 	virtual void BeginPlay() override;
+	
+	virtual void DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source) override;
+	
+	void SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID);
+
 
 protected:
 
@@ -127,6 +139,10 @@ protected:
 	void AddStartUpGameplayAbilities();
 	
 	FVector2D InputCache;
+	void HandleAttackActionPressed();
+	void HandleRollActionPressed();
+	void HandleRollActionReleased();
+	void HandleAttackActionReleased();
 
 	/**
 	 * ABILITIES ///////////////////////////////////////////////////////
@@ -140,6 +156,11 @@ protected:
 	UPROPERTY()
 	uint8 bAbilitiesInitialized:1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Abilities")
+	TSubclassOf<UGameplayEffect> DamageGameplayEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Abilities")
+	FGameplayTag DamageTag;
 	
 protected:
 

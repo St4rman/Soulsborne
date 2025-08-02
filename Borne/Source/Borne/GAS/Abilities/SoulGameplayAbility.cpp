@@ -7,7 +7,7 @@
 
 USoulGameplayAbility::USoulGameplayAbility()
 {
-	
+	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
 }
 
 void USoulGameplayAbility::OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)

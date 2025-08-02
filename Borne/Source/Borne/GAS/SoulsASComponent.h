@@ -13,4 +13,5 @@ UCLASS()
 class BORNE_API USoulsASComponent : public UAbilitySystemComponent
 {
 	GENERATED_BODY()
+	USoulsASComponent();
 };

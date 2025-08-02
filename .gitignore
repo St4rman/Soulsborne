@@ -73,3 +73,6 @@ Plugins/**/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 Borne/Content/Stylized_PBR_Nature/Maps/Stylized_Nature_ExampleScene.umap
+
+# idk if this even works/is good
+Borne/Saved/Logs/*

@@ -6,6 +6,7 @@
 UBDodgeRollAbility::UBDodgeRollAbility()
 {
 	AbilityInputID = ESoulsAbilityInputID::Roll;
+	
 }
 
 bool UBDodgeRollAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
@@ -62,7 +63,6 @@ bool UBDodgeRollAbility::CheckCanDodgeConditions( const FGameplayAbilitySpecHand
 
 void UBDodgeRollAbility::OnDodgeAnimFinished(UAnimMontage* Montage, bool bInterrupted, FGameplayAbilitySpecHandle SpecHandle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,  ABorneCharacter* Player)
 {
-	
 	// Player->GetNiagaraEffectComponent()->SetActive(false);
 	ActorInfo->AbilitySystemComponent->RemoveLooseGameplayTags(TagsToGive);
 	Super::EndAbility(SpecHandle, ActorInfo, ActivationInfo, false, false);

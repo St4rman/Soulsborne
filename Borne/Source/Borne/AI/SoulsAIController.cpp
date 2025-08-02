@@ -1,4 +1,6 @@
 ﻿#include "SoulsAIController.h"
+#include "Borne/Core/HelperData.h"
+
 
 ASoulsAIController::ASoulsAIController()
 {
@@ -8,7 +10,9 @@ ASoulsAIController::ASoulsAIController()
 void ASoulsAIController::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	RunBehaviorTree(MainBehaviorTree);
+	GetBlackboardComponent()->SetValueAsEnum( BlackBoardStateKeyValue, CurrentState );
+	GetBlackboardComponent()->SetValueAsFloat("Stamina", 100);
 }
 
 void ASoulsAIController::Tick(float DeltaTime)

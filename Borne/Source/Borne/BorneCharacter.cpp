@@ -1,8 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "BorneCharacter.h"
+
+#include "AbilitySystemBlueprintLibrary.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
+#include "GameplayEffect.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -13,6 +16,8 @@
 #include "Interfaces/TargetableInterface.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
+
+class UGameplayEffect;
 
 //////////////////////////////////////////////////////////////////////////
 // ABorneCharacter
@@ -93,6 +98,7 @@ void ABorneCharacter::BeginPlay()
 			 );
 
 			SoulsAbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, Binds);
+			
 		}
 	}
 
@@ -100,6 +106,7 @@ void ABorneCharacter::BeginPlay()
 	CameraHandlerComponent->SetCamFree();
 	
 }
+
 
 //////////////////////////////////////////////////////////////////////////
 // Input
@@ -133,6 +140,14 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABorneCharacter::Look);
 		EnhancedInputComponent->BindAction(DetectAction, ETriggerEvent::Completed, this, &ABorneCharacter::FireDetection);
+
+		EnhancedInputComponent->BindAction(AttackAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleAttackActionPressed);
+		EnhancedInputComponent->BindAction(AttackAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleAttackActionReleased);
+
+		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleRollActionPressed);
+		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleRollActionReleased);
+
+
 	}
 	else
 	{
@@ -281,3 +296,54 @@ void ABorneCharacter::AddStartUpGameplayAbilities()
 	}
 }
 
+
+
+void ABorneCharacter::DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source)
+{
+	IDamageableInterface::DoPlayerDamage_Implementation(IncomingDamage, Source);
+	FGameplayEffectContextHandle ContextHandle = GetAbilitySystemComponent()->MakeEffectContext();
+	ContextHandle.AddSourceObject(Source);
+		
+	const FGameplayEffectSpecHandle SpecHandle =  GetAbilitySystemComponent()->MakeOutgoingSpec(DamageGameplayEffect, 1.0f, ContextHandle);
+	const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, DamageTag, 10.0 * -1.0f );
+	GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
+}
+
+
+void ABorneCharacter::HandleAttackActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::Attack);
+}
+
+void ABorneCharacter::HandleAttackActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Attack);
+}
+
+void ABorneCharacter::HandleRollActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::Roll);
+}
+
+void ABorneCharacter::HandleRollActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Roll);
+}
+
+
+void ABorneCharacter::SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID)
+{
+	if (! SoulsAbilitySystemComponent)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No valid ASC found - char.cpp"));
+	}
+
+	if (bIsPressed)
+	{
+		SoulsAbilitySystemComponent->AbilityLocalInputPressed(static_cast<int32>(InputID));
+	}
+	else
+	{
+		SoulsAbilitySystemComponent->AbilityLocalInputReleased(static_cast<int32>(InputID));
+	}
+}

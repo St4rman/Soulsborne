@@ -19,7 +19,7 @@ public:
 	
 	ASBWeaponBase();
 
-	UPROPERTY(BlueprintReadWrite, meta=(AllowPrivateAccess=true), Category="Weapon")
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Weapon")
 	UStaticMeshComponent* MeshComp;
 	
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")

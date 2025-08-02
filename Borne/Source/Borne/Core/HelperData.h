@@ -34,6 +34,15 @@ enum ECameraState : uint8
 	Locked		= 1 UMETA(DisplayName = "Locked"),
 };
 
+UENUM(BlueprintType)
+enum EAIState : uint8
+{
+	Idle		= 0 UMETA(DisplayName = "Idle"),
+	Strafing	= 1 UMETA(DisplayName = "Strafing"),
+	Attacking	= 2 UMETA(DisplayName = "Attacking"),
+	Ranged		= 3 UMETA(DisplayName = "Ranged"),
+};
+
 /**
  * 
  */

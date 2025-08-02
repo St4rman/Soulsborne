@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeHelperData() {}
 
 // Begin Cross Module References
+BORNE_API UEnum* Z_Construct_UEnum_Borne_EAIState();
 BORNE_API UEnum* Z_Construct_UEnum_Borne_ECameraState();
 BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 BORNE_API UEnum* Z_Construct_UEnum_Borne_ESoulsAbilityInputID();
@@ -200,6 +201,66 @@ UEnum* Z_Construct_UEnum_Borne_ECameraState()
 }
 // End Enum ECameraState
 
+// Begin Enum EAIState
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EAIState;
+static UEnum* EAIState_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EAIState.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EAIState.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_Borne_EAIState, (UObject*)Z_Construct_UPackage__Script_Borne(), TEXT("EAIState"));
+	}
+	return Z_Registration_Info_UEnum_EAIState.OuterSingleton;
+}
+template<> BORNE_API UEnum* StaticEnum<EAIState>()
+{
+	return EAIState_StaticEnum();
+}
+struct Z_Construct_UEnum_Borne_EAIState_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Attacking.DisplayName", "Attacking" },
+		{ "Attacking.Name", "Attacking" },
+		{ "BlueprintType", "true" },
+		{ "Idle.DisplayName", "Idle" },
+		{ "Idle.Name", "Idle" },
+		{ "ModuleRelativePath", "Core/HelperData.h" },
+		{ "Ranged.DisplayName", "Ranged" },
+		{ "Ranged.Name", "Ranged" },
+		{ "Strafing.DisplayName", "Strafing" },
+		{ "Strafing.Name", "Strafing" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "Idle", (int64)Idle },
+		{ "Strafing", (int64)Strafing },
+		{ "Attacking", (int64)Attacking },
+		{ "Ranged", (int64)Ranged },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_Borne_EAIState_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_Borne,
+	nullptr,
+	"EAIState",
+	"EAIState",
+	Z_Construct_UEnum_Borne_EAIState_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_Borne_EAIState_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::Regular,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_Borne_EAIState_Statics::Enum_MetaDataParams), Z_Construct_UEnum_Borne_EAIState_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_Borne_EAIState()
+{
+	if (!Z_Registration_Info_UEnum_EAIState.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EAIState.InnerSingleton, Z_Construct_UEnum_Borne_EAIState_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EAIState.InnerSingleton;
+}
+// End Enum EAIState
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics
 {
@@ -207,9 +268,10 @@ struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics
 		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2896397640U) },
 		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2571520345U) },
 		{ ECameraState_StaticEnum, TEXT("ECameraState"), &Z_Registration_Info_UEnum_ECameraState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4218898129U) },
+		{ EAIState_StaticEnum, TEXT("EAIState"), &Z_Registration_Info_UEnum_EAIState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3248951569U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_3967080373(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_2635180638(TEXT("/Script/Borne"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo));
