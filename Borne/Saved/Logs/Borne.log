@@ -4638,3 +4638,26 @@ ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\B
 [2025.08.02-12.57.05:800][891]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=31
 [2025.08.02-12.57.05:816][891]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
 [2025.08.02-12.57.05:945][892]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2025.08.02-12.58.21:458][155]LogUObjectHash: Compacting FUObjectHashTables data took   2.17ms
+[2025.08.02-12.58.21:461][155]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/MyContent/Map/PrototypeMap' took 0.036
+[2025.08.02-12.58.21:463][155]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/AIContent/Data/BT_SoulsAI] ([1] browsable assets)...
+[2025.08.02-12.58.21:463][155]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/AIContent/Data/BT_SoulsAI]
+[2025.08.02-12.58.21:472][155]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/MyContent/AIContent/Data/BT_SoulsAI_Auto5
+[2025.08.02-12.58.21:472][155]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BT_SoulsAI_Auto5AB90166A4040CCD8788BCCAD7B3471EB.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/Autosaves/Game/MyContent/AIContent/Data/BT_SoulsAI_Auto5.uasset'
+[2025.08.02-12.58.21:474][155]LogFileHelpers: Auto-saving content packages took 0.013
+[2025.08.02-13.01.12:148][800]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.02-13.01.12:340][800]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.02-13.01.12:424][800]LogUObjectHash: Compacting FUObjectHashTables data took   1.29ms
+[2025.08.02-13.01.12:442][800]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.02-13.01.12:443][800]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap4587B9AC4C44F37779ACFF93D084F2B9.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.02-13.01.12:474][800]LogFileHelpers: Saving map 'PrototypeMap' took 0.136
+[2025.08.02-13.01.12:495][800]LogFileHelpers: InternalPromptForCheckoutAndSave took 346.711 ms (total: 10.2 sec)
+[2025.08.02-13.01.12:596][800]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.02-13.01.12:596][800]LogContentValidation: Enabled validators:
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.02-13.01.12:596][800]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.02-13.01.12:596][800]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
