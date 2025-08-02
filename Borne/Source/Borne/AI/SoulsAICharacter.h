@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "Borne/Interfaces/TargetableInterface.h"
 #include "Components/WidgetComponent.h"
+#include "MotionWarpingComponent.h"
 #include "AIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Borne/Core/HelperData.h"
@@ -38,6 +39,7 @@ protected:
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
 	
+
 	ASBWeaponBase* MainWeapon;
 
 	UPROPERTY(EditAnywhere, Category = "WeaponBase Class")
@@ -53,6 +55,13 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 	TEnumAsByte<ELocomotionMode> CurrentLocomotionMode;
+
+	UMotionWarpingComponent* MotionWarp;
+
+	UPROPERTY(EditAnywhere)
+	FName MotionWarpName = "PlayerLocation";
+
+	AActor* Target;
 	
 public:
 
@@ -60,6 +69,7 @@ public:
 	bool IsTargeted;
 
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
 
 	 ASBWeaponBase* GetWeapon() const {return MainWeapon; }
 
@@ -70,4 +80,5 @@ public:
 
 	void SetLocomotionMode(ELocomotionMode ToMode ) { CurrentLocomotionMode = ToMode;}
 	ELocomotionMode GetCurrentLocomotionMode() { return CurrentLocomotionMode; }
+	void UpdateMotionWarpingTarget();
 };

@@ -1,5 +1,7 @@
 ﻿#include "SBTTaskMeleeAttack.h"
 
+#include "Borne/AI/SoulsAICharacter.h"
+
 EBTNodeResult::Type USBTTaskMeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AAIController* BossController = OwnerComp.GetAIOwner();
@@ -21,8 +23,10 @@ EBTNodeResult::Type USBTTaskMeleeAttack::ExecuteTask(UBehaviorTreeComponent& Own
 			
 			if (CalculateCost(OwnerComp, curCost))
 			{
+				Cast<ASoulsAICharacter>(Character)->UpdateMotionWarpingTarget();
 				const float FinishDelay = Character->PlayAnimMontage(AnimToPlay);
 				BossController->GetWorld()->GetTimerManager().SetTimer(TimerHandle, TimerDelegate, FinishDelay, /*bLoop=*/false);
+
 				Result = EBTNodeResult::InProgress;
 			}
 		}

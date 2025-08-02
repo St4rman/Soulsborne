@@ -19,7 +19,8 @@ public class Borne : ModuleRules
 			"GameplayTasks",
 			"AIModule",
 			"UMG",
-			"Niagara"
+			"Niagara",
+			"MotionWarping"
 		});
 	}
 }

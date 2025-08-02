@@ -8,7 +8,6 @@
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
-			"Borne.init.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"BTD_CheckPlayerInRange.gen.cpp.obj",
@@ -27,7 +26,6 @@
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
-			"SoulsAICharacter.gen.cpp.obj",
 			"SoulsAIController.gen.cpp.obj",
 			"SoulsASComponent.gen.cpp.obj",
 			"SoulsBTTaskRangedAttack.gen.cpp.obj",
@@ -39,9 +37,7 @@
 			"BTD_CheckPlayerInRange.cpp.obj",
 			"SoulBTSCheckAttackRange.cpp.obj",
 			"SStateCheckService.cpp.obj",
-			"SoulsAICharacter.cpp.obj",
 			"SoulsAIController.cpp.obj",
-			"SBTTaskMeleeAttack.cpp.obj",
 			"SBTTTurnToFacePlayer.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
 			"ANS_EnemyAttackNotify.cpp.obj",
@@ -67,7 +63,11 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj"
+			"SBWeaponBase.cpp.obj",
+			"Borne.init.gen.cpp.obj",
+			"SoulsAICharacter.gen.cpp.obj",
+			"SoulsAICharacter.cpp.obj",
+			"SBTTaskMeleeAttack.cpp.obj"
 		]
 	}
 }
