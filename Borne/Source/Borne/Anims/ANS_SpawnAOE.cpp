@@ -36,13 +36,12 @@ void UANS_SpawnAOE::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 		if (Weapon == nullptr){ return;}
 		const FVector SphereLocation = Weapon->GetMesh()->GetSocketLocation( SourceSocket );
 		// constexpr float Radius	= HitBoxRadius;
-
+	
 		bool DidHit = UKismetSystemLibrary::SphereTraceSingleForObjects(
 			Self->GetWorld(),
 			SphereLocation, SphereLocation, HitBoxRadius, TraceObjects,
 			true, TraceIgnoreActors,
-			EDrawDebugTrace::None,
-			Target, true);
+			DebugDraw, Target, true);
 
 		AActor* TargetActor = Target.GetActor();
 

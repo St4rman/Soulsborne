@@ -46,7 +46,6 @@
 			"SoulsBTTaskRangedAttack.cpp.obj",
 			"ANS_EnemyAttackNotify.cpp.obj",
 			"ANS_MeleeAttackNotify.cpp.obj",
-			"ANS_SpawnAOE.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
@@ -67,7 +66,8 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj"
+			"SBWeaponBase.cpp.obj",
+			"ANS_SpawnAOE.cpp.obj"
 		]
 	}
 }
