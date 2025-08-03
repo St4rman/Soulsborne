@@ -5,6 +5,7 @@ UBLightAttackAbility::UBLightAttackAbility()
 {
 	AbilityInputID = ESoulsAbilityInputID::Attack;
 	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
+	CurrentComboIdx = 0;
 }
 
 bool UBLightAttackAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
@@ -27,7 +28,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		return;
 	}
 
-	const ASBWeaponBase* CurrentWeapon = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
+	ASBWeaponBase* CurrentWeapon = PlayerChar->GetInventoryComponent()->GetCurrentEquippedWeapon();
 	
 	float CurrentCost = CurrentWeapon->LightStaminaCost;
 	const float AttackSpeed = CurrentWeapon->LightAttackSpeed > 1.0f ? CurrentWeapon->LightAttackSpeed : 1.0f;
@@ -40,7 +41,14 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		const FGameplayEffectSpecHandle SpecHandle =  PlayerChar->GetAbilitySystemComponent()->MakeOutgoingSpec(EffectClass, 1.0f, ContextHandle);
 		const FGameplayEffectSpecHandle NewSpecHandle = UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, Dynamic, CurrentCost * -1.0f);
 
-		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnim();
+
+		if (CurrentComboIdx > CurrentWeapon->GetComboLength()- 1 )
+		{
+			CurrentComboIdx = 0;
+		}
+		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnimCombo( CurrentComboIdx );
+		CurrentComboIdx++;
+		
 		
 		if(CustomCheckCost(CurrentCost, ActorInfo))
 		{
@@ -49,17 +57,22 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		else
 		{
 			AnimInstance->Montage_Play( LightAttack, AttackSpeed * 0.8f );
+			ResetCombo();
 		}
 		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
 		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags( AttackingTags );
 		ActorInfo->AbilitySystemComponent->NotifyAbilityCommit(this);
-		// since we manually do it, dont call this
-		// CommitAbility(Handle, ActorInfo, ActivationInfo);
 	}
 	
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBLightAttackAbility::OnAttackAnimFinished, Handle, ActorInfo, ActivationInfo);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
+}
+
+void UBLightAttackAbility::ResetCombo()
+{
+	// GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "Resetting Combo");
+	CurrentComboIdx = 0;
 }
 
 //returns true if we CAN attack

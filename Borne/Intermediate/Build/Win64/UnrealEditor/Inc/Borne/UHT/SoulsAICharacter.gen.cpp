@@ -19,6 +19,7 @@ BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
@@ -141,6 +142,16 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 		{ "Category", "SoulsAICharacter" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MotionWarpName_MetaData[] = {
+		{ "Category", "SoulsAICharacter" },
+		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NiagaraRoarComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Effects" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsTargeted_MetaData[] = {
 		{ "Category", "SoulsAICharacter" },
 		{ "ModuleRelativePath", "AI/SoulsAICharacter.h" },
@@ -152,6 +163,8 @@ struct Z_Construct_UClass_ASoulsAICharacter_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentLocomotionMode;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_MotionWarpName;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraRoarComponent;
 	static void NewProp_IsTargeted_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsTargeted;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -173,6 +186,8 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASoulsAICharact
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, Health), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, MaxHealth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHealth_MetaData), NewProp_MaxHealth_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_CurrentLocomotionMode = { "CurrentLocomotionMode", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, CurrentLocomotionMode), Z_Construct_UEnum_Borne_ELocomotionMode, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLocomotionMode_MetaData), NewProp_CurrentLocomotionMode_MetaData) }; // 2571520345
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MotionWarpName = { "MotionWarpName", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, MotionWarpName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MotionWarpName_MetaData), NewProp_MotionWarpName_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_NiagaraRoarComponent = { "NiagaraRoarComponent", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAICharacter, NiagaraRoarComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NiagaraRoarComponent_MetaData), NewProp_NiagaraRoarComponent_MetaData) };
 void Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted_SetBit(void* Obj)
 {
 	((ASoulsAICharacter*)Obj)->IsTargeted = 1;
@@ -185,6 +200,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASoulsAIC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MaxHealth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_CurrentLocomotionMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_MotionWarpName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_NiagaraRoarComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAICharacter_Statics::NewProp_IsTargeted,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAICharacter_Statics::PropPointers) < 2048);
@@ -231,10 +248,10 @@ ASoulsAICharacter::~ASoulsAICharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 3397869581U) },
+		{ Z_Construct_UClass_ASoulsAICharacter, ASoulsAICharacter::StaticClass, TEXT("ASoulsAICharacter"), &Z_Registration_Info_UClass_ASoulsAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAICharacter), 3600168697U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_4084508199(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_434625265(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAICharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

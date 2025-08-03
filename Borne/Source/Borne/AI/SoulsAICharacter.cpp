@@ -1,5 +1,8 @@
 ﻿#include "SoulsAICharacter.h"
+
+#include "Borne/BorneCharacter.h"
 #include "Borne/Core/HelperData.h"
+#include "Kismet/GameplayStatics.h"
 
 
 ASoulsAICharacter::ASoulsAICharacter()
@@ -9,7 +12,13 @@ ASoulsAICharacter::ASoulsAICharacter()
 	LockOnWidget = CreateDefaultSubobject<UWidgetComponent>("LockOnWidget");
 	LockOnWidget->SetupAttachment(RootComponent);
 	LockOnWidget->SetVisibility(false);
-	
+
+	MotionWarp = CreateDefaultSubobject<UMotionWarpingComponent>("MotionWarp");
+
+	NiagaraRoarComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
+	NiagaraRoarComponent->SetupAttachment(GetMesh());
+	NiagaraRoarComponent->SetAutoActivate(false);
+
 	PawnSensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComponent");
 }
 
@@ -41,6 +50,14 @@ void ASoulsAICharacter::BeginPlay()
 		UE_LOG(LogTemp, Error, TEXT("MaxHealth is 0"));
 	}
 	Health = MaxHealth;
+
+	Target = UGameplayStatics::GetActorOfClass(GetWorld(), ABorneCharacter::StaticClass());
+}
+
+void ASoulsAICharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	UpdateMotionWarpingTarget();
 }
 
 void ASoulsAICharacter::TakeDamage( const float DamageAmount )
@@ -72,9 +89,28 @@ void ASoulsAICharacter::OnPawnSeen(APawn* Pawn)
 	{
 		UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
 		BBComp->SetValueAsObject("TargetActor", Pawn);
+		Target = Pawn;
 	}
 }
 
+void ASoulsAICharacter::UpdateMotionWarpingTarget()
+{
+	if (Target == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Target is null"));
+		return;
+	}
+	const FVector Location = Target->GetActorLocation();
+	
+	FVector ToTarget = Location - GetActorLocation();
+	ToTarget.Normalize();
+	const FVector StoppingPos = Location - ToTarget * 200.0f;
+	
+	const FVector LookAt = FVector(Location.X, Location.Y, GetActorLocation().Z);
+	const FRotator Rotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LookAt);
+	
+	MotionWarp->AddOrUpdateWarpTargetFromLocationAndRotation(MotionWarpName, StoppingPos, Rotation);
+}
 
 
 

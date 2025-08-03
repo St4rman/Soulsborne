@@ -103,6 +103,55 @@ DEFINE_FUNCTION(ASBWeaponBase::execGetLightAnim)
 }
 // End Class ASBWeaponBase Function GetLightAnim
 
+// Begin Class ASBWeaponBase Function GetLightAnimCombo
+struct Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics
+{
+	struct SBWeaponBase_eventGetLightAnimCombo_Parms
+	{
+		int32 Index;
+		UAnimMontage* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Index_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SBWeaponBase_eventGetLightAnimCombo_Parms, Index), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Index_MetaData), NewProp_Index_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SBWeaponBase_eventGetLightAnimCombo_Parms, ReturnValue), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::NewProp_Index,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBWeaponBase, nullptr, "GetLightAnimCombo", nullptr, nullptr, Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::SBWeaponBase_eventGetLightAnimCombo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::SBWeaponBase_eventGetLightAnimCombo_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASBWeaponBase::execGetLightAnimCombo)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param_Index);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimMontage**)Z_Param__Result=P_THIS->GetLightAnimCombo(Z_Param_Index);
+	P_NATIVE_END;
+}
+// End Class ASBWeaponBase Function GetLightAnimCombo
+
 // Begin Class ASBWeaponBase Function IsWeaponEquipped
 struct Z_Construct_UFunction_ASBWeaponBase_IsWeaponEquipped_Statics
 {
@@ -269,6 +318,7 @@ void ASBWeaponBase::StaticRegisterNativesASBWeaponBase()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetIcon", &ASBWeaponBase::execGetIcon },
 		{ "GetLightAnim", &ASBWeaponBase::execGetLightAnim },
+		{ "GetLightAnimCombo", &ASBWeaponBase::execGetLightAnimCombo },
 		{ "IsWeaponEquipped", &ASBWeaponBase::execIsWeaponEquipped },
 		{ "OnWeaponDrop_Implementation", &ASBWeaponBase::execOnWeaponDrop_Implementation },
 		{ "OnWeaponPickup_Implementation", &ASBWeaponBase::execOnWeaponPickup_Implementation },
@@ -334,6 +384,11 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 		{ "Category", "Icon" },
 		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttackArray_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Anim Montage" },
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsEquipped_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Equipped" },
@@ -349,6 +404,8 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HeavyStaminaCost;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_LightAttackSpeed;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Icon;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttackArray_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_LightAttackArray;
 	static void NewProp_bIsEquipped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsEquipped;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -356,6 +413,7 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetIcon, "GetIcon" }, // 1229079396
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetLightAnim, "GetLightAnim" }, // 1980117797
+		{ &Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo, "GetLightAnimCombo" }, // 1805074818
 		{ &Z_Construct_UFunction_ASBWeaponBase_IsWeaponEquipped, "IsWeaponEquipped" }, // 815069651
 		{ &Z_Construct_UFunction_ASBWeaponBase_OnWeaponDrop_Implementation, "OnWeaponDrop_Implementation" }, // 1218289295
 		{ &Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation, "OnWeaponPickup_Implementation" }, // 515731518
@@ -377,6 +435,8 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASBWeaponBase_S
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_HeavyStaminaCost = { "HeavyStaminaCost", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, HeavyStaminaCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyStaminaCost_MetaData), NewProp_HeavyStaminaCost_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackSpeed = { "LightAttackSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, LightAttackSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttackSpeed_MetaData), NewProp_LightAttackSpeed_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Icon = { "Icon", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, Icon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Icon_MetaData), NewProp_Icon_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray_Inner = { "LightAttackArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray = { "LightAttackArray", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, LightAttackArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttackArray_MetaData), NewProp_LightAttackArray_MetaData) };
 void Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsEquipped_SetBit(void* Obj)
 {
 	((ASBWeaponBase*)Obj)->bIsEquipped = 1;
@@ -392,6 +452,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASBWeapon
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_HeavyStaminaCost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Icon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsEquipped,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASBWeaponBase_Statics::PropPointers) < 2048);
@@ -438,10 +500,10 @@ ASBWeaponBase::~ASBWeaponBase() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 1825234130U) },
+		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 1145855538U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_3668656373(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_563577041(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -45,7 +45,10 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Icon")
 	UTexture2D* Icon;
-
+	
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
+	TArray<UAnimMontage*> LightAttackArray;
+	
 protected:
 	
 	UPROPERTY(VisibleAnywhere, meta=(AllowPrivateAccess=true), Category="Equipped")
@@ -63,6 +66,11 @@ public:
 	UStaticMeshComponent* GetMesh() const { return MeshComp; }
 
 	UFUNCTION(BlueprintCallable)
+	UAnimMontage* GetLightAnimCombo( const int Index) const { return LightAttackArray[Index]; }
+
+	int GetComboLength() const { return LightAttackArray.Num(); }
+
+	UFUNCTION(BlueprintCallable)
 	UTexture2D* GetIcon() const { return Icon; }
 
 	UFUNCTION(BlueprintCallable)
@@ -76,4 +84,5 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent)
 	void StopFloating();
+
 };
