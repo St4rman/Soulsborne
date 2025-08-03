@@ -17,7 +17,7 @@ void UANS_EnemyAttackNotify::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSe
 }
 
 void UANS_EnemyAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation,
-	float TotalDuration, const FAnimNotifyEventReference& EventReference)
+                                         float TotalDuration, const FAnimNotifyEventReference& EventReference)
 {
 	Super::NotifyBegin(MeshComp, Animation, TotalDuration, EventReference);
 	
@@ -44,7 +44,6 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 		{
 			return;
 		}
-	
 		
 		const ASBWeaponBase* Weapon = Character->GetWeapon();
 		if (Weapon == nullptr){ return;}

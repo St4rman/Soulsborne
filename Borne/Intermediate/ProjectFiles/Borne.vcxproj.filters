@@ -73,13 +73,70 @@
     <ClCompile Include="..\..\Source\Borne\AI\SoulsAIController.h">
       <Filter>Source\Borne\AI</Filter>
     </ClCompile>
+    <Filter Include="Source\Borne\AI\Decorators">
+      <UniqueIdentifier>{C4E8275C-1911-38BB-9976-4377F09EE3AB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\AI\Decorators\BTD_CheckPlayerInRange.cpp">
+      <Filter>Source\Borne\AI\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Decorators\BTD_CheckPlayerInRange.h">
+      <Filter>Source\Borne\AI\Decorators</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\AI\Services">
+      <UniqueIdentifier>{DD55D583-DA20-3F00-A089-BE291AFF01FA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.cpp">
+      <Filter>Source\Borne\AI\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Services\SoulBTSCheckAttackRange.h">
+      <Filter>Source\Borne\AI\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Services\SStateCheckService.cpp">
+      <Filter>Source\Borne\AI\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Services\SStateCheckService.h">
+      <Filter>Source\Borne\AI\Services</Filter>
+    </ClCompile>
+    <Filter Include="Source\Borne\AI\Tasks">
+      <UniqueIdentifier>{B429598C-7756-3474-B32A-47AB6D01279A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTaskMeleeAttack.cpp">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTaskMeleeAttack.h">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTTurnToFacePlayer.cpp">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SBTTTurnToFacePlayer.h">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.cpp">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\AI\Tasks\SoulsBTTaskRangedAttack.h">
+      <Filter>Source\Borne\AI\Tasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Borne\Anims">
       <UniqueIdentifier>{03BB59C3-CABB-314A-A173-839DE1C98DED}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.cpp">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_EnemyAttackNotify.h">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.cpp">
       <Filter>Source\Borne\Anims</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Borne\Anims\ANS_MeleeAttackNotify.h">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_SpawnAOE.cpp">
+      <Filter>Source\Borne\Anims</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Anims\ANS_SpawnAOE.h">
       <Filter>Source\Borne\Anims</Filter>
     </ClCompile>
     <Filter Include="Source\Borne\Core">
@@ -151,6 +208,12 @@
     <Filter Include="Source\Borne\Interfaces">
       <UniqueIdentifier>{50013263-8A91-322F-9E0B-BE7E675BF31C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\DamageableInterface.cpp">
+      <Filter>Source\Borne\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Interfaces\DamageableInterface.h">
+      <Filter>Source\Borne\Interfaces</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Borne\Interfaces\TargetableInterface.cpp">
       <Filter>Source\Borne\Interfaces</Filter>
     </ClCompile>
@@ -166,6 +229,12 @@
     <Filter Include="Source\Borne\Pawns">
       <UniqueIdentifier>{40203D7F-0D64-37BE-B64D-8677F8C89D87}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Borne\Pawns\SDmgProjectile.cpp">
+      <Filter>Source\Borne\Pawns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Borne\Pawns\SDmgProjectile.h">
+      <Filter>Source\Borne\Pawns</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Borne\Pawns\TargetableEnemy.cpp">
       <Filter>Source\Borne\Pawns</Filter>
     </ClCompile>

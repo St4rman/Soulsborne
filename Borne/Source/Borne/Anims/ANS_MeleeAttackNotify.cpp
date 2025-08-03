@@ -1,19 +1,6 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
-
-#include "ANS_MeleeAttackNotify.h"
-
+﻿#include "ANS_MeleeAttackNotify.h"
 #include "Borne/AI/SoulsAICharacter.h"
 
-void UANS_MeleeAttackNotify::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation,
-                                       const FAnimNotifyEventReference& EventReference){
-	Super::NotifyEnd(MeshComp, Animation, EventReference);
-	if (MeshComp !=nullptr && MeshComp->GetOwner() != nullptr)
-	{
-		TraceIgnoreActors.Empty();
-	}
-	
-}
 
 void UANS_MeleeAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
 {
@@ -24,6 +11,16 @@ void UANS_MeleeAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 		TraceIgnoreActors.Add(MeshComp->GetOwner());
 	}
 }
+
+void UANS_MeleeAttackNotify::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference){
+	Super::NotifyEnd(MeshComp, Animation, EventReference);
+	if (MeshComp !=nullptr && MeshComp->GetOwner() != nullptr)
+	{
+		TraceIgnoreActors.Empty();
+	}
+	
+}
+
 
 void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, const FAnimNotifyEventReference& EventReference)
 {

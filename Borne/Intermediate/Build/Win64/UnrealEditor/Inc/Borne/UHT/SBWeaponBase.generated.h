@@ -24,6 +24,7 @@ class UTexture2D;
 	DECLARE_FUNCTION(execOnWeaponDrop_Implementation); \
 	DECLARE_FUNCTION(execOnWeaponPickup_Implementation); \
 	DECLARE_FUNCTION(execGetIcon); \
+	DECLARE_FUNCTION(execGetLightAnimCombo); \
 	DECLARE_FUNCTION(execGetLightAnim);
 
 

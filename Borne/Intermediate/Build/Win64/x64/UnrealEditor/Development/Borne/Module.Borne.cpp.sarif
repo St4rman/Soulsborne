@@ -105,6 +105,50 @@
                 {
                     "ruleId": "C4996",
                     "message": {
+                        "text": "'UPawnSensingComponent': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/Module.Borne.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.cpp"
+                                },
+                                "region": {
+                                    "startLine": 22,
+                                    "startColumn": 48
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'UPawnSensingComponent::OnSeePawn': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/Module.Borne.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.cpp"
+                                },
+                                "region": {
+                                    "startLine": 28,
+                                    "startColumn": 22
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
                         "text": "'FGameplayAbilityInputBinds::FGameplayAbilityInputBinds': Enum names are now represented by path names. Please use a version of FGameplayAbilityInputBinds constructor that accepts FTopLevelAssetPath. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
@@ -119,6 +163,85 @@
                                 "region": {
                                     "startLine": 92,
                                     "startColumn": 43
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'UPawnSensingComponent': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/Module.Borne.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h"
+                                },
+                                "region": {
+                                    "startLine": 150,
+                                    "startColumn": 24
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h"
+                                },
+                                "region": {
+                                    "startLine": 150,
+                                    "startColumn": 24
+                                }
+                            },
+                            "message": {
+                                "text": "the template instantiation context (the oldest one first) is"
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.cpp"
+                                },
+                                "region": {
+                                    "startLine": 22,
+                                    "startColumn": 25
+                                }
+                            },
+                            "message": {
+                                "text": "see reference to function template instantiation 'TReturnType *UObject::CreateDefaultSubobject<UPawnSensingComponent>(FName,bool)' being compiled\n        with\n        [\n            TReturnType=UPawnSensingComponent\n        ]"
+                            },
+                            "properties": {
+                                "nestingLevel": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'UPawnSensingComponent::StaticClass': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/Module.Borne.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/CoreUObject/Public/UObject/Object.h"
+                                },
+                                "region": {
+                                    "startLine": 150,
+                                    "startColumn": 37
                                 }
                             }
                         }

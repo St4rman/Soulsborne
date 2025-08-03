@@ -23,6 +23,8 @@ class BORNE_API UANS_EnemyAttackNotify : public UAnimNotifyState
 	FGameplayTag DamageTag;
 	
 public:
+	
+	
 	UPROPERTY()
 	TArray<AActor*> TraceIgnoreActors;
 	

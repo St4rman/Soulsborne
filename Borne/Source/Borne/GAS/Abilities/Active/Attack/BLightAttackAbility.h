@@ -21,6 +21,8 @@ class BORNE_API UBLightAttackAbility : public USoulGameplayAbility
 
 	ABorneCharacter* PlayerCharacter;
 
+	int CurrentComboIdx;
+
 public:
 	UBLightAttackAbility();
 
