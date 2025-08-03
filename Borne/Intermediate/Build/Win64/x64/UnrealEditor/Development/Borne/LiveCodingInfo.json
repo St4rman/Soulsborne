@@ -45,12 +45,12 @@
 			"SBTTTurnToFacePlayer.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
 			"ANS_EnemyAttackNotify.cpp.obj",
-			"ANS_MeleeAttackNotify.cpp.obj",
 			"ANS_SpawnAOE.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
+			"BLightAttackAbility.cpp.obj",
 			"BDodgeRollAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
@@ -67,7 +67,7 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"BLightAttackAbility.cpp.obj"
+			"ANS_MeleeAttackNotify.cpp.obj"
 		]
 	}
 }
