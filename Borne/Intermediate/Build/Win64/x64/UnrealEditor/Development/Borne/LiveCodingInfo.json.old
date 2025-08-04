@@ -4,11 +4,9 @@
 		"Module.Borne.cpp.obj": [
 			"ANS_EnemyAttackNotify.gen.cpp.obj",
 			"ANS_MeleeAttackNotify.gen.cpp.obj",
-			"ANS_SpawnAOE.gen.cpp.obj",
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
-			"Borne.init.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
 			"BTD_CheckPlayerInRange.gen.cpp.obj",
@@ -67,6 +65,8 @@
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
+			"ANS_SpawnAOE.gen.cpp.obj",
+			"Borne.init.gen.cpp.obj",
 			"ANS_SpawnAOE.cpp.obj"
 		]
 	}
