@@ -23,6 +23,7 @@ BORNE_API UClass* Z_Construct_UClass_USoulGameplayAbility_NoRegister();
 BORNE_API UClass* Z_Construct_UClass_USoulsASComponent_NoRegister();
 BORNE_API UEnum* Z_Construct_UEnum_Borne_ELocomotionMode();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
@@ -33,6 +34,7 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
+MOTIONWARPING_API UClass* Z_Construct_UClass_UMotionWarpingComponent_NoRegister();
 NIAGARA_API UClass* Z_Construct_UClass_UNiagaraComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
@@ -168,6 +170,49 @@ DEFINE_FUNCTION(ABorneCharacter::execGetInputCache)
 }
 // End Class ABorneCharacter Function GetInputCache
 
+// Begin Class ABorneCharacter Function MotionWarpOnFogGate
+struct Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics
+{
+	struct BorneCharacter_eventMotionWarpOnFogGate_Parms
+	{
+		FVector WarpPosition;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Animations" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_WarpPosition;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::NewProp_WarpPosition = { "WarpPosition", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BorneCharacter_eventMotionWarpOnFogGate_Parms, WarpPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::NewProp_WarpPosition,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABorneCharacter, nullptr, "MotionWarpOnFogGate", nullptr, nullptr, Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::BorneCharacter_eventMotionWarpOnFogGate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::BorneCharacter_eventMotionWarpOnFogGate_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABorneCharacter::execMotionWarpOnFogGate)
+{
+	P_GET_STRUCT(FVector,Z_Param_WarpPosition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MotionWarpOnFogGate(Z_Param_WarpPosition);
+	P_NATIVE_END;
+}
+// End Class ABorneCharacter Function MotionWarpOnFogGate
+
 // Begin Class ABorneCharacter
 void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 {
@@ -176,6 +221,7 @@ void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 		{ "ExecuteDodge", &ABorneCharacter::execExecuteDodge },
 		{ "GetCurrentLocomotionMode", &ABorneCharacter::execGetCurrentLocomotionMode },
 		{ "GetInputCache", &ABorneCharacter::execGetInputCache },
+		{ "MotionWarpOnFogGate", &ABorneCharacter::execMotionWarpOnFogGate },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -323,9 +369,20 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "BorneCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MotionWarpComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Animations" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WarpTarget_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Animations" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TakingDamageAnim_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Effects" },
+		{ "Category", "Animations" },
 		{ "ModuleRelativePath", "BorneCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SoulsAbilitySystemComponent_MetaData[] = {
@@ -388,6 +445,8 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InventoryComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerHUD;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MotionWarpComponent;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_WarpTarget;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TakingDamageAnim;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SoulsAbilitySystemComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BaseSet;
@@ -405,6 +464,7 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ &Z_Construct_UFunction_ABorneCharacter_ExecuteDodge, "ExecuteDodge" }, // 3943078948
 		{ &Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode, "GetCurrentLocomotionMode" }, // 2769954917
 		{ &Z_Construct_UFunction_ABorneCharacter_GetInputCache, "GetInputCache" }, // 2083511342
+		{ &Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate, "MotionWarpOnFogGate" }, // 2712910200
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -427,6 +487,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacte
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_InventoryComponent = { "InventoryComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, InventoryComponent), Z_Construct_UClass_USInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InventoryComponent_MetaData), NewProp_InventoryComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PlayerHUD = { "PlayerHUD", nullptr, (EPropertyFlags)0x004000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, PlayerHUD), Z_Construct_UClass_USHUDComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerHUD_MetaData), NewProp_PlayerHUD_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_NiagaraComponent = { "NiagaraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, NiagaraComponent), Z_Construct_UClass_UNiagaraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NiagaraComponent_MetaData), NewProp_NiagaraComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_MotionWarpComponent = { "MotionWarpComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, MotionWarpComponent), Z_Construct_UClass_UMotionWarpingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MotionWarpComponent_MetaData), NewProp_MotionWarpComponent_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_WarpTarget = { "WarpTarget", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, WarpTarget), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WarpTarget_MetaData), NewProp_WarpTarget_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_TakingDamageAnim = { "TakingDamageAnim", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, TakingDamageAnim), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TakingDamageAnim_MetaData), NewProp_TakingDamageAnim_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent = { "SoulsAbilitySystemComponent", nullptr, (EPropertyFlags)0x01440000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, SoulsAbilitySystemComponent), Z_Construct_UClass_USoulsASComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SoulsAbilitySystemComponent_MetaData), NewProp_SoulsAbilitySystemComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_BaseSet = { "BaseSet", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, BaseSet), Z_Construct_UClass_UBaseAttributesSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BaseSet_MetaData), NewProp_BaseSet_MetaData) };
@@ -456,6 +518,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCha
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_InventoryComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_PlayerHUD,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_NiagaraComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_MotionWarpComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_WarpTarget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_TakingDamageAnim,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_SoulsAbilitySystemComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_BaseSet,
@@ -512,10 +576,10 @@ ABorneCharacter::~ABorneCharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 2621042567U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 1443657928U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1366478018(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1056510634(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

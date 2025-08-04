@@ -13,6 +13,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "MotionWarpingComponent.h"
 #include "Interfaces/TargetableInterface.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -74,7 +75,10 @@ ABorneCharacter::ABorneCharacter()
 	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
 	NiagaraComponent->SetupAttachment(GetMesh());
 	NiagaraComponent->SetAutoActivate(false);
-	
+
+
+	MotionWarpComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpComponent"));
+
 }
 
 void ABorneCharacter::BeginPlay()
@@ -346,4 +350,10 @@ void ABorneCharacter::SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID 
 	{
 		SoulsAbilitySystemComponent->AbilityLocalInputReleased(static_cast<int32>(InputID));
 	}
+}
+
+
+void ABorneCharacter::MotionWarpOnFogGate(FVector WarpPosition)
+{
+	MotionWarpComponent->AddOrUpdateWarpTargetFromLocation( WarpTarget , WarpPosition );
 }

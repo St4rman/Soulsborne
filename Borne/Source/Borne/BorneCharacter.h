@@ -26,6 +26,7 @@
 #include "BorneCharacter.generated.h"
 
 
+class UMotionWarpingComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UBaseAttributesSet;
@@ -102,7 +103,13 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, publi
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Animations ", meta = (AllowPrivateAccess = "true"))
+	UMotionWarpingComponent* MotionWarpComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=" Animations ", meta = (AllowPrivateAccess = "true"))
+	FName WarpTarget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=" Animations ", meta = (AllowPrivateAccess = "true"))
 	UAnimMontage* TakingDamageAnim;
 	
 	/**ABILTIES ////////////////////////////////////////////
@@ -124,7 +131,7 @@ public:
 	virtual void DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source) override;
 	
 	void SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID InputID);
-
+	
 
 protected:
 
@@ -194,5 +201,8 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Ddoging")
 	void ExecuteDodge();
+
+	UFUNCTION( BlueprintCallable, Category = "Animations")
+	void MotionWarpOnFogGate(FVector WarpPosition);
 };
 
