@@ -1,7 +1,5 @@
 ﻿#include "PlayerHUD.h"
 
-
-
 void UPlayerHUD::SetHealth(const float Health, const float MaxHealth)
 {
 	if (HealthBar != nullptr)
@@ -31,5 +29,14 @@ void UPlayerHUD::SetBossHealth(const float Health, const float MaxHealth)
 	if (BossHealthBar != nullptr)
 	{
 		BossHealthBar->SetPercent(Health / MaxHealth);
+	}
+}
+
+void UPlayerHUD::ToggleBossBarVisibility(const bool Toggle)
+{
+	if (BossHealthBar != nullptr)
+	{
+		const ESlateVisibility CurVis = Toggle ? ESlateVisibility::Visible : ESlateVisibility::Hidden;
+		BossHealthBar->SetVisibility(CurVis);
 	}
 }

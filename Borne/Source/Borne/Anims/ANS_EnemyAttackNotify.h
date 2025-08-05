@@ -6,6 +6,7 @@
 #include "GameplayEffect.h"
 #include "GameplayTagContainer.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "ANS_EnemyAttackNotify.generated.h"
 
 /**
@@ -27,6 +28,12 @@ public:
 	
 	UPROPERTY()
 	TArray<AActor*> TraceIgnoreActors;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TEnumAsByte<EDrawDebugTrace::Type> DebugDraw = EDrawDebugTrace::None;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Radius	= 70.0f;
 	
 	virtual void NotifyBegin(USkeletalMeshComponent * MeshComp, UAnimSequenceBase * Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference) override;
 	virtual void NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference) override;

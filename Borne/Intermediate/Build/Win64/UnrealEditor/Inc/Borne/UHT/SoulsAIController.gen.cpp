@@ -18,6 +18,36 @@ BORNE_API UEnum* Z_Construct_UEnum_Borne_EAIState();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class ASoulsAIController Function EndFight
+struct Z_Construct_UFunction_ASoulsAIController_EndFight_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASoulsAIController_EndFight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASoulsAIController, nullptr, "EndFight", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASoulsAIController_EndFight_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASoulsAIController_EndFight_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ASoulsAIController_EndFight()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASoulsAIController_EndFight_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASoulsAIController::execEndFight)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EndFight();
+	P_NATIVE_END;
+}
+// End Class ASoulsAIController Function EndFight
+
 // Begin Class ASoulsAIController Function StartFight
 struct Z_Construct_UFunction_ASoulsAIController_StartFight_Statics
 {
@@ -53,6 +83,7 @@ void ASoulsAIController::StaticRegisterNativesASoulsAIController()
 {
 	UClass* Class = ASoulsAIController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "EndFight", &ASoulsAIController::execEndFight },
 		{ "StartFight", &ASoulsAIController::execStartFight },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -94,6 +125,7 @@ struct Z_Construct_UClass_ASoulsAIController_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASoulsAIController_EndFight, "EndFight" }, // 3280190748
 		{ &Z_Construct_UFunction_ASoulsAIController_StartFight, "StartFight" }, // 1679919754
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -153,10 +185,10 @@ ASoulsAIController::~ASoulsAIController() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 1397683475U) },
+		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 3154388410U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_4008295606(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_234454167(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

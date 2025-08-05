@@ -19,7 +19,15 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 {
 	ABorneCharacter* PlayerChar = CastChecked<ABorneCharacter>(ActorInfo->AvatarActor.Get());
 	UAnimInstance* AnimInstance = ActorInfo->GetAnimInstance();
-	
+
+	if (AnimInstance != nullptr)
+	{
+		if (AnimInstance->Montage_IsPlaying(nullptr))
+		{
+			Super::EndAbility(Handle, ActorInfo, ActivationInfo, true, false);
+			return;
+		}
+	} 
 	if (!CheckAbilityConditions(ActorInfo , PlayerChar))
 	{
 		check(NoWeaponAnimMontage);

@@ -168,7 +168,11 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Abilities")
 	FGameplayTag DamageTag;
-	
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsDead = false;
+
 protected:
 
 	virtual void NotifyControllerChanged() override;
@@ -204,5 +208,8 @@ public:
 
 	UFUNCTION( BlueprintCallable, Category = "Animations")
 	void MotionWarpOnFogGate(FVector WarpPosition);
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Finished")
+	void OnPlayerDeath();
 };
 

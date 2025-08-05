@@ -30,6 +30,7 @@ protected:
 
 public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UPlayerHUD> PlayerHUDClass;
@@ -50,4 +51,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetBossHealth(float Health, float MaxHealth);
+	
+	UFUNCTION(BlueprintCallable)
+	void ToggleBossHealth(bool toggle);
 };

@@ -14,6 +14,7 @@ BORNE_API UClass* Z_Construct_UClass_UANS_MeleeAttackNotify();
 BORNE_API UClass* Z_Construct_UClass_UANS_MeleeAttackNotify_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimNotifyState();
+ENGINE_API UEnum* Z_Construct_UEnum_Engine_EDrawDebugTrace();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
@@ -40,9 +41,14 @@ struct Z_Construct_UClass_UANS_MeleeAttackNotify_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TraceIgnoreActors_MetaData[] = {
 		{ "ModuleRelativePath", "Anims/ANS_MeleeAttackNotify.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DebugDraw_MetaData[] = {
+		{ "Category", "ANS_MeleeAttackNotify" },
+		{ "ModuleRelativePath", "Anims/ANS_MeleeAttackNotify.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TraceIgnoreActors_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_TraceIgnoreActors;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_DebugDraw;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -52,9 +58,11 @@ struct Z_Construct_UClass_UANS_MeleeAttackNotify_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_TraceIgnoreActors_Inner = { "TraceIgnoreActors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_TraceIgnoreActors = { "TraceIgnoreActors", nullptr, (EPropertyFlags)0x0010000000000010, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UANS_MeleeAttackNotify, TraceIgnoreActors), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TraceIgnoreActors_MetaData), NewProp_TraceIgnoreActors_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_DebugDraw = { "DebugDraw", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UANS_MeleeAttackNotify, DebugDraw), Z_Construct_UEnum_Engine_EDrawDebugTrace, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DebugDraw_MetaData), NewProp_DebugDraw_MetaData) }; // 2070357899
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_TraceIgnoreActors_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_TraceIgnoreActors,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::NewProp_DebugDraw,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UANS_MeleeAttackNotify_Statics::DependentSingletons[])() = {
@@ -98,10 +106,10 @@ UANS_MeleeAttackNotify::~UANS_MeleeAttackNotify() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_MeleeAttackNotify_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UANS_MeleeAttackNotify, UANS_MeleeAttackNotify::StaticClass, TEXT("UANS_MeleeAttackNotify"), &Z_Registration_Info_UClass_UANS_MeleeAttackNotify, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UANS_MeleeAttackNotify), 2087616413U) },
+		{ Z_Construct_UClass_UANS_MeleeAttackNotify, UANS_MeleeAttackNotify::StaticClass, TEXT("UANS_MeleeAttackNotify"), &Z_Registration_Info_UClass_UANS_MeleeAttackNotify, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UANS_MeleeAttackNotify), 1342316990U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_MeleeAttackNotify_h_1231233213(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_MeleeAttackNotify_h_2830997188(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_MeleeAttackNotify_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Anims_ANS_MeleeAttackNotify_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

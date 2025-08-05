@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BORNE_SoulsAIController_generated_h
 
 #define FID_Borne_Source_Borne_AI_SoulsAIController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execEndFight); \
 	DECLARE_FUNCTION(execStartFight);
 
 

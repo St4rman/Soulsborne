@@ -3,6 +3,8 @@
 
 #include "BaseAttributesSet.h"
 
+#include "Borne/BorneCharacter.h"
+
 UBaseAttributesSet::UBaseAttributesSet()
 {
 	
@@ -34,6 +36,23 @@ void UBaseAttributesSet::PostGameplayEffectExecute(const FGameplayEffectModCallb
 			if (OldStaminaValue != NewStaminaValue)
 			{
 				SetStamina(NewStaminaValue);
+			}
+		}
+
+		if (Data.EvaluatedData.Attribute == GetHealthAttribute())
+		{
+			const float OldHealthValue = GetHealth();
+			const float NewHealth = OldHealthValue + Delta;
+
+			if (NewHealth < 0.0)
+			{
+				
+				AActor* Owner = OwningASC->GetOwner();
+
+				if (ABorneCharacter* Player = Cast<ABorneCharacter>(Owner))
+				{
+					Player->OnPlayerDeath();
+				}
 			}
 		}
 	}

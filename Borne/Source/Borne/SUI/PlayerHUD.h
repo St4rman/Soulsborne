@@ -23,7 +23,8 @@ public:
 	void SetStamina(const float Stamina, const float MaxStamina);
 	void SetMeleeIcon(UTexture2D* WeaponTexture, bool bMatchSize);
 	void SetBossHealth(const float Health, const float MaxHealth);
-	
+	void ToggleBossBarVisibility(const bool Toggle);
+
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* HealthBar;
 

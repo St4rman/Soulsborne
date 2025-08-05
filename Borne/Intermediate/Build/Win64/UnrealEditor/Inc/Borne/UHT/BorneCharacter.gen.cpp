@@ -213,6 +213,49 @@ DEFINE_FUNCTION(ABorneCharacter::execMotionWarpOnFogGate)
 }
 // End Class ABorneCharacter Function MotionWarpOnFogGate
 
+// Begin Class ABorneCharacter Function OnPlayerDeath
+static const FName NAME_ABorneCharacter_OnPlayerDeath = FName(TEXT("OnPlayerDeath"));
+void ABorneCharacter::OnPlayerDeath()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ABorneCharacter_OnPlayerDeath);
+	if (!Func->GetOwnerClass()->HasAnyClassFlags(CLASS_Native))
+	{
+	ProcessEvent(Func,NULL);
+	}
+	else
+	{
+		OnPlayerDeath_Implementation();
+	}
+}
+struct Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Finished" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABorneCharacter, nullptr, "OnPlayerDeath", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABorneCharacter::execOnPlayerDeath)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPlayerDeath_Implementation();
+	P_NATIVE_END;
+}
+// End Class ABorneCharacter Function OnPlayerDeath
+
 // Begin Class ABorneCharacter
 void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 {
@@ -222,6 +265,7 @@ void ABorneCharacter::StaticRegisterNativesABorneCharacter()
 		{ "GetCurrentLocomotionMode", &ABorneCharacter::execGetCurrentLocomotionMode },
 		{ "GetInputCache", &ABorneCharacter::execGetInputCache },
 		{ "MotionWarpOnFogGate", &ABorneCharacter::execMotionWarpOnFogGate },
+		{ "OnPlayerDeath", &ABorneCharacter::execOnPlayerDeath },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -430,6 +474,10 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ "Category", "Abilities" },
 		{ "ModuleRelativePath", "BorneCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsDead_MetaData[] = {
+		{ "Category", "BorneCharacter" },
+		{ "ModuleRelativePath", "BorneCharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
@@ -458,6 +506,8 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bAbilitiesInitialized;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_DamageGameplayEffect;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_DamageTag;
+	static void NewProp_bIsDead_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsDead;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -465,6 +515,7 @@ struct Z_Construct_UClass_ABorneCharacter_Statics
 		{ &Z_Construct_UFunction_ABorneCharacter_GetCurrentLocomotionMode, "GetCurrentLocomotionMode" }, // 2769954917
 		{ &Z_Construct_UFunction_ABorneCharacter_GetInputCache, "GetInputCache" }, // 2083511342
 		{ &Z_Construct_UFunction_ABorneCharacter_MotionWarpOnFogGate, "MotionWarpOnFogGate" }, // 2712910200
+		{ &Z_Construct_UFunction_ABorneCharacter_OnPlayerDeath, "OnPlayerDeath" }, // 2505639361
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -503,6 +554,11 @@ void Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bAbilitiesInitialized_S
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bAbilitiesInitialized = { "bAbilitiesInitialized", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(uint8), sizeof(ABorneCharacter), &Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bAbilitiesInitialized_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bAbilitiesInitialized_MetaData), NewProp_bAbilitiesInitialized_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_DamageGameplayEffect = { "DamageGameplayEffect", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, DamageGameplayEffect), Z_Construct_UClass_UClass, Z_Construct_UClass_UGameplayEffect_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageGameplayEffect_MetaData), NewProp_DamageGameplayEffect_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_DamageTag = { "DamageTag", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABorneCharacter, DamageTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageTag_MetaData), NewProp_DamageTag_MetaData) }; // 1298103297
+void Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bIsDead_SetBit(void* Obj)
+{
+	((ABorneCharacter*)Obj)->bIsDead = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABorneCharacter), &Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsDead_MetaData), NewProp_bIsDead_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_FollowCamera,
@@ -530,6 +586,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABorneCha
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bAbilitiesInitialized,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_DamageGameplayEffect,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_DamageTag,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABorneCharacter_Statics::NewProp_bIsDead,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABorneCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABorneCharacter_Statics::DependentSingletons[])() = {
@@ -576,10 +633,10 @@ ABorneCharacter::~ABorneCharacter() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 1443657928U) },
+		{ Z_Construct_UClass_ABorneCharacter, ABorneCharacter::StaticClass, TEXT("ABorneCharacter"), &Z_Registration_Info_UClass_ABorneCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABorneCharacter), 1275745477U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1056510634(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_1540161012(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_BorneCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

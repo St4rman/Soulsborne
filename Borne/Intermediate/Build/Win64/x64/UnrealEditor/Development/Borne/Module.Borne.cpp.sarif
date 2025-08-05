@@ -149,7 +149,7 @@
                 {
                     "ruleId": "C4996",
                     "message": {
-                        "text": "'FGameplayAbilityInputBinds::FGameplayAbilityInputBinds': Enum names are now represented by path names. Please use a version of FGameplayAbilityInputBinds constructor that accepts FTopLevelAssetPath. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                        "text": "'FValueOrBBKey_Object::operator UObject *': Implicit conversion will be removed next version. Call GetValue instead Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
                     },
                     "analysisTarget": {
                         "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/x64/UnrealEditor/Development/Borne/Module.Borne.cpp"
@@ -158,11 +158,11 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/BorneCharacter.cpp"
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
                                 },
                                 "region": {
-                                    "startLine": 96,
-                                    "startColumn": 43
+                                    "startLine": 42,
+                                    "startColumn": 7
                                 }
                             }
                         }

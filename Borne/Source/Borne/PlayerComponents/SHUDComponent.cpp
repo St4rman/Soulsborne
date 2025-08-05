@@ -29,6 +29,7 @@ void USHUDComponent::BeginPlay()
 		check(PlayerController);
 		PlayerHUD->AddToPlayerScreen();
 		SetMeleeIcon(EmptyTexture);
+		PlayerHUD->ToggleBossBarVisibility(false);
 	}
 }
 
@@ -67,4 +68,9 @@ void USHUDComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
+}
+
+void USHUDComponent::ToggleBossHealth(bool toggle)
+{
+	PlayerHUD->ToggleBossBarVisibility(toggle);
 }

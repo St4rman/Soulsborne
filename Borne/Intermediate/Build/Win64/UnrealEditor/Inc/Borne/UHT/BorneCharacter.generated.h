@@ -15,7 +15,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BORNE_BorneCharacter_generated_h
 
 #define FID_Borne_Source_Borne_BorneCharacter_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void OnPlayerDeath_Implementation(); \
 	virtual void ExecuteDodge_Implementation(); \
+	DECLARE_FUNCTION(execOnPlayerDeath); \
 	DECLARE_FUNCTION(execMotionWarpOnFogGate); \
 	DECLARE_FUNCTION(execExecuteDodge); \
 	DECLARE_FUNCTION(execGetInputCache); \

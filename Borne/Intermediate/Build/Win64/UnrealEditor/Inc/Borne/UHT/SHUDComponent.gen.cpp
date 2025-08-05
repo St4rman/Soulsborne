@@ -214,6 +214,53 @@ DEFINE_FUNCTION(USHUDComponent::execSetStamina)
 }
 // End Class USHUDComponent Function SetStamina
 
+// Begin Class USHUDComponent Function ToggleBossHealth
+struct Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics
+{
+	struct SHUDComponent_eventToggleBossHealth_Parms
+	{
+		bool toggle;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_toggle_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_toggle;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::NewProp_toggle_SetBit(void* Obj)
+{
+	((SHUDComponent_eventToggleBossHealth_Parms*)Obj)->toggle = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::NewProp_toggle = { "toggle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(SHUDComponent_eventToggleBossHealth_Parms), &Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::NewProp_toggle_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::NewProp_toggle,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "ToggleBossHealth", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::SHUDComponent_eventToggleBossHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::SHUDComponent_eventToggleBossHealth_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USHUDComponent_ToggleBossHealth()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USHUDComponent_ToggleBossHealth_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USHUDComponent::execToggleBossHealth)
+{
+	P_GET_UBOOL(Z_Param_toggle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ToggleBossHealth(Z_Param_toggle);
+	P_NATIVE_END;
+}
+// End Class USHUDComponent Function ToggleBossHealth
+
 // Begin Class USHUDComponent
 void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 {
@@ -223,6 +270,7 @@ void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 		{ "SetHealth", &USHUDComponent::execSetHealth },
 		{ "SetMeleeIcon", &USHUDComponent::execSetMeleeIcon },
 		{ "SetStamina", &USHUDComponent::execSetStamina },
+		{ "ToggleBossHealth", &USHUDComponent::execToggleBossHealth },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -264,6 +312,7 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 		{ &Z_Construct_UFunction_USHUDComponent_SetHealth, "SetHealth" }, // 1039324302
 		{ &Z_Construct_UFunction_USHUDComponent_SetMeleeIcon, "SetMeleeIcon" }, // 1892680031
 		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 576948195
+		{ &Z_Construct_UFunction_USHUDComponent_ToggleBossHealth, "ToggleBossHealth" }, // 1826743213
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -320,10 +369,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 1315616732U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 967031072U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2210821417(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2774740576(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

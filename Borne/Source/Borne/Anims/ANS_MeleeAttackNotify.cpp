@@ -54,7 +54,7 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			Self->GetWorld(),
 			StartLoc, EndLoc, Radius, TraceObjects,
 			true, TraceIgnoreActors,
-			EDrawDebugTrace::None,
+			DebugDraw,
 			Target, true);
 
 		AActor* TargetActor = Target.GetActor();

@@ -31,7 +31,7 @@ public:
 	FName SourceSocket = "Tip";
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TEnumAsByte<EDrawDebugTrace::Type> DebugDraw;
+	TEnumAsByte<EDrawDebugTrace::Type> DebugDraw = EDrawDebugTrace::None;
 
 	
 	virtual void NotifyBegin(USkeletalMeshComponent * MeshComp, UAnimSequenceBase * Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference) override;

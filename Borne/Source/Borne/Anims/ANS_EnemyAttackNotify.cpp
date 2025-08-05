@@ -49,7 +49,7 @@ void UANS_EnemyAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 		if (Weapon == nullptr){ return;}
 		const FVector StartLoc	= Weapon->GetMesh()->GetSocketLocation("Hilt");
 		const FVector EndLoc	= Weapon->GetMesh()->GetSocketLocation("Tip");
-		constexpr float Radius	= 50.0f;
+		;
 
 		bool DidHit = UKismetSystemLibrary::SphereTraceSingleForObjects(
 			Self->GetWorld(),

@@ -259,7 +259,6 @@ void ABorneCharacter::DoRoll()
 	FVector Movement = GetLastMovementInputVector();
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
 	
-
 }
 
 //this is all from the action rpg example project on epic + a few tutorials
@@ -304,6 +303,10 @@ void ABorneCharacter::AddStartUpGameplayAbilities()
 
 void ABorneCharacter::DoPlayerDamage_Implementation(const float IncomingDamage, UObject* Source)
 {
+	if (bIsDead)
+	{
+		return;
+	}
 	IDamageableInterface::DoPlayerDamage_Implementation(IncomingDamage, Source);
 	FGameplayEffectContextHandle ContextHandle = GetAbilitySystemComponent()->MakeEffectContext();
 	ContextHandle.AddSourceObject(Source);
@@ -356,4 +359,10 @@ void ABorneCharacter::SendLocalIpnutToASC(bool bIsPressed, ESoulsAbilityInputID 
 void ABorneCharacter::MotionWarpOnFogGate(FVector WarpPosition)
 {
 	MotionWarpComponent->AddOrUpdateWarpTargetFromLocation( WarpTarget , WarpPosition );
+}
+
+void ABorneCharacter::OnPlayerDeath_Implementation()
+{
+	UE_LOG(LogTemp, Error, TEXT("No implementation of on player death found, check player blueprint"));
+	return;
 }

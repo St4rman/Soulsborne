@@ -24,3 +24,9 @@ void ASoulsAIController::StartFight()
 {
 	GetBlackboardComponent()->SetValueAsBool( BBIsActiveBool, true );
 }
+
+void ASoulsAIController::EndFight()
+{
+	GetBlackboardComponent()->SetValueAsBool( BBIsActiveBool, false );
+
+}

@@ -40,4 +40,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "AI")
 	void StartFight();
+	
+	UFUNCTION(BlueprintCallable, Category = "AI")
+	void EndFight();
 };
