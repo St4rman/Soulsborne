@@ -3914,3 +3914,312 @@ ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\B
 [2025.08.05-13.48.35:334][394]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2025.08.05-13.48.35:337][394]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
 [2025.08.05-13.48.35:369][395]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2025.08.05-13.49.32:571][184]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4333.705566
+[2025.08.05-13.49.32:842][190]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.05-13.49.32:842][190]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4333.928711, Update Interval: 327.906128
+[2025.08.05-13.51.41:330][552]LogAssetEditorSubsystem: Opening Asset editor for NiagaraSystem /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail
+[2025.08.05-13.51.41:552][552]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2025.08.05-13.51.41:871][552]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2025.08.05-13.51.42:826][559]66498_NS_AxeTrail_MessageLog: System successfully compiled.
+[2025.08.05-13.52.11:096][847]66498_NS_AxeTrail_MessageLog: System compile status unknown.
+[2025.08.05-13.52.11:251][850]LogNiagara: Compiling System NiagaraSystem /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail took 0.306451 sec (time since issued), 0.156519 sec (combined shader worker time).
+[2025.08.05-13.52.15:187][871]66498_NS_AxeTrail_MessageLog: System successfully compiled.
+[2025.08.05-13.52.19:523][884]LogStreaming: Display: FlushAsyncLoading(368): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.05-13.52.21:746][884]LogAutomationController: Ignoring very large delta of 2.53 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2025.08.05-13.52.28:224][958]LogNiagaraEditor: Removed Var 'Constants.CompletelyEmpty.InitializeParticle.Ribbon Facing Vector' from Script NiagaraScript /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail:CompletelyEmpty.SpawnScript
+[2025.08.05-13.52.28:224][958]LogNiagaraEditor: Removed Var 'Constants.CompletelyEmpty.InitializeParticle.Ribbon Facing Vector' from Script NiagaraScript /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail:CompletelyEmpty.GPUComputeScript
+[2025.08.05-13.52.28:412][960]66498_NS_AxeTrail_MessageLog: System compile status unknown.
+[2025.08.05-13.52.28:588][964]LogNiagara: Compiling System NiagaraSystem /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail took 0.304229 sec (time since issued), 0.215321 sec (combined shader worker time).
+[2025.08.05-13.52.31:589][978]66498_NS_AxeTrail_MessageLog: System successfully compiled.
+[2025.08.05-13.52.35:606][  7]LogNiagara: Compiling System NiagaraSystem /Game/MyContent/Effects/NS_AxeTrail.NS_AxeTrail took 0.297096 sec (time since issued), 0.203658 sec (combined shader worker time).
+[2025.08.05-13.52.35:721][  7]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.05-13.52.35:877][  7]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Effects/NS_AxeTrail] ([1] browsable assets)...
+[2025.08.05-13.52.35:877][  7]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Effects/NS_AxeTrail]
+[2025.08.05-13.52.35:877][  7]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Effects/NS_AxeTrail" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Effects/NS_AxeTrail.uasset" SILENT=true
+[2025.08.05-13.52.35:916][  7]LogSavePackage: Moving output files for package: /Game/MyContent/Effects/NS_AxeTrail
+[2025.08.05-13.52.35:917][  7]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/NS_AxeTrail587CE32A44BB33DC2CB4289D8B94F404.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Effects/NS_AxeTrail.uasset'
+[2025.08.05-13.52.36:047][  7]LogFileHelpers: InternalPromptForCheckoutAndSave took 325.600 ms (total: 18.6 sec)
+[2025.08.05-13.52.36:515][  7]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.05-13.52.36:515][  7]LogContentValidation: Enabled validators:
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.05-13.52.36:515][  7]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.05-13.52.36:515][  7]AssetCheck: /Game/MyContent/Effects/NS_AxeTrail Validating asset
+[2025.08.05-13.52.36:661][  7]LogNiagaraEditor: GPU shader compile skipped. Id 1
+[2025.08.05-13.52.36:661][  7]LogNiagaraEditor: GPU shader compile skipped. Id 1
+[2025.08.05-13.52.53:894][297]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.05-13.52.53:911][297]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.05-13.52.53:911][297]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.05-13.52.53:916][297]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005066s)
+[2025.08.05-13.52.53:916][297]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.005127s)
+[2025.08.05-13.52.53:959][297]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2025.08.05-13.52.53:967][297]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.05-13.52.53:970][297]LogPlayLevel: PIE: World Init took: (0.002501s)
+[2025.08.05-13.52.53:971][297]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.05-13.52.53:971][297]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.05-13.52.53:971][297]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.05-13.52.53:971][297]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.05-13.52.53:971][297]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.05-13.52.53:971][297]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.05-13.52.53:974][297]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.05-13.52.54:017][297]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.05-13.52.54:019][297]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.05-13.52.54:019][297]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.05-13.52.54:019][297]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.05-13.52.54:020][297]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.08.05-13.52.54:020][297]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.08.05-13.52.54:023][297]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.08.05-13.52.54:023][297]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.08.05-13.52.54:023][297]LogInit: FAudioDevice initialized with ID 5.
+[2025.08.05-13.52.54:023][297]LogAudio: Display: Audio Device (ID: 5) registered with world 'PrototypeMap'.
+[2025.08.05-13.52.54:023][297]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.08.05-13.52.54:043][297]LogLoad: Game class is 'BorneGameMode'
+[2025.08.05-13.52.54:049][297]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.05-14.52.54
+[2025.08.05-13.52.54:050][297]LogWorld: Bringing up level for play took: 0.007145
+[2025.08.05-13.52.54:053][297]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2025.08.05-13.52.54:060][297]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.05-13.52.54:067][297]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007ffa082b085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:96]
+0x00007ff9f1b43664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f4051936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f28d5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f3dd53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f2823648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f01f3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.05-13.52.54:069][297]PIE: Server logged in
+[2025.08.05-13.52.54:070][297]PIE: Play in editor total start time 0.16 seconds.
+[2025.08.05-13.52.54:184][299]LogTemp: Error: No Equipped weapon - BLightAttackAbility.cpp
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: ================================================
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Total job queries 1,167, among them cache hits 613 (52.53%), DDC hits 280 (23.99%), Duplicates 69 (5.91%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Tracking 485 distinct input hashes that result in 335 distinct outputs (69.07%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: RAM used: 190.25 KiB of 819.20 MiB budget. Usage: 0.02%
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Shaders Compiled: 205
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Jobs assigned 205, completed 205 (100%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Average time worker was idle: 119.49 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Time job spent in pending queue: average 0.59 s, longest 2.25 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Job execution time: average 1.22 s, max 3.74 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Job life time (pending + execution): average 1.81 s, max 4.39
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Shader code size: average 9.812 KiB, min 1.187 KiB, max 21.232 KiB
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 51.02 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.08%
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Jobs were issued in 205 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Average processing rate: 4.02 jobs/sec
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Total thread time: 178.031 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Total thread preprocess time: 21.657 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Percentage time preprocessing: 12.16%
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Effective parallelization: 3.49 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled   16 times, average 2.18 sec, max 3.19 sec, min 1.54 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   16 times, average 1.85 sec, max 2.55 sec, min 1.48 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled   17 times, average 1.76 sec, max 2.40 sec, min 1.34 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   18 times, average 0.89 sec, max 1.44 sec, min 0.48 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled   16 times, average 0.82 sec, max 1.32 sec, min 0.61 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                             FDebugViewModePS - 19.62% of total time (compiled   16 times, average 2.18 sec, max 3.19 sec, min 1.54 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 16.84% of total time (compiled   17 times, average 1.76 sec, max 2.40 sec, min 1.34 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 16.60% of total time (compiled   16 times, average 1.85 sec, max 2.55 sec, min 1.48 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 9.04% of total time (compiled   18 times, average 0.89 sec, max 1.44 sec, min 0.48 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 7.41% of total time (compiled   16 times, average 0.82 sec, max 1.32 sec, min 0.61 sec)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: === Material stats ===
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Materials Translated:    252
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Material Total Translate Time: 0.21 s
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Material Translation Only: 0.09 s (45%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: Material Cache Hits: 19 (8%)
+[2025.08.05-13.53.02:662][476]LogShaderCompilers: Display: ================================================
+[2025.08.05-13.53.14:009][707]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.05-13.53.14:009][707]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.05-13.53.14:010][707]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.05-13.53.14:010][707]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.53.14:090][707]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.05-13.53.14:094][707]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.53.14:110][707]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.05-13.53.14:110][707]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.08.05-13.53.14:110][707]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.08.05-13.53.14:113][707]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.08.05-13.53.14:121][707]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2025.08.05-13.53.14:154][708]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2025.08.05-13.53.20:654][815]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2025.08.05-13.53.20:654][815]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.53.20:687][815]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2025.08.05-13.53.20:687][815]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.53.20:720][815]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2025.08.05-13.53.31:846][995]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/MyContent/AIContent/Anims/Attack/AM_ComboV1.AM_ComboV1
+[2025.08.05-13.53.31:847][995]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2025.08.05-13.53.31:985][995]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_21:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2025.08.05-13.53.32:344][995]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2025.08.05-13.53.55:471][443]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.05-13.53.55:695][443]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/AIContent/Anims/Attack/AM_ComboV1] ([1] browsable assets)...
+[2025.08.05-13.53.55:761][443]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/AIContent/Anims/Attack/AM_ComboV1.AM_ComboV1]
+[2025.08.05-13.53.55:761][443]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/AIContent/Anims/Attack/AM_ComboV1]
+[2025.08.05-13.53.55:761][443]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/AIContent/Anims/Attack/AM_ComboV1" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Anims/Attack/AM_ComboV1.uasset" SILENT=true
+[2025.08.05-13.53.55:764][443]LogSavePackage: Moving output files for package: /Game/MyContent/AIContent/Anims/Attack/AM_ComboV1
+[2025.08.05-13.53.55:764][443]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_ComboV174CD24324618EFD3F54054AB717A0DDE.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Anims/Attack/AM_ComboV1.uasset'
+[2025.08.05-13.53.55:855][443]LogFileHelpers: InternalPromptForCheckoutAndSave took 383.234 ms (total: 19.0 sec)
+[2025.08.05-13.53.56:011][443]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.05-13.53.56:011][443]LogContentValidation: Enabled validators:
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.05-13.53.56:011][443]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.05-13.53.56:011][443]AssetCheck: /Game/MyContent/AIContent/Anims/Attack/AM_ComboV1 Validating asset
+[2025.08.05-13.54.10:932][707]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump.AM_RunJump
+[2025.08.05-13.55.21:277][ 28]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.05-13.55.21:591][ 28]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump] ([1] browsable assets)...
+[2025.08.05-13.55.21:645][ 28]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump.AM_RunJump]
+[2025.08.05-13.55.21:645][ 28]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump]
+[2025.08.05-13.55.21:649][ 28]LogSavePackage: Moving output files for package: /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump
+[2025.08.05-13.55.21:649][ 28]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_RunJump5D9D94FE4B37FDA846C4248220C8861F.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump.uasset'
+[2025.08.05-13.55.21:739][ 28]LogFileHelpers: InternalPromptForCheckoutAndSave took 461.062 ms (total: 19.4 sec)
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: Enabled validators:
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.05-13.55.21:889][ 28]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.05-13.55.21:889][ 28]AssetCheck: /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump Validating asset
+[2025.08.05-13.55.34:821][303]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.05-13.55.35:108][303]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump] ([1] browsable assets)...
+[2025.08.05-13.55.35:167][303]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump.AM_RunJump]
+[2025.08.05-13.55.35:167][303]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump]
+[2025.08.05-13.55.35:170][303]LogSavePackage: Moving output files for package: /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump
+[2025.08.05-13.55.35:170][303]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_RunJumpA5ECA3C040B82CCCE641AF8BFBE4E7D2.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump.uasset'
+[2025.08.05-13.55.35:259][303]LogFileHelpers: InternalPromptForCheckoutAndSave took 437.680 ms (total: 19.9 sec)
+[2025.08.05-13.55.35:402][303]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.05-13.55.35:402][303]LogContentValidation: Enabled validators:
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.05-13.55.35:402][303]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.05-13.55.35:402][303]AssetCheck: /Game/MyContent/AIContent/Anims/Attack/Jump/AM_RunJump Validating asset
+[2025.08.05-13.55.35:533][303]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4696.671387
+[2025.08.05-13.55.35:743][308]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.05-13.55.35:743][308]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4696.829102, Update Interval: 329.610901
+[2025.08.05-13.55.37:073][335]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.05-13.55.37:089][335]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.05-13.55.37:089][335]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.05-13.55.37:094][335]LogPlayLevel: PIE: StaticDuplicateObject took: (0.005143s)
+[2025.08.05-13.55.37:094][335]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.005205s)
+[2025.08.05-13.55.37:133][335]LogUObjectHash: Compacting FUObjectHashTables data took   1.70ms
+[2025.08.05-13.55.37:139][335]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.05-13.55.37:141][335]LogPlayLevel: PIE: World Init took: (0.002318s)
+[2025.08.05-13.55.37:142][335]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.05-13.55.37:142][335]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.05-13.55.37:142][335]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.05-13.55.37:142][335]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.05-13.55.37:142][335]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.05-13.55.37:142][335]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.05-13.55.37:146][335]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.05-13.55.37:193][335]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.05-13.55.37:194][335]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.05-13.55.37:194][335]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.05-13.55.37:194][335]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.05-13.55.37:195][335]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.08.05-13.55.37:195][335]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.08.05-13.55.37:198][335]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.08.05-13.55.37:198][335]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.08.05-13.55.37:198][335]LogInit: FAudioDevice initialized with ID 6.
+[2025.08.05-13.55.37:198][335]LogAudio: Display: Audio Device (ID: 6) registered with world 'PrototypeMap'.
+[2025.08.05-13.55.37:198][335]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.08.05-13.55.37:201][335]LogLoad: Game class is 'BorneGameMode'
+[2025.08.05-13.55.37:207][335]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.05-14.55.37
+[2025.08.05-13.55.37:209][335]LogWorld: Bringing up level for play took: 0.006736
+[2025.08.05-13.55.37:212][335]LogOnline: OSS: Created online subsystem instance for: :Context_28
+[2025.08.05-13.55.37:218][335]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.05-13.55.37:226][335]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007ffa082b085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:96]
+0x00007ff9f1b43664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f4051936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f28d5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f3dd53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f2823648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007ff9f01f3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.05-13.55.37:228][335]PIE: Server logged in
+[2025.08.05-13.55.37:230][335]PIE: Play in editor total start time 0.141 seconds.
+[2025.08.05-13.55.37:500][340]LogTemp: Error: No Equipped weapon - BLightAttackAbility.cpp
+[2025.08.05-13.56.02:369][833]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.05-13.56.02:370][833]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.05-13.56.02:370][833]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.05-13.56.02:371][833]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.56.02:433][833]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.05-13.56.02:437][833]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.05-13.56.02:449][833]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.08.05-13.56.02:450][833]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.08.05-13.56.02:450][833]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.08.05-13.56.02:453][833]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.08.05-13.56.02:459][833]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.05-13.56.02:462][833]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2025.08.05-13.56.02:494][834]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: ================================================
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Total job queries 1,169, among them cache hits 613 (52.44%), DDC hits 280 (23.95%), Duplicates 70 (5.99%)
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Tracking 486 distinct input hashes that result in 336 distinct outputs (69.14%)
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: RAM used: 191.34 KiB of 819.20 MiB budget. Usage: 0.02%
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Shaders Compiled: 206
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Jobs assigned 206, completed 206 (100%)
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Average time worker was idle: 119.14 s
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Time job spent in pending queue: average 0.58 s, longest 2.25 s
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Job execution time: average 1.22 s, max 3.74 s
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Job life time (pending + execution): average 1.80 s, max 4.39
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Shader code size: average 9.797 KiB, min 1.187 KiB, max 21.232 KiB
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 51.54 s
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.08%
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Jobs were issued in 206 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.08.05-13.56.02:687][838]LogShaderCompilers: Display: Average processing rate: 4.00 jobs/sec
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Total thread time: 178.1 s
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Total thread preprocess time: 21.667 s
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Percentage time preprocessing: 12.17%
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Effective parallelization: 3.46 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled   16 times, average 2.18 sec, max 3.19 sec, min 1.54 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   16 times, average 1.85 sec, max 2.55 sec, min 1.48 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader (compiled   17 times, average 1.76 sec, max 2.40 sec, min 1.34 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   18 times, average 0.89 sec, max 1.44 sec, min 0.48 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled   16 times, average 0.82 sec, max 1.32 sec, min 0.61 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                             FDebugViewModePS - 19.62% of total time (compiled   16 times, average 2.18 sec, max 3.19 sec, min 1.54 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 16.84% of total time (compiled   17 times, average 1.76 sec, max 2.40 sec, min 1.34 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 16.59% of total time (compiled   16 times, average 1.85 sec, max 2.55 sec, min 1.48 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 9.04% of total time (compiled   18 times, average 0.89 sec, max 1.44 sec, min 0.48 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 7.40% of total time (compiled   16 times, average 0.82 sec, max 1.32 sec, min 0.61 sec)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: === Material stats ===
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Materials Translated:    252
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Material Total Translate Time: 0.21 s
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Material Translation Only: 0.09 s (45%)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: Material Cache Hits: 19 (8%)
+[2025.08.05-13.56.02:688][838]LogShaderCompilers: Display: ================================================
