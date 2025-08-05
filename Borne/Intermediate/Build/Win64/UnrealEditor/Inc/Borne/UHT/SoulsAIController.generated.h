@@ -14,6 +14,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_SoulsAIController_generated_h
 
+#define FID_Borne_Source_Borne_AI_SoulsAIController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execStartFight);
+
+
 #define FID_Borne_Source_Borne_AI_SoulsAIController_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASoulsAIController(); \
@@ -39,6 +43,7 @@ public: \
 #define FID_Borne_Source_Borne_AI_SoulsAIController_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Borne_Source_Borne_AI_SoulsAIController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_AI_SoulsAIController_h_16_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_AI_SoulsAIController_h_16_ENHANCED_CONSTRUCTORS \
 private: \

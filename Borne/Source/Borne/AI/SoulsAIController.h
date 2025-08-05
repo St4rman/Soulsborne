@@ -30,7 +30,14 @@ protected:
 	FName BlackBoardStateKeyValue;
 	
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	FName BBIsActiveBool;
+	
 	
 public:
 	virtual void Tick(float DeltaTime) override;
+	
+	UFUNCTION(BlueprintCallable, Category = "AI")
+	void StartFight();
 };

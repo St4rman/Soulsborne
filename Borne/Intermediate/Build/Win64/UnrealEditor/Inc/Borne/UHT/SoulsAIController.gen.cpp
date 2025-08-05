@@ -18,9 +18,44 @@ BORNE_API UEnum* Z_Construct_UEnum_Borne_EAIState();
 UPackage* Z_Construct_UPackage__Script_Borne();
 // End Cross Module References
 
+// Begin Class ASoulsAIController Function StartFight
+struct Z_Construct_UFunction_ASoulsAIController_StartFight_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASoulsAIController_StartFight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASoulsAIController, nullptr, "StartFight", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASoulsAIController_StartFight_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASoulsAIController_StartFight_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ASoulsAIController_StartFight()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASoulsAIController_StartFight_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASoulsAIController::execStartFight)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StartFight();
+	P_NATIVE_END;
+}
+// End Class ASoulsAIController Function StartFight
+
 // Begin Class ASoulsAIController
 void ASoulsAIController::StaticRegisterNativesASoulsAIController()
 {
+	UClass* Class = ASoulsAIController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartFight", &ASoulsAIController::execStartFight },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ASoulsAIController);
 UClass* Z_Construct_UClass_ASoulsAIController_NoRegister()
@@ -47,12 +82,21 @@ struct Z_Construct_UClass_ASoulsAIController_Statics
 		{ "Category", "AI" },
 		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BBIsActiveBool_MetaData[] = {
+		{ "Category", "AI" },
+		{ "ModuleRelativePath", "AI/SoulsAIController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainBehaviorTree;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentState;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_BlackBoardStateKeyValue;
+	static const UECodeGen_Private::FNamePropertyParams NewProp_BBIsActiveBool;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASoulsAIController_StartFight, "StartFight" }, // 1679919754
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASoulsAIController>::IsAbstract,
 	};
@@ -61,10 +105,12 @@ struct Z_Construct_UClass_ASoulsAIController_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_MainBehaviorTree = { "MainBehaviorTree", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, MainBehaviorTree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainBehaviorTree_MetaData), NewProp_MainBehaviorTree_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, CurrentState), Z_Construct_UEnum_Borne_EAIState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 3248951569
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BlackBoardStateKeyValue = { "BlackBoardStateKeyValue", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, BlackBoardStateKeyValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlackBoardStateKeyValue_MetaData), NewProp_BlackBoardStateKeyValue_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BBIsActiveBool = { "BBIsActiveBool", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASoulsAIController, BBIsActiveBool), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BBIsActiveBool_MetaData), NewProp_BBIsActiveBool_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASoulsAIController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_MainBehaviorTree,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_CurrentState,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BlackBoardStateKeyValue,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASoulsAIController_Statics::NewProp_BBIsActiveBool,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASoulsAIController_Statics::DependentSingletons[])() = {
@@ -77,11 +123,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ASoulsAIController_Stat
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ASoulsAIController_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ASoulsAIController_Statics::PropPointers),
 	0,
 	0x009002A4u,
@@ -107,10 +153,10 @@ ASoulsAIController::~ASoulsAIController() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 2129612600U) },
+		{ Z_Construct_UClass_ASoulsAIController, ASoulsAIController::StaticClass, TEXT("ASoulsAIController"), &Z_Registration_Info_UClass_ASoulsAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASoulsAIController), 1397683475U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_4047953165(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_4008295606(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_AI_SoulsAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -1,6 +1,7 @@
 ﻿#include "SDmgProjectile.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "Borne/BorneCharacter.h"
+#include "Borne/AI/SoulsAICharacter.h"
 
 ASDmgProjectile::ASDmgProjectile()
 {
@@ -16,7 +17,7 @@ ASDmgProjectile::ASDmgProjectile()
 	ProjectileMesh->SetupAttachment(SphereComp);
 	
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("MovementComponent");
-	MovementComponent->InitialSpeed = 1000;
+	MovementComponent->InitialSpeed = 3000;
 	MovementComponent->bRotationFollowsVelocity = true;
 	MovementComponent->bInitialVelocityInLocalSpace = true;
 	
@@ -41,12 +42,23 @@ void ASDmgProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, A
 {
 	if (OtherActor)
 	{
+
+		if (ASoulsAICharacter* boss = Cast<ASoulsAICharacter>(OtherActor))
+		{
+			return;
+		}
+
+		if (ASDmgProjectile* dmg = Cast<ASDmgProjectile>(OtherActor))
+		{
+			return;
+		}
 		if (ABorneCharacter* Player =  Cast<ABorneCharacter>(OtherActor))
 		{
 			Player->DoPlayerDamage_Implementation(ProjectileDamage, GetOwner());
 			Destroy();
 		}
 		
+		Destroy();
 	}
 }
 
