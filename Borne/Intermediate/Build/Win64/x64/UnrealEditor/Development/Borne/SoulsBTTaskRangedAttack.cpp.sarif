@@ -3,7 +3,128 @@
     "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
     "runs": [
         {
-            "results": [],
+            "results": [
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'UPawnSensingComponent': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 35,
+                                    "startColumn": 2
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4263",
+                    "message": {
+                        "text": "'void ASoulsAICharacter::TakeDamage(const float)': member function does not override any base class virtual member function"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 80,
+                                    "startColumn": 7
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4264",
+                    "message": {
+                        "text": "'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
+                                },
+                                "region": {
+                                    "startLine": 21,
+                                    "startColumn": 17
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
+                                },
+                                "region": {
+                                    "startLine": 285,
+                                    "startColumn": 27
+                                }
+                            },
+                            "message": {
+                                "text": "see declaration of 'APawn::TakeDamage'"
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 7
+                                }
+                            },
+                            "message": {
+                                "text": "see declaration of 'APawn'"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'FValueOrBBKey_Object::operator UObject *': Implicit conversion will be removed next version. Call GetValue instead Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/Tasks/SoulsBTTaskRangedAttack.cpp"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 7
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
             "tool": {
                 "driver": {
                     "name": "MSVC",

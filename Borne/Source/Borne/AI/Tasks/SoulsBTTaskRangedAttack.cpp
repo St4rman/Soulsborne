@@ -1,37 +1,94 @@
 ﻿#include "SoulsBTTaskRangedAttack.h"
 
+#include "Borne/AI/SoulsAICharacter.h"
 
 
 EBTNodeResult::Type USoulsBTTaskRangedAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AAIController* MyController = OwnerComp.GetAIOwner();
+	MyOwnerComp = &OwnerComp;
+	EBTNodeResult::Type Result = EBTNodeResult::Failed;
 
+
+	AnimFinishedDelegate = FTimerDelegate::CreateUObject(this, &USoulsBTTaskRangedAttack::OnAnimFinished);
+	AnimFinishHandle.Invalidate();
+
+	
+	SpawnHandle.Invalidate();
+	
 	if (ensure(MyController))
 	{
-	
-		ACharacter* MyCharacter = Cast<ACharacter>(MyController->GetPawn());
-		if (MyCharacter == nullptr)
+		ACharacter* Character = Cast<ACharacter>(MyController->GetPawn());
+		if (Character == nullptr)
 		{
 			UE_LOG(LogTemp, Error, TEXT("Cant cast AI controller to pawn @ SBTTRangedAttack"));
 			return EBTNodeResult::Failed;
 		}
-		FVector MuzzleLocation = MyCharacter->GetMesh()->GetSocketLocation("WeaponSocket_r");
+		FVector MuzzleLocation = Character->GetMesh()->GetSocketLocation("WeaponSocket_r");
 
-		AActor* TargetActor = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject("TargetActor"));
+		TargetActor = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject("TargetActor"));
 		if (TargetActor == nullptr)
 		{
 			UE_LOG(LogTemp, Error, TEXT("Cant cast Actor to pawn @ SBTTRangedAttack"));
 			return EBTNodeResult::Failed;
 		}
 
-		const FVector Direction = TargetActor->GetActorLocation() - MyCharacter->GetActorLocation();
-		FRotator Rotation = Direction.Rotation();
+		const FVector Direction = TargetActor->GetActorLocation() - Character->GetActorLocation();
+		const FVector ProjectileLocation = Character->GetMesh()->GetSocketLocation("MeleeArmament-boss-r");
+		SpawnLocation = ProjectileLocation;
 
-		FActorSpawnParameters SpawnParameters;
-		SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnProjectileDelegate =  FTimerDelegate::CreateUObject(this, &USoulsBTTaskRangedAttack::FireProjectile, Direction, ProjectileLocation);
 		
-		AActor* NewProjectile = GetWorld()->SpawnActor<AActor>(ProjectileClass, MyCharacter->GetActorLocation(), Rotation, SpawnParameters);
-		return NewProjectile ? EBTNodeResult::Succeeded : EBTNodeResult::Failed;
+		if (AnimationToPlay)
+		{
+			Cast<ASoulsAICharacter>(Character)->UpdateMotionWarpingTarget();
+			const float FinishDelay = Character->PlayAnimMontage(AnimationToPlay.GetValue<UAnimMontage>(OwnerComp));
+			MyController->GetWorld()->GetTimerManager().SetTimer(AnimFinishHandle, AnimFinishedDelegate, FinishDelay, /*bLoop=*/false);
+			MyController->GetWorld()->GetTimerManager().SetTimer(SpawnHandle, SpawnProjectileDelegate, FinishDelay * 0.5f, /*bLoop=*/false);
+
+			Result = EBTNodeResult::InProgress;
+		}
+		
+		
+		// return NewProjectile ? EBTNodeResult::Succeeded : EBTNodeResult::Failed;
 	}
-	return EBTNodeResult::Failed;
+	return Result;
 }
+
+void USoulsBTTaskRangedAttack::OnAnimFinished()
+{
+	{
+		if (MyOwnerComp)
+		{
+			FinishLatentTask(*MyOwnerComp, EBTNodeResult::Succeeded);
+			if(MeshCache != nullptr)
+			{
+				MeshCache->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+			}
+		}
+	}
+}
+
+void USoulsBTTaskRangedAttack::FireProjectile(FVector Direction, const FVector Location)
+{
+	//spawn our projectiles
+	
+	const FVector  ToPlayer = TargetActor->GetActorLocation() - Location;
+	const FRotator Rotation = ToPlayer.Rotation();
+
+	FActorSpawnParameters SpawnParameters;
+	SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	
+	for (int i = - HalfNumber; i < HalfNumber + 1; i++)
+	{
+		if (i ==0 )
+		{
+			continue;
+		}
+		FRotator CacheRotation = ToPlayer.RotateAngleAxis(10.0f / i, FVector::UpVector).Rotation();
+		AActor* Projectile = GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnLocation, CacheRotation, SpawnParameters);
+	}
+	
+}
+
+

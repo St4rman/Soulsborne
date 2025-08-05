@@ -29,14 +29,13 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	// ACharacter* Char = CastChecked<ACharacter>(ActorInfo->AvatarActor.Get());
 	TArray<FActiveGameplayEffectHandle> AppliedEffects;
 	
-	ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(TagsToGive);
+	// ActorInfo->AbilitySystemComponent->AddLooseGameplayTags(TagsToGive);
 	
 	if (UHelperBPLib::HasLastMovementInput(PlayerChar))
 	{
 		// const FVector2D InputCache = PlayerChar->GetInputCache();
 		// const int DirectionalIndex = InputCache.X + 1 + (InputCache.Y + 1) * 3.0f;
 		// float const Duration = AnimInstance->Montage_Play( AnimMontages[DirectionalIndex], 2.0f, EMontagePlayReturnType::Duration, 0.f, true );
-
 		
 		//set up in player blueprint bcz no easy delta time
 		PlayerChar->ExecuteDodge();
@@ -47,6 +46,7 @@ void UBDodgeRollAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
 	}
 	
 	// PlayerChar->GetNiagaraEffectComponent()->SetActive(true);
+	
 	FOnMontageEnded EndDelegate;
 	EndDelegate.BindUObject(this, &UBDodgeRollAbility::OnDodgeAnimFinished, Handle, ActorInfo, ActivationInfo, PlayerChar);
 	AnimInstance->Montage_SetEndDelegate(EndDelegate);
