@@ -2018,3 +2018,918 @@ ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\B
 [2025.08.08-13.17.25:748][853]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
 [2025.08.08-13.17.25:761][853]LogUObjectHash: Compacting FUObjectHashTables data took   1.85ms
 [2025.08.08-13.17.25:822][854]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2025.08.08-13.18.12:887][597]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.18.12:887][597]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.18.13:048][597]LogUObjectHash: Compacting FUObjectHashTables data took   2.48ms
+[2025.08.08-13.18.13:940][626]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.08.08-13.18.13:940][626]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.18.13:940][626]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.18.14:071][626]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2025.08.08-13.18.14:806][654]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.18.14:806][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.18.14:827][654]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.18.14:827][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.18.14:928][654]LogUObjectHash: Compacting FUObjectHashTables data took   2.43ms
+[2025.08.08-13.18.35:835][240]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.08-13.18.35:859][240]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.08-13.18.35:860][240]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.18.35:868][240]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009060s)
+[2025.08.08-13.18.35:868][240]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.009176s)
+[2025.08.08-13.18.35:905][240]LogUObjectHash: Compacting FUObjectHashTables data took   2.77ms
+[2025.08.08-13.18.35:907][240]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.08-13.18.35:912][240]LogPlayLevel: PIE: World Init took: (0.004420s)
+[2025.08.08-13.18.35:913][240]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.08-13.18.35:913][240]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.08-13.18.35:913][240]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.08-13.18.35:913][240]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.08-13.18.35:913][240]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.08-13.18.35:913][240]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.08-13.18.35:921][240]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.08-13.18.35:988][240]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.08-13.18.35:989][240]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.08-13.18.35:989][240]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.08-13.18.35:989][240]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.08-13.18.35:990][240]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.08.08-13.18.35:990][240]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.08.08-13.18.35:993][240]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.08.08-13.18.35:993][240]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.08.08-13.18.35:993][240]LogInit: FAudioDevice initialized with ID 3.
+[2025.08.08-13.18.35:993][240]LogAudio: Display: Audio Device (ID: 3) registered with world 'PrototypeMap'.
+[2025.08.08-13.18.35:993][240]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.08.08-13.18.35:998][240]LogLoad: Game class is 'BorneGameMode'
+[2025.08.08-13.18.36:008][240]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.08-14.18.36
+[2025.08.08-13.18.36:009][240]LogWorld: Bringing up level for play took: 0.010440
+[2025.08.08-13.18.36:013][240]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2025.08.08-13.18.36:022][240]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.18.36:034][240]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007fff56c2085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:95]
+0x00007fff41013664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff43521936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41da5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff432a53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41cf3648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff3f6c3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.08-13.18.36:036][240]PIE: Server logged in
+[2025.08.08-13.18.36:037][240]PIE: Play in editor total start time 0.179 seconds.
+[2025.08.08-13.18.46:319][417]LogActor: Warning: BP_GreatSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_GreatSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.19.03:801][704]LogActor: Warning: BP_ShortSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_ShortSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.19.17:004][956]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.19.17:004][956]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.19.17:005][956]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.19.17:006][956]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.19.17:045][956]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.08-13.19.17:052][956]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.19.17:078][956]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.08.08-13.19.17:081][956]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.08.08-13.19.17:081][956]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.08.08-13.19.17:085][956]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.08.08-13.19.17:096][956]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.19.17:103][956]LogUObjectHash: Compacting FUObjectHashTables data took   2.90ms
+[2025.08.08-13.19.17:198][957]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.08.08-13.19.19:168][987]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1014.102844
+[2025.08.08-13.19.19:387][993]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.19.19:387][993]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1014.265137, Update Interval: 343.347870
+[2025.08.08-13.19.45:579][494]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.19.45:808][494]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.19.45:903][494]LogUObjectHash: Compacting FUObjectHashTables data took   1.89ms
+[2025.08.08-13.19.45:941][494]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.19.45:942][494]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMapAE2D7C664B5F8CCD86C507B8A3463062.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.19.45:977][494]LogFileHelpers: Saving map 'PrototypeMap' took 0.170
+[2025.08.08-13.19.46:044][494]LogFileHelpers: InternalPromptForCheckoutAndSave took 465.675 ms (total: 5.22 sec)
+[2025.08.08-13.19.46:166][494]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.19.46:166][494]LogContentValidation: Enabled validators:
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.19.46:166][494]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.19.46:166][494]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.20.01:422][820]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.20.01:545][820]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.20.01:644][820]LogUObjectHash: Compacting FUObjectHashTables data took   5.45ms
+[2025.08.08-13.20.01:682][820]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.20.01:683][820]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap19246834431831A59B5765B820F4E63C.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.20.01:723][820]LogFileHelpers: Saving map 'PrototypeMap' took 0.178
+[2025.08.08-13.20.01:819][820]LogFileHelpers: InternalPromptForCheckoutAndSave took 397.229 ms (total: 5.62 sec)
+[2025.08.08-13.20.01:952][820]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.20.01:952][820]LogContentValidation: Enabled validators:
+[2025.08.08-13.20.01:952][820]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.20.01:953][820]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.20.01:953][820]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.20.01:953][820]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.20.01:953][820]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.20.01:953][820]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.20.01:953][820]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.20.05:998][913]Cmd: EDIT COPY
+[2025.08.08-13.20.06:757][928]Cmd: EDIT PASTE
+[2025.08.08-13.20.16:463][ 97]Cmd: TRANSACTION UNDO
+[2025.08.08-13.20.16:463][ 97]LogEditorTransaction: Undo Move Elements
+[2025.08.08-13.20.26:014][263]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.20.26:152][263]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.20.26:258][263]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2025.08.08-13.20.26:291][263]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.20.26:292][263]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap46EEF20C409D05C6566884BFA76BEEFF.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.20.26:336][263]LogFileHelpers: Saving map 'PrototypeMap' took 0.185
+[2025.08.08-13.20.26:432][263]LogFileHelpers: InternalPromptForCheckoutAndSave took 418.015 ms (total: 6.04 sec)
+[2025.08.08-13.20.26:548][263]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.20.26:548][263]LogContentValidation: Enabled validators:
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.20.26:548][263]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.20.26:548][263]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.20.34:211][410]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2025.08.08-13.20.34:530][414]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.20.34:711][414]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.20.34:795][414]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2025.08.08-13.20.34:822][414]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.20.34:822][414]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMapCFCA83CE436672E49D389EBBE760FE1F.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.20.34:853][414]LogFileHelpers: Saving map 'PrototypeMap' took 0.143
+[2025.08.08-13.20.34:908][414]LogFileHelpers: InternalPromptForCheckoutAndSave took 378.343 ms (total: 6.42 sec)
+[2025.08.08-13.20.35:031][414]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.20.35:031][414]LogContentValidation: Enabled validators:
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.20.35:031][414]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.20.35:031][414]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.20.45:158][598]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2025.08.08-13.20.45:507][600]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.20.45:635][600]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.20.45:718][600]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.08.08-13.20.45:745][600]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.20.45:746][600]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMapB325FE044590B0A6FEFE46B6E9C37DEE.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.20.45:780][600]LogFileHelpers: Saving map 'PrototypeMap' took 0.146
+[2025.08.08-13.20.45:850][600]LogFileHelpers: InternalPromptForCheckoutAndSave took 343.551 ms (total: 6.76 sec)
+[2025.08.08-13.20.45:968][600]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.20.45:968][600]LogContentValidation: Enabled validators:
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.20.45:968][600]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.20.45:968][600]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.20.49:034][665]LogNavigationPoint: PostEditMove Clear paths rebuilt
+[2025.08.08-13.20.52:747][730]Cmd: EDIT COPY
+[2025.08.08-13.20.53:276][735]Cmd: EDIT PASTE
+[2025.08.08-13.21.04:388][934]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.08-13.21.04:409][934]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.08-13.21.04:409][934]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.21.04:419][934]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009459s)
+[2025.08.08-13.21.04:419][934]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.009541s)
+[2025.08.08-13.21.04:455][934]LogUObjectHash: Compacting FUObjectHashTables data took   3.51ms
+[2025.08.08-13.21.04:457][934]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.08-13.21.04:461][934]LogPlayLevel: PIE: World Init took: (0.003360s)
+[2025.08.08-13.21.04:464][934]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.08-13.21.04:464][934]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.08-13.21.04:464][934]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.08-13.21.04:464][934]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.08-13.21.04:464][934]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.08-13.21.04:464][934]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.08-13.21.04:468][934]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.08-13.21.04:537][934]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.08-13.21.04:538][934]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.08-13.21.04:538][934]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.08-13.21.04:538][934]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.08-13.21.04:539][934]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.08.08-13.21.04:539][934]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.08.08-13.21.04:543][934]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.08.08-13.21.04:543][934]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.08.08-13.21.04:543][934]LogInit: FAudioDevice initialized with ID 4.
+[2025.08.08-13.21.04:543][934]LogAudio: Display: Audio Device (ID: 4) registered with world 'PrototypeMap'.
+[2025.08.08-13.21.04:543][934]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.08.08-13.21.04:548][934]LogLoad: Game class is 'BorneGameMode'
+[2025.08.08-13.21.04:557][934]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.08-14.21.04
+[2025.08.08-13.21.04:559][934]LogWorld: Bringing up level for play took: 0.010890
+[2025.08.08-13.21.04:563][934]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2025.08.08-13.21.04:572][934]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.21.04:581][934]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007fff56c2085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:95]
+0x00007fff41013664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff43521936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41da5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff432a53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41cf3648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff3f6c3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.08-13.21.04:584][934]PIE: Server logged in
+[2025.08.08-13.21.04:586][934]PIE: Play in editor total start time 0.177 seconds.
+[2025.08.08-13.21.05:358][952]LogTemp: Error: No Equipped weapon - BLightAttackAbility.cpp
+[2025.08.08-13.21.12:355][102]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.21.12:355][102]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.21.12:356][102]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.21.12:357][102]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.21.12:420][102]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.08-13.21.12:428][102]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.21.12:461][102]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.08.08-13.21.12:462][102]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.08.08-13.21.12:462][102]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.08.08-13.21.12:466][102]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.08.08-13.21.12:476][102]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.21.12:483][102]LogUObjectHash: Compacting FUObjectHashTables data took   3.42ms
+[2025.08.08-13.21.12:590][103]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2025.08.08-13.21.17:214][205]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.21.17:428][205]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.21.17:517][205]LogUObjectHash: Compacting FUObjectHashTables data took   2.27ms
+[2025.08.08-13.21.17:542][205]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.21.17:543][205]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap4AA9E9EE423A1AEFDD10ED958F11C6EE.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.21.17:574][205]LogFileHelpers: Saving map 'PrototypeMap' took 0.146
+[2025.08.08-13.21.17:647][205]LogFileHelpers: InternalPromptForCheckoutAndSave took 433.497 ms (total: 7.19 sec)
+[2025.08.08-13.21.17:776][205]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.21.17:776][205]LogContentValidation: Enabled validators:
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.21.17:776][205]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.21.17:777][205]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.21.24:700][326]Cmd: EDIT COPY
+[2025.08.08-13.21.25:329][339]Cmd: EDIT PASTE
+[2025.08.08-13.21.55:872][828]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.21.56:041][828]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.21.56:137][828]LogUObjectHash: Compacting FUObjectHashTables data took   2.49ms
+[2025.08.08-13.21.56:169][828]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.21.56:170][828]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap90DC522E449925D340F797A20BB2242A.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.21.56:199][828]LogFileHelpers: Saving map 'PrototypeMap' took 0.158
+[2025.08.08-13.21.56:258][828]LogFileHelpers: InternalPromptForCheckoutAndSave took 386.148 ms (total: 7.58 sec)
+[2025.08.08-13.21.56:389][828]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.21.56:390][828]LogContentValidation: Enabled validators:
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.21.56:390][828]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.21.56:390][828]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.21.57:610][844]LogSlate: Window 'Color Picker' being destroyed
+[2025.08.08-13.22.17:904][220]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.22.18:048][220]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.22.18:156][220]LogUObjectHash: Compacting FUObjectHashTables data took   2.04ms
+[2025.08.08-13.22.18:186][220]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.22.18:186][220]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap558813EB421829A33B3B5BA3D20FA96B.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.22.18:220][220]LogFileHelpers: Saving map 'PrototypeMap' took 0.172
+[2025.08.08-13.22.18:326][220]LogFileHelpers: InternalPromptForCheckoutAndSave took 421.841 ms (total: 8.00 sec)
+[2025.08.08-13.22.18:492][220]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.22.18:492][220]LogContentValidation: Enabled validators:
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.22.18:492][220]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.22.18:492][220]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.22.19:473][240]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.08-13.22.19:493][240]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.08-13.22.19:493][240]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.22.19:505][240]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011294s)
+[2025.08.08-13.22.19:505][240]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.011384s)
+[2025.08.08-13.22.19:539][240]LogUObjectHash: Compacting FUObjectHashTables data took   2.75ms
+[2025.08.08-13.22.19:543][240]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.08-13.22.19:546][240]LogPlayLevel: PIE: World Init took: (0.003580s)
+[2025.08.08-13.22.19:548][240]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.08-13.22.19:548][240]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.08-13.22.19:548][240]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.08-13.22.19:548][240]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.08-13.22.19:548][240]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.08-13.22.19:548][240]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.08-13.22.19:553][240]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.08-13.22.19:633][240]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.08-13.22.19:633][240]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.08-13.22.19:633][240]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.08-13.22.19:633][240]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.08-13.22.19:634][240]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.08.08-13.22.19:634][240]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.08.08-13.22.19:638][240]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.08.08-13.22.19:639][240]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.08.08-13.22.19:639][240]LogInit: FAudioDevice initialized with ID 5.
+[2025.08.08-13.22.19:639][240]LogAudio: Display: Audio Device (ID: 5) registered with world 'PrototypeMap'.
+[2025.08.08-13.22.19:639][240]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.08.08-13.22.19:643][240]LogLoad: Game class is 'BorneGameMode'
+[2025.08.08-13.22.19:656][240]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.08-14.22.19
+[2025.08.08-13.22.19:657][240]LogWorld: Bringing up level for play took: 0.012698
+[2025.08.08-13.22.19:661][240]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2025.08.08-13.22.19:671][240]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.22.19:685][240]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007fff56c2085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:95]
+0x00007fff41013664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff43521936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41da5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff432a53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41cf3648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff3f6c3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.08-13.22.19:687][240]PIE: Server logged in
+[2025.08.08-13.22.19:689][240]PIE: Play in editor total start time 0.196 seconds.
+[2025.08.08-13.22.19:949][243]LogTemp: Error: No Equipped weapon - BLightAttackAbility.cpp
+[2025.08.08-13.22.28:602][414]LogActor: Warning: BP_ShortSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_ShortSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.22.38:176][602]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.22.38:176][602]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.22.38:177][602]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.22.38:179][602]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.22.38:231][602]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.08-13.22.38:249][602]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.22.38:286][602]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.22.38:286][602]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.08.08-13.22.38:287][602]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.08.08-13.22.38:291][602]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.08.08-13.22.38:308][602]LogUObjectHash: Compacting FUObjectHashTables data took   2.85ms
+[2025.08.08-13.22.38:404][603]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2025.08.08-13.22.46:592][747]Cmd: DELETE
+[2025.08.08-13.22.46:592][747]Cmd: ACTOR DELETE
+[2025.08.08-13.22.46:607][747]LogEditorActor: Deleted Actor: BP_FloorGen_C
+[2025.08.08-13.22.46:639][747]LogUObjectHash: Compacting FUObjectHashTables data took   1.88ms
+[2025.08.08-13.22.46:644][747]LogEditorActor: Deleted 1 Actors (0.050 secs)
+[2025.08.08-13.22.47:566][767]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.22.47:787][767]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.22.47:883][767]LogUObjectHash: Compacting FUObjectHashTables data took   3.09ms
+[2025.08.08-13.22.47:910][767]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.22.47:911][767]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMapBBB7ACA3405FC4CD31962CA0B29BC847.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.22.47:941][767]LogFileHelpers: Saving map 'PrototypeMap' took 0.154
+[2025.08.08-13.22.48:005][767]LogFileHelpers: InternalPromptForCheckoutAndSave took 438.894 ms (total: 8.44 sec)
+[2025.08.08-13.22.48:126][767]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.22.48:126][767]LogContentValidation: Enabled validators:
+[2025.08.08-13.22.48:126][767]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.22.48:126][767]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.22.48:127][767]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.22.48:127][767]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.22.48:127][767]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.22.48:127][767]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.22.48:127][767]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.22.49:372][796]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.08-13.22.49:390][796]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.08-13.22.49:391][796]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.22.49:398][796]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008187s)
+[2025.08.08-13.22.49:398][796]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.008260s)
+[2025.08.08-13.22.49:431][796]LogUObjectHash: Compacting FUObjectHashTables data took   2.42ms
+[2025.08.08-13.22.49:433][796]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.08-13.22.49:436][796]LogPlayLevel: PIE: World Init took: (0.003062s)
+[2025.08.08-13.22.49:438][796]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.08-13.22.49:438][796]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.08-13.22.49:438][796]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.08-13.22.49:438][796]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.08-13.22.49:438][796]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.08-13.22.49:438][796]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.08-13.22.49:443][796]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.08-13.22.49:515][796]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.08-13.22.49:516][796]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.08-13.22.49:516][796]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.08-13.22.49:516][796]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.08-13.22.49:517][796]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.08.08-13.22.49:517][796]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.08.08-13.22.49:522][796]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.08.08-13.22.49:522][796]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.08.08-13.22.49:522][796]LogInit: FAudioDevice initialized with ID 6.
+[2025.08.08-13.22.49:522][796]LogAudio: Display: Audio Device (ID: 6) registered with world 'PrototypeMap'.
+[2025.08.08-13.22.49:522][796]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.08.08-13.22.49:526][796]LogLoad: Game class is 'BorneGameMode'
+[2025.08.08-13.22.49:537][796]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.08-14.22.49
+[2025.08.08-13.22.49:538][796]LogWorld: Bringing up level for play took: 0.010869
+[2025.08.08-13.22.49:541][796]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2025.08.08-13.22.49:550][796]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.22.49:560][796]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007fff56c2085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:95]
+0x00007fff41013664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff43521936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41da5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff432a53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41cf3648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff3f6c3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.08-13.22.49:561][796]PIE: Server logged in
+[2025.08.08-13.22.49:563][796]PIE: Play in editor total start time 0.173 seconds.
+[2025.08.08-13.22.49:776][799]LogTemp: Error: No Equipped weapon - BLightAttackAbility.cpp
+[2025.08.08-13.22.53:832][879]LogActor: Warning: BP_GreatSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_GreatSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.23.03:103][ 62]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.23.03:103][ 62]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.23.03:103][ 62]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.23.03:104][ 62]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.23.03:176][ 62]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.08-13.23.03:186][ 62]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.23.03:219][ 62]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.23.03:219][ 62]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.08.08-13.23.03:219][ 62]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.08.08-13.23.03:225][ 62]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.08.08-13.23.03:243][ 62]LogUObjectHash: Compacting FUObjectHashTables data took   2.88ms
+[2025.08.08-13.23.03:292][ 63]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2025.08.08-13.25.12:180][476]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1367.116333
+[2025.08.08-13.25.13:179][479]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.25.13:179][479]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1367.782471, Update Interval: 325.163116
+[2025.08.08-13.29.35:234][733]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2025.08.08-13.29.35:359][735]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2025.08.08-13.29.35:369][735]LogActor: Warning: BP_ShortSword_C /Engine/Transient.World_19:PersistentLevel.BP_ShortSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.29.35:401][736]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2025.08.08-13.29.35:410][736]LogActor: Warning: BP_GreatSword_C /Engine/Transient.World_20:PersistentLevel.BP_GreatSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.29.35:489][737]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2025.08.08-13.29.35:565][738]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2025.08.08-13.29.35:640][739]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2025.08.08-13.29.36:145][748]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2025.08.08-13.29.36:154][748]LogActor: Warning: BP_BossWeapon_C /Engine/Transient.World_24:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.29.37:164][769]LogStreaming: Display: FlushAsyncLoading(509): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.29.37:588][772]LogStreaming: Display: FlushAsyncLoading(510): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.29.38:434][772]LogSkeletalMesh: Building Skeletal Mesh SKM_Quinn...
+[2025.08.08-13.29.38:489][772]LogSkeletalMesh: Display: Waiting for skinned assets to be ready 0/1 (SKM_Quinn) ...
+[2025.08.08-13.29.43:067][772]LogSkeletalMeshReduction: Reducing skeletal mesh for LOD 2 
+[2025.08.08-13.29.43:067][772]LogSkeletalMeshReduction: Reducing skeletal mesh for LOD 3 
+[2025.08.08-13.29.48:634][772]LogSkeletalMesh: Skeletal mesh [/Game/Characters/Mannequins/Meshes/SKM_Quinn.SKM_Quinn]: The derived data key is different after the build. Save the asset to avoid rebuilding it everytime the editor load it.
+[2025.08.08-13.29.48:663][772]LogSkeletalMesh: Built Skeletal Mesh [10.23s] /Game/Characters/Mannequins/Meshes/SKM_Quinn.SKM_Quinn
+[2025.08.08-13.29.48:737][772]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_25
+[2025.08.08-13.29.56:118][795]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_26
+[2025.08.08-13.30.47:926][268]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/MyContent/Anims/Attacks/LightSword/AM_LightBroad3.AM_LightBroad3
+[2025.08.08-13.30.48:216][268]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_27
+[2025.08.08-13.30.48:228][268]LogStreaming: Display: FlushAsyncLoading(511): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.30.48:338][268]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_27:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2025.08.08-13.30.49:101][268]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_28
+[2025.08.08-13.30.49:976][268]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_29
+[2025.08.08-13.31.08:476][821]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1723.411865
+[2025.08.08-13.31.08:661][827]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.31.08:661][827]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1723.569336, Update Interval: 353.592957
+[2025.08.08-13.31.18:922][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   4.00ms
+[2025.08.08-13.31.24:793][ 41]LogSlate: Window 'Delete Assets' being destroyed
+[2025.08.08-13.31.25:102][ 41]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/MyContent/Anims/Attacks/LightSword/AM_LightBroad4.AM_LightBroad4
+	Asset Type: AnimMontage
+[2025.08.08-13.31.26:119][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   1.84ms
+[2025.08.08-13.31.26:148][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2025.08.08-13.31.26:175][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.08.08-13.31.29:021][ 98]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/broad3_UE.broad3_UE
+[2025.08.08-13.31.46:525][503]LogContentBrowser: Attempting asset rename: broad3_UE1 -> Heavy
+[2025.08.08-13.31.46:838][503]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.31.46:838][503]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/Heavy] ([1] browsable assets)...
+[2025.08.08-13.31.46:883][503]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/MyContent/Anims/Attacks/LightSword/Heavy.Heavy]
+[2025.08.08-13.31.46:883][503]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/Heavy]
+[2025.08.08-13.31.46:883][503]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/Heavy" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Heavy.uasset" SILENT=true
+[2025.08.08-13.31.46:897][503]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/Heavy
+[2025.08.08-13.31.46:897][503]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/HeavyB0FB91014CEB6B34E4FF2FAD287C2E03.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Heavy.uasset'
+[2025.08.08-13.31.46:915][503]LogFileHelpers: InternalPromptForCheckoutAndSave took 77.680 ms (total: 8.52 sec)
+[2025.08.08-13.31.46:985][503]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2025.08.08-13.31.47:021][503]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2025.08.08-13.31.47:051][503]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2025.08.08-13.31.47:245][503]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.31.47:245][503]LogContentValidation: Enabled validators:
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.31.47:245][503]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.31.47:245][503]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/Heavy Validating asset
+[2025.08.08-13.37.48:048][619]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2122.981201
+[2025.08.08-13.37.49:047][622]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.37.49:047][622]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2123.649414, Update Interval: 327.787109
+[2025.08.08-13.38.10:856][741]LogUObjectHash: Compacting FUObjectHashTables data took   3.68ms
+[2025.08.08-13.38.12:947][741]LogSlate: Window 'Delete Assets' being destroyed
+[2025.08.08-13.38.13:064][741]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/MyContent/Anims/Attacks/LightSword/Heavy.Heavy
+	Asset Type: AnimSequence
+[2025.08.08-13.38.14:035][741]LogUObjectHash: Compacting FUObjectHashTables data took   4.33ms
+[2025.08.08-13.38.14:076][741]LogUObjectHash: Compacting FUObjectHashTables data took   1.85ms
+[2025.08.08-13.38.14:119][741]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2025.08.08-13.38.24:394][871]LogStreaming: Display: FlushAsyncLoading(516): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.38.24:702][871]LogInterchangeEngine: Display: Interchange start importing source [E:/Software/MixamoConverter/OutgoingFbx/StableSwordInwardSlash.UE.fbx]
+[2025.08.08-13.38.25:326][871]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2025.08.08-13.38.25:532][871]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2025.08.08-13.38.29:801][871]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_30
+[2025.08.08-13.38.29:995][871]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_31
+[2025.08.08-13.38.33:539][871]LogSlate: Window 'Import Content' being destroyed
+[2025.08.08-13.38.33:695][871]LogInterchangeEngine: [Pending] Importing
+[2025.08.08-13.38.34:845][874]LogStreaming: Display: FlushAsyncLoading(520): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.38.34:949][876]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE.StableSwordInwardSlash_UE (Required Memory Estimate: 2.19 MB)
+[2025.08.08-13.38.35:022][876]LogAnimationCompression: Display: Storing compressed animation data for /Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE.StableSwordInwardSlash_UE, at AnimationSequence/801163e349c6ac3c561d63071e2338258d865a7b
+[2025.08.08-13.38.35:094][876]LogInterchangeEngine: Display: Interchange import completed [E:/Software/MixamoConverter/OutgoingFbx/StableSwordInwardSlash.UE.fbx]
+[2025.08.08-13.38.35:166][876]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2025.08.08-13.38.35:166][876]LogInterchangeEngine: [Success] Import Done
+[2025.08.08-13.38.39:370][915]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.38.39:661][915]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE] ([1] browsable assets)...
+[2025.08.08-13.38.39:742][915]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE.StableSwordInwardSlash_UE]
+[2025.08.08-13.38.39:742][915]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE]
+[2025.08.08-13.38.39:779][915]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE
+[2025.08.08-13.38.39:779][915]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/StableSwordInwardSlash_UE906415724AD064DB18A47AB59DC71401.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE.uasset'
+[2025.08.08-13.38.39:966][915]LogFileHelpers: InternalPromptForCheckoutAndSave took 595.156 ms (total: 9.11 sec)
+[2025.08.08-13.38.40:150][915]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.38.40:150][915]LogContentValidation: Enabled validators:
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.38.40:150][915]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.38.40:150][915]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/StableSwordInwardSlash_UE Validating asset
+[2025.08.08-13.38.48:953][  1]LogContentBrowser: Attempting asset rename: StableSwordInwardSlash_UE -> FirstHalf
+[2025.08.08-13.38.49:347][  1]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.38.49:347][  1]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/FirstHalf] ([1] browsable assets)...
+[2025.08.08-13.38.49:347][  1]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/FirstHalf]
+[2025.08.08-13.38.49:348][  1]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/FirstHalf" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/FirstHalf.uasset" SILENT=true
+[2025.08.08-13.38.49:365][  1]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/FirstHalf
+[2025.08.08-13.38.49:365][  1]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/FirstHalf1DD7BD854BAF35AE0C4B93A657B3B562.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/FirstHalf.uasset'
+[2025.08.08-13.38.49:389][  1]LogFileHelpers: InternalPromptForCheckoutAndSave took 42.819 ms (total: 9.16 sec)
+[2025.08.08-13.38.49:512][  1]LogUObjectHash: Compacting FUObjectHashTables data took   3.16ms
+[2025.08.08-13.38.49:556][  1]LogUObjectHash: Compacting FUObjectHashTables data took   3.67ms
+[2025.08.08-13.38.49:593][  1]LogUObjectHash: Compacting FUObjectHashTables data took   1.50ms
+[2025.08.08-13.38.49:847][  1]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.38.49:847][  1]LogContentValidation: Enabled validators:
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.38.49:847][  1]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.38.49:847][  1]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/FirstHalf Validating asset
+[2025.08.08-13.38.54:679][ 57]LogContentBrowser: Attempting asset rename: StableSwordInwardSlash_UE1 -> SecondHalf
+[2025.08.08-13.38.55:132][ 57]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.38.55:133][ 57]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/SecondHalf] ([1] browsable assets)...
+[2025.08.08-13.38.55:147][ 57]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/MyContent/Anims/Attacks/LightSword/SecondHalf.SecondHalf]
+[2025.08.08-13.38.55:147][ 57]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/SecondHalf]
+[2025.08.08-13.38.55:147][ 57]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/SecondHalf" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/SecondHalf.uasset" SILENT=true
+[2025.08.08-13.38.55:166][ 57]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/SecondHalf
+[2025.08.08-13.38.55:166][ 57]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/SecondHalf39C2CF934ABFCAF3821E00A99BD47016.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/SecondHalf.uasset'
+[2025.08.08-13.38.55:193][ 57]LogFileHelpers: InternalPromptForCheckoutAndSave took 60.450 ms (total: 9.22 sec)
+[2025.08.08-13.38.55:290][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   4.09ms
+[2025.08.08-13.38.55:337][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   3.47ms
+[2025.08.08-13.38.55:380][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   1.77ms
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: Enabled validators:
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.38.55:728][ 57]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.38.55:728][ 57]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/SecondHalf Validating asset
+[2025.08.08-13.39.04:289][ 95]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/FirstHalf.FirstHalf
+[2025.08.08-13.39.51:218][730]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/FirstHalf.FirstHalf (Required Memory Estimate: 1.09 MB)
+[2025.08.08-13.39.51:254][731]LogAnimationCompression: Display: Storing compressed animation data for /Game/MyContent/Anims/Attacks/LightSword/FirstHalf.FirstHalf, at AnimationSequence/b45b198e8acfdadc48035016af6c9931f7f9c40c
+[2025.08.08-13.39.55:934][861]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.39.56:105][861]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/FirstHalf] ([1] browsable assets)...
+[2025.08.08-13.39.56:105][861]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/FirstHalf]
+[2025.08.08-13.39.56:105][861]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/FirstHalf" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/FirstHalf.uasset" SILENT=true
+[2025.08.08-13.39.56:117][861]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/FirstHalf
+[2025.08.08-13.39.56:118][861]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/FirstHalfDF016CAA4320D0D8510D57AD98E59B97.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/FirstHalf.uasset'
+[2025.08.08-13.39.56:200][861]LogFileHelpers: InternalPromptForCheckoutAndSave took 265.754 ms (total: 9.48 sec)
+[2025.08.08-13.39.56:319][861]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.39.56:319][861]LogContentValidation: Enabled validators:
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.39.56:319][861]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.39.56:319][861]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/FirstHalf Validating asset
+[2025.08.08-13.39.59:572][923]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/SecondHalf.SecondHalf
+[2025.08.08-13.40.08:176][101]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/MyContent/Anims/Attacks/LightSword/SecondHalf.SecondHalf (Required Memory Estimate: 1.27 MB)
+[2025.08.08-13.40.08:200][101]LogAnimationCompression: Display: Storing compressed animation data for /Game/MyContent/Anims/Attacks/LightSword/SecondHalf.SecondHalf, at AnimationSequence/1b01c328b864bfb6196f86b09d44067e0905a73d
+[2025.08.08-13.40.11:497][192]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.40.11:630][192]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/SecondHalf] ([1] browsable assets)...
+[2025.08.08-13.40.11:630][192]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/SecondHalf]
+[2025.08.08-13.40.11:630][192]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/SecondHalf" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/SecondHalf.uasset" SILENT=true
+[2025.08.08-13.40.11:641][192]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/SecondHalf
+[2025.08.08-13.40.11:641][192]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/SecondHalf95F720A84696D18333141E8A06098D48.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/SecondHalf.uasset'
+[2025.08.08-13.40.11:722][192]LogFileHelpers: InternalPromptForCheckoutAndSave took 225.450 ms (total: 9.71 sec)
+[2025.08.08-13.40.11:869][192]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.40.11:869][192]LogContentValidation: Enabled validators:
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.40.11:869][192]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.40.11:869][192]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/SecondHalf Validating asset
+[2025.08.08-13.40.13:378][219]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.40.13:632][219]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Map/PrototypeMap" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.08.08-13.40.13:729][219]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2025.08.08-13.40.13:778][219]LogSavePackage: Moving output files for package: /Game/MyContent/Map/PrototypeMap
+[2025.08.08-13.40.13:779][219]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/PrototypeMap124DDEC44B5987EC84E2278020EAB4AA.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Map/PrototypeMap.umap'
+[2025.08.08-13.40.13:814][219]LogFileHelpers: Saving map 'PrototypeMap' took 0.185
+[2025.08.08-13.40.13:921][219]LogFileHelpers: InternalPromptForCheckoutAndSave took 542.415 ms (total: 10.2 sec)
+[2025.08.08-13.40.14:050][219]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.40.14:050][219]LogContentValidation: Enabled validators:
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.40.14:050][219]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.40.14:051][219]AssetCheck: /Game/MyContent/Map/PrototypeMap Validating asset
+[2025.08.08-13.40.15:753][241]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.40.15:757][241]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.40.15:954][241]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.40.15:954][241]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.40.16:026][241]LogUObjectHash: Compacting FUObjectHashTables data took   2.23ms
+[2025.08.08-13.42.19:535][325]LogContentBrowser: Attempting asset rename: SecondHalf_Montage -> AM_HeavySecondHalf
+[2025.08.08-13.42.19:831][325]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.42.19:831][325]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf] ([1] browsable assets)...
+[2025.08.08-13.42.19:877][325]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf.AM_HeavySecondHalf]
+[2025.08.08-13.42.19:877][325]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf]
+[2025.08.08-13.42.19:879][325]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf
+[2025.08.08-13.42.19:880][325]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_HeavySecondHalfAC914D86489C6BE07523709DF69F5875.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf.uasset'
+[2025.08.08-13.42.19:880][325]LogFileHelpers: InternalPromptForCheckoutAndSave took 49.424 ms (total: 10.3 sec)
+[2025.08.08-13.42.20:030][325]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2025.08.08-13.42.20:064][325]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2025.08.08-13.42.20:093][325]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.08.08-13.42.20:282][325]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.42.20:283][325]LogContentValidation: Enabled validators:
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.42.20:283][325]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.42.20:283][325]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavySecondHalf Validating asset
+[2025.08.08-13.42.25:999][420]LogContentBrowser: Attempting asset rename: FirstHalf_Montage -> FirstHalf_Montage
+[2025.08.08-13.42.30:940][496]LogContentBrowser: Attempting asset rename: FirstHalf_Montage -> FirstHalf_Montage
+[2025.08.08-13.42.41:586][707]LogContentBrowser: Attempting asset rename: FirstHalf_Montage -> AM_HeavyFirstHalf
+[2025.08.08-13.42.41:915][707]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.42.41:915][707]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf] ([1] browsable assets)...
+[2025.08.08-13.42.41:965][707]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.AM_HeavyFirstHalf]
+[2025.08.08-13.42.41:966][707]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf]
+[2025.08.08-13.42.41:968][707]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf
+[2025.08.08-13.42.41:968][707]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_HeavyFirstHalfD9DD6E6D4DFEF62AA39CBDAA94BF3D0A.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.uasset'
+[2025.08.08-13.42.41:969][707]LogFileHelpers: InternalPromptForCheckoutAndSave took 53.981 ms (total: 10.3 sec)
+[2025.08.08-13.42.42:006][707]LogUObjectHash: Compacting FUObjectHashTables data took   1.76ms
+[2025.08.08-13.42.42:042][707]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2025.08.08-13.42.42:070][707]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2025.08.08-13.42.42:314][707]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.42.42:314][707]LogContentValidation: Enabled validators:
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.42.42:314][707]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.42.42:314][707]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf Validating asset
+[2025.08.08-13.42.42:790][717]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.42.43:036][717]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf] ([1] browsable assets)...
+[2025.08.08-13.42.43:036][717]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf]
+[2025.08.08-13.42.43:038][717]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf
+[2025.08.08-13.42.43:039][717]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_HeavyFirstHalfC4DC5979455B68F48A3E54A89B8B616B.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.uasset'
+[2025.08.08-13.42.43:174][717]LogFileHelpers: InternalPromptForCheckoutAndSave took 385.250 ms (total: 10.7 sec)
+[2025.08.08-13.42.43:357][717]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.42.43:357][717]LogContentValidation: Enabled validators:
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.42.43:357][717]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.42.43:357][717]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf Validating asset
+[2025.08.08-13.42.59:244][789]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.AM_HeavyFirstHalf
+[2025.08.08-13.42.59:247][789]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_32
+[2025.08.08-13.42.59:442][789]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_32:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2025.08.08-13.43.00:259][789]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_33
+[2025.08.08-13.43.18:632][108]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.43.18:850][108]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf] ([1] browsable assets)...
+[2025.08.08-13.43.18:903][108]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.AM_HeavyFirstHalf]
+[2025.08.08-13.43.18:903][108]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf]
+[2025.08.08-13.43.18:906][108]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf
+[2025.08.08-13.43.18:906][108]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/AM_HeavyFirstHalfC9C9D2D647FD74EFA66437B4A6D8C341.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf.uasset'
+[2025.08.08-13.43.18:997][108]LogFileHelpers: InternalPromptForCheckoutAndSave took 364.962 ms (total: 11.1 sec)
+[2025.08.08-13.43.19:170][108]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.43.19:170][108]LogContentValidation: Enabled validators:
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.43.19:170][108]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.43.19:170][108]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/AM_HeavyFirstHalf Validating asset
+[2025.08.08-13.43.47:833][303]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_34
+[2025.08.08-13.43.48:586][309]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2025.08.08-13.43.48:589][309]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_35
+[2025.08.08-13.43.58:842][517]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2493.773438
+[2025.08.08-13.43.59:091][523]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.43.59:091][523]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2493.983154, Update Interval: 311.724609
+[2025.08.08-13.44.42:570][699]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.44.42:784][699]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2025.08.08-13.44.42:784][699]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2025.08.08-13.44.42:831][699]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2025.08.08-13.44.42:832][699]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BP_ThirdPersonCharacterB4F71E4A409F6BF23E030194968665A3.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2025.08.08-13.44.42:923][699]LogFileHelpers: InternalPromptForCheckoutAndSave took 352.790 ms (total: 11.4 sec)
+[2025.08.08-13.44.43:094][699]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.44.43:094][699]LogContentValidation: Enabled validators:
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.44.43:094][699]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.44.43:094][699]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter Validating asset
+[2025.08.08-13.45.11:222][112]LogStreaming: Display: FlushAsyncLoading(521): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.45.11:398][112]LogInterchangeEngine: Display: Interchange start importing source [E:/Software/MixamoConverter/OutgoingFbx/StableSwordInwardSlash.UE.fbx]
+[2025.08.08-13.45.11:670][112]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2025.08.08-13.45.11:713][112]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2025.08.08-13.45.22:089][112]LogSlate: Window 'Import Content' being destroyed
+[2025.08.08-13.45.22:175][112]LogInterchangeEngine: [Pending] Importing
+[2025.08.08-13.45.22:544][115]LogStreaming: Display: FlushAsyncLoading(522): 1 QueuedPackages, 0 AsyncPackages
+[2025.08.08-13.45.22:720][116]LogInterchangeEngine: Display: Interchange import completed [E:/Software/MixamoConverter/OutgoingFbx/StableSwordInwardSlash.UE.fbx]
+[2025.08.08-13.45.22:760][116]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2025.08.08-13.45.22:760][116]LogInterchangeEngine: [Success] Import Done
+[2025.08.08-13.45.28:554][209]LogContentBrowser: Attempting asset rename: StableSwordInwardSlash_UE -> Slash
+[2025.08.08-13.45.28:882][209]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.45.28:883][209]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/Slash] ([1] browsable assets)...
+[2025.08.08-13.45.28:928][209]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/MyContent/Anims/Attacks/LightSword/Slash.Slash]
+[2025.08.08-13.45.28:928][209]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/Slash]
+[2025.08.08-13.45.28:928][209]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/Slash" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Slash.uasset" SILENT=true
+[2025.08.08-13.45.28:941][209]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/Slash
+[2025.08.08-13.45.28:941][209]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/SlashB71C99D24AD8C3672B8C2BA14987719F.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Slash.uasset'
+[2025.08.08-13.45.28:967][209]LogFileHelpers: InternalPromptForCheckoutAndSave took 83.893 ms (total: 11.5 sec)
+[2025.08.08-13.45.29:075][209]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2025.08.08-13.45.29:107][209]LogUObjectHash: Compacting FUObjectHashTables data took   1.91ms
+[2025.08.08-13.45.29:139][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2025.08.08-13.45.29:337][209]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.45.29:337][209]LogContentValidation: Enabled validators:
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.45.29:337][209]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.45.29:337][209]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/Slash Validating asset
+[2025.08.08-13.45.32:253][278]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.45.32:437][278]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/MyContent/Anims/Attacks/LightSword/Slash] ([1] browsable assets)...
+[2025.08.08-13.45.32:437][278]OBJ SavePackage: Finished generating thumbnails for package [/Game/MyContent/Anims/Attacks/LightSword/Slash]
+[2025.08.08-13.45.32:437][278]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MyContent/Anims/Attacks/LightSword/Slash" FILE="E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Slash.uasset" SILENT=true
+[2025.08.08-13.45.32:449][278]LogSavePackage: Moving output files for package: /Game/MyContent/Anims/Attacks/LightSword/Slash
+[2025.08.08-13.45.32:449][278]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/Slash064273C1478B3780C066A5B41B0EA823.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/MyContent/Anims/Attacks/LightSword/Slash.uasset'
+[2025.08.08-13.45.32:552][278]LogFileHelpers: InternalPromptForCheckoutAndSave took 299.458 ms (total: 11.8 sec)
+[2025.08.08-13.45.32:677][278]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.45.32:677][278]LogContentValidation: Enabled validators:
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.45.32:677][278]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.45.32:677][278]AssetCheck: /Game/MyContent/Anims/Attacks/LightSword/Slash Validating asset
+[2025.08.08-13.47.54:244][404]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.47.54:467][404]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2025.08.08-13.47.54:598][404]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter]
+[2025.08.08-13.47.54:598][404]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2025.08.08-13.47.54:622][404]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2025.08.08-13.47.54:623][404]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BP_ThirdPersonCharacter47CB96A848546A3CD9569EBED8E5EF3E.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2025.08.08-13.47.54:716][404]LogFileHelpers: InternalPromptForCheckoutAndSave took 471.232 ms (total: 12.3 sec)
+[2025.08.08-13.47.54:877][404]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.47.54:877][404]LogContentValidation: Enabled validators:
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.47.54:877][404]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.47.54:877][404]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter Validating asset
+[2025.08.08-13.47.57:957][483]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.47.58:181][483]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2025.08.08-13.47.58:182][483]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2025.08.08-13.47.58:200][483]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2025.08.08-13.47.58:201][483]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BP_ThirdPersonCharacter5A34A5894DFFE32B60879AA9B65C0329.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2025.08.08-13.47.58:281][483]LogFileHelpers: InternalPromptForCheckoutAndSave took 323.620 ms (total: 12.6 sec)
+[2025.08.08-13.47.58:403][483]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.47.58:403][483]LogContentValidation: Enabled validators:
+[2025.08.08-13.47.58:403][483]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.47.58:403][483]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.47.58:403][483]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.47.58:404][483]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.47.58:404][483]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.47.58:404][483]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.47.58:404][483]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter Validating asset
+[2025.08.08-13.47.58:862][489]LogScript: Warning: Attempted to access REINST_BP_ThirdPersonCharacter_C_0 via property Character, but REINST_BP_ThirdPersonCharacter_C_0 is not valid (pending kill or garbage)
+	ABP_Quinn_C /Engine/Transient.World_35:PersistentLevel.REINST_BP_ThirdPersonCharacter_C_0.CharacterMesh0.ABP_Quinn_C_0
+	Function /Game/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny_C:ExecuteUbergraph_ABP_Manny:0182
+[2025.08.08-13.47.58:864][489]LogScript: Warning: Attempted to access REINST_BP_ThirdPersonCharacter_C_0 via property Character, but REINST_BP_ThirdPersonCharacter_C_0 is not valid (pending kill or garbage)
+	ABP_Quinn_C /Engine/Transient.World_34:PersistentLevel.REINST_BP_ThirdPersonCharacter_C_0.CharacterMesh0.ABP_Quinn_C_0
+	Function /Game/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny_C:ExecuteUbergraph_ABP_Manny:0182
+[2025.08.08-13.47.58:909][489]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2025.08.08-13.48.00:188][508]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.08.08-13.48.00:218][508]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.08.08-13.48.00:224][508]LogPlayLevel: Creating play world package: /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.48.00:270][508]LogPlayLevel: PIE: StaticDuplicateObject took: (0.046503s)
+[2025.08.08-13.48.00:270][508]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MyContent/Map/PrototypeMap.PrototypeMap to /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap (0.046598s)
+[2025.08.08-13.48.00:303][508]LogUObjectHash: Compacting FUObjectHashTables data took   1.96ms
+[2025.08.08-13.48.00:313][508]LogChaosDD: Creating Chaos Debug Draw Scene for world PrototypeMap
+[2025.08.08-13.48.00:329][508]LogPlayLevel: PIE: World Init took: (0.017503s)
+[2025.08.08-13.48.00:333][508]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.08.08-13.48.00:335][508]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.08.08-13.48.00:335][508]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.08.08-13.48.00:337][508]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.08.08-13.48.00:338][508]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.08.08-13.48.00:338][508]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.08.08-13.48.00:343][508]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.08.08-13.48.00:598][508]LogAudioMixer: Display: Using Audio Hardware Device Headphones (Realtek(R) Audio)
+[2025.08.08-13.48.00:602][508]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.08.08-13.48.00:602][508]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.08.08-13.48.00:603][508]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.08.08-13.48.00:607][508]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.08.08-13.48.00:607][508]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.08.08-13.48.00:609][508]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.08.08-13.48.00:609][508]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.08.08-13.48.00:609][508]LogInit: FAudioDevice initialized with ID 7.
+[2025.08.08-13.48.00:609][508]LogAudio: Display: Audio Device (ID: 7) registered with world 'PrototypeMap'.
+[2025.08.08-13.48.00:612][508]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.08.08-13.48.00:635][508]LogLoad: Game class is 'BorneGameMode'
+[2025.08.08-13.48.00:673][508]LogWorld: Bringing World /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap up for play (max tick rate 60) at 2025.08.08-14.48.00
+[2025.08.08-13.48.00:681][508]LogWorld: Bringing up level for play took: 0.044842
+[2025.08.08-13.48.00:695][508]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2025.08.08-13.48.00:733][508]LogActor: Warning: BP_BossWeapon_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_BossWeapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.48.00:774][508]LogClass: Warning: Short type name "ESoulsAbilityInputID" provided for TryFindType. Please convert it to a path name (suggested: "/Script/Borne.ESoulsAbilityInputID"). Callstack:
+
+0x00007fff56c2085d UnrealEditor-CoreUObject.dll!UnknownFunction []
+FGameplayAbilityInputBinds::FGameplayAbilityInputBinds() [D:\Games\EpicGames\UE_5.5\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities\GameplayAbilityTypes.h:348]
+ABorneCharacter::BeginPlay() [E:\Projects\UNREAL\Souls\Soulsborne\Borne\Source\Borne\BorneCharacter.cpp:95]
+0x00007fff41013664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff43521936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41da5e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff432a53a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff41cf3648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fff3f6c3a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+
+[2025.08.08-13.48.00:776][508]PIE: Server logged in
+[2025.08.08-13.48.00:777][508]PIE: Play in editor total start time 0.568 seconds.
+[2025.08.08-13.48.04:349][580]LogActor: Warning: BP_GreatSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_GreatSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.48.10:365][724]LogActor: Warning: BP_ShortSword_C /Game/MyContent/Map/UEDPIE_0_PrototypeMap.PrototypeMap:PersistentLevel.BP_ShortSword_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.08.08-13.48.37:269][346]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.48.37:269][346]LogWorld: BeginTearingDown for /Game/MyContent/Map/UEDPIE_0_PrototypeMap
+[2025.08.08-13.48.37:273][346]LogWorld: UWorld::CleanupWorld for PrototypeMap, bSessionEnded=true, bCleanupResources=true
+[2025.08.08-13.48.37:277][346]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.48.37:303][346]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.08.08-13.48.37:311][346]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.08.08-13.48.37:340][346]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.08.08-13.48.37:342][346]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.08.08-13.48.37:344][346]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.08.08-13.48.37:347][346]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.08.08-13.48.37:356][346]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.08.08-13.48.37:367][346]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2025.08.08-13.48.37:437][347]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2025.08.08-13.50.04:490][ 27]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2859.423584
+[2025.08.08-13.50.04:734][ 34]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.08.08-13.50.04:734][ 34]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2859.634521, Update Interval: 357.264313
+[2025.08.08-13.50.09:809][149]LogScript: Warning: Attempted to access REINST_BP_ThirdPersonCharacter_C_0 via property Character, but REINST_BP_ThirdPersonCharacter_C_0 is not valid (pending kill or garbage)
+	ABP_Quinn_C /Engine/Transient.World_34:PersistentLevel.REINST_BP_ThirdPersonCharacter_C_0.CharacterMesh0.ABP_Quinn_C_0
+	Function /Game/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny_C:ExecuteUbergraph_ABP_Manny:0182
+[2025.08.08-13.50.09:810][149]LogScript: Warning: Attempted to access REINST_BP_ThirdPersonCharacter_C_0 via property Character, but REINST_BP_ThirdPersonCharacter_C_0 is not valid (pending kill or garbage)
+	ABP_Quinn_C /Engine/Transient.World_35:PersistentLevel.REINST_BP_ThirdPersonCharacter_C_0.CharacterMesh0.ABP_Quinn_C_1
+	Function /Game/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny_C:ExecuteUbergraph_ABP_Manny:0182
+[2025.08.08-13.50.09:844][149]LogUObjectHash: Compacting FUObjectHashTables data took   1.77ms
+[2025.08.08-13.50.09:916][149]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.08.08-13.50.10:047][149]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2025.08.08-13.50.10:196][149]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter]
+[2025.08.08-13.50.10:196][149]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2025.08.08-13.50.10:218][149]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2025.08.08-13.50.10:219][149]LogSavePackage: Moving 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Saved/BP_ThirdPersonCharacter3B78C736440638824C3F8AB146E77D57.tmp' to 'E:/Projects/UNREAL/Souls/Soulsborne/Borne/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2025.08.08-13.50.10:319][149]LogFileHelpers: InternalPromptForCheckoutAndSave took 403.082 ms (total: 13.0 sec)
+[2025.08.08-13.50.10:437][149]LogContentValidation: Display: Starting to validate 1 assets
+[2025.08.08-13.50.10:437][149]LogContentValidation: Enabled validators:
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.08.08-13.50.10:437][149]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.08.08-13.50.10:438][149]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter Validating asset
