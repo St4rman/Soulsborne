@@ -24,7 +24,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ESoulsAbilityInputID::Confirm) \
 	op(ESoulsAbilityInputID::Cancel) \
 	op(ESoulsAbilityInputID::Roll) \
-	op(ESoulsAbilityInputID::Attack) 
+	op(ESoulsAbilityInputID::Attack) \
+	op(ESoulsAbilityInputID::HeavyAttack) 
 
 enum class ESoulsAbilityInputID : uint8;
 template<> struct TIsUEnumClass<ESoulsAbilityInputID> { enum { Value = true }; };

@@ -39,6 +39,8 @@ protected:
 public:
 	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION(BlueprintCallable)
 	ASBWeaponBase* GetCurrentEquippedWeapon() const {return EquippedWeapon;}
 	
 	void SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon);

@@ -46,6 +46,7 @@
 			"SBTTTurnToFacePlayer.cpp.obj",
 			"SoulsBTTaskRangedAttack.cpp.obj",
 			"ANS_EnemyAttackNotify.cpp.obj",
+			"ANS_MeleeAttackNotify.cpp.obj",
 			"ANS_SpawnAOE.cpp.obj",
 			"Borne.cpp.obj",
 			"BorneGameMode.cpp.obj",
@@ -61,15 +62,14 @@
 			"TargetableInterface.cpp.obj",
 			"WeaponInterface.cpp.obj",
 			"SDmgProjectile.cpp.obj",
+			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
 			"SBWeaponBase.cpp.obj",
-			"ANS_MeleeAttackNotify.cpp.obj",
-			"BorneCharacter.cpp.obj",
-			"TargetableEnemy.cpp.obj"
+			"BorneCharacter.cpp.obj"
 		]
 	}
 }

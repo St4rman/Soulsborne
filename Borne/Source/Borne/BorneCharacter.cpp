@@ -150,6 +150,9 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleRollActionPressed);
 		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleRollActionReleased);
 
+		EnhancedInputComponent->BindAction(HeavAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleHeavyActionPressed);
+		EnhancedInputComponent->BindAction(HeavAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleHeavyActionReleased);
+
 
 	}
 	else
@@ -332,6 +335,16 @@ void ABorneCharacter::HandleRollActionPressed()
 void ABorneCharacter::HandleRollActionReleased()
 {
 	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Roll);
+}
+
+void ABorneCharacter::HandleHeavyActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::HeavyAttack);
+}
+
+void ABorneCharacter::HandleHeavyActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::HeavyAttack);
 }
 
 
