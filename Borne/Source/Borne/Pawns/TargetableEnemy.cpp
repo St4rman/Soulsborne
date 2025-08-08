@@ -33,3 +33,7 @@ void ATargetableEnemy::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
+void ATargetableEnemy::DoDamageTaken_Implementation(float IncomingDamage)
+{
+}
+

@@ -237,7 +237,9 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\blackboardcomponent.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\aimodule\\classes\\perception\\pawnsensingcomponent.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\pawnsensingcomponent.generated.h",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\soulsaicharacter.generated.h"
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\soulsaicharacter.generated.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\source\\borne\\pawns\\targetableenemy.h",
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\targetableenemy.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

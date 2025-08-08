@@ -1,5 +1,6 @@
 ﻿#include "ANS_MeleeAttackNotify.h"
 #include "Borne/AI/SoulsAICharacter.h"
+#include "Borne/Pawns/TargetableEnemy.h"
 
 
 void UANS_MeleeAttackNotify::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
@@ -67,6 +68,14 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			{
 				TraceIgnoreActors.Add(TargetActor);
 				Enemy->TakeDamage(CurWep->LightDamage);
+				return;
+			}
+
+			ATargetableEnemy* Dummy = Cast<ATargetableEnemy>(TargetActor);
+			if (Dummy != nullptr)
+			{
+				TraceIgnoreActors.Add(Dummy);
+				Dummy->DoDamageTaken(CurWep->LightDamage);
 			}
 		}
 	}

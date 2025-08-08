@@ -32,5 +32,8 @@ public:
 
 	UPROPERTY(BlueprintReadOnly)
 	bool IsTargeted;
+
+	UFUNCTION(BlueprintNativeEvent)
+	void DoDamageTaken(float IncomingDamage);
 	
 };

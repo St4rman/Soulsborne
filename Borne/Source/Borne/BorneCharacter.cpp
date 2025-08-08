@@ -75,8 +75,7 @@ ABorneCharacter::ABorneCharacter()
 	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
 	NiagaraComponent->SetupAttachment(GetMesh());
 	NiagaraComponent->SetAutoActivate(false);
-
-
+	
 	MotionWarpComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpComponent"));
 
 }
@@ -235,7 +234,6 @@ void ABorneCharacter::FireDetection()
 				ITargetableInterface::Execute_SetSelfAsTarget(LocalTarget);
 				MainLocomotionMode = L_InCombat;
 				CameraHandlerComponent->SetLockedOn(CurrentMainTarget);
-				
 			}
 		}
 	}
@@ -258,7 +256,6 @@ void ABorneCharacter::DoRoll()
 {
 	FVector Movement = GetLastMovementInputVector();
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
-	
 }
 
 //this is all from the action rpg example project on epic + a few tutorials
