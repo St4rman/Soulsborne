@@ -75,8 +75,7 @@ ABorneCharacter::ABorneCharacter()
 	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
 	NiagaraComponent->SetupAttachment(GetMesh());
 	NiagaraComponent->SetAutoActivate(false);
-
-
+	
 	MotionWarpComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpComponent"));
 
 }
@@ -150,6 +149,9 @@ void ABorneCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleRollActionPressed);
 		EnhancedInputComponent->BindAction(RollAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleRollActionReleased);
+
+		EnhancedInputComponent->BindAction(HeavAction,  ETriggerEvent::Started, this, &ABorneCharacter::HandleHeavyActionPressed);
+		EnhancedInputComponent->BindAction(HeavAction,  ETriggerEvent::Completed, this, &ABorneCharacter::HandleHeavyActionReleased);
 
 
 	}
@@ -235,7 +237,6 @@ void ABorneCharacter::FireDetection()
 				ITargetableInterface::Execute_SetSelfAsTarget(LocalTarget);
 				MainLocomotionMode = L_InCombat;
 				CameraHandlerComponent->SetLockedOn(CurrentMainTarget);
-				
 			}
 		}
 	}
@@ -258,7 +259,6 @@ void ABorneCharacter::DoRoll()
 {
 	FVector Movement = GetLastMovementInputVector();
 	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, FString::Printf(TEXT("Roll: %f, %f, %f"), Movement.X, Movement.Y, Movement.Z));
-	
 }
 
 //this is all from the action rpg example project on epic + a few tutorials
@@ -335,6 +335,16 @@ void ABorneCharacter::HandleRollActionPressed()
 void ABorneCharacter::HandleRollActionReleased()
 {
 	SendLocalIpnutToASC(false, ESoulsAbilityInputID::Roll);
+}
+
+void ABorneCharacter::HandleHeavyActionPressed()
+{
+	SendLocalIpnutToASC(true, ESoulsAbilityInputID::HeavyAttack);
+}
+
+void ABorneCharacter::HandleHeavyActionReleased()
+{
+	SendLocalIpnutToASC(false, ESoulsAbilityInputID::HeavyAttack);
 }
 
 

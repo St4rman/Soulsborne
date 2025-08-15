@@ -39,6 +39,7 @@ struct Z_Construct_UEnum_Borne_ESoulsAbilityInputID_Statics
 		{ "BlueprintType", "true" },
 		{ "Cancel.Name", "ESoulsAbilityInputID::Cancel" },
 		{ "Confirm.Name", "ESoulsAbilityInputID::Confirm" },
+		{ "HeavyAttack.Name", "ESoulsAbilityInputID::HeavyAttack" },
 		{ "ModuleRelativePath", "Core/HelperData.h" },
 		{ "None.Name", "ESoulsAbilityInputID::None" },
 		{ "Roll.Name", "ESoulsAbilityInputID::Roll" },
@@ -50,6 +51,7 @@ struct Z_Construct_UEnum_Borne_ESoulsAbilityInputID_Statics
 		{ "ESoulsAbilityInputID::Cancel", (int64)ESoulsAbilityInputID::Cancel },
 		{ "ESoulsAbilityInputID::Roll", (int64)ESoulsAbilityInputID::Roll },
 		{ "ESoulsAbilityInputID::Attack", (int64)ESoulsAbilityInputID::Attack },
+		{ "ESoulsAbilityInputID::HeavyAttack", (int64)ESoulsAbilityInputID::HeavyAttack },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -265,13 +267,13 @@ UEnum* Z_Construct_UEnum_Borne_EAIState()
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2896397640U) },
+		{ ESoulsAbilityInputID_StaticEnum, TEXT("ESoulsAbilityInputID"), &Z_Registration_Info_UEnum_ESoulsAbilityInputID, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 972518124U) },
 		{ ELocomotionMode_StaticEnum, TEXT("ELocomotionMode"), &Z_Registration_Info_UEnum_ELocomotionMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2571520345U) },
 		{ ECameraState_StaticEnum, TEXT("ECameraState"), &Z_Registration_Info_UEnum_ECameraState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4218898129U) },
 		{ EAIState_StaticEnum, TEXT("EAIState"), &Z_Registration_Info_UEnum_EAIState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3248951569U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_2635180638(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_3528473259(TEXT("/Script/Borne"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Core_HelperData_h_Statics::EnumInfo));

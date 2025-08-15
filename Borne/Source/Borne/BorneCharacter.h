@@ -86,6 +86,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, publi
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* AttackAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* HeavAction;
 	
 	/** Detection */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))
@@ -149,6 +152,8 @@ protected:
 	void HandleAttackActionPressed();
 	void HandleRollActionPressed();
 	void HandleRollActionReleased();
+	void HandleHeavyActionPressed();
+	void HandleHeavyActionReleased();
 	void HandleAttackActionReleased();
 
 	/**

@@ -14,6 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BORNE_TargetableEnemy_generated_h
 
+#define FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void DoDamageTaken_Implementation(float IncomingDamage); \
+	DECLARE_FUNCTION(execDoDamageTaken);
+
+
+#define FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_CALLBACK_WRAPPERS
 #define FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATargetableEnemy(); \
@@ -40,6 +46,8 @@ public: \
 #define FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_CALLBACK_WRAPPERS \
 	FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_INCLASS_NO_PURE_DECLS \
 	FID_Borne_Source_Borne_Pawns_TargetableEnemy_h_16_ENHANCED_CONSTRUCTORS \
 private: \

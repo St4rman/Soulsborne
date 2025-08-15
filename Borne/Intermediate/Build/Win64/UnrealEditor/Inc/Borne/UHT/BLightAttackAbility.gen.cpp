@@ -120,10 +120,10 @@ UBLightAttackAbility::~UBLightAttackAbility() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_Attack_BLightAttackAbility_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBLightAttackAbility, UBLightAttackAbility::StaticClass, TEXT("UBLightAttackAbility"), &Z_Registration_Info_UClass_UBLightAttackAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBLightAttackAbility), 3960971553U) },
+		{ Z_Construct_UClass_UBLightAttackAbility, UBLightAttackAbility::StaticClass, TEXT("UBLightAttackAbility"), &Z_Registration_Info_UClass_UBLightAttackAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBLightAttackAbility), 2769863453U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_Attack_BLightAttackAbility_h_3713646436(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_Attack_BLightAttackAbility_h_3972349397(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_Attack_BLightAttackAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_Attack_BLightAttackAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

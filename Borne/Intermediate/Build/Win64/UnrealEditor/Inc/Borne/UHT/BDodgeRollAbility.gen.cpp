@@ -113,10 +113,10 @@ UBDodgeRollAbility::~UBDodgeRollAbility() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_BDodgeRollAbility_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBDodgeRollAbility, UBDodgeRollAbility::StaticClass, TEXT("UBDodgeRollAbility"), &Z_Registration_Info_UClass_UBDodgeRollAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBDodgeRollAbility), 1895486800U) },
+		{ Z_Construct_UClass_UBDodgeRollAbility, UBDodgeRollAbility::StaticClass, TEXT("UBDodgeRollAbility"), &Z_Registration_Info_UClass_UBDodgeRollAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBDodgeRollAbility), 3733063769U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_BDodgeRollAbility_h_3965494392(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_BDodgeRollAbility_h_3841597867(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_BDodgeRollAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_GAS_Abilities_Active_BDodgeRollAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

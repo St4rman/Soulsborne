@@ -13,8 +13,6 @@ class BORNE_API ASBWeaponBase : public AActor, public IWeaponInterface
 {
 	GENERATED_BODY()
 
-
-
 public:
 	
 	ASBWeaponBase();
@@ -25,8 +23,6 @@ public:
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
 	UAnimMontage* LightAttackAnim;
 
-	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
-	UAnimMontage* HeavyAttackAnim;
 	
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
 	float LightDamage;
@@ -45,9 +41,11 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Icon")
 	UTexture2D* Icon;
-	
+
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
 	TArray<UAnimMontage*> LightAttackArray;
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
+	UAnimMontage* HeavyAttackAnim;
 	
 protected:
 	
@@ -85,4 +83,6 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void StopFloating();
 
+	// UFUNCTION(BlueprintCallable)
+	
 };

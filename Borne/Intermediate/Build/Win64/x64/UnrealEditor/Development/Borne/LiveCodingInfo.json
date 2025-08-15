@@ -7,6 +7,7 @@
 			"ANS_SpawnAOE.gen.cpp.obj",
 			"BaseAttributesSet.gen.cpp.obj",
 			"BDodgeRollAbility.gen.cpp.obj",
+			"BFlaskAbility.gen.cpp.obj",
 			"BLightAttackAbility.gen.cpp.obj",
 			"BorneCharacter.gen.cpp.obj",
 			"BorneGameMode.gen.cpp.obj",
@@ -20,7 +21,6 @@
 			"PlayerHUD.gen.cpp.obj",
 			"SBTTaskMeleeAttack.gen.cpp.obj",
 			"SBTTTurnToFacePlayer.gen.cpp.obj",
-			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
 			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
@@ -52,13 +52,13 @@
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
 			"BDodgeRollAbility.cpp.obj",
+			"BFlaskAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
 			"BaseAttributesSet.cpp.obj",
 			"SoulsASComponent.cpp.obj",
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
-			"WeaponInterface.cpp.obj",
 			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
@@ -66,10 +66,10 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BFlaskAbility.gen.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"BFlaskAbility.cpp.obj"
+			"SBWeaponBase.gen.cpp.obj",
+			"WeaponInterface.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }
