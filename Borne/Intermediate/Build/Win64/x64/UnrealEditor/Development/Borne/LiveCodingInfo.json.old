@@ -49,6 +49,7 @@
 			"ANS_MeleeAttackNotify.cpp.obj",
 			"ANS_SpawnAOE.cpp.obj",
 			"Borne.cpp.obj",
+			"BorneCharacter.cpp.obj",
 			"BorneGameMode.cpp.obj",
 			"HelperBPLib.cpp.obj",
 			"BLightAttackAbility.cpp.obj",
@@ -60,7 +61,6 @@
 			"SoulsASComponent.cpp.obj",
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
-			"WeaponInterface.cpp.obj",
 			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
@@ -68,8 +68,8 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BorneCharacter.cpp.obj"
+			"WeaponInterface.cpp.obj",
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }
