@@ -14,7 +14,7 @@ Featurelist:
 * Weapons class: Modular weapon system allowing for data driven wepaon and inventory
 * Boss AI: State based boss behavior using EQS pawn sensing and more
 
-#### Current Status: Polishing
+Current Status: Polishing
 
 ## How It's Made: 
 Tech used: UE5, GAS, Niagara
