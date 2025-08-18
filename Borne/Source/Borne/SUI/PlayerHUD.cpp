@@ -1,5 +1,7 @@
 ﻿#include "PlayerHUD.h"
 
+#include "Components/TextBlock.h"
+
 void UPlayerHUD::SetHealth(const float Health, const float MaxHealth)
 {
 	if (HealthBar != nullptr)
@@ -38,5 +40,13 @@ void UPlayerHUD::ToggleBossBarVisibility(const bool Toggle)
 	{
 		const ESlateVisibility CurVis = Toggle ? ESlateVisibility::Visible : ESlateVisibility::Hidden;
 		BossHealthBar->SetVisibility(CurVis);
+	}
+}
+
+void UPlayerHUD::UpdateFlask(const FText Value)
+{
+	if (FlaskNum != nullptr)
+	{
+		FlaskNum->SetText(Value);
 	}
 }

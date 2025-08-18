@@ -24,6 +24,7 @@ public:
 	void SetMeleeIcon(UTexture2D* WeaponTexture, bool bMatchSize);
 	void SetBossHealth(const float Health, const float MaxHealth);
 	void ToggleBossBarVisibility(const bool Toggle);
+	void UpdateFlask(FText Value);
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* HealthBar;
@@ -39,4 +40,7 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* BossHealthBar;
+
+	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	class UTextBlock* FlaskNum;
 };

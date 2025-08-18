@@ -54,4 +54,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void ToggleBossHealth(bool toggle);
+	
+	UFUNCTION(BlueprintCallable)
+	void UpdateFlask(FText FlaskCount);
 };

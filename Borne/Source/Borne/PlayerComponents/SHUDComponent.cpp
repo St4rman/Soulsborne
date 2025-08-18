@@ -74,3 +74,8 @@ void USHUDComponent::ToggleBossHealth(bool toggle)
 {
 	PlayerHUD->ToggleBossBarVisibility(toggle);
 }
+
+void USHUDComponent::UpdateFlask(FText FlaskCount)
+{
+	PlayerHUD->UpdateFlask(FlaskCount);
+}

@@ -261,6 +261,48 @@ DEFINE_FUNCTION(USHUDComponent::execToggleBossHealth)
 }
 // End Class USHUDComponent Function ToggleBossHealth
 
+// Begin Class USHUDComponent Function UpdateFlask
+struct Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics
+{
+	struct SHUDComponent_eventUpdateFlask_Parms
+	{
+		FText FlaskCount;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FTextPropertyParams NewProp_FlaskCount;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FTextPropertyParams Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::NewProp_FlaskCount = { "FlaskCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SHUDComponent_eventUpdateFlask_Parms, FlaskCount), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::NewProp_FlaskCount,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "UpdateFlask", nullptr, nullptr, Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::PropPointers), sizeof(Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::SHUDComponent_eventUpdateFlask_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::SHUDComponent_eventUpdateFlask_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_USHUDComponent_UpdateFlask()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USHUDComponent::execUpdateFlask)
+{
+	P_GET_PROPERTY(FTextProperty,Z_Param_FlaskCount);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateFlask(Z_Param_FlaskCount);
+	P_NATIVE_END;
+}
+// End Class USHUDComponent Function UpdateFlask
+
 // Begin Class USHUDComponent
 void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 {
@@ -271,6 +313,7 @@ void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 		{ "SetMeleeIcon", &USHUDComponent::execSetMeleeIcon },
 		{ "SetStamina", &USHUDComponent::execSetStamina },
 		{ "ToggleBossHealth", &USHUDComponent::execToggleBossHealth },
+		{ "UpdateFlask", &USHUDComponent::execUpdateFlask },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -313,6 +356,7 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 		{ &Z_Construct_UFunction_USHUDComponent_SetMeleeIcon, "SetMeleeIcon" }, // 1892680031
 		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 576948195
 		{ &Z_Construct_UFunction_USHUDComponent_ToggleBossHealth, "ToggleBossHealth" }, // 1826743213
+		{ &Z_Construct_UFunction_USHUDComponent_UpdateFlask, "UpdateFlask" }, // 2073826068
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -369,10 +413,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 967031072U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 190527117U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_2774740576(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_1532929571(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

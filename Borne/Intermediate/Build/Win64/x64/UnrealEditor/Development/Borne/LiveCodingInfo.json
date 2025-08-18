@@ -18,11 +18,10 @@
 			"HelperBPLib.gen.cpp.obj",
 			"HelperData.gen.cpp.obj",
 			"PGA_StaminaRegen.gen.cpp.obj",
-			"PlayerHUD.gen.cpp.obj",
 			"SBTTaskMeleeAttack.gen.cpp.obj",
 			"SBTTTurnToFacePlayer.gen.cpp.obj",
+			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
-			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
@@ -59,17 +58,18 @@
 			"SoulsASComponent.cpp.obj",
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
+			"WeaponInterface.cpp.obj",
 			"SDmgProjectile.cpp.obj",
 			"TargetableEnemy.cpp.obj",
 			"CamMoveComponent.cpp.obj",
 			"DetectorComponent.cpp.obj",
-			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
-			"PlayerHUD.cpp.obj",
+			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
-			"SBWeaponBase.gen.cpp.obj",
-			"WeaponInterface.cpp.obj",
-			"SBWeaponBase.cpp.obj"
+			"PlayerHUD.gen.cpp.obj",
+			"SHUDComponent.gen.cpp.obj",
+			"SHUDComponent.cpp.obj",
+			"PlayerHUD.cpp.obj"
 		]
 	}
 }

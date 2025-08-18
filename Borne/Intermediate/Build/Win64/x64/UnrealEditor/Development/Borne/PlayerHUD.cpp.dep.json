@@ -52,7 +52,11 @@
             "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\sprogressbar.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\sprogressbar.generated.h",
             "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\progressbar.generated.h",
-            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\playerhud.generated.h"
+            "e:\\projects\\unreal\\souls\\soulsborne\\borne\\intermediate\\build\\win64\\unrealeditor\\inc\\borne\\uht\\playerhud.generated.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textblock.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
+            "d:\\games\\epicgames\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
