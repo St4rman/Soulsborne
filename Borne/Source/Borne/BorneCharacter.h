@@ -89,6 +89,9 @@ class ABorneCharacter : public ACharacter, public IAbilitySystemInterface, publi
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* HeavAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* FlaskAction;
 	
 	/** Detection */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Detector", meta = (AllowPrivateAccess = "true"))

@@ -22,7 +22,6 @@
 			"SBTTTurnToFacePlayer.gen.cpp.obj",
 			"SBWeaponBase.gen.cpp.obj",
 			"SDmgProjectile.gen.cpp.obj",
-			"SHUDComponent.gen.cpp.obj",
 			"SInventoryComponent.gen.cpp.obj",
 			"SoulBTSCheckAttackRange.gen.cpp.obj",
 			"SoulGameplayAbility.gen.cpp.obj",
@@ -68,6 +67,7 @@
 			"SBWeaponBase.cpp.obj",
 			"Borne.init.gen.cpp.obj",
 			"PlayerHUD.gen.cpp.obj",
+			"SHUDComponent.gen.cpp.obj",
 			"SHUDComponent.cpp.obj",
 			"PlayerHUD.cpp.obj"
 		]
