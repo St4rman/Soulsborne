@@ -54,6 +54,11 @@ void UBaseAttributesSet::PostGameplayEffectExecute(const FGameplayEffectModCallb
 					Player->OnPlayerDeath();
 				}
 			}
+
+			if (NewHealth > GetMaxHealth())
+			{
+				SetHealth(GetMaxHealth());
+			}
 		}
 	}
 	
