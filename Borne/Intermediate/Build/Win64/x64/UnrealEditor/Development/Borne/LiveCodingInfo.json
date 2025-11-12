@@ -57,6 +57,7 @@
 			"BFlaskAbility.cpp.obj",
 			"PGA_StaminaRegen.cpp.obj",
 			"SoulGameplayAbility.cpp.obj",
+			"BaseAttributesSet.cpp.obj",
 			"SoulsASComponent.cpp.obj",
 			"DamageableInterface.cpp.obj",
 			"TargetableInterface.cpp.obj",
@@ -68,8 +69,7 @@
 			"SHUDComponent.cpp.obj",
 			"SInventoryComponent.cpp.obj",
 			"PlayerHUD.cpp.obj",
-			"SBWeaponBase.cpp.obj",
-			"BaseAttributesSet.cpp.obj"
+			"SBWeaponBase.cpp.obj"
 		]
 	}
 }

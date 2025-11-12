@@ -54,6 +54,7 @@
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/Active/Flask/BFlaskAbility.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/Passive/PGA_StaminaRegen.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/Abilities/SoulGameplayAbility.cpp"
+#include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/AttributeSets/BaseAttributesSet.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/GAS/SoulsASComponent.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Interfaces/DamageableInterface.cpp"
 #include "E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/Interfaces/TargetableInterface.cpp"
