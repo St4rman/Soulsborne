@@ -57,4 +57,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void UpdateFlask(FText FlaskCount);
+
+	UFUNCTION(BlueprintCallable)
+	void UnHideUI(){PlayerHUD->SetVisibility(ESlateVisibility::Visible);}
 };

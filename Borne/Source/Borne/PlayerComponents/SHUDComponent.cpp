@@ -22,7 +22,7 @@ void USHUDComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	if (Player->IsLocallyControlled() && PlayerHUDClass )
+	if (Player->IsLocallyControlled() && PlayerHUDClass)
 	{
 		AController* PlayerController = Player->GetController();
 		PlayerHUD = CreateWidget<UPlayerHUD>(GetWorld(), PlayerHUDClass);
@@ -30,6 +30,7 @@ void USHUDComponent::BeginPlay()
 		PlayerHUD->AddToPlayerScreen();
 		SetMeleeIcon(EmptyTexture);
 		PlayerHUD->ToggleBossBarVisibility(false);
+		PlayerHUD->SetVisibility(ESlateVisibility::Hidden);
 	}
 }
 
