@@ -72,6 +72,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraRoarComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
+	USoundBase* HurtNoise;
+
 	FTimerHandle BleedTimer;
 	
 public:
@@ -98,4 +101,7 @@ public:
 	void IncreaseBleedStack();
 	void DecreaseBleedStacks();
 	void ApplyBleedBurst();
+
+	UFUNCTION(BlueprintCallable)
+	float GetCurrentBleed(){ return CurrentBleed;};
 };

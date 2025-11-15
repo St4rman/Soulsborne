@@ -62,6 +62,7 @@ void ASoulsAICharacter::Tick(float DeltaSeconds)
 
 void ASoulsAICharacter::TakeDamage( const float DamageAmount )
 {
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), HurtNoise, GetActorLocation());
 	const float HealthDelta = Health - DamageAmount;
 	if (HealthDelta > 0)
 	{

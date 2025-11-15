@@ -1,5 +1,7 @@
 ﻿#include "BLightAttackAbility.h"
 
+#include "Kismet/GameplayStatics.h"
+
 
 UBLightAttackAbility::UBLightAttackAbility()
 {
@@ -55,6 +57,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 			CurrentComboIdx = 0;
 		}
 		UAnimMontage* LightAttack = CurrentWeapon->GetLightAnimCombo( CurrentComboIdx );
+		USoundBase* SwishSound = CurrentWeapon->GetSwordSound( CurrentComboIdx );
 		CurrentComboIdx++;
 		
 		
@@ -67,6 +70,7 @@ void UBLightAttackAbility::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 			AnimInstance->Montage_Play( LightAttack, AttackSpeed * 0.8f );
 			ResetCombo();
 		}
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), SwishSound, PlayerChar->GetActorLocation() );
 		PlayerChar->GetAbilitySystemComponent()->ApplyGameplayEffectSpecToSelf( *NewSpecHandle.Data.Get() );
 		ActorInfo->AbilitySystemComponent->AddLooseGameplayTags( AttackingTags );
 		ActorInfo->AbilitySystemComponent->NotifyAbilityCommit(this);

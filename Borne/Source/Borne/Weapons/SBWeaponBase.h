@@ -49,6 +49,9 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
 	bool bIsBleed = false;
+
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Sounds")
+	TArray<USoundBase*> Sounds;
 	
 protected:
 	
@@ -69,7 +72,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	UAnimMontage* GetLightAnimCombo( const int Index) const { return LightAttackArray[Index]; }
 
+	UFUNCTION(BlueprintCallable)
+	USoundBase* GetSwordSound( const int Index) const { return Sounds[Index]; }
+	
 	int GetComboLength() const { return LightAttackArray.Num(); }
+	
 
 	UFUNCTION(BlueprintCallable)
 	UTexture2D* GetIcon() const { return Icon; }
@@ -89,6 +96,6 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void StopFloating();
 
-	// UFUNCTION(BlueprintCallable)
+	
 	
 };
