@@ -46,6 +46,9 @@ public:
 	TArray<UAnimMontage*> LightAttackArray;
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Anim Montage")
 	UAnimMontage* HeavyAttackAnim;
+
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true), Category="Stats")
+	bool bIsBleed = false;
 	
 protected:
 	
@@ -79,6 +82,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool IsWeaponEquipped(){ return bIsEquipped; }
+
+	UFUNCTION(BlueprintCallable)
+	bool IsBleedWeapon(){ return bIsBleed; }
 
 	UFUNCTION(BlueprintNativeEvent)
 	void StopFloating();

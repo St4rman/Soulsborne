@@ -38,7 +38,7 @@ void USInventoryComponent::SetCurrentEquippedWeapon(ASBWeaponBase* NewWeapon)
 {
 	if (ensure(NewWeapon->GetClass()))
 	{
-		const FVector HandLoc = Player->GetMesh()->GetSocketLocation("g");
+		const FVector HandLoc = Player->GetMesh()->GetSocketLocation("MeleeArmament-right");
 		const FTransform SpawnTM = FTransform(FRotator(0, 0, 0), HandLoc);
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;

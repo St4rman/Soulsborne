@@ -31,9 +31,6 @@ public:
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UProgressBar* StaminaBar;
-
-	UPROPERTY(EditAnywhere, meta=(BindWidget))
-	class UImage* ShieldIcon;
 	
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
 	class UImage* MeleeIcon;
@@ -42,5 +39,5 @@ public:
 	class UProgressBar* BossHealthBar;
 
 	UPROPERTY(EditAnywhere, meta=(BindWidget))
-	class UTextBlock* FlaskNum;
+	class UTextBlock* NameText;
 };

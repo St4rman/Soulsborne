@@ -112,6 +112,32 @@ void ASoulsAICharacter::UpdateMotionWarpingTarget()
 	MotionWarp->AddOrUpdateWarpTargetFromLocationAndRotation(MotionWarpName, StoppingPos, Rotation);
 }
 
+void ASoulsAICharacter::IncreaseBleedStack()
+{
+	if (CurrentBleed <MaxBleed)
+	{
+		CurrentBleed +=1;
+		GetWorldTimerManager().SetTimer(BleedTimer, this, &ASoulsAICharacter::DecreaseBleedStacks, 2.0f);
+	}
+	if (CurrentBleed >= MaxBleed)
+	{
+		ApplyBleedBurst();
+		CurrentBleed = 0;
+		GetWorldTimerManager().ClearTimer(BleedTimer);
+	}
+}
+
+void ASoulsAICharacter::DecreaseBleedStacks()
+{
+	CurrentBleed -=1;
+}
+
+void ASoulsAICharacter::ApplyBleedBurst()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 1.0f, FColor::Red, "ApplyBleedBurst");
+	TakeDamage(200);
+}
+
 
 
 

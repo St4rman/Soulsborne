@@ -40,13 +40,11 @@ void UPlayerHUD::ToggleBossBarVisibility(const bool Toggle)
 	{
 		const ESlateVisibility CurVis = Toggle ? ESlateVisibility::Visible : ESlateVisibility::Hidden;
 		BossHealthBar->SetVisibility(CurVis);
+		NameText->SetVisibility(CurVis);
 	}
 }
 
 void UPlayerHUD::UpdateFlask(const FText Value)
 {
-	if (FlaskNum != nullptr)
-	{
-		FlaskNum->SetText(Value);
-	}
+	
 }

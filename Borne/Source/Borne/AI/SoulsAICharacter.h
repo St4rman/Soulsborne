@@ -40,7 +40,6 @@ protected:
 	UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);
 	
-
 	ASBWeaponBase* MainWeapon;
 
 	UPROPERTY(EditAnywhere, Category = "WeaponBase Class")
@@ -54,6 +53,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MaxHealth;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CurrentBleed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxBleed = 3;
+	
 	UPROPERTY(VisibleAnywhere)
 	TEnumAsByte<ELocomotionMode> CurrentLocomotionMode;
 
@@ -66,6 +71,8 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=" Effects ", meta = (AllowPrivateAccess = "true"))
 	UNiagaraComponent* NiagaraRoarComponent;
+
+	FTimerHandle BleedTimer;
 	
 public:
 
@@ -87,4 +94,8 @@ public:
 	void UpdateMotionWarpingTarget();
 
 	FORCEINLINE UNiagaraComponent* GetNiagaraComponent() const { return NiagaraRoarComponent; }
+
+	void IncreaseBleedStack();
+	void DecreaseBleedStacks();
+	void ApplyBleedBurst();
 };

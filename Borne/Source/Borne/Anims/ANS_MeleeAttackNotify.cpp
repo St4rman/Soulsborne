@@ -68,6 +68,11 @@ void UANS_MeleeAttackNotify::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimS
 			{
 				TraceIgnoreActors.Add(TargetActor);
 				Enemy->TakeDamage(CurWep->LightDamage);
+
+				if (CurWep->IsBleedWeapon())
+				{
+					Enemy->IncreaseBleedStack();
+				}
 				return;
 			}
 

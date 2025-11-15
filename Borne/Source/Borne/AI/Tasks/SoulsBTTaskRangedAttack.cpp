@@ -1,5 +1,5 @@
 ﻿#include "SoulsBTTaskRangedAttack.h"
-
+#include "DrawDebugHelpers.h"
 #include "Borne/AI/SoulsAICharacter.h"
 
 
@@ -73,7 +73,8 @@ void USoulsBTTaskRangedAttack::FireProjectile(FVector Direction, const FVector L
 {
 	//spawn our projectiles
 	
-	const FVector  ToPlayer = TargetActor->GetActorLocation() - Location;
+	FVector  ToPlayer = TargetActor->GetActorLocation() - Location;
+	// ToPlayer.Z = TargetActor->GetActorLocation().Z;
 	const FRotator Rotation = ToPlayer.Rotation();
 
 	FActorSpawnParameters SpawnParameters;
