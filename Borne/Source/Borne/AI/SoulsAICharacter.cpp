@@ -64,10 +64,15 @@ void ASoulsAICharacter::TakeDamage( const float DamageAmount )
 {
 	UGameplayStatics::PlaySoundAtLocation(GetWorld(), HurtNoise, GetActorLocation());
 	const float HealthDelta = Health - DamageAmount;
-	if (HealthDelta > 0)
+	if (HealthDelta > 0)        
 	{
 		Health = HealthDelta;
 		UpdateHealth();
+	}
+	if (HealthDelta <= 0)
+	{
+		Health = 0;
+		OnDeath();
 	}
 }
 

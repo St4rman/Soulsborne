@@ -92,6 +92,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void UpdateHealth();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnDeath();
+
 	void SetLocomotionMode(ELocomotionMode ToMode ) { CurrentLocomotionMode = ToMode;}
 	ELocomotionMode GetCurrentLocomotionMode() { return CurrentLocomotionMode; }
 	void UpdateMotionWarpingTarget();
