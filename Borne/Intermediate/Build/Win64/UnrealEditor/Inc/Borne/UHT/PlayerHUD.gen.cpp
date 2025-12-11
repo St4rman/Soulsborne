@@ -50,12 +50,6 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SUI/PlayerHUD.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShieldIcon_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "Category", "PlayerHUD" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "SUI/PlayerHUD.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeleeIcon_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "PlayerHUD" },
@@ -68,7 +62,7 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SUI/PlayerHUD.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FlaskNum_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NameText_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "PlayerHUD" },
 		{ "EditInline", "true" },
@@ -77,10 +71,9 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthBar;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaminaBar;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ShieldIcon;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeleeIcon;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BossHealthBar;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_FlaskNum;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NameText;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -90,17 +83,15 @@ struct Z_Construct_UClass_UPlayerHUD_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthBar = { "HealthBar", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, HealthBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthBar_MetaData), NewProp_HealthBar_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_StaminaBar = { "StaminaBar", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, StaminaBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaminaBar_MetaData), NewProp_StaminaBar_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_ShieldIcon = { "ShieldIcon", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, ShieldIcon), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShieldIcon_MetaData), NewProp_ShieldIcon_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_MeleeIcon = { "MeleeIcon", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, MeleeIcon), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeIcon_MetaData), NewProp_MeleeIcon_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_BossHealthBar = { "BossHealthBar", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, BossHealthBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BossHealthBar_MetaData), NewProp_BossHealthBar_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_FlaskNum = { "FlaskNum", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, FlaskNum), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FlaskNum_MetaData), NewProp_FlaskNum_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerHUD_Statics::NewProp_NameText = { "NameText", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerHUD, NameText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_NameText_MetaData), NewProp_NameText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerHUD_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_HealthBar,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_StaminaBar,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_ShieldIcon,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_MeleeIcon,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_BossHealthBar,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_FlaskNum,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerHUD_Statics::NewProp_NameText,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerHUD_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerHUD_Statics::DependentSingletons[])() = {
@@ -144,10 +135,10 @@ UPlayerHUD::~UPlayerHUD() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_SUI_PlayerHUD_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerHUD, UPlayerHUD::StaticClass, TEXT("UPlayerHUD"), &Z_Registration_Info_UClass_UPlayerHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerHUD), 514366203U) },
+		{ Z_Construct_UClass_UPlayerHUD, UPlayerHUD::StaticClass, TEXT("UPlayerHUD"), &Z_Registration_Info_UClass_UPlayerHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerHUD), 2034969693U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_SUI_PlayerHUD_h_712128470(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_SUI_PlayerHUD_h_4268630840(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_SUI_PlayerHUD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_SUI_PlayerHUD_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

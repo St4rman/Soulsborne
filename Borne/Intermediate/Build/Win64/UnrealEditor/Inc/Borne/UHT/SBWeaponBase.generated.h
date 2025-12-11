@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class UAnimMontage;
+class USoundBase;
 class UTexture2D;
 #ifdef BORNE_SBWeaponBase_generated_h
 #error "SBWeaponBase.generated.h already included, missing '#pragma once' in SBWeaponBase.h"
@@ -20,10 +21,12 @@ class UTexture2D;
 #define FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual void StopFloating_Implementation(); \
 	DECLARE_FUNCTION(execStopFloating); \
+	DECLARE_FUNCTION(execIsBleedWeapon); \
 	DECLARE_FUNCTION(execIsWeaponEquipped); \
 	DECLARE_FUNCTION(execOnWeaponDrop_Implementation); \
 	DECLARE_FUNCTION(execOnWeaponPickup_Implementation); \
 	DECLARE_FUNCTION(execGetIcon); \
+	DECLARE_FUNCTION(execGetSwordSound); \
 	DECLARE_FUNCTION(execGetLightAnimCombo); \
 	DECLARE_FUNCTION(execGetLightAnim);
 

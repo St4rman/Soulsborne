@@ -41,7 +41,7 @@
                                     "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
                                 },
                                 "region": {
-                                    "startLine": 80,
+                                    "startLine": 87,
                                     "startColumn": 7
                                 }
                             }
@@ -63,8 +63,8 @@
                                     "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Source/Borne/AI/SoulsAICharacter.h"
                                 },
                                 "region": {
-                                    "startLine": 21,
-                                    "startColumn": 17
+                                    "startLine": 101,
+                                    "startColumn": 1
                                 }
                             }
                         }
@@ -89,10 +89,10 @@
                             "id": 1,
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///D:/Games/EpicGames/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h"
+                                    "uri": "file:///E:/Projects/UNREAL/Souls/Soulsborne/Borne/Intermediate/Build/Win64/UnrealEditor/Inc/Borne/UHT/SoulsAICharacter.generated.h"
                                 },
                                 "region": {
-                                    "startLine": 42,
+                                    "startLine": 12,
                                     "startColumn": 7
                                 }
                             },

@@ -16,6 +16,7 @@ class APawn;
 #define BORNE_SoulsAICharacter_generated_h
 
 #define FID_Borne_Source_Borne_AI_SoulsAICharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetCurrentBleed); \
 	DECLARE_FUNCTION(execOnPawnSeen);
 
 

@@ -16,6 +16,7 @@ BORNE_API UClass* Z_Construct_UClass_UWeaponInterface_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Borne();
@@ -151,6 +152,101 @@ DEFINE_FUNCTION(ASBWeaponBase::execGetLightAnimCombo)
 	P_NATIVE_END;
 }
 // End Class ASBWeaponBase Function GetLightAnimCombo
+
+// Begin Class ASBWeaponBase Function GetSwordSound
+struct Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics
+{
+	struct SBWeaponBase_eventGetSwordSound_Parms
+	{
+		int32 Index;
+		USoundBase* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Index_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SBWeaponBase_eventGetSwordSound_Parms, Index), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Index_MetaData), NewProp_Index_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(SBWeaponBase_eventGetSwordSound_Parms, ReturnValue), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::NewProp_Index,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBWeaponBase, nullptr, "GetSwordSound", nullptr, nullptr, Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::SBWeaponBase_eventGetSwordSound_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::SBWeaponBase_eventGetSwordSound_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASBWeaponBase_GetSwordSound()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASBWeaponBase_GetSwordSound_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASBWeaponBase::execGetSwordSound)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param_Index);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(USoundBase**)Z_Param__Result=P_THIS->GetSwordSound(Z_Param_Index);
+	P_NATIVE_END;
+}
+// End Class ASBWeaponBase Function GetSwordSound
+
+// Begin Class ASBWeaponBase Function IsBleedWeapon
+struct Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics
+{
+	struct SBWeaponBase_eventIsBleedWeapon_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((SBWeaponBase_eventIsBleedWeapon_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(SBWeaponBase_eventIsBleedWeapon_Parms), &Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBWeaponBase, nullptr, "IsBleedWeapon", nullptr, nullptr, Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::SBWeaponBase_eventIsBleedWeapon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::SBWeaponBase_eventIsBleedWeapon_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASBWeaponBase::execIsBleedWeapon)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsBleedWeapon();
+	P_NATIVE_END;
+}
+// End Class ASBWeaponBase Function IsBleedWeapon
 
 // Begin Class ASBWeaponBase Function IsWeaponEquipped
 struct Z_Construct_UFunction_ASBWeaponBase_IsWeaponEquipped_Statics
@@ -319,6 +415,8 @@ void ASBWeaponBase::StaticRegisterNativesASBWeaponBase()
 		{ "GetIcon", &ASBWeaponBase::execGetIcon },
 		{ "GetLightAnim", &ASBWeaponBase::execGetLightAnim },
 		{ "GetLightAnimCombo", &ASBWeaponBase::execGetLightAnimCombo },
+		{ "GetSwordSound", &ASBWeaponBase::execGetSwordSound },
+		{ "IsBleedWeapon", &ASBWeaponBase::execIsBleedWeapon },
 		{ "IsWeaponEquipped", &ASBWeaponBase::execIsWeaponEquipped },
 		{ "OnWeaponDrop_Implementation", &ASBWeaponBase::execOnWeaponDrop_Implementation },
 		{ "OnWeaponPickup_Implementation", &ASBWeaponBase::execOnWeaponPickup_Implementation },
@@ -389,6 +487,16 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 		{ "Category", "Anim Montage" },
 		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsBleed_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Stats" },
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Sounds_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Sounds" },
+		{ "ModuleRelativePath", "Weapons/SBWeaponBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsEquipped_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Equipped" },
@@ -406,6 +514,10 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttackArray_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_LightAttackArray;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttackAnim;
+	static void NewProp_bIsBleed_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsBleed;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Sounds_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_Sounds;
 	static void NewProp_bIsEquipped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsEquipped;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -414,6 +526,8 @@ struct Z_Construct_UClass_ASBWeaponBase_Statics
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetIcon, "GetIcon" }, // 1229079396
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetLightAnim, "GetLightAnim" }, // 1980117797
 		{ &Z_Construct_UFunction_ASBWeaponBase_GetLightAnimCombo, "GetLightAnimCombo" }, // 1805074818
+		{ &Z_Construct_UFunction_ASBWeaponBase_GetSwordSound, "GetSwordSound" }, // 2589628878
+		{ &Z_Construct_UFunction_ASBWeaponBase_IsBleedWeapon, "IsBleedWeapon" }, // 1572274794
 		{ &Z_Construct_UFunction_ASBWeaponBase_IsWeaponEquipped, "IsWeaponEquipped" }, // 815069651
 		{ &Z_Construct_UFunction_ASBWeaponBase_OnWeaponDrop_Implementation, "OnWeaponDrop_Implementation" }, // 1218289295
 		{ &Z_Construct_UFunction_ASBWeaponBase_OnWeaponPickup_Implementation, "OnWeaponPickup_Implementation" }, // 515731518
@@ -437,6 +551,13 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray_Inner = { "LightAttackArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray = { "LightAttackArray", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, LightAttackArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttackArray_MetaData), NewProp_LightAttackArray_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_HeavyAttackAnim = { "HeavyAttackAnim", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, HeavyAttackAnim), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyAttackAnim_MetaData), NewProp_HeavyAttackAnim_MetaData) };
+void Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsBleed_SetBit(void* Obj)
+{
+	((ASBWeaponBase*)Obj)->bIsBleed = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsBleed = { "bIsBleed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ASBWeaponBase), &Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsBleed_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsBleed_MetaData), NewProp_bIsBleed_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Sounds_Inner = { "Sounds", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Sounds = { "Sounds", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASBWeaponBase, Sounds), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sounds_MetaData), NewProp_Sounds_MetaData) };
 void Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsEquipped_SetBit(void* Obj)
 {
 	((ASBWeaponBase*)Obj)->bIsEquipped = 1;
@@ -454,6 +575,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASBWeapon
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_LightAttackArray,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_HeavyAttackAnim,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsBleed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Sounds_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_Sounds,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBWeaponBase_Statics::NewProp_bIsEquipped,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASBWeaponBase_Statics::PropPointers) < 2048);
@@ -500,10 +624,10 @@ ASBWeaponBase::~ASBWeaponBase() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 4218964697U) },
+		{ Z_Construct_UClass_ASBWeaponBase, ASBWeaponBase::StaticClass, TEXT("ASBWeaponBase"), &Z_Registration_Info_UClass_ASBWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASBWeaponBase), 2681793924U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_3043188965(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_3483125467(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_Weapons_SBWeaponBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

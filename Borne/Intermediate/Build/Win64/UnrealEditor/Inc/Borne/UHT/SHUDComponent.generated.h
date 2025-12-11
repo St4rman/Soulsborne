@@ -16,6 +16,7 @@ class UTexture2D;
 #define BORNE_SHUDComponent_generated_h
 
 #define FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUnHideUI); \
 	DECLARE_FUNCTION(execUpdateFlask); \
 	DECLARE_FUNCTION(execToggleBossHealth); \
 	DECLARE_FUNCTION(execSetBossHealth); \

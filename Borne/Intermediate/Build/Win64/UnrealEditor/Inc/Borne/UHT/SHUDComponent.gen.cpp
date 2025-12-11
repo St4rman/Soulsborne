@@ -261,6 +261,35 @@ DEFINE_FUNCTION(USHUDComponent::execToggleBossHealth)
 }
 // End Class USHUDComponent Function ToggleBossHealth
 
+// Begin Class USHUDComponent Function UnHideUI
+struct Z_Construct_UFunction_USHUDComponent_UnHideUI_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerComponents/SHUDComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USHUDComponent_UnHideUI_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USHUDComponent, nullptr, "UnHideUI", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USHUDComponent_UnHideUI_Statics::Function_MetaDataParams), Z_Construct_UFunction_USHUDComponent_UnHideUI_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USHUDComponent_UnHideUI()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USHUDComponent_UnHideUI_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(USHUDComponent::execUnHideUI)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UnHideUI();
+	P_NATIVE_END;
+}
+// End Class USHUDComponent Function UnHideUI
+
 // Begin Class USHUDComponent Function UpdateFlask
 struct Z_Construct_UFunction_USHUDComponent_UpdateFlask_Statics
 {
@@ -313,6 +342,7 @@ void USHUDComponent::StaticRegisterNativesUSHUDComponent()
 		{ "SetMeleeIcon", &USHUDComponent::execSetMeleeIcon },
 		{ "SetStamina", &USHUDComponent::execSetStamina },
 		{ "ToggleBossHealth", &USHUDComponent::execToggleBossHealth },
+		{ "UnHideUI", &USHUDComponent::execUnHideUI },
 		{ "UpdateFlask", &USHUDComponent::execUpdateFlask },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -356,6 +386,7 @@ struct Z_Construct_UClass_USHUDComponent_Statics
 		{ &Z_Construct_UFunction_USHUDComponent_SetMeleeIcon, "SetMeleeIcon" }, // 1892680031
 		{ &Z_Construct_UFunction_USHUDComponent_SetStamina, "SetStamina" }, // 576948195
 		{ &Z_Construct_UFunction_USHUDComponent_ToggleBossHealth, "ToggleBossHealth" }, // 1826743213
+		{ &Z_Construct_UFunction_USHUDComponent_UnHideUI, "UnHideUI" }, // 95788950
 		{ &Z_Construct_UFunction_USHUDComponent_UpdateFlask, "UpdateFlask" }, // 2073826068
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -413,10 +444,10 @@ USHUDComponent::~USHUDComponent() {}
 struct Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 190527117U) },
+		{ Z_Construct_UClass_USHUDComponent, USHUDComponent::StaticClass, TEXT("USHUDComponent"), &Z_Registration_Info_UClass_USHUDComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHUDComponent), 2122510489U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_1532929571(TEXT("/Script/Borne"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_187701641(TEXT("/Script/Borne"),
 	Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Borne_Source_Borne_PlayerComponents_SHUDComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
